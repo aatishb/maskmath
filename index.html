@@ -24,7 +24,7 @@
 
     <p>It’s increasingly evident that masks have an outsized effect on curbing the spread of COVID-19. But how effective are masks exactly? There’s a massive debate on this topic, with lots of people loudly offering differing opinions.</p>
 
-    <p>In this article, we’ll use high-school level math to develop our intuition for how masks reduce the spread of airborne diseases like COVID-19. After reading this, you'll be able to quantitatively understand how wearing masks influences an epidemic. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
+    <p>In this article, we’ll use high-school level math to develop our intuition for how masks reduce the spread of airborne diseases like COVID-19. After reading this, you'll be able to quantitatively predict how wearing masks influences an epidemic. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
 
     <h2>Say it, Don't Spray It</h2>
 
@@ -42,19 +42,19 @@
 
   </div>
 
-  <maskanim :mask1="false" :mask2="false">When a contagious person is in close contact with a suceptible person, virus-laden particles of saliva can transmit disease.</maskanim>
+  <maskanim :mask1="false" :mask2="false">Scenario 1: When a contagious person is in close contact with a suceptible person, virus-laden particles of saliva can transmit disease.</maskanim>
 
   <div class="container">
 
-    <p>Masks reduce the amount of ‘mouth spray’ that can travel from a contagious person to a susceptible person (either by blocking the spray, or by redirecting the spray so that it’s more diffuse), thereby reducing the number of viral particles transmitted.</p>
+    <p>Masks reduce the amount of mouth spray that travels from a contagious person to a susceptible person (by blocking or redirecting the spray), thereby reducing the number of viral particles transmitted.</p>
 
-    <p>It's worth keeping in mind that no mask is perfect. Even the N95 masks recommend for use by health workers are only guaranteed to block 95% of the incoming particles (and that’s only if you wear it right). So you shouldn't think of masks like impenetrable force fields that guarantee safety, they're more like armor that reduces your risk.</p>
+    <p>It's worth keeping in mind that no mask is perfect. Even the N95 masks recommend for use by health workers are only guaranteed to block 95% of the incoming particles (and that’s only if you wear it right). Masks don't guarantee safety, they reduce your risk. This is similar how an umbrella can't guarantee that you'll be dry in a storm, but it can reduce your odds of getting drenched.</p>
 
-    <p>Let’s imagine that a contagious person is wearing a 50% effective mask. This means that for every hundred viral particles that the person would transmit without a mask, fifty are either blocked or redirected by the mask, while the remaining fifty are still transmitted. So by wearing this mask, the number of viral particles that a contagious person transmits to a susceptible person is cut in half.</p>
+    <p>Let’s imagine that a contagious person wears a 50% effective mask. This means that out of every 100 viral particles that the person would transmit without a mask, 50 are blocked or redirected by the mask, while the remaining 50 are transmitted. So by wearing this 50% effective mask, the number of viral particles that a contagious person transmits to a susceptible person is cut in half.</p>
 
   </div>
 
-  <maskanim :mask1="true" :mask2="false">If the contagious person's mask blocks or redirects half of all exhaled viral particles, the risk of disease transmission is cut in half.</maskanim>
+  <maskanim :mask1="true" :mask2="false">Scenario 2: If the contagious person wears a 50% effective mask, the risk of disease transmission is reduced by 50%.</maskanim>
 
   <div class="container">
 
@@ -62,29 +62,29 @@
 
     <p>In general, the effectiveness of a mask varies depending on whether you’re <b>inhaling</b> or <b>exhaling</b> through it. But for now, let’s keep things simple and assume that this mask is equally effective in both directions, i.e. it filters 50% of viral particles whether you exhale or inhale through it.</p>
 
-    <p>With these assumptions, when the susceptible person is wearing a mask, we’ll still see a 50% reduction in the number of viral particles transmitted.</p>
+    <p>This means that when the susceptible person is wearing a mask, we’ll still see a 50% reduction in the number of viral particles transmitted.</p>
 
   </div>
 
-  <maskanim :mask1="false" :mask2="true">If the susceptible person's mask blocks half of all inhaled viral particles, the risk of disease transmission is cut in half.</maskanim>
+  <maskanim :mask1="false" :mask2="true">Scenario 3: If the susceptible person wears a 50% effective mask, the risk of disease transmission is also reduced by 50%.</maskanim>
   
   <div class="container">
 
-    <p>So far, this is just what we expect. But here’s where it gets interesting. What if both the contagious and the susceptible person wear a mask?</p> 
+    <p>So far, this is just what we expect. But here’s a surprise. What if both the contagious and the susceptible person wear a mask?</p> 
 
     <p>In this case, the first mask blocks half the viral particles, and the second mask blocks half of the remaining particles. This means that only a quarter of viral particles make it through both masks, which amounts to a 75% reduction in viral particles.</p>
 
   </div>
 
-  <maskanim :mask1="true" :mask2="true">When both people wear 50% effective masks, the risk of disease transmission becomes 25%.</maskanim>
+  <maskanim :mask1="true" :mask2="true">Scenario 4: When both people wear 50% effective masks, the risk of disease transmission is reduced by 75%.</maskanim>
   
   <div class="container">
 
-    <p>Here’s why this is unexpected. Suppose everybody wore a 50% effective mask. If everyone does a half-effective thing, it <i>feels like</i> this should only be half-effective overall. So you might guess that a 50% effective mask can at best only reduce transmission by 50 percent. But in this scenario, the virus transmission actually drops by 75 percent!</p>
+    <p>Here’s why this is unexpected. Imagine if everybody wore a 50% effective mask. If everyone does a half-effective thing, it <i>feels like</i> this should only be half-effective overall. So your first guess might be that a 50% effective mask can only reduce transmission by 50 percent at best. But in this scenario, the virus transmission actually drops by 75 percent!</p>
 
     <p>That’s because in this scenario, masks filter the spray twice: once on the way out, and a second time on the way in. This double protection is the reason that masks are more effective than they might seem.</p>
 
-    <p>So here’s every possible contact scenario by which an airborne disease can spread from person to person. For completeness, we’ve also included the default case where neither person is wearing a mask (in which case there’s no reduction in virus transmission, since masks only work if you wear them.)</p>
+    <p>Below, we've listed all four possible contact scenarios through which an airborne disease can spread. In the case where neither person is wearing a mask, there’s no reduction in virus transmission, since masks only work if you wear them.</p>
 
   </div>
 
@@ -96,19 +96,10 @@
 
     <h2>From People to The Population</h2>
 
-    <p>So far we've been looking at virus transmission in the context of individual person-to-person contacts. But we can use these numbers to calculate the average reduction in virus transmission for <i>the entire population</i>. To do this, we need to know how likely each scenario is, which depends on how many people wear a mask.</p>
+    <p>So far we've been looking at virus transmission in the context of individual person-to-person contacts. But we can use these numbers to calculate the reduction in virus transmission for <i>the entire population</i>.</p>
 
-    <p>If nobody wore a mask, then we’d only have the first scenario, and so virus transmission in the population would be unaffected.</p>
 
-  </div>
-
-  <div class="graphic">
-    GRAPHIC
-  </div>
-
-  <div class="container">
-
-    <p>And conversely, if everybody wore a mask, then we’d only have the last scenario, and so virus transmission in the population will drop by 75 percent.</p>
+    <p>To do this, we need to know how likely each scenario is, which depends on how many people wear a mask. For example, if nobody wore a mask, we’d only have the first scenario to consider, and so virus transmission in the population would be unaffected.</p>
 
   </div>
 
@@ -118,9 +109,21 @@
 
   <div class="container">
 
-    <p>In reality some people wear masks, and others don’t. This means we need to calculate an average across all scenarios.</p>
+    <p>Conversely, if everybody wore a mask, then we’d only have the last scenario to consider, and so virus transmission in the population would drop by 75 percent.</p>
 
-    <p>To make things simple for now, let’s assume that 50% of people wear masks, which implies that 50% don’t wear masks. When two people meet at random, the odds that neither person is wearing a mask is then 50% times 50%, or 25%. Similarly, we can work out the odds for the other three scenarios. It turns out that when half the people in the population are wearing masks, all four scenarios are equally likely.</p>
+  </div>
+
+  <div class="graphic">
+    GRAPHIC
+  </div>
+
+  <div class="container">
+
+    <p>In reality some people wear masks, and others don’t. This means we need to calculate an average across all four scenarios.</p>
+
+    <p>To make things simple for now, let’s assume that 50% of people wear masks, which of course implies that 50% don’t wear masks. When two people meet at random, the odds that neither person is wearing a mask is then 50% times 50%, or 25%.</p>
+
+    <p>Similarly, we can work out the odds for the other three scenarios. It turns out that when half the people in the population are wearing masks, all four scenarios are equally likely.</p>
 
   </div>
 
