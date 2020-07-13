@@ -13,12 +13,15 @@
   font-family: 'Raleway', sans-serif;
   background-color: #262626;
   color: #fff;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #header {
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin-bottom: 1em;
   background-color: #262626;;
 }
@@ -40,9 +43,49 @@
 .overlay > div {
 
 }
+
 #header canvas {
   position: absolute;
   left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.anim {
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  background-color: #262626;
+}
+
+.anim >div:nth-child(1) {
+  flex: 1 1 15%;
+}
+
+.anim >div:nth-child(2) {
+  flex: 1 1 70%;
+}
+
+.anim >div:nth-child(3) {
+  flex: 1 1 15%;
+}
+
+.emoji {
+  font-size: 5em;
+}
+
+.sideanim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.caption {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 0.75em;
+  text-align: center;
 }
 
 html, body {

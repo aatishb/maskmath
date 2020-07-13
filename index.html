@@ -22,13 +22,13 @@
 
   <div class="container">
 
-    <p>It’s increasingly evident that masks have an outsized effect on curbing the spread of COVID-19. But how effective are masks <i>exactly</i>? There’s a massive debate on this topic, with lots of people loudly offering differing opinions.</p>
+    <p>It’s increasingly evident that masks have an outsized effect on curbing the spread of COVID-19. But how effective are masks exactly? There’s a massive debate on this topic, with lots of people loudly offering differing opinions.</p>
 
-    <p>In this article, we’ll use high-school level math to develop our intuition for how masks reduce the spread of airborne diseases like COVID-19. You can use the interactives on this page to make quantitative statements about how wearing masks influences an epidemic. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
+    <p>In this article, we’ll use high-school level math to develop our intuition for how masks reduce the spread of airborne diseases like COVID-19. After reading this, you'll be able to quantitatively understand how wearing masks influences an epidemic. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
 
     <h2>Say it, Don't Spray It</h2>
 
-    <p>First, let’s get a ballpark sense for some numbers.</p>
+    <p>First, let’s get a ballpark sense for some numbers. Whenever we exhale, we spray out particles of saliva of various tiny sizes. When a person is contagious, this 'mouth spray' is packed with viral particles, and this virus-laden saliva spray is the primary way that COVID-19 spreads.</p>
 
     <p>When a contagious person breathes, they spray out roughly <b>a thousand</b> viral particles every minute.</p>
 
@@ -40,17 +40,21 @@
 
     <p>The more viral particles travel from person to person, the higher the risk of infection.</p>
 
-    <p>Masks work by reducing the amount of this ‘mouth spray’ that travels from person to person (either by blocking the spray, or by redirecting the spray so that it’s more diffuse).</p>
+  </div>
 
-    <h2>Doing The Math on Masks</h2>
+  <maskanim :mask1="false" :mask2="false">When a contagious person is in close contact with a suceptible person, virus-laden particles of saliva can transmit disease.</maskanim>
+
+  <div class="container">
+
+    <p>Masks reduce the amount of ‘mouth spray’ that can travel from a contagious person to a susceptible person (either by blocking the spray, or by redirecting the spray so that it’s more diffuse), thereby reducing the number of viral particles transmitted.</p>
+
+    <p>It's worth keeping in mind that no mask is perfect. Even the N95 masks recommend for use by health workers are only guaranteed to block 95% of the incoming particles (and that’s only if you wear it right). So you shouldn't think of masks like impenetrable force fields that guarantee safety, they're more like armor that reduces your risk.</p>
 
     <p>Let’s imagine that a contagious person is wearing a 50% effective mask. This means that for every hundred viral particles that the person would transmit without a mask, fifty are either blocked or redirected by the mask, while the remaining fifty are still transmitted. So by wearing this mask, the number of viral particles that a contagious person transmits to a susceptible person is cut in half.</p>
 
   </div>
 
-  <div class="graphic">
-    GRAPHIC
-  </div>
+  <maskanim :mask1="true" :mask2="false">If the contagious person's mask blocks or redirects half of all exhaled viral particles, the risk of disease transmission is cut in half.</maskanim>
 
   <div class="container">
 
@@ -62,19 +66,17 @@
 
   </div>
 
-  <div class="graphic">
-    GRAPHIC
-  </div>
+  <maskanim :mask1="false" :mask2="true">If the susceptible person's mask blocks half of all inhaled viral particles, the risk of disease transmission is cut in half.</maskanim>
   
   <div class="container">
 
-    <p>So far, this is just what we expect. But here’s where it gets interesting. What if both the contagious and the susceptible person wear a mask? The first mask blocks half the viral particles, and the second mask blocks half of the remaining particles. This means that only a quarter of viral particles make it through both masks, which is a 75% reduction in viral particles.</p>
+    <p>So far, this is just what we expect. But here’s where it gets interesting. What if both the contagious and the susceptible person wear a mask?</p> 
+
+    <p>In this case, the first mask blocks half the viral particles, and the second mask blocks half of the remaining particles. This means that only a quarter of viral particles make it through both masks, which amounts to a 75% reduction in viral particles.</p>
 
   </div>
 
-  <div class="graphic">
-    GRAPHIC
-  </div>
+  <maskanim :mask1="true" :mask2="true">When both people wear 50% effective masks, the risk of disease transmission becomes 25%.</maskanim>
   
   <div class="container">
 
@@ -165,9 +167,12 @@
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-observe-visibility@0.4.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
 <script src="vue-definitions.js"></script>
-<script src="sketch.js"></script>
+<script type="text/javascript">javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+</script>
+<!--<script src="sketch.js"></script>-->
 </body>
 
 </html>

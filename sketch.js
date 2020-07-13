@@ -2,9 +2,8 @@ function setup() {
   let target = document.getElementById('header');
   let width = target.offsetWidth;
   let height = target.offsetHeight;
-
   let canvas = createCanvas(width, height);
-  canvas.parent(target)
+  canvas.parent(target);
 }
 
 function draw() {
