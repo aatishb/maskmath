@@ -25,11 +25,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     p.draw = function() {
-      p.background('#262626');
+      p.background(0, 0, 51);
 
       if (particles.length < 25) {
         for (let i = 0; i < 50; i++) {
-          particles.push(new particle()); // append snowflake object
+          particles.push(new particle());
         }
       }
 
@@ -56,8 +56,8 @@ function sketch(parent) { // we pass the sketch data from the parent
 
       p.noStroke();
       for (let particle of particles) {
-        particle.display(); // draw snowflake
-        particle.update(); // update snowflake position
+        particle.display();
+        particle.update();
       }
     };
 
@@ -83,7 +83,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     function particle() {
 
       this.y = p.random(0.45 * p.height, 0.55 * p.height);
-      this.size = p.random(1, 15);
+      this.size = p.random(5, 15);
       this.x = 0.1 * p.width;
       this.maxangle = 2 * p.atan2(p.height/2, p.width);
       this.angle = this.maxangle * p.random(-1, 1);
@@ -93,6 +93,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.vy = this.v0 * Math.sin(this.angle);
       this.pastFirstMask = false;
       this.pastSecondMask = false;
+      this.color = 'white';
+      this.fadeOut = false;
+      this.fadeCount = 30;
 
       this.update = function() {
         
@@ -107,43 +110,67 @@ function sketch(parent) { // we pass the sketch data from the parent
         this.x = this.x + this.vx;
         this.y = this.y + this.vy;
         
-        if (this.size > 3) {
+        if (this.size > 4) {
           this.size = this.size * 0.99;
         }
 
-        // delete snowflake if past end of screen
-        if (this.x > p.width || this.x < -this.size || this.y > p.height || this.y < 0)     {
-          let index = particles.indexOf(this);
-          particles.splice(index, 1);
+        // delete particle if it leaves screen
+        if (this.x > p.width || this.x < -this.size || this.y > p.height || this.y < 0) {
+          this.remove();
         }
 
         if (parent.data.mask1) {
           if (!this.pastFirstMask && this.x > 0.2 * p.width) {
             if (p.random(1) <= 0.5) {
-              let index = particles.indexOf(this);
-              particles.splice(index, 1);
+              this.color = 'red';
+              this.vx *= -1;
+              this.fadeOut = true;
             }
             this.pastFirstMask = true;
-          }    
+          }
+
+          else if (this.fadeOut) {
+            this.fadeCount--;
+            if (this.fadeCount == 0) {
+              this.remove();
+            }
+          }
         }
         
         if (parent.data.mask2) {
           if (!this.pastSecondMask && this.x > 0.8 * p.width) {
             if (p.random(1) <= 0.5) {
-              let index = particles.indexOf(this);
-              particles.splice(index, 1);
+              this.color = 'red';
+              this.vx *= -1;
+              this.fadeOut = true;
             }
             this.pastSecondMask = true;
-          }    
+          }
+
+          else if (this.fadeOut) {
+            this.fadeCount--;
+              if (this.fadeCount == 0) {
+                this.remove();
+              }
+          }
         }
 
       };
 
       this.display = function() {
+        p.fill(this.color);
         p.ellipse(this.x, this.y, this.size);
       };
+
+    this.remove = function() {
+      let index = particles.indexOf(this);
+      particles.splice(index, 1);
+    }
+
+
     }
 
 
   };
 }
+

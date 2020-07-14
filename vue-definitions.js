@@ -1,16 +1,15 @@
 // mask interactive component
-
 Vue.component('maskanim', {
 
   template:   `
   <div class="graphic">
     <div class="anim">
       <div class="sideanim">
-          <div>Contagious<br/>Person</div>
+          <div class="label">Contagious<br/>Person</div>
       </div>
       <p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>
       <div class="sideanim">
-          <div>Susceptible<br/>Person</div>
+          <div class="label">Susceptible<br/>Person</div>
       </div>
     </div>
     <div class="caption">
@@ -19,6 +18,44 @@ Vue.component('maskanim', {
   </div>`,
 
   props: ['mask1', 'mask2']
+
+})
+
+// mask interactive component
+Vue.component('maskscenario', {
+
+  template:   `
+    <div class="anim row">
+      <div class="sideanim">
+          <div>{{text1}}</div>
+      </div>
+      <p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>
+      <div class="sideanim">
+          <div>{{text2}}</div>
+      </div>
+    </div>`,
+
+  props: ['mask1', 'mask2', 'text1', 'text2']
+
+})
+
+// mask interactive component
+Vue.component('tablelabel', {
+
+  template:   `
+    <div class="anim heading">
+      <div class="sideanim">
+          <div>{{text1}}</div>
+      </div>
+      <div class="sideanim">
+          <div>{{text2}}</div>
+      </div>
+      <div class="sideanim">
+          <div>{{text3}}</div>
+      </div>
+    </div>`,
+
+  props: ['text1', 'text2', 'text3']
 
 })
 
