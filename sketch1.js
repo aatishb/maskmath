@@ -6,6 +6,7 @@ function sketch(parent) { // we pass the sketch data from the parent
 
     // p5 sketch goes here
     let particles = []; 
+    let emojiSize;
 
     p.setup = function() {
       let target = parent.$el;
@@ -16,8 +17,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       canvas.parent(parent.$el);
       p.fill(240);
       p.noStroke();
-      p.textSize(p.height * 0.66);
-      p.textAlign(p.CENTER, p.BASELINE);
+      emojiSize = p.height * 0.66;
+      p.textSize(emojiSize);
+      p.textAlign(p.CENTER, p.CENTER);
       //console.log(parent.data.mask1);
       p.strokeWeight(7);
       p.drawingContext.setLineDash([0, 15]);
@@ -34,24 +36,24 @@ function sketch(parent) { // we pass the sketch data from the parent
       }
 
       if (parent.data.mask1) {
-        p.text('😷', 0.1 * p.width, p.height * 0.8);      
+        p.text('😷', emojiSize/2, p.height * 0.6);      
       } else {
-        p.text('😐', 0.1 * p.width, p.height * 0.8);              
+        p.text('😐', emojiSize/2, p.height * 0.6);              
       }
 
       if (parent.data.mask2) {
-        p.text('😷', 0.9 * p.width, p.height * 0.8);      
+        p.text('😷', p.width - emojiSize/2, p.height * 0.6);      
       } else {
-        p.text('😐', 0.9 * p.width, p.height * 0.8);      
+        p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
       }
 
       p.stroke(240);
       if (parent.data.mask1) {
-        p.line(0.2 * p.width, 10, 0.2 * p.width, p.height + 10);
+        p.line(1.25 * emojiSize, 10, 1.25 * emojiSize, p.height + 10);
       }
 
       if (parent.data.mask2) {
-        p.line(0.8 * p.width, 10, 0.8 * p.width, p.height + 10);
+        p.line(p.width - 1.25 * emojiSize, 10, p.width - 1.25 * emojiSize, p.height + 10);
       }
 
       p.noStroke();
@@ -84,7 +86,7 @@ function sketch(parent) { // we pass the sketch data from the parent
 
       this.y = p.random(0.45 * p.height, 0.55 * p.height);
       this.size = p.random(5, 15);
-      this.x = 0.1 * p.width;
+      this.x = emojiSize / 2;
       this.maxangle = 2 * p.atan2(p.height/2, p.width);
       this.angle = this.maxangle * p.random(-1, 1);
       this.wander = 0.02;
@@ -120,7 +122,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         }
 
         if (parent.data.mask1) {
-          if (!this.pastFirstMask && this.x > 0.2 * p.width) {
+          if (!this.pastFirstMask && this.x > 1.25 * emojiSize) {
             if (p.random(1) <= 0.5) {
               this.color = 'red';
               this.vx *= -1;
@@ -138,7 +140,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         }
         
         if (parent.data.mask2) {
-          if (!this.pastSecondMask && this.x > 0.8 * p.width) {
+          if (!this.pastSecondMask && this.x > p.width - 1.25 * emojiSize) {
             if (p.random(1) <= 0.5) {
               this.color = 'red';
               this.vx *= -1;

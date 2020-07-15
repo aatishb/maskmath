@@ -15,15 +15,15 @@
   color: #fff;
   display: flex;
   flex-direction: column;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 #header {
   width: 100%;
   height: 400px;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   background-color: rgb(0, 0, 51);
 }
 
@@ -72,8 +72,8 @@
   flex: 1 1 20%;
 }
 
-.emoji {
-  font-size: 5em;
+.remoji {
+  font-size: 5rem;
 }
 
 .sideanim {
@@ -85,14 +85,14 @@
 }
 
 .label {
-  padding: 1em;
+  padding: 1rem;
   color: #E3C4AC;    
 }
 
 .caption {
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 0.75em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -104,32 +104,32 @@
 
 .heading {
   height: 100px;
-  margin-bottom: 0.25em;
-  font-size: 1.5em;
-  justify-content: flex-end;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
 }
 
 .row {
   height: 100px;
-  margin-bottom: 1em;
-  font-size: 2em;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .simplerow {
-  margin-bottom: 1em;
-  font-size: 1.25em;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-size: 24px;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 200;
   color: white;
   background-color: rgb(0,0,51);
@@ -139,7 +139,7 @@ body {
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 h1, h2, h3 {
@@ -150,18 +150,18 @@ h1, h2, h3 {
 h1 {
   text-align: center;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 h3 {
   text-align: center;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 i {
