@@ -26,7 +26,7 @@
 
     <p>In this interactive article, we’ll use high-school level math to develop our intuition for how masks reduce the spread of airborne diseases like COVID-19. After reading this, you'll be able to quantitatively predict how wearing masks influences an epidemic.</p>
 
-    <p>For example, you'll see how when 60% of people wear 60% effective masks, the rate of virus transmission will fall by 60 percent, which is more or less what we need to halt the spread of COVID-19. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
+    <p>For example, you'll see how when 60% of people wear 60% effective masks, the rate of virus transmission will fall by 60 percent, which turns out to be more or less sufficient to halt the spread of COVID-19. So the next time that you get into an argument about masks, rather than argue about <i>opinions</i>, you can argue about <i>numbers</i> instead.</p>
 
     <h2>Say it, Don't Spray It</h2>
 
@@ -52,7 +52,7 @@
 
     <p>It's worth keeping in mind that no mask is perfect. Even the N95 masks recommend for use by health workers are only guaranteed to block 95% of the hardest-to-block particles (and that’s only if you wear it right).</p>
 
-    <p>Masks don't guarantee safety, they reduce risk. This is just like how umbrellas can't guarantee that you'll stay dry, but they <i>do</i> reduce your odds of getting drenched.</p>
+    <p>Masks don't guarantee safety, they reduce risk. It's a lot like how umbrellas can't guarantee you'll be dry, but they <i>do</i> reduce your odds of getting drenched.</p>
 
     <p>So let’s imagine that a contagious person wears a 50% effective mask. This means that out of every 100 viral particles that the person would transmit without a mask, 50 are blocked or redirected by the mask. A 50% effective mask blocks 50% of viral particles.</p>
 
@@ -66,7 +66,7 @@
 
     <p>In general, the effectiveness of a mask varies depending on whether you’re <b>inhaling</b> or <b>exhaling</b> through it. But for now, let’s keep things simple and assume that this mask is equally effective in both directions, i.e. it blocks 50% of viral particles whether you exhale or inhale through it.</p>
 
-    <p>So when the susceptible person wears a mask, we’ll still see a 50% drop in viral particles transmitted.</p>
+    <p>This means that when the susceptible person wears a mask, we’ll still see a 50% drop in viral particles transmitted.</p>
 
   </div>
 
@@ -84,11 +84,11 @@
   
   <div class="container">
 
-    <p>That's surprising, because if everybody wore a half-effective mask, then it <i>feels like</i> this should at best only be half-effective. But that's wrong! If everyone wore a 50% effective mask, virus transmission would drop by 75 percent – not 50 percent.</p>
+    <p>That's surprising, because if everybody wore a half-effective mask, you might guess that this could only be half-effective at best. But that's wrong! When everyone wears a 50% effective mask, virus transmission drops by 75 percent – not 50 percent.</p>
 
-    <p>That’s because in this scenario, masks filter the spray twice: once on the way out, and a second time on the way in. This <b>double protection</b> is the reason that masks are more effective than they might seem.</p>
+    <p>That’s because in this scenario, masks filter the spray twice: once on the way out, and a second time on the way in. This <b>double protection</b> is one reason that masks are more effective than they might seem.</p>
 
-    <p>Below, I've listed all four possible contact scenarios through which an airborne disease can spread. In the case where neither person is wearing a mask, there’s no reduction in virus transmission, since masks only work if you wear them.</p>
+    <p>Below, I've listed all four possible contact scenarios through which an airborne disease can spread.</p>
 
   </div>
 
@@ -110,9 +110,9 @@
 
     <h2>From People to The Population</h2>
 
-    <p>So far, we've been looking at virus transmission in the context of two people. But we can use these numbers to calculate the reduction in virus transmission for <i>the entire population</i>.</p>
+    <p>So far, we've been looking at virus transmission in the context of two people. But how can we go from understanding person-to-person virus transmission to understanding virus transmission in the <i>entire population</i>?</p> 
 
-    <p>So how do we go from understanding person-to-persion virus transmission to understanding virus transmission in the entire population? Well, in certain extreme situations, this is straightforward.</p> 
+    <p>Well, in the extreme cases, this is straightforward.</p> 
 
     <p>For example, if <b>nobody</b> wore a mask, we’d only have the first scenario to consider, which means that virus transmission in the entire population would be unaffected.</p>
 
@@ -124,7 +124,7 @@
       <maskscenario :mask1="false" :mask2="false" text1="100%" text2="0%"></maskscenario>
     </div>
     <div class="caption">
-      If no one wore a mask, virus transmission would be unaffected.
+      If <b>nobody</b> wore a mask, virus transmission would be unaffected.
     </div>
   </div>
 
@@ -140,19 +140,19 @@
       <maskscenario :mask1="true" :mask2="true" text1="100%" text2="75%"></maskscenario>
     </div>
     <div class="caption">
-      If everyone wore a 50% effective mask, virus transmission would drop by 75%.
+      If <b>everybody</b> wore a 50% effective mask, virus transmission would drop by 75%.
     </div>
   </div>
 
   <div class="container">
 
-    <p>In reality some people wear masks, and others don’t. This means that in general, the disease can spread through all four possible scenarios. Each scenario has a different likelihood and a different risk level.</p>
+    <p>In reality some people wear masks, and others don’t. This means that in general, the disease can spread through all four possible scenarios. Each scenario has a different likelihood and a different level of risk.</p>
 
     <p>It's straightforward to calculate the effect of masks on virus transmission when either 0% or 100% of people wear masks. The question is, how do we do calculate this in general?<p>
 
     <p>Let's try a simple case. Suppose that 50% of people wear masks. When two people meet at random, the odds that both people are wearing masks is simply the odds that the first person is wearing a mask multiplied by the odds that the second person is wearing a mask. So the answer is 50% times 50%, or 25%.</p>
 
-    <p>Similarly, we can work out the odds for the other scenarios. It turns out that when 50% of people are wearing masks, all four scenarios are equally likely. (Can you convince yourself that this must be true?)</p>
+    <p>Similarly, we can work out the odds for the other scenarios. It turns out that when 50% of people are wearing masks, all four scenarios are equally likely. (Can you convince yourself why this must be true?)</p>
 
   </div>
 
@@ -171,11 +171,11 @@
   
   <div class="container">
 
-    <p>We can now calculate the <b>reduction in virus transmission for the entire population</b>. Since we’ve set things up so that all four scenarios are equally likely, we just need to compute the average of 0%, 50%, 50% and 75%, which is 43.75%.</p>
+    <p>We can now calculate the <b>average reduction in virus transmission for the entire population</b>. Since we’ve set things up so that all four scenarios are equally likely, we just need to compute the average of 0%, 50%, 50% and 75%, which is 43.75%.</p>
 
-    <p>We can also calculate the <b>reduction in virus transmission to people who don’t wear masks</b>. They can only get infected via the first two scenarios show above, which are equally likely when half the population is wearing a mask. So the answer is the average of 0% and 50%, which is 25%.</p>
+    <p>We can also calculate the <b>average reduction in virus transmission to people who don’t wear masks</b>. They can only get infected via the first two scenarios show above, which are equally likely when half the population is wearing a mask. So the answer is the average of 0% and 50%, which is 25%.</p>
 
-    <p>Similarly, people who DO wear masks can only get infected via the last two scenarios shown above. So <b>the reduction in virus transmission to mask-wearers</b> is the average of 50% and 75%, which is 62.5%.</p>
+    <p>Similarly, people who DO wear masks can only get infected via the last two scenarios shown above. So the <b>average reduction in virus transmission to mask-wearers</b> is the average of 50% and 75%, which is 62.5%.</p>
 
   </div>
 
@@ -192,9 +192,9 @@
   
   <div class="container">
 
-    <p>Remember, the fewer viral particles you inhale, the less likely you are to become infected (and if you do get infected, inhaling fewer viral particles generally results in less severe symptoms).</p>
+    <p>Remember, the fewer viral particles you inhale, the less likely you are to become infected (and if you do get infected, inhaling fewer viral particles causes less severe symptoms).</p>
 
-    <p>This means that mask wearers get the largest benefit from mask wearing, as you might expect. But even non-mask wearers get a modest benefit. That’s because the air they breathe is sometimes filtered by <i>other people’s</i> partially effective masks (as you can see in the second scenario shown above.)</p>
+    <p>This means that mask wearers get the largest benefit from mask wearing, as you might expect. But even non-mask wearers get a modest benefit. That’s because the air that they inhale is often filtered by <i>other people’s</i> partially effective masks (as you can see in the second scenario shown above.)</p>
 
     <p>The population as a whole, which is made up of both mask wearers and non-mask wearers, gets a benefit somewhere in between these two groups.</p>
 
@@ -202,7 +202,9 @@
 
     <h2>Let's Make it Interactive</h2>
 
-    <p>We can now extend this to any values of mask wearership and mask effectiveness. Let’s add in sliders so you can vary these numbers, so you can see how the percentage of people wearing a mask influences the risk of disease spread.</p>
+    <p>We've worked out above how to calculate the collective benefit of masks to a society when 50% of people wear 50% effective masks. This can be extended to any values of <b>mask wearership</b> and <b>mask effectiveness</b>. The math becomes slightly more tedious, but the idea is exactly the same.</p>
+
+    <p>Let’s add in sliders so that you can vary these numbers, and see how mask wearership and mask effectiveness influences the spread of disease.</p>
 
   </div>
 
