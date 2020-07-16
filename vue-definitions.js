@@ -1,19 +1,34 @@
 // mask interactive component
-Vue.component('maskanim', {
+Vue.component('anim', {
+  template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>',
+  props: ['mask1', 'mask2']
+
+})
+
+Vue.component('anim-with-caption', {
 
   template:   `
   <div class="graphic">
-    <div class="anim">
-      <div class="sideanim">
-          <div class="label">Contagious<br/>Person</div>
+    <div class="graphic-container">
+
+      <div class="row small-big-small twohundredpx">
+
+        <div class="center">
+            <div class="label">Contagious<br/>Person</div>
+        </div>
+
+        <anim :mask1="mask1" :mask2="mask2"></anim>
+
+        <div class="center">
+            <div class="label">Susceptible<br/>Person</div>
+        </div>
+
       </div>
-      <p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>
-      <div class="sideanim">
-          <div class="label">Susceptible<br/>Person</div>
+
+      <div class="caption">
+        <slot></slot>
       </div>
-    </div>
-    <div class="caption">
-      <slot></slot>
+
     </div>
   </div>`,
 
@@ -26,11 +41,11 @@ Vue.component('maskscenario', {
 
   template:   `
     <div class="anim row">
-      <div class="sideanim">
+      <p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>
+      <div class="center">
           <div>{{text1}}</div>
       </div>
-      <p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>
-      <div class="sideanim">
+      <div class="center">
           <div>{{text2}}</div>
       </div>
     </div>`,
@@ -43,14 +58,14 @@ Vue.component('maskscenario', {
 Vue.component('tablelabel', {
 
   template:   `
-    <div class="anim heading">
-      <div class="sideanim">
+    <div class="anim row heading">
+      <div class="center">
           <div>{{text1}}</div>
       </div>
-      <div class="sideanim">
+      <div class="center">
           <div>{{text2}}</div>
       </div>
-      <div class="sideanim">
+      <div class="center">
           <div>{{text3}}</div>
       </div>
     </div>`,

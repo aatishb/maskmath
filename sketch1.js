@@ -7,9 +7,10 @@ function sketch(parent) { // we pass the sketch data from the parent
     // p5 sketch goes here
     let particles = []; 
     let emojiSize;
+    let target;
 
     p.setup = function() {
-      let target = parent.$el;
+      target = parent.$el;
       let width = target.clientWidth;
       let height = target.clientHeight;
       //console.log(width, height);
@@ -24,6 +25,8 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.strokeWeight(7);
       p.drawingContext.setLineDash([0, 15]);
       p.noLoop();
+
+      //new ResizeObserver(onResize).observe(target);
     };
 
     p.draw = function() {
@@ -79,6 +82,12 @@ function sketch(parent) { // we pass the sketch data from the parent
       } else {
         p.noLoop();
       }
+    }
+
+    function onResize() {
+      let width = target.clientWidth;
+      let height = target.clientHeight;
+      console.log('p5 container resized', width, height);
     }
 
     // particle class
