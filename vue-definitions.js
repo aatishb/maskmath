@@ -169,7 +169,7 @@ let app = new Vue({
 
   methods: {
     convertToPercent(val) {
-      return Math.round(100 * 100 * val) / 100;
+      return Math.round(10 * 100 * val) / 10;
     },
   },
 

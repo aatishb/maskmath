@@ -29,6 +29,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.wrap {
   flex-wrap: wrap;
 }
 
@@ -184,7 +187,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 body {
@@ -237,36 +240,50 @@ a {
   color: #00aeef;
 }
 
-blockquote {
+@media only screen and (max-width: 800px) {
 
- font-size: 1.2rem;
- font-style: italic;
- margin-bottom: 20px;
- padding-left: 15px;
+  html {
+    font-size: 20px;
+  }
 
- border-width: 0px 0px 0px 3px;
- border-style: solid;
-}
-
-/* For devices larger than 400px */
-@media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; }
-}
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
-  .container {
-    width: 80%;
   }
+
+  .graphic-container {
+    flex-basis: 95%;
+  }
+
+  .column {
+    font-size: 1rem;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .onehundredpx > div {
+    height: 100px;
+  }
+
+  .twohundredpx > div {
+    height: 100px;
+  }
+
+  .splash {
+    font-size: 1rem;
+  }
+
 }
 
-ul {
-  margin:10px 0;
-}
+@media only screen and (max-width: 400px) {
 
-ul li {
-  margin-bottom:5px;
-  overflow:auto;
+  .onehundredpx > div {
+    height: 50px;
+  }
+
+  .twohundredpx > div {
+    height: 50px;
+  }
+
 }
