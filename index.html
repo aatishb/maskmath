@@ -98,7 +98,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Contact Scenario</div>
+          <div class="center">Type of Contact</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
@@ -135,7 +135,7 @@
 
       <div class="row big-small-small">
         <div class="column onehundredpx">
-          <div class="center">Contact Scenario</div>
+          <div class="center">Type of Contact</div>
           <anim :mask1="false" :mask2="false" ></anim>
         </div>
 
@@ -168,7 +168,7 @@
 
       <div class="row big-small-small">
         <div class="column onehundredpx">
-          <div class="center">Contact Scenario</div>
+          <div class="center">Type of Contact</div>
           <anim :mask1="true" :mask2="true" ></anim>
         </div>
 
@@ -208,7 +208,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Contact Scenario</div>
+          <div class="center">Type of Contact</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
@@ -243,6 +243,8 @@
   <div class="container">
 
     <p>We can now calculate the <b>average drop in virus transmission for the entire population</b>. Since we’ve set things up so that all four scenarios are equally likely, we just need to compute the average of 0%, 50%, 50% and 75%, which is 43.75%.</p>
+
+    <p>(For number-philes: To calculate the average in general, multiply the drop in virus transmission for each scenario by the likelihood of that scenario, and then add this for all four scenarios. So, 0%⨉25% + 50%⨉25% + 50%⨉25% + 75%⨉25% = 43.75%)</p>
 
     <p>We can also calculate the <b>average drop in virus transmission to people who don’t wear masks</b>. They can only get infected via the first two scenarios show above, which are equally likely when half the population is wearing a mask. So the answer is the average of 0% and 50%, which is 25%.</p>
 
@@ -284,10 +286,37 @@
   <div class="graphic">
     <div class="graphic-container">
 
+      <div class="row half splash">
+        <div class="half">
+          People Wearing Masks: 50%
+        </div>
+        <div class="half">
+          <input class="slider" type="range" min="0" max="100" value="50" step="1">
+        </div>
+      </div>
+
+      <div class="row half splash">
+        <div class="half">
+          Mask Inhale Efficacy: 50%
+        </div>
+        <div class="half">
+          <input class="slider" type="range" min="0" max="100" value="50" step="1">
+        </div>
+      </div>
+
+      <div class="row half splash">
+        <div class="half">
+          Mask Exhale Efficacy: 50%
+        </div>
+        <div class="half">
+          <input class="slider" type="range" min="0" max="100" value="50" step="1">
+        </div>
+      </div>
+
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Contact Scenario</div>
+          <div class="center">Type of Contact</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
