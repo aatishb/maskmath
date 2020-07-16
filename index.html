@@ -287,30 +287,18 @@
     <div class="graphic-container">
 
       <div class="row half splash">
-        <div class="half">
-          People Wearing Masks: 50%
-        </div>
-        <div class="half">
-          <input class="slider" type="range" min="0" max="100" value="50" step="1">
-        </div>
+        <div>People Wearing Masks: {{convertToPercent(p)}}%</div>
+        <slider v-model="p"></slider>
       </div>
 
       <div class="row half splash">
-        <div class="half">
-          Mask Inhale Efficacy: 50%
-        </div>
-        <div class="half">
-          <input class="slider" type="range" min="0" max="100" value="50" step="1">
-        </div>
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
+        <slider v-model="Eout"></slider>
       </div>
 
       <div class="row half splash">
-        <div class="half">
-          Mask Exhale Efficacy: 50%
-        </div>
-        <div class="half">
-          <input class="slider" type="range" min="0" max="100" value="50" step="1">
-        </div>
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
+        <slider v-model="Ein"></slider>
       </div>
 
       <div class="row big-small-small">
@@ -325,24 +313,33 @@
 
         <div class="column onehundredpx">
           <div class="center">Drop in Virus Transmission</div>
-          <div class="center">0%</div>
-          <div class="center">50%</div>
-          <div class="center">50%</div>
-          <div class="center">75%</div>
+          <div class="center">{{convertToPercent(d1)}}%</div>
+          <div class="center">{{convertToPercent(d2)}}%</div>
+          <div class="center">{{convertToPercent(d3)}}%</div>
+          <div class="center">{{convertToPercent(d4)}}%</div>
         </div>
 
         <div class="column onehundredpx">
           <div class="center">Likelihood</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
+          <div class="center">{{convertToPercent(l1)}}%</div>
+          <div class="center">{{convertToPercent(l2)}}%</div>
+          <div class="center">{{convertToPercent(l3)}}%</div>
+          <div class="center">{{convertToPercent(l4)}}%</div>
         </div>
 
       </div>
 
-      <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+
+      <div class="row half splash">
+        Drop in Virus Transmission for Entire Population: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%
+      </div>
+
+      <div class="row half splash">
+        Drop in Virus Transmission for Non-Mask Wearers: {{convertToPercent(Eout * p)}}%
+      </div>
+
+      <div class="row half splash">
+        Drop in Virus Transmission for Mask Wearers: {{convertToPercent(1 - (1 - Eout * p) * (1 - Ein))}}%
       </div>
 
     </div>

@@ -1,3 +1,18 @@
+// interactive component
+Vue.component('slider', {
+  props: ['value'],
+
+  template: `<div><input type="range" min="0" max="1" step="0.01" :value="value" @input="sliderChanged" class="slider"></input></div>`,
+
+  methods: {
+    sliderChanged: function(event) {
+      let slider = event.target;
+      this.$emit('input', slider.value)
+    },
+  }
+})
+
+
 // mask interactive component
 Vue.component('anim', {
   template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>',
@@ -147,12 +162,42 @@ let app = new Vue({
   el: '#root',
 
   data: {
+    Eout: 0.5,
+    Ein: 0.5,
+    p: 0.5,
   },
 
   methods: {
+    convertToPercent(val) {
+      return Math.round(100 * 100 * val) / 100;
+    },
   },
 
   computed: {
+    d1() {
+      return 0;
+    },
+    d2() {
+      return this.Eout;
+    },
+    d3() {
+      return this.Ein;
+    },
+    d4() {
+      return 1 - (1 - this.Eout) * (1 - this.Ein);
+    },
+    l1() {
+      return (1 - this.p) * (1 - this.p);
+    },
+    l2() {
+      return this.p * (1 - this.p);
+    },
+    l3() {
+      return (1 - this.p) * this.p;
+    },
+    l4() {
+      return this.p * this.p;
+    },
   }
 
 })
