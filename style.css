@@ -22,6 +22,9 @@
 
 .graphic-container {
   flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .row {
@@ -240,10 +243,22 @@ a {
   color: #00aeef;
 }
 
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: purple;
+}
+
 @media only screen and (max-width: 800px) {
 
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .container {

@@ -1,4 +1,33 @@
-// interactive component
+// custom graph component
+Vue.component('graph', {
+
+  props: ['traces', 'layout'],
+
+  template: '<div ref="graph" class="graph" style="width: 700px; height: 700px;"></div>',
+  
+  methods: {
+
+    graph() {
+      Plotly.react(this.$refs.graph, this.traces, this.layout);
+    },
+
+  },
+
+  mounted() {
+    this.graph();
+  },
+
+  watch: {
+    traces() {
+      this.graph();
+    },
+    layout() {
+      this.graph();
+    }
+  }
+})
+
+// slider component
 Vue.component('slider', {
   props: ['value'],
 
@@ -13,13 +42,14 @@ Vue.component('slider', {
 })
 
 
-// mask interactive component
+// mask animation component
 Vue.component('anim', {
   template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>',
   props: ['mask1', 'mask2']
 
 })
 
+// mask animation component with sidetext and caption
 Vue.component('anim-with-caption', {
 
   template:   `
@@ -174,6 +204,56 @@ let app = new Vue({
   },
 
   computed: {
+
+    indexArray() {
+      return new Array(101).fill(0).map((e,i) => i / 100);
+    },
+
+    graph1Traces() {
+      return [
+        {
+          x: this.indexArray,
+          y: this.indexArray.map(p => 1 - (1 - this.Ein * p) * (1 - this.Eout * p) ),
+          mode: 'lines',
+          name: 'Entire Population',
+          line: {
+            color: 'purple'
+          }
+        },
+        {
+          x: this.indexArray,
+          y: this.indexArray.map(p => this.Eout * p ),
+          mode: 'lines',
+          name: 'Non-Mask Wearers',
+          line: {
+            color: 'red'
+          }
+        },
+        {
+          x: this.indexArray,
+          y: this.indexArray.map(p => 1 - (1 - this.Eout * p) * (1 - this.Ein) ),
+          mode: 'lines',
+          name: 'Mask Wearers',
+          line: {
+            color: 'blue'
+          }
+        },
+      ]
+    },
+
+    graph1Layout() {
+      return {
+        title:'Reduction in Virus Transmission Versus Mask Wearership',
+        xaxis: {
+          tickformat: ',.0%',
+        },
+        yaxis: {
+          tickformat: ',.0%',
+          range: [1, 0]
+        }
+      }
+    },
+
     d1() {
       return 0;
     },
