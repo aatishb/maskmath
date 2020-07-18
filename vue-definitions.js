@@ -4,7 +4,7 @@ Vue.component('graph', {
   props: ['traces', 'layout'],
 
   template: '<div ref="graph" class="graph" style="width: 700px; height: 700px;"></div>',
-  
+
   methods: {
 
     graph() {
@@ -192,9 +192,10 @@ let app = new Vue({
   el: '#root',
 
   data: {
-    Eout: 0.5,
-    Ein: 0.5,
-    p: 0.5,
+    Eout: 0.5,  // mask effectiveness on exhale
+    Ein: 0.5,   // mask effectiveness on inhale
+    p: 0.5,     // percent of people wearing masks
+    R0: 2.5     // reproductive number R0
   },
 
   methods: {

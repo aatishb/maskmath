@@ -375,17 +375,68 @@
   <div class="container">
     <p>In the graph above, the <span class="blue">blue line</span> shows the protection that masks provide to people who wear them (lower = more protection), the <span class="red">red line</span> shows the second-hand protection that masks provide to people who don't wear them, and the <span class="purple">purple curve</span> shows the average protection to people in the population</p> 
 
-    <p>As more people wear masks, we move further down each line, and masks offer a greater collective benefit.</p>
+    <p><b>The takeaway:</b> as more people wear masks, we move further down each line, and masks offer a greater collective benefit.</p>
 
     <p>This graph makes it clear that when sufficiently many people wear a sufficiently effective mask, you end up with a large reduction in the virus transmission. In fact, masks are <i>even more effective</i> than this graph makes it seem.</p>
 
-    <p>Think of an epidemic like a fire. You can extinguish a fire by starving it of oxygen. But you don't need to remove all the oxygen, you just need to lower it enough to stop the fire from spreading. It's the same with an epidemic — you don't need to reduce virus transmission by 100%, you just need to reduce it enough to stop the disease from growing. In fact, for COVID-19, if you reduce the virus transmission by roughly 60 percent, you can extinguish the epidemic.</p>
+    <p>Think of an epidemic like a fire. You can extinguish a fire by starving it of oxygen. But you don't need to remove all the oxygen, you just need to reduce it enough to stop the fire from spreading. It's the same with an epidemic — you don't need to cut virus transmission by 100%, you just need to reduce it enough to stop the disease from growing, and it'll fizzle out. For COVID-19, if you can reduce virus transmission by roughly 60 percent, you can extinguish the epidemic.</p>
 
     <h2>How To Stop An Epidemic</h2>
 
-    <p>Text continues here.</p>
-    
+    <p>You've probably already heard of the epidemiology term R0, pronounced R-nought or R-zero. This is <a href="">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.</p> 
+
+    <p>When R0 is greater than 1, the disease will grow exponentially, and this will continue until we reach 'herd immunity', either through enough people getting vaccinated or getting infected and developing immunity.</p>
+
+    <p>R0 is really a product of two numbers: the average number of people that a person encounters while contagious, and the chance of infection when a contagious person encounters a susceptible person.</p>
+
   </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">R0 = average number of people that a contagious person encounters <br/>⨉ probability of infection upon contact </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>The goal of social distancing is to reduce the first number, and the goal of wearing masks is to reduce the second number. Both strategies effectively reduce R0.</p>
+
+    <p>With this in mind, let's recreate the graph of the social benefit of masks, but this time expressed in terms of R0. You can use the slider to vary R0, which for COVID-19 is between 2 and 3.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row half splash">
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
+        <slider v-model="Eout"></slider>
+      </div>
+
+      <div class="row half splash">
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
+        <slider v-model="Ein"></slider>
+      </div>
+
+      <div class="row half splash">
+        <div>R0: {{R0}}</div>
+        <slider v-model="R0"></slider>
+      </div>
+
+      <graph :traces="graph1Traces" :layout="graph1Layout"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>Text continues here.</p>
+
+  </div>
+
+
 </div>
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>

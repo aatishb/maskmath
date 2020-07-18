@@ -244,14 +244,17 @@ a {
 }
 
 .red {
+  font-weight: 600;
   color: red;
 }
 
 .blue {
+  font-weight: 600;
   color: blue;
 }
 
 .purple {
+  font-weight: 600;
   color: purple;
 }
 
