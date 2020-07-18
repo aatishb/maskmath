@@ -276,7 +276,7 @@
 
     <p>So in this simplified example (where 50% of people wear 50% effective masks), we’ve worked out how to go from the <b>protection that a mask offers an <i>individual</i></b> to the <b>collective benefit that masks confer to a <i>society</i>.</b></p>
 
-    <h2>Let's Make it Interactive</h2>
+    <h2>Building a Mask Simulator</h2>
 
     <p>We can apply the logic we used above to <i>any values</i> of <b>mask wearership</b> and <b>mask effectiveness</b>. The algebra becomes a bit more tedious, but the idea is exactly the same.</p>
 
@@ -332,7 +332,7 @@
 
 
       <div class="row half splash">
-        Drop in Virus Transmission for Entire Population: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%
+        <b>Drop in Virus Transmission for Entire Population: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%</b>
       </div>
 
       <div class="row half splash">
@@ -347,9 +347,11 @@
   </div>
   
   <div class="container">
-    <p>What happens to virus transmission if 60 percent of people were to wear a 60% effective mask? And What if 70 percent of people wore a 70% effective mask? The interactive above lets you answer these questions.</p>
+    <p>What happens to virus transmission if 50% of people wear a 50% effecitve mask? Or 60% wear a 60% effective mask? Or 70% wear a 70% effective mask? The interactive above lets you answer these questions.</p>
 
-    <p>Instead of just looking at a table of numbers, which can be hard to make sense of, let's make a graph of how much virus transmission falls as more people wear masks. In the graph below, you can once again use the sliders to vary the effectiveness of the masks, and see the drop in viral transmission to <span class="blue">mask wearers</span>, <span class="red">non-mask wearers</span>, and by the <span class="purple">population as a whole</span>.</p>
+    <p>However, it can be hard to see trends by looking at a table of numbers. So let's make a graph of how much virus transmission falls as more people wear masks.</p>
+
+    <p>In the graph below, you can once again vary the effectiveness of the masks, and see the resulting change in viral transmission to <span class="blue">mask wearers</span>, <span class="red">non-mask wearers</span>, and the <span class="purple">population as a whole</span>.</p>
 
   </div>
 
@@ -385,9 +387,9 @@
 
     <p>You've probably already heard of the epidemiology term R0, pronounced R-nought or R-zero. This is <a href="">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.</p> 
 
-    <p>When R0 is greater than 1, the disease will grow exponentially, and this will continue until we reach 'herd immunity', either through enough people getting vaccinated or getting infected and developing immunity.</p>
+    <p>When R0 is greater than 1, the disease will grow exponentially, and this will continue until we reach '<a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>', which happens when sufficiently many people get vaccinated or get infected and develop immunity.</p>
 
-    <p>R0 is really a product of two numbers: the average number of people that a person encounters while contagious, and the chance of infection when a contagious person encounters a susceptible person.</p>
+    <p>But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>. R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.</p>
 
   </div>
 
@@ -401,7 +403,7 @@
   
   <div class="container">
 
-    <p>The goal of social distancing is to reduce the first number, and the goal of wearing masks is to reduce the second number. Both strategies effectively reduce R0.</p>
+    <p>The goal of social distancing is to reduce the first number, and the goal of wearing masks is to reduce the second number. Both strategies reduce R0.</p>
 
     <p>With this in mind, let's recreate the graph of the social benefit of masks, but this time expressed in terms of R0. You can use the slider to vary R0, which for COVID-19 is between 2 and 3.</p>
 
