@@ -287,17 +287,17 @@
 
       <div class="row half splash">
         <div>People Wearing Masks: {{convertToPercent(p)}}%</div>
-        <slider v-model="p"></slider>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout"></slider>
+        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein"></slider>
+        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row big-small-small">
@@ -360,12 +360,12 @@
 
       <div class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout"></slider>
+        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein"></slider>
+        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <graph :traces="graph1Traces" :layout="graph1Layout"></graph>
@@ -415,20 +415,20 @@
 
       <div class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout"></slider>
+        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein"></slider>
+        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
         <div>R0: {{R0}}</div>
-        <slider v-model="R0"></slider>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </div>
 
-      <graph :traces="graph1Traces" :layout="graph1Layout"></graph>
+      <graph :traces="graph2Traces" :layout="graph2Layout"></graph>
 
     </div>
   </div>

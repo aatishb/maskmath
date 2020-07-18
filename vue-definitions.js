@@ -29,9 +29,9 @@ Vue.component('graph', {
 
 // slider component
 Vue.component('slider', {
-  props: ['value'],
+  props: ['value', 'min', 'max', 'step'],
 
-  template: `<div><input type="range" min="0" max="1" step="0.01" :value="value" @input="sliderChanged" class="slider"></input></div>`,
+  template: `<div><input type="range" :min="min" :max="max" :step="step" :value="value" @input="sliderChanged" class="slider"></input></div>`,
 
   methods: {
     sliderChanged: function(event) {
@@ -199,9 +199,11 @@ let app = new Vue({
   },
 
   methods: {
+
     convertToPercent(val) {
       return Math.round(10 * 100 * val) / 10;
-    },
+    }
+
   },
 
   computed: {
@@ -254,6 +256,32 @@ let app = new Vue({
         }
       }
     },
+
+    graph2Traces() {
+      return [
+        {
+          x: this.indexArray,
+          y: this.indexArray.map(p => this.R0 * (1 - this.Ein * p) * (1 - this.Eout * p) ),
+          mode: 'lines',
+          line: {
+            color: 'purple'
+          }
+        }
+      ]
+    },
+
+    graph2Layout() {
+      return {
+        title:'R0 Versus Mask Wearership',
+        xaxis: {
+          tickformat: ',.0%',
+        },
+        yaxis: {
+          range: [0, 3]
+        }
+      }
+    },
+
 
     d1() {
       return 0;
