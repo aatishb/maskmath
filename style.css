@@ -207,6 +207,7 @@ body {
 
 p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 h1, h2, h3 {
