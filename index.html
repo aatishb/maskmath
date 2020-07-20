@@ -561,30 +561,85 @@
     <h2>The Human Cost</h2>
 
     <p>
-      We've seen that as more people wear masks, we effectively reduce R0.
-      And when we reduce R0, we reduce the fraction of people who will eventually get infected.
-      This is how masks save lives.
+      We've seen how as more people wear masks, R0 becomes smaller.
+      And as R0 becomes smaller, so does the percentage of people who will eventually get infected.
+      This is how masks save lives: they reduce the rate of infection, which shrinks the extent of the epidemic.
+    </p>
+
+    <p>This suggests that we can get a clearer picture of the human cost of not wearing masks if, instead of visualizing R0, we visualize the infected fraction of the population under different mask-wearing scenarios.</p>
+
+    <p>By using a widely-used mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.</p>
+    
+    <p>Although this model is a substantial simplification of reality (e.g. it assumes random mixing between people and no lockdowns), it can offer us a ballpark estimate of the human cost of not wearing masks.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row half splash">
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
+        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
+      </div>
+
+      <div class="row half splash">
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
+        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
+      </div>
+
+      <div class="row half splash">
+        <div>R0: {{R0}}</div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </div>
+
+      <graph :traces="graph3Traces" :layout="graph3Layout"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      This hill-shaped curve shows us how masks influence the number of people infected in an epidemic.
+      <b>The more people wear masks, the fewer people will eventually be infected.</b>
+      To end the spread of COVID-19 through masks, we have to ride down this hill.
     </p>
 
     <p>
-      This suggests that we can get a clearer picture of the human cost of wearing masks if, rather than visualizing R0, we instead visualize the fraction of the population who'll get infected under different mask-wearing scenarios.
+      When a small fraction of people wear masks, we're at the top of the hill.
+      And since the top of the hill is fairly shallow, this means that, at first, wearing masks provides a modest drop in the number of infections.
     </p>
 
     <p>
-      We can do this by using a simplified and widely-used mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>.
-      This model relates R0 to the fraction of people who will eventually be infected.
+      But as more people wear masks, we move further down the hill, and the hill grows steeper. 
+      In the steep part of the hill, a small step to the right takes you further downwards.
+      Which means <b>masks provide greater returns when more people wear them.</b>
     </p>
 
     <p>
-      Although this model is a simplification of reality (e.g. it assumes random mixing between people and no lockdowns), it can offer us a ballpark estimate of the human cost of not wearing masks.
+      If more and more people wear masks, we'll eventually reach the end of the hill, and the risk of infection will drop to zero.
+      This is how masks can end an epidemic.
+      But masks can only end an epidemic if enough people wear them.
     </p>
-
-    <p>Add Graph of infected fraction vs mask wearership</p>
 
     <p>
-      <b>The more people wear masks, the more masks help people.</b>
-      So it's in your best interest to wear an effective, well-fitting mask, and also to try to convince other people to do so.
+      You might wonder how many people have to wear masks to end an epidemic.
+      This depends on how effective the mask is.
+      For example, by playing with interactive above, you can see that if masks were 100% effective, you'd need just over a third of the population to wear them to stop the spread of COVID-19.
+      But if masks are 50% effective, you'd need three-quarters of the population to wear them to stop the spread.
     </p>
+
+    <p>We all want to get to the bottom of the hill, where we wipe out COVID-19, and everyone's risk of infection goes to zero.</p>
+
+    <p>But you can't get to the bottom of the hill by yourself. You can only take a tiny step downwards.</p>
+
+    <p>However, when many people each take a small step, together, we take a giant leap down the hill.</p>
+
+    <p>Together, we can get to the bottom of the hill.</p>
+    
+    <p>Together, we can end COVID-19.</p>
+    </p>
+
 
   </div>
 
@@ -595,6 +650,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vue-observe-visibility@0.4.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+<script src="lambertw.js"></script>
 <script src="vue-definitions.js"></script>
 <script type="text/javascript">javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
 </script>

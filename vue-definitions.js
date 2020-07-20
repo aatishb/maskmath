@@ -202,7 +202,35 @@ let app = new Vue({
 
     convertToPercent(val) {
       return Math.round(10 * 100 * val) / 10;
+    },
+
+    R0withmask(p) {
+      return this.R0 * (1 - this.Ein * p) * (1 - this.Eout * p);
+    },
+
+    /*
+    findRoot(R0, guess) { // Newton's method for finding equation root
+
+      let estimate = guess;
+      let maxIterations = 10;
+
+      for (let i = 0; i < maxIterations; i++) {
+        estimate = estimate - this.equation(R0, guess) / this.derivative(R0, guess);
+      }
+
+      return estimate;
+
+    },
+
+    equation(R0, a) {
+      return 1 - Math.exp(-a * R0) - a;
+    },
+
+    derivative(R0, a) {
+      return R0 * Math.exp(-a * R0) - 1;
     }
+    */
+
 
   },
 
@@ -261,7 +289,7 @@ let app = new Vue({
       return [
         {
           x: this.indexArray,
-          y: this.indexArray.map(p => this.R0 * (1 - this.Ein * p) * (1 - this.Eout * p) ),
+          y: this.indexArray.map(p => this.R0withmask(p)),
           mode: 'lines',
           line: {
             color: 'purple'
@@ -282,6 +310,31 @@ let app = new Vue({
       }
     },
 
+    graph3Traces() {
+      return [
+        {
+          x: this.indexArray,
+          y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
+          mode: 'lines',
+          line: {
+            color: 'purple'
+          }
+        }
+      ]
+    },
+
+    graph3Layout() {
+      return {
+        title:'Infected Fraction Versus Mask Wearership',
+        xaxis: {
+          tickformat: ',.0%',
+        },
+        yaxis: {
+          range: [0, 1],
+          tickformat: '%',
+        }
+      }
+    },
 
     d1() {
       return 0;
