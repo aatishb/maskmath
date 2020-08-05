@@ -65,7 +65,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><b>Scenario 1:</b> When a contagious person is in close contact with a suceptible person, virus-laden saliva particles can transmit disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false"><b>Transmission Route 1:</b> When a contagious person is in close contact with a suceptible person, virus-laden saliva particles can transmit disease.</anim-with-caption>
 
   <div class="container">
 
@@ -80,7 +80,10 @@
       Masks don't guarantee safety, they reduce risk.
       This is similar to how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
       Like umbrellas, masks only work if you use them correctly.
-      But unlike umbrellas, which only protect people carrying them, masks also protect people around the wearer.
+      But unlike umbrellas, which only protect people who use them, masks also protect people around the wearer.
+    </p>
+
+    <p>
       This makes masks more effective than you might expect.
     </p>
 
@@ -88,12 +91,12 @@
 
     <p>
       Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask reduces the chance that they'll infect a nearby susceptible person by 50%.
+      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false"><b>Scenario 2:</b> If the contagious person wears a 50% effective mask, disease transmission is reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask, disease transmission is reduced by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -108,7 +111,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true"><b>Scenario 3:</b> If the susceptible person wears a 50% effective mask, disease transmission is also reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask, disease transmission is also reduced by 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -126,7 +129,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true"><b>Scenario 4:</b> When both people wear 50% effective masks, disease transmission is reduced by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true"><b>Transmission Route 4:</b> When both people wear 50% effective masks, disease transmission is reduced by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -136,7 +139,7 @@
       This <b>double protection</b> makes masks much more effective than you might intuitively expect.
     </p>
 
-    <p>So here again are all four possible scenarios through which an airborne disease can spread from person to person.</p>
+    <p>So here again are all four possible routes through which an airborne disease can spread from person to person.</p>
 
   </div>
 
@@ -146,7 +149,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Type of Contact</div>
+          <div class="center">Disease Transmission Route</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
@@ -177,12 +180,12 @@
 
     <p>
       So far, we've been looking at the transmission of disease in the context of two people.
-      But how do we go from understanding disease transmission from person-to-person to understanding disease transmission in the <i>entire population</i>?
+      But how do we go from understanding disease transmission between two people to understanding disease transmission in the <i>entire population</i>?
     </p> 
 
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
-    <p>For example, if <b>nobody</b> wore a mask, we’d only have the first scenario to consider, and so disease transmission in the population would be unaffected.</p>
+    <p>For example, if <b>nobody</b> wore a mask, we’d only have the first route to consider, and so disease transmission in the population would be unaffected.</p>
 
   </div>
 
@@ -191,7 +194,7 @@
 
       <div class="row big-small-small">
         <div class="column onehundredpx">
-          <div class="center">Type of Contact</div>
+          <div class="center">Disease Transmission Route</div>
           <anim :mask1="false" :mask2="false" ></anim>
         </div>
 
@@ -201,7 +204,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Scenario</div>
+          <div class="center">Likelihood of This Route</div>
           <div class="center">100%</div>
         </div>
       </div>
@@ -215,7 +218,12 @@
 
   <div class="container">
 
-    <p>Conversely, if <b>everybody</b> wore a 50% effective mask, we’d only have the last scenario to consider, and so disease transmission in the population would drop by 75 percent.</p>
+    <p>
+      Conversely, suppose <b>everybody</b> wore a mask.
+      In this route, whenever two people meet, they'd both be wearing masks.
+      So we’d only have the last route to consider.
+      And if each mask were 50% effective, then disease transmission in the overall population would drop by 75 percent.
+    </p>
 
   </div>
 
@@ -224,7 +232,7 @@
 
       <div class="row big-small-small">
         <div class="column onehundredpx">
-          <div class="center">Type of Contact</div>
+          <div class="center">Disease Transmission Route</div>
           <anim :mask1="true" :mask2="true" ></anim>
         </div>
 
@@ -234,7 +242,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Scenario</div>
+          <div class="center">Likelihood of This Route</div>
           <div class="center">100%</div>
         </div>
       </div>
@@ -250,8 +258,8 @@
 
     <p>
       In reality some people wear masks, and others don’t.
-      This means that in general, the virus can spread through all four possible scenarios.
-      Each scenario has a different likelihood and a different level of risk.
+      This implies that the virus can spread through all four possible routes.
+      Each route has a different likelihood and a different level of risk.
     </p>
 
     <p>
@@ -263,12 +271,12 @@
 
     <p>
       When two people meet at random, the chance that both people are wearing masks is the chance that the first person is wearing a mask multiplied by the chance that the second person is wearing a mask.
-      So the chance that both people are wearing masks when in close contact is 50% times 50%, or 25%*.
+      So the chance that both people are wearing masks when in close contact is 50% times 50%, or 25%.
     </p>
 
     <p>
-      Similarly, you can work out the likelihood for the other scenarios.
-      It turns out that when half the population wear masks, all four scenarios are equally likely.
+      Similarly, you can work out the likelihood for the other three routes.
+      It turns out that when half the population wear masks, each route is equally likely.
       (Can you convince yourself why this has to be true?)
     </p>
 
@@ -280,7 +288,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Type of Contact</div>
+          <div class="center">Disease Transmission Route</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
@@ -296,7 +304,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Scenario</div>
+          <div class="center">Likelihood of This Route</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -316,17 +324,17 @@
 
     <p>
       We can now calculate the average drop in disease transmission in the entire population.
-      This involves averaging all four possible scenarios.
-      Since we’ve set things up so that each scenario is equally likely, this is just the average of 0%, 50%, 50% and 75%, which is 43.75%.
+      This involves averaging all four possible routes.
+      Since we’ve set things up so that each route is equally likely, this is just the average of 0%, 50%, 50% and 75%, which is 43.75%.
     </p>
 
     <p>
-      Meanwhile, people who don’t wear masks can only get infected via the first two scenarios shown above, which are equally likely when half the population is wearing a mask.
+      Meanwhile, people who don’t wear masks can only get infected via the first two routes shown above, which are equally likely when half the population is wearing a mask.
       So the drop in disease transmission to mask-wearers is the average of 0% and 50%, which is 25%.
     </p>
 
     <p>
-      Similarly, people who DO wear masks can only get infected via the last two scenarios shown above.
+      Similarly, people who <i>do</i> wear masks can only get infected via the last two routes shown above.
       So the drop in disease transmission to mask-wearers is the average of 50% and 75%, which is 62.5%.
     </p>
 
@@ -336,8 +344,8 @@
     <div class="graphic-container">
       <div class="column">
         <div class="splash">Average Drop in Disease Transmission = 43.75%</div>
-        <div class="splash">Drop in Disease Transmission to Non-Mask Wearers = 25%</div>
-        <div class="splash">Drop in Disease Transmission to Mask-Wearers = 62.5%</div>
+        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
+        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
       </div>
       <div class="caption">
         (Assuming 50% of people wear a 50% effective mask.)
@@ -348,9 +356,9 @@
   <div class="container">
 
     <p>
-      So mask-wearers get the largest benefit from masks, which makes sense.
-      But even non-mask wearers get a modest benefit.
-      That’s because the air that they inhale is often filtered by <i>other people’s</i> partially effective masks (as you can see in the second scenario shown above.)
+      So mask-wearers get the largest benefit from masks (no surprise there).
+      But even non-mask wearers get a modest benefit, by freeloading off other people who wear masks.
+      That’s because the air that they inhale is often filtered by <i>other people’s</i> partially effective masks (shown above in the second route.)
     </p>
 
     <p>The population as a whole, which is made up of both mask-wearers and non-mask wearers, gets a benefit somewhere in between these two groups.</p>
@@ -361,7 +369,7 @@
 
     <p>
       Let's apply this logic to <i>any values</i> of <b>mask wearership</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks can influence the spread of disease.
+      Vary the sliders below to see how masks influence the spread of disease.
     </p>
 
   </div>
@@ -387,7 +395,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Type of Contact</div>
+          <div class="center">Disease Transmission Route</div>
           <anim :mask1="false" :mask2="false" ></anim>
           <anim :mask1="true" :mask2="false"></anim>
           <anim :mask1="false" :mask2="true"></anim>
@@ -403,7 +411,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Scenario</div>
+          <div class="center">Likelihood of This Route</div>
           <div class="center">{{convertToPercent(l1)}}%</div>
           <div class="center">{{convertToPercent(l2)}}%</div>
           <div class="center">{{convertToPercent(l3)}}%</div>
@@ -434,7 +442,7 @@
       What happens to disease transmission if 50% of people wear a 50% effecitve mask?
       Or 60% wear a 60% effective mask?
       Or 70% wear a 70% effective mask?
-      The interactive above lets you predict the answer to these questions.
+      The interactive above lets you easily predict the answer to these questions.
     </p>
 
     <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
@@ -459,10 +467,10 @@
 
     <p>
       You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
     </p> 
 
-    <p>When R0 is greater than 1, the disease will grow exponentially until we reach '<a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>', which happens when sufficiently many people either get vaccinated or get infected and develop immunity to the disease.</p>
+    <p>When R0 is greater than 1, the disease will grow exponentially until we reach <a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>, which happens either when sufficiently many people get vaccinated, or get infected and develop immunity to the disease.</p>
 
     <p>
       But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
@@ -488,9 +496,9 @@
     </p>
 
     <p>
-      With this in mind, let's express the power of masks in terms of R0.
+      With this in mind, let's express the impact of masks in terms of R0.
       The graph below shows how R0 varies as mask wearership increases.
-      You can use the slider to vary R0, which for COVID-19 is between 2 and 3 (That's in the absence of other public health measures such as social distancing. In reality, we can use multiple strategies to bring down R0.)
+      You can use the slider to vary R0, which for COVID-19 is between 2 and 3 (in the absence of other public health measures such as social distancing.)
       And you can also vary how effective these masks are.
     </p>
 
@@ -521,33 +529,34 @@
 
   <div class="container">
 
-    <p><b>How Masks Reduce R0.</b></p>
-
-    <p>Remember, to stop the spread of COVID-19, we need to keep R0 beneath 1.</p>
+    <p><b>Wearing masks reduces R0.</b></p>
 
     <p>
-      So can you work out how many people need to wear a 50% effective mask in order to stop the spread of COVID-19?
+      To stop the spread of COVID-19, we need to bring R0 beneath 1 (and keep it there).
+      So how many people need to wear a 50% effective mask in order to stop the spread of COVID-19?
       What if the masks are 60% effective?
       Or 70% effective?
-      Using the interactive above, you can predict these numbers.
-      (In reality, because people tend to cluster together and not mix randomly, so the numbers that this model predicts will be an underestimate.)
     </p>
 
-    <p>Let's take this one step further.</p>
+    <p>
+      With this interactive, you can predict the answer to these questions.
+      (In reality, because people tend to cluster together and not mix randomly, the numbers this model predicts will be an underestimate.)
+    </p>
+
+    <p>
+      We can take this one step further.
+      R0 is an abstract quantity to think about, and it would be nice if we could express this in more relatable, human terms.
+    </p>
 
     <h2>The Human Cost</h2>
 
-    <p>
-      We've seen how as more people wear masks, R0 becomes smaller.
-      And as R0 becomes smaller, so does the percentage of people who will eventually get infected.
-      This is how masks save lives: they reduce the rate of infection, which shrinks the extent of the epidemic.
-    </p>
+    <p>Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.</p>
 
     <p>This suggests that we can get a clearer picture of the human cost of not wearing masks if, instead of visualizing R0, we visualize the infected fraction of the population under different mask-wearing scenarios.</p>
 
     <p>By using a widely-used mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.</p>
     
-    <p>Although this model is a substantial simplification of reality (e.g. it assumes random mixing between people and no lockdowns), it can offer us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Although this model is a considerable simplification of reality (e.g. it assumes random mixing between people and no lockdowns), it can offer us a ballpark estimate of the human cost of not wearing masks.</p>
 
   </div>
 
@@ -578,8 +587,8 @@
     <p><b>The more people wear masks, the fewer people will eventually be infected.</b></p>
 
     <p>
-      This hill-shaped curve shows us how masks influence the number of people infected in an epidemic.
-      To end the spread of COVID-19 through masks, we need to ride all the way down this hill.
+      This hill-shaped curve shows us how masks influence the number of people who will be infected in an epidemic.
+      To end the spread of COVID-19, we need to get to the bottom of this hill.
     </p>
 
     <p>
@@ -589,12 +598,12 @@
 
     <p>
       But as more people wear masks, we move further down the hill, and the hill grows steeper. 
-      In the steep part of the hill, a small step to the right takes you further downwards.
+      With every small step to the right, we move further downwards.
       Which means masks provide greater returns when more people wear them.
     </p>
 
     <p>
-      If more and more people wear masks, we'll eventually reach the end of the hill, and the risk of infection will drop to zero.
+      When enough people wear masks, we'll reach the end of the hill, and the risk of infection will drop to zero.
       This is how masks can end an epidemic.
       But masks can only end an epidemic if enough people wear them.
     </p>
@@ -602,14 +611,14 @@
     <p>
       You might wonder how many people have to wear masks to end an epidemic.
       This depends on how effective the mask is.
-      By playing with interactive above, you can see that if masks were 100% effective, you'd need just over a third of the population to wear them to stop the spread of COVID-19.
+      By playing with interactive above, you can see that if masks were 100% effective, you'd need a little over a third of the population to wear them to stop the spread of COVID-19.
       But if masks are 50% effective, you'd need closer to three-quarters of the population to wear them to stop the spread.
     </p>
 
     <p>
-      We all want to get to the bottom of the hill, where everyone's risk of infection goes to zero.
-      But you can't get to the bottom of the hill by yourself.
-      Each person can only take a tiny step downwards by themselves.
+      We all want to get to the bottom of the hill and end this epidemic.
+      But you can't get there by yourself.
+      Each person can only take a tiny step downwards.
       However, when many people take this small step, together, we take a giant leap down the hill.
     </p>
 
