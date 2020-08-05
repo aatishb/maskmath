@@ -12,7 +12,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     p.setup = function() {
       target = parent.$el;
       let width = target.clientWidth;
-      let height = target.clientHeight;
+      let height = 0.833 * target.clientHeight;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
       canvas.parent(parent.$el);

@@ -16,6 +16,7 @@
         <h1>How Masks Protect Us</h1>
         <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
         <h3>by <a href="https://aatishb.com/">Aatish Bhatia</a></h3>
+        <h3>with support from Minute Physics</h3>
       </div>
     </div>
   </div>
@@ -24,7 +25,7 @@
 
     <p>
       We <a href="https://www.sciencedirect.com/science/article/pii/S0140673620311429">now know</a> that masks have an outsized effect on halting the spread of COVID-19.
-      And yet some people are still opposed to wearing masks, because they view this as a personal choice rather than a public health issue.
+      And yet some people are still opposed to wearing masks, because they view this as a personal choice rather than as a public health issue.
     </p>
 
     <p>
@@ -37,7 +38,7 @@
     <p>
       In this interactive essay, we’ll calculate the social benefit of wearing masks (or conversely, the social cost of not wearing masks).
       By doing the math on masks, we'll see how masks can be a surprisingly powerful way to extinguish epidemics.
-      For example, we'll calculate that when 60% of people wear masks that are 60% effective, virus transmission will decrease by 60% — roughly what's needed to stop the spread of COVID-19.
+      For example, we'll calculate that when 60% of people wear masks that are 60% effective, disease transmission will drop by 60% — roughly what's needed to stop the spread of COVID-19.
     </p>
 
     <h2>Say it, Don't Spray It</h2>
@@ -64,7 +65,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false">Scenario 1: When a contagious person is in close contact with a suceptible person, virus-laden saliva particles can transmit disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false"><b>Scenario 1:</b> When a contagious person is in close contact with a suceptible person, virus-laden saliva particles can transmit disease.</anim-with-caption>
 
   <div class="container">
 
@@ -76,7 +77,8 @@
     </p>
 
     <p>
-      Masks don't guarantee safety, they reduce risk, just like umbrellas reduce your odds of getting wet.
+      Masks don't guarantee safety, they reduce risk.
+      This is similar to how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
       Like umbrellas, masks only work if you use them correctly.
       But unlike umbrellas, which only protect people carrying them, masks also protect people around the wearer.
       This makes masks more effective than you might expect.
@@ -86,45 +88,45 @@
 
     <p>
       Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask reduces the odds that they'll infect a nearby susceptible person by 50%.
+      By '50 percent effective', I mean that wearing this mask reduces the chance that they'll infect a nearby susceptible person by 50%.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false">Scenario 2: If the contagious person wears a 50% effective mask, virus transmission is reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false"><b>Scenario 2:</b> If the contagious person wears a 50% effective mask, disease transmission is reduced by 50%.</anim-with-caption>
 
   <div class="container">
 
-    <p>What if the susceptible person wears the mask instead of the contagious person?</p>
+    <p>But what if instead the susceptible person is the one wearing the mask?</p>
 
     <p>
       In general, the effectiveness of a mask varies depending on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in both directions.
+      For the moment, let’s keep things simple and assume that this mask is equally effective in both directions.
     </p>
 
-    <p>In that case, if the susceptible person wears this mask whenever they're near a contagious person, their odds of infection will also drop by 50%.</p>
+    <p>In that case, if the susceptible person wears this mask whenever they're near a contagious person, their chance of infection will also drop by 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true">Scenario 3: If the susceptible person wears a 50% effective mask, virus transmission is also reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true"><b>Scenario 3:</b> If the susceptible person wears a 50% effective mask, disease transmission is also reduced by 50%.</anim-with-caption>
   
   <div class="container">
 
     <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
 
     <p>
-      Well, the first mask filters the air the contagious person breathes <b>out</b>, which cuts the odds of infection in half.
-      The second mask filters the air the susceptible person breathes <b>in</b>, which again cuts the odds of infection in half.
+      Well, the first mask filters the air the contagious person breathes <b>out</b>, which cuts the chance of infection in half.
+      The second mask filters the air the susceptible person breathes <b>in</b>, which again cuts the chance of infection in half.
     </p>
 
     <p>
-      So when <i>both</i> people are wearing masks the odds of infection are quartered (as compared to when neither of them wear masks).
+      So when <i>both</i> people are wearing masks the chance of infection is quartered (as compared to when neither of them wear masks).
       That's a 75% reduction in the risk of infection.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true">Scenario 4: When both people wear 50% effective masks, virus transmission is reduced by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true"><b>Scenario 4:</b> When both people wear 50% effective masks, disease transmission is reduced by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -134,7 +136,7 @@
       This <b>double protection</b> makes masks much more effective than you might intuitively expect.
     </p>
 
-    <p>So here are all four possible scenarios through which an airborne disease can spread from person to person.</p>
+    <p>So here again are all four possible scenarios through which an airborne disease can spread from person to person.</p>
 
   </div>
 
@@ -152,7 +154,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Virus Transmission</div>
+          <div class="center">Drop in Disease Transmission</div>
           <div class="center">0%</div>
           <div class="center">50%</div>
           <div class="center">50%</div>
@@ -174,13 +176,13 @@
     <h2>From People to The Population</h2>
 
     <p>
-      So far, we've been looking at virus transmission in the context of two people.
-      How do we go from understanding person-to-person virus transmission to understanding virus transmission in the <i>entire population</i>?
+      So far, we've been looking at the transmission of disease in the context of two people.
+      But how do we go from understanding disease transmission from person-to-person to understanding disease transmission in the <i>entire population</i>?
     </p> 
 
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
-    <p>For example, if <b>nobody</b> wore a mask, we’d only have the first scenario to consider, and so virus transmission in the population would be unaffected.</p>
+    <p>For example, if <b>nobody</b> wore a mask, we’d only have the first scenario to consider, and so disease transmission in the population would be unaffected.</p>
 
   </div>
 
@@ -194,18 +196,18 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Virus Transmission</div>
+          <div class="center">Drop in Disease Transmission</div>
           <div class="center">0%</div>
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood</div>
+          <div class="center">Likelihood of This Scenario</div>
           <div class="center">100%</div>
         </div>
       </div>
 
       <div class="caption">
-        If <b>nobody</b> wore a mask, virus transmission would be unaffected.
+        If <b>nobody</b> wore a mask, disease transmission would be unaffected.
       </div>
 
     </div>
@@ -213,7 +215,7 @@
 
   <div class="container">
 
-    <p>Conversely, if <b>everybody</b> wore a 50% effective mask, we’d only have the last scenario to consider, and so virus transmission in the population would drop by 75 percent.</p>
+    <p>Conversely, if <b>everybody</b> wore a 50% effective mask, we’d only have the last scenario to consider, and so disease transmission in the population would drop by 75 percent.</p>
 
   </div>
 
@@ -227,18 +229,18 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Virus Transmission</div>
+          <div class="center">Drop in Disease Transmission</div>
           <div class="center">75%</div>
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood</div>
+          <div class="center">Likelihood of This Scenario</div>
           <div class="center">100%</div>
         </div>
       </div>
 
       <div class="caption">
-        If <b>everybody</b> wore a 50% effective mask, virus transmission is reduced by 75%.
+        If <b>everybody</b> wore a 50% effective mask, disease transmission is reduced by 75%.
       </div>
 
     </div>
@@ -257,14 +259,15 @@
       The question is, how do we do calculate this in general?
     <p>
 
+    <p>Let's try a simple case. Suppose that 50% of people wear masks.</p>
+
     <p>
-      Let's try a simple case. Suppose that 50% of people wear masks.
-      When two people meet at random, the odds that both people are wearing masks is the odds that the first person is wearing a mask multiplied by the odds that the second person is wearing a mask.
-      So the odds that both people are wearing masks when in close contact is 50% times 50%, or 25%*.
+      When two people meet at random, the chance that both people are wearing masks is the chance that the first person is wearing a mask multiplied by the chance that the second person is wearing a mask.
+      So the chance that both people are wearing masks when in close contact is 50% times 50%, or 25%*.
     </p>
 
     <p>
-      Similarly, you can work out the odds for the other scenarios.
+      Similarly, you can work out the likelihood for the other scenarios.
       It turns out that when half the population wear masks, all four scenarios are equally likely.
       (Can you convince yourself why this has to be true?)
     </p>
@@ -285,7 +288,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Virus Transmission</div>
+          <div class="center">Drop in Disease Transmission</div>
           <div class="center">0%</div>
           <div class="center">50%</div>
           <div class="center">50%</div>
@@ -293,7 +296,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood</div>
+          <div class="center">Likelihood of This Scenario</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -312,19 +315,19 @@
   <div class="container">
 
     <p>
-      We can now calculate the average drop in virus transmission in the entire population.
+      We can now calculate the average drop in disease transmission in the entire population.
       This involves averaging all four possible scenarios.
       Since we’ve set things up so that each scenario is equally likely, this is just the average of 0%, 50%, 50% and 75%, which is 43.75%.
     </p>
 
     <p>
       Meanwhile, people who don’t wear masks can only get infected via the first two scenarios shown above, which are equally likely when half the population is wearing a mask.
-      So the drop in virus transmission to mask-wearers is the average of 0% and 50%, which is 25%.
+      So the drop in disease transmission to mask-wearers is the average of 0% and 50%, which is 25%.
     </p>
 
     <p>
       Similarly, people who DO wear masks can only get infected via the last two scenarios shown above.
-      So the drop in virus transmission to mask-wearers is the average of 50% and 75%, which is 62.5%.
+      So the drop in disease transmission to mask-wearers is the average of 50% and 75%, which is 62.5%.
     </p>
 
   </div>
@@ -332,9 +335,9 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Virus Transmission = 43.75%</div>
-        <div class="splash">Drop in Virus Transmission to Non-Mask Wearers = 25%</div>
-        <div class="splash">Drop in Virus Transmission to Mask-Wearers = 62.5%</div>
+        <div class="splash">Average Drop in Disease Transmission = 43.75%</div>
+        <div class="splash">Drop in Disease Transmission to Non-Mask Wearers = 25%</div>
+        <div class="splash">Drop in Disease Transmission to Mask-Wearers = 62.5%</div>
       </div>
       <div class="caption">
         (Assuming 50% of people wear a 50% effective mask.)
@@ -392,7 +395,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Virus Transmission</div>
+          <div class="center">Drop in Disease Transmission</div>
           <div class="center">{{convertToPercent(d1)}}%</div>
           <div class="center">{{convertToPercent(d2)}}%</div>
           <div class="center">{{convertToPercent(d3)}}%</div>
@@ -400,7 +403,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood</div>
+          <div class="center">Likelihood of This Scenario</div>
           <div class="center">{{convertToPercent(l1)}}%</div>
           <div class="center">{{convertToPercent(l2)}}%</div>
           <div class="center">{{convertToPercent(l3)}}%</div>
@@ -411,70 +414,39 @@
 
 
       <div class="row half splash">
-        <b>Average Drop in Virus Transmission: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%</b>
+        <b>Average Drop in Disease Transmission: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%</b>
       </div>
 
       <div class="row half splash">
-        Drop in Virus Transmission for Non-Mask Wearers: {{convertToPercent(Eout * p)}}%
+        Drop in Disease Transmission for Non-Mask Wearers: {{convertToPercent(Eout * p)}}%
       </div>
 
       <div class="row half splash">
-        Drop in Virus Transmission for Mask-Wearers: {{convertToPercent(1 - (1 - Eout * p) * (1 - Ein))}}%
+        Drop in Disease Transmission for Mask-Wearers: {{convertToPercent(1 - (1 - Eout * p) * (1 - Ein))}}%
       </div>
 
     </div>
   </div>
   
   <div class="container">
+
     <p>
       What happens to virus transmission if 50% of people wear a 50% effecitve mask?
       Or 60% wear a 60% effective mask?
       Or 70% wear a 70% effective mask?
-      This interactive lets you predict the answer to these questions.
+      The interactive above lets you predict the answer to these questions.
+    </p>
+
+    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+
+    <p>
+      By filtering exhaled air, masks protect both mask-wearers and non-mask wearers alike.
+      And by filtering inhaled air, masks provide additional protection to those who wear them.
+      As mask wearership increases, the spread of disease reduces for everyone.
     </p>
 
     <p>
-      However, it can be hard to see trends by looking at a table of numbers.
-      So let's make a graph of how virus transmission reduces as more people wear masks.
-    </p>
-
-    <p>In the graph below, the <span class="blue">blue line</span> shows the protection that masks provide to people who wear them (lower = more protection), the <span class="red">red line</span> shows the secondhand protection that masks provide to people who don't wear them, and the <span class="purple">purple curve</span> shows the average protection to people in the population</p> 
-
-    <p>You can vary the effectiveness of the masks, and see how the protection changes.</p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <div class="row half splash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
-      </div>
-
-      <div class="row half splash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
-      </div>
-
-      <graph :traces="graph1Traces" :layout="graph1Layout"></graph>
-
-    </div>
-
-  </div>
-
-  <div class="container">
-
-    <p><b>When more people wear masks, everyone is safer.</b></p>
-
-    <p>
-      By filtering exhaled air, masks protect both <span class="blue">mask-wearers</span> and <span class="red">non-mask wearers</span> alike.
-      And by filtering inhaled air, masks provide additional protection to those who wear them (which is why the blue line is lower than the red one).
-      As mask wearership increases, we move further down this graph, and the spread of disease reduces for <span class="purple">everyone</span>.
-    </p>
-
-    <p>
-      In fact, masks are even more effective than this graph suggests.
+      In fact, masks are even more effective than this calculation suggests.
     </p>
 
     <h2>How To Stop An Epidemic</h2>
@@ -482,7 +454,7 @@
     <p>
       You extinguish a fire by starving it of oxygen. 
       But you don't need to remove all the oxygen, you just need to reduce it enough to stop the fire from spreading.
-      It's the same with an epidemic — you don't need to cut virus transmission by 100%, you just need to reduce it enough to stop the disease from growing.
+      It's the same with an epidemic — you don't need to cut disease transmission by 100%, you just need to reduce it enough to stop the disease from growing.
     </p>
 
     <p>

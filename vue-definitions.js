@@ -122,7 +122,7 @@ Vue.component('tablelabel', {
 // Creates a Vue <p5> Component
 Vue.component('p5', {
   
-  template: `<div v-observe-visibility="{
+  template: `<div class="center" v-observe-visibility="{
     callback: visibilityChanged,
     throttle: 300
   }"></div>`,
