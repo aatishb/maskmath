@@ -431,7 +431,7 @@
   <div class="container">
 
     <p>
-      What happens to virus transmission if 50% of people wear a 50% effecitve mask?
+      What happens to disease transmission if 50% of people wear a 50% effecitve mask?
       Or 60% wear a 60% effective mask?
       Or 70% wear a 70% effective mask?
       The interactive above lets you predict the answer to these questions.
@@ -442,7 +442,7 @@
     <p>
       By filtering exhaled air, masks protect both mask-wearers and non-mask wearers alike.
       And by filtering inhaled air, masks provide additional protection to those who wear them.
-      As mask wearership increases, the spread of disease reduces for everyone.
+      As mask wearership increases, the spread of disease reduces for <b>everyone</b>.
     </p>
 
     <p>
@@ -462,7 +462,7 @@
       This is <a href="">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
     </p> 
 
-    <p>When R0 is greater than 1, the disease will grow exponentially until we reach '<a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>', which happens when sufficiently many people either get vaccinated or get infected and develop immunity.</p>
+    <p>When R0 is greater than 1, the disease will grow exponentially until we reach '<a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>', which happens when sufficiently many people either get vaccinated or get infected and develop immunity to the disease.</p>
 
     <p>
       But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
@@ -482,20 +482,27 @@
   <div class="container">
 
     <p>
-      Social distancing, quarantines and lockdowns all reduce the first number.
-      Wearing masks reduces the second number.
+      Social distancing, quarantines and lockdowns reduce the first number.
+      And wearing masks reduces the second number.
       The goal of all these strategies is to bring the epidemic under control by pulling R0 beneath 1.
     </p>
 
     <p>
-      With this in mind, let's recreate the graph of the social benefit of masks, but this time expressed in terms of R0.
-      You can use the slider to vary R0, which for COVID-19 is between 2 and 3 (in the absence of other public health measures like social distancing, etc.)
+      With this in mind, let's express the power of masks in terms of R0.
+      The graph below shows how R0 varies as mask wearership increases.
+      You can use the slider to vary R0, which for COVID-19 is between 2 and 3 (That's in the absence of other public health measures such as social distancing. In reality, we can use multiple strategies to bring down R0.)
+      And you can also vary how effective these masks are.
     </p>
 
   </div>
 
   <div class="graphic">
     <div class="graphic-container">
+
+      <div class="row half splash">
+        <div>R0: {{R0}}</div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </div>
 
       <div class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
@@ -507,11 +514,6 @@
         <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
-      <div class="row half splash">
-        <div>R0: {{R0}}</div>
-        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
-      </div>
-
       <graph :traces="graph2Traces" :layout="graph2Layout"></graph>
 
     </div>
@@ -521,15 +523,17 @@
 
     <p><b>How Masks Reduce R0.</b></p>
 
+    <p>Remember, to stop the spread of COVID-19, we need to keep R0 beneath 1.</p>
+
     <p>
-      Can you work out how many people need to wear a 50% effective mask in order to stop the spread of COVID-19?
+      So can you work out how many people need to wear a 50% effective mask in order to stop the spread of COVID-19?
       What if the masks are 60% effective?
       Or 70% effective?
-      This interactive lets us predict these numbers.
-      (In reality, because people tend to cluster together and not mix randomly, the numbers that this model predicts will be an underestimate.)
+      Using the interactive above, you can predict these numbers.
+      (In reality, because people tend to cluster together and not mix randomly, so the numbers that this model predicts will be an underestimate.)
     </p>
 
-    <p>We can take this one step further.</p>
+    <p>Let's take this one step further.</p>
 
     <h2>The Human Cost</h2>
 
