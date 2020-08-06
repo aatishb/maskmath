@@ -124,6 +124,7 @@ Vue.component('p5', {
   
   template: `<div class="center" v-observe-visibility="{
     callback: visibilityChanged,
+    once: true,
     throttle: 300
   }"></div>`,
 

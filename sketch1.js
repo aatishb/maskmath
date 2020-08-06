@@ -8,6 +8,8 @@ function sketch(parent) { // we pass the sketch data from the parent
     let particles = []; 
     let emojiSize;
     let target;
+    let nearbyParticles = 0;
+    let worry = 0;
 
     p.setup = function() {
       target = parent.$el;
@@ -29,6 +31,29 @@ function sketch(parent) { // we pass the sketch data from the parent
       //new ResizeObserver(onResize).observe(target);
     };
 
+    function drawContagiousPerson() {
+      if (parent.data.mask1) {
+        p.text('😷', emojiSize/2, p.height * 0.6);      
+      } else {
+        p.text('😐', emojiSize/2, p.height * 0.6);              
+      }
+    }
+
+    function drawSusceptiblePerson() {
+      if (parent.data.mask2) {
+        p.text('😷', p.width - emojiSize/2, p.height * 0.6);      
+      } else {
+        if (worry > 10) {
+          p.text('😟', p.width - emojiSize/2, p.height * 0.6);      
+        } else if (worry > 5) {
+          p.text('😕', p.width - emojiSize/2, p.height * 0.6);      
+        } else {
+          p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
+        }
+
+      }
+    }
+
     p.draw = function() {
       p.background(0, 0, 51);
 
@@ -38,17 +63,8 @@ function sketch(parent) { // we pass the sketch data from the parent
         }
       }
 
-      if (parent.data.mask1) {
-        p.text('😷', emojiSize/2, p.height * 0.6);      
-      } else {
-        p.text('😐', emojiSize/2, p.height * 0.6);              
-      }
-
-      if (parent.data.mask2) {
-        p.text('😷', p.width - emojiSize/2, p.height * 0.6);      
-      } else {
-        p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
-      }
+      drawContagiousPerson();
+      drawSusceptiblePerson();
 
       p.stroke(240);
       if (parent.data.mask1) {
@@ -60,10 +76,24 @@ function sketch(parent) { // we pass the sketch data from the parent
       }
 
       p.noStroke();
+      nearbyParticles = 0;
       for (let particle of particles) {
         particle.display();
         particle.update();
+        nearbyParticles += particle.checkIfNear(p.width - emojiSize/2, p.height * 0.6 - 0.2*emojiSize, emojiSize/2);
       }
+
+      if (nearbyParticles) {
+        worry++;
+      } else {
+        worry--;
+      }
+
+      if (worry > 21) {worry = 21;}
+      if (worry < 0) {worry = 0;}
+
+      //p.ellipse(p.width - emojiSize/2, p.height * 0.6 - 0.2*emojiSize, emojiSize);
+      //console.log('nearby particles', nearbyParticles);
     };
 
     // this is a new function we've added to p5
@@ -104,7 +134,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.vy = this.v0 * Math.sin(this.angle);
       this.pastFirstMask = false;
       this.pastSecondMask = false;
-      this.color = 'white';
+      this.color = 'palegoldenrod';
       this.fadeOut = false;
       this.fadeCount = 30;
 
@@ -173,14 +203,22 @@ function sketch(parent) { // we pass the sketch data from the parent
         p.ellipse(this.x, this.y, this.size);
       };
 
-    this.remove = function() {
-      let index = particles.indexOf(this);
-      particles.splice(index, 1);
+      this.remove = function() {
+        let index = particles.indexOf(this);
+        particles.splice(index, 1);
+      }
+
+      this.checkIfNear = function(x,y,range) {
+        return distSquared(this.x, this.y, x, y) < range*range ? 1 : 0;
+      }
+
     }
 
-
+    function distSquared(x1, y1, x2, y2) {
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        return dx * dx + dy * dy;
     }
-
 
   };
 }

@@ -59,16 +59,16 @@
 }
 
 .small-big-small > div:nth-child(1) {
-  flex: 1 0 25%;
+  flex: 1 0 20%;
   align-items: flex-end;
 }
 
 .small-big-small > div:nth-child(2) {
-  flex: 1 0 50%;
+  flex: 1 0 60%;
 }
 
 .small-big-small > div:nth-child(3) {
-  flex: 1 0 25%;
+  flex: 1 0 20%;
   align-items: flex-start;
 }
 
@@ -214,7 +214,7 @@ p {
   text-align: justify;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   line-height: 1.1;
   color: #E3C4AC;
 }
@@ -234,6 +234,12 @@ h3 {
   text-align: center;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+h4 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1rem;
 }
 
 i {
