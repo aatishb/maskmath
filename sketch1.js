@@ -24,34 +24,54 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.textSize(emojiSize);
       p.textAlign(p.CENTER, p.CENTER);
       //console.log(parent.data.mask1);
-      p.strokeWeight(7);
-      p.drawingContext.setLineDash([0, 15]);
       p.noLoop();
 
       //new ResizeObserver(onResize).observe(target);
     };
 
+    function drawMask(x,y) {
+      p.stroke('white');
+      p.strokeWeight(emojiSize/15);
+      p.drawingContext.setLineDash([]);
+      p.line(x - 0.43*emojiSize, y - 0.2*emojiSize, x + 0.27*emojiSize, y + 0.1*emojiSize);
+      p.line(x + 0.43*emojiSize, y - 0.2*emojiSize, x - 0.27*emojiSize, y + 0.1*emojiSize);
+      p.noStroke();
+      p.fill('white');
+      p.ellipse(x, y, 0.5*emojiSize, 0.37*emojiSize)
+
+      p.stroke('grey');
+      p.strokeWeight(emojiSize/40);
+      p.arc(x, y, 0.8*0.5*emojiSize, 0.8*0.35*emojiSize, -Math.PI/2 -0.5, -Math.PI/2 + 0.5);
+    }
+
     function drawContagiousPerson() {
+      
+      p.text('😐', emojiSize/2, p.height * 0.6);              
+      
       if (parent.data.mask1) {
-        p.text('😷', emojiSize/2, p.height * 0.6);      
-      } else {
-        p.text('😐', emojiSize/2, p.height * 0.6);              
+        let x = emojiSize/2;
+        let y = p.height * 0.6;
+        drawMask(x,y);
       }
+
     }
 
     function drawSusceptiblePerson() {
-      if (parent.data.mask2) {
-        p.text('😷', p.width - emojiSize/2, p.height * 0.6);      
-      } else {
-        if (worry > 10) {
-          p.text('😟', p.width - emojiSize/2, p.height * 0.6);      
-        } else if (worry > 5) {
-          p.text('😕', p.width - emojiSize/2, p.height * 0.6);      
-        } else {
-          p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
-        }
 
+      if (worry > 10) {
+        p.text('😟', p.width - emojiSize/2, p.height * 0.6);      
+      } else if (worry > 5) {
+        p.text('😕', p.width - emojiSize/2, p.height * 0.6);      
+      } else {
+        p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
       }
+
+      if (parent.data.mask2) {
+        let x = p.width - emojiSize/2;
+        let y = p.height * 0.6;
+        drawMask(x,y);
+      }
+
     }
 
     p.draw = function() {
@@ -67,6 +87,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       drawSusceptiblePerson();
 
       p.stroke(240);
+      p.strokeWeight(7);
+      p.drawingContext.setLineDash([0, 15]);
+
       if (parent.data.mask1) {
         p.line(1.25 * emojiSize, 10, 1.25 * emojiSize, p.height + 10);
       }
