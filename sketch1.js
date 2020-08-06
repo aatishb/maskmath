@@ -21,6 +21,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.fill(240);
       p.noStroke();
       emojiSize = height * 0.66;
+      p.textFont('Open Sans');
       p.textSize(emojiSize);
       p.textAlign(p.CENTER, p.CENTER);
       //console.log(parent.data.mask1);
@@ -175,7 +176,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.maxangle = 2 * p.atan2(p.height/2, p.width);
       this.angle = this.maxangle * p.random(-1, 1);
       this.wander = 0.02;
-      this.v0 = p.random(0.1,5);
+      this.v0 = p.random(0.1, 0.01*p.width);
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
       this.pastFirstMask = false;
