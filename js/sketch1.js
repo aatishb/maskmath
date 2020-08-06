@@ -21,7 +21,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.fill(240);
       p.noStroke();
       emojiSize = height * 0.66;
-      p.textFont('Open Sans');
+      p.loadFont('assets/EmojiOneColor-SVGinOT.ttf');
       p.textSize(emojiSize);
       p.textAlign(p.CENTER, p.CENTER);
       //console.log(parent.data.mask1);
