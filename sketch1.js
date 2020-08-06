@@ -189,7 +189,7 @@ function sketch(parent) { // we pass the sketch data from the parent
 
         if (parent.data.mask1) {
           if (!this.pastFirstMask && this.x > 1.25 * emojiSize) {
-            if (p.random(1) <= 0.5) {
+            if (p.random(1) <= parent.data.eout) {
               this.color = 'red';
               this.vx *= -1;
               this.fadeOut = true;
@@ -207,7 +207,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         
         if (parent.data.mask2) {
           if (!this.pastSecondMask && this.x > p.width - 1.25 * emojiSize) {
-            if (p.random(1) <= 0.5) {
+            if (p.random(1) <= parent.data.ein) {
               this.color = 'red';
               this.vx *= -1;
               this.fadeOut = true;

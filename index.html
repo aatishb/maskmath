@@ -96,7 +96,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask,<br/> disease transmission is reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask,<br/> disease transmission is reduced by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -111,7 +111,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask,<br/> disease transmission is also reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask,<br/> disease transmission is also reduced by 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -129,7 +129,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true"><b>Transmission Route 4:</b> When both people wear 50% effective masks,<br/> disease transmission is reduced by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b>Transmission Route 4:</b> When both people wear 50% effective masks,<br/> disease transmission is reduced by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -150,10 +150,10 @@
 
         <div class="column onehundredpx">
           <div class="center">Disease Transmission Route</div>
-          <anim :mask1="false" :mask2="false" ></anim>
-          <anim :mask1="true" :mask2="false"></anim>
-          <anim :mask1="false" :mask2="true"></anim>
-          <anim :mask1="true" :mask2="true"></anim>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
         </div>
 
         <div class="column onehundredpx">
@@ -233,7 +233,7 @@
       <div class="row big-small-small">
         <div class="column onehundredpx">
           <div class="center">Disease Transmission Route</div>
-          <anim :mask1="true" :mask2="true" ></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
         </div>
 
         <div class="column onehundredpx">
@@ -289,10 +289,10 @@
 
         <div class="column onehundredpx">
           <div class="center">Disease Transmission Route</div>
-          <anim :mask1="false" :mask2="false" ></anim>
-          <anim :mask1="true" :mask2="false"></anim>
-          <anim :mask1="false" :mask2="true"></anim>
-          <anim :mask1="true" :mask2="true"></anim>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
         </div>
 
         <div class="column onehundredpx">
@@ -383,23 +383,23 @@
       </div>
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
+        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
+        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
           <div class="center">Disease Transmission Route</div>
-          <anim :mask1="false" :mask2="false" ></anim>
-          <anim :mask1="true" :mask2="false"></anim>
-          <anim :mask1="false" :mask2="true"></anim>
-          <anim :mask1="true" :mask2="true"></anim>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
         </div>
 
         <div class="column onehundredpx">
@@ -422,15 +422,15 @@
 
 
       <div class="row half splash">
-        <b>Average Drop in Disease Transmission: {{convertToPercent(1 - (1 - Ein * p) * (1 - Eout * p))}}%</b>
+        <b>Average Drop in Disease Transmission: {{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}%</b>
       </div>
 
       <div class="row half splash">
-        Drop in Disease Transmission for Non-Mask Wearers: {{convertToPercent(Eout * p)}}%
+        Drop in Disease Transmission for Non-Mask Wearers: {{convertToPercent(eout * p)}}%
       </div>
 
       <div class="row half splash">
-        Drop in Disease Transmission for Mask-Wearers: {{convertToPercent(1 - (1 - Eout * p) * (1 - Ein))}}%
+        Drop in Disease Transmission for Mask-Wearers: {{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}%
       </div>
 
     </div>
@@ -513,13 +513,13 @@
       </div>
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
+        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
+        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <graph :traces="graph2Traces" :layout="graph2Layout"></graph>
@@ -564,13 +564,13 @@
     <div class="graphic-container">
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(Eout)}}%</div>
-        <slider v-model="Eout" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
+        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(Ein)}}%</div>
-        <slider v-model="Ein" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
+        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </div>
 
       <div class="row half splash">

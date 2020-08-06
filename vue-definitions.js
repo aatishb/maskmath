@@ -44,8 +44,8 @@ Vue.component('slider', {
 
 // mask animation component
 Vue.component('anim', {
-  template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2}"></p5>',
-  props: ['mask1', 'mask2']
+  template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2, eout: eout, ein: ein}"></p5>',
+  props: ['mask1', 'mask2', 'eout', 'ein']
 
 })
 
@@ -62,7 +62,7 @@ Vue.component('anim-with-caption', {
             <div class="label">Contagious<br/>Person</div>
         </div>
 
-        <anim :mask1="mask1" :mask2="mask2"></anim>
+        <anim :mask1="mask1" :mask2="mask2" :eout="eout" :ein="ein"></anim>
 
         <div class="center">
             <div class="label">Susceptible<br/>Person</div>
@@ -77,7 +77,7 @@ Vue.component('anim-with-caption', {
     </div>
   </div>`,
 
-  props: ['mask1', 'mask2']
+  props: ['mask1', 'mask2', 'eout', 'ein']
 
 })
 
@@ -193,8 +193,8 @@ let app = new Vue({
   el: '#root',
 
   data: {
-    Eout: 0.5,  // mask effectiveness on exhale
-    Ein: 0.5,   // mask effectiveness on inhale
+    eout: 0.5,  // mask effectiveness on exhale
+    ein: 0.5,   // mask effectiveness on inhale
     p: 0.5,     // percent of people wearing masks
     R0: 2.5     // reproductive number R0
   },
@@ -206,7 +206,7 @@ let app = new Vue({
     },
 
     R0withmask(p) {
-      return this.R0 * (1 - this.Ein * p) * (1 - this.Eout * p);
+      return this.R0 * (1 - this.ein * p) * (1 - this.eout * p);
     },
 
     /*
@@ -245,7 +245,7 @@ let app = new Vue({
       return [
         {
           x: this.indexArray,
-          y: this.indexArray.map(p => 1 - (1 - this.Ein * p) * (1 - this.Eout * p) ),
+          y: this.indexArray.map(p => 1 - (1 - this.ein * p) * (1 - this.eout * p) ),
           mode: 'lines',
           name: 'Entire Population',
           line: {
@@ -254,7 +254,7 @@ let app = new Vue({
         },
         {
           x: this.indexArray,
-          y: this.indexArray.map(p => this.Eout * p ),
+          y: this.indexArray.map(p => this.eout * p ),
           mode: 'lines',
           name: 'Non-Mask Wearers',
           line: {
@@ -263,7 +263,7 @@ let app = new Vue({
         },
         {
           x: this.indexArray,
-          y: this.indexArray.map(p => 1 - (1 - this.Eout * p) * (1 - this.Ein) ),
+          y: this.indexArray.map(p => 1 - (1 - this.eout * p) * (1 - this.ein) ),
           mode: 'lines',
           name: 'Mask Wearers',
           line: {
@@ -341,13 +341,13 @@ let app = new Vue({
       return 0;
     },
     d2() {
-      return this.Eout;
+      return this.eout;
     },
     d3() {
-      return this.Ein;
+      return this.ein;
     },
     d4() {
-      return 1 - (1 - this.Eout) * (1 - this.Ein);
+      return 1 - (1 - this.eout) * (1 - this.ein);
     },
     l1() {
       return (1 - this.p) * (1 - this.p);
