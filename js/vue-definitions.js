@@ -227,21 +227,21 @@ let app = new Vue({
       return [
         {
           x: [0,1],
-          y: [3,3],
+          y: [1,1],
           type: 'scatter',
           mode: 'lines',
-          fill: 'tonexty',
-          fillcolor: 'rgba(255, 140, 105, 0.2)',
+          fill: 'tozeroy',
+          fillcolor: 'rgba(50, 255, 50, 0.2)',
           line: {color: "transparent"},
           hoverinfo: 'none'
         },
         {
           x: [0,1],
-          y: [1,1],
+          y: [3,3],
           type: 'scatter',
           mode: 'lines',
-          fill: 'tozeroy',
-          fillcolor: 'rgba(88,229,88, 0.2)',
+          fill: 'tonexty',
+          fillcolor: 'rgba(255, 50, 50, 0.2)',
           line: {color: "transparent"},
           hoverinfo: 'none'
         },
@@ -264,11 +264,24 @@ let app = new Vue({
         {
           x: this.indexArray,
           y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
+          type: 'scatter',
           mode: 'lines',
+          fill: 'tozeroy',
+          fillcolor: 'rgba(255, 50, 50, 0.2)',
           line: {
             color: this.graphTraceColor,
             width: 4
           }
+        },
+        {
+          x: [0,1],
+          y: [1,1],
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tonexty',
+          fillcolor: 'rgba(50, 255, 50, 0.2)',
+          line: {color: "transparent"},
+          hoverinfo: 'none'
         }
       ]
     },
@@ -338,6 +351,7 @@ let app = new Vue({
     graph3Layout() {
       return {
         title:'<b>The more people wear masks, the fewer people will eventually be infected.</b>',
+        showlegend: false,
         xaxis: {
           title: 'Percentage of People Who Wear Masks',
           tickformat: ',.0%',
