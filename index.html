@@ -16,7 +16,8 @@
 <body>
 <div id="root" class="page">
 
-  <div id="header">
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
         <h1>How Masks Protect Us</h1>
@@ -102,7 +103,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask,<br/> disease transmission is reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask,<br/>disease transmission is reduced by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -117,7 +118,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask,<br/> disease transmission is also reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask,<br/>disease transmission is also reduced by 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -135,7 +136,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b>Transmission Route 4:</b> When both people wear 50% effective masks,<br/> disease transmission is reduced by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b>Transmission Route 4:</b> When both people wear 50% effective masks,<br/>disease transmission is reduced by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -173,7 +174,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. The numbers here are calculated assuming a 50% effective mask.
+        The four ways that COVID-19 can spread from person to person.<br/>The numbers here are calculated assuming a 50% effective mask.
       </div>
 
     </div>

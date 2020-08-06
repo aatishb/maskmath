@@ -1,6 +1,6 @@
-TODO
+# TODO
 
-[ ] References / Footnotes
-[ ] Responsive
 [ ] Graph Styling
 [ ] Header Code
+[ ] References / Footnotes
+[X] Responsive
