@@ -21,7 +21,8 @@
 }
 
 .graphic-container {
-  flex-basis: 1000px;
+  flex-basis: 85%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;

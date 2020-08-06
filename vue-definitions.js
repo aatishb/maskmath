@@ -82,6 +82,7 @@ Vue.component('anim-with-caption', {
 })
 
 // mask interactive component
+/*
 Vue.component('maskscenario', {
 
   template:   `
@@ -98,8 +99,10 @@ Vue.component('maskscenario', {
   props: ['mask1', 'mask2', 'text1', 'text2']
 
 })
+*/
 
 // mask interactive component
+/*
 Vue.component('tablelabel', {
 
   template:   `
@@ -118,13 +121,13 @@ Vue.component('tablelabel', {
   props: ['text1', 'text2', 'text3']
 
 })
+*/
 
 // Creates a Vue <p5> Component
 Vue.component('p5', {
   
   template: `<div class="center" v-observe-visibility="{
     callback: visibilityChanged,
-    once: true,
     throttle: 300
   }"></div>`,
 

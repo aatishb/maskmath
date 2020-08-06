@@ -20,7 +20,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       canvas.parent(parent.$el);
       p.fill(240);
       p.noStroke();
-      emojiSize = p.height * 0.66;
+      emojiSize = height * 0.66;
       p.textSize(emojiSize);
       p.textAlign(p.CENTER, p.CENTER);
       //console.log(parent.data.mask1);
@@ -139,12 +139,26 @@ function sketch(parent) { // we pass the sketch data from the parent
       } else {
         p.noLoop();
       }
-    }
+    };
+
+    p.windowResized = function() {
+      console.log('p5 canvas resized');
+      let width = target.clientWidth;
+      let height = 0.833 * target.clientHeight;
+      p.resizeCanvas(width, height);
+      emojiSize = height * 0.66;
+      p.textSize(emojiSize);
+
+      for (let particle of particles) {
+        particle.remove();
+      }
+
+    };
 
     function onResize() {
       let width = target.clientWidth;
       let height = target.clientHeight;
-      console.log('p5 container resized', width, height);
+      //console.log('p5 container resized', width, height);
     }
 
     // particle class
