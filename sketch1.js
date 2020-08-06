@@ -142,7 +142,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     p.windowResized = function() {
-      console.log('p5 canvas resized');
+      //console.log('p5 canvas resized');
       let width = target.clientWidth;
       let height = 0.833 * target.clientHeight;
       p.resizeCanvas(width, height);
@@ -165,7 +165,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     function particle() {
 
       this.y = p.random(0.45 * p.height, 0.55 * p.height);
-      this.size = p.random(5, 15);
+      this.size = p.random(0.05*emojiSize, 0.14*emojiSize);
       this.x = emojiSize / 2;
       this.maxangle = 2 * p.atan2(p.height/2, p.width);
       this.angle = this.maxangle * p.random(-1, 1);
@@ -192,7 +192,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         this.x = this.x + this.vx;
         this.y = this.y + this.vy;
         
-        if (this.size > 4) {
+        if (this.size > 0.036 * emojiSize) {
           this.size = this.size * 0.99;
         }
 
