@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <title>How Masks Protect Us</title>
@@ -377,20 +377,20 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>People Wearing Masks: {{convertToPercent(p)}}%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
       <div class="row big-small-small">
 
@@ -507,20 +507,20 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>R0: {{R0}}</div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout"></graph>
 
@@ -563,20 +563,20 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
-      </div>
+      </label>
 
-      <div class="row half splash">
+      <label class="row half splash">
         <div>R0: {{R0}}</div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
-      </div>
+      </label>
 
       <graph :traces="graph3Traces" :layout="graph3Layout"></graph>
 
@@ -631,13 +631,13 @@
 
 </div>
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-observe-visibility@0.4.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-<script src="lambertw.js"></script>
-<script src="vue-definitions.js"></script>
-<script type="text/javascript">javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+<script type="text/javascript">javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();stats.domElement.style.cssText='position:fixed;left:0;top:0;z-index:10000';document.body.appendChild(stats.domElement);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
 </script>
 <!--<script src="sketch.js"></script>-->
 </body>

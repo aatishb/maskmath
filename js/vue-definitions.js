@@ -44,7 +44,7 @@ Vue.component('slider', {
 
 // mask animation component
 Vue.component('anim', {
-  template: '<p5 src="sketch1.js" :data="{mask1: mask1, mask2: mask2, eout: eout, ein: ein}"></p5>',
+  template: '<p5 src="js/sketch1.js" :data="{mask1: mask1, mask2: mask2, eout: eout, ein: ein}"></p5>',
   props: ['mask1', 'mask2', 'eout', 'ein']
 
 })
