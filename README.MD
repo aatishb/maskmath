@@ -1,6 +1,6 @@
 # TODO
 
 [ ] Graph Styling
-[ ] Header Code
+[X] Header Animation
 [ ] References / Footnotes
 [X] Responsive

@@ -5,6 +5,7 @@ function sketch(parent) { // we pass the sketch data from the parent
   return function( p ) { // p could be any variable name
 
     // p5 sketch goes here
+    let particles = []; 
 
     p.setup = function() {
       let target = parent.$el;
@@ -13,11 +14,28 @@ function sketch(parent) { // we pass the sketch data from the parent
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
       canvas.parent(parent.$el);
+      p.noStroke();
     };
 
     p.draw = function() {
-      p.background('#262626');
-      p.circle(p.mouseX, p.mouseY, 50);
+      p.background(0, 0, 51);
+
+      if (particles.length < 50) {
+        for (let i = 0; i < 150; i++) {
+          particles.push(new particle());
+        }
+      }
+
+      //p.circle(p.mouseX, p.mouseY, 100);
+
+      for (let particle of particles) {
+        particle.display();
+        particle.update();
+      }
+
+      p.fill(255,255,255, 50);
+      p.circle(p.mouseX, p.mouseY, 100);
+
     };
 
     // this is a new function we've added to p5
@@ -26,6 +44,103 @@ function sketch(parent) { // we pass the sketch data from the parent
       // console.log('data changed');
       // console.log('x: ', val.x, 'y: ', val.y);
     };
+
+    // particle class
+    function particle() {
+
+      this.y = p.random(0.45 * p.height, 0.55 * p.height);
+      this.size = p.random(5, 25);
+      this.x = Math.random() < 0.5 ? 25 : p.width - 25;
+      this.maxangle = 2 * p.atan2(p.height/2, p.width);
+      this.angle = this.maxangle * p.random(-1, 1);
+      this.wander = 0.05;
+      this.v0 = p.random(0.1, 5) * (this.x < p.width/2 ? 1 : -1);
+      this.vx = this.v0 * Math.cos(this.angle);
+      this.vy = this.v0 * Math.sin(this.angle);
+      this.color = 'palegoldenrod';
+      this.fadeOut = false;
+      this.fadeCount = 20;
+
+      this.update = function() {
+        
+        this.angle = p.random(2 * p.PI);
+
+        this.ax = this.wander * Math.cos(this.angle);
+        this.ay = this.wander * Math.sin(this.angle);
+
+        /*
+        let dy = this.y - p.mouseY;
+        let dx = this.x - p.mouseX;
+        let angle = Math.atan2(dy, dx);
+        let rsq = 1 + dy*dy + dx*dx;
+
+        this.ax += 1000*Math.cos(angle)/rsq;
+        this.ay += 1000*Math.sin(angle)/rsq;
+        */
+
+        this.vx += this.ax;
+        this.vy += this.ay;
+        
+        this.x = this.x + this.vx;
+        this.y = this.y + this.vy;
+        
+        if (this.size > 2) {
+          this.size = this.size * 0.99;
+        }
+
+        // delete particle if it leaves screen
+        if (this.x > p.width || this.x < -this.size || this.y > p.height || this.y < 0) {
+          this.remove();
+        }
+
+        if (distSquared(p.mouseX, p.mouseY, this.x, this.y) < 50*50) {
+          let dy = this.y - p.mouseY;
+          let dx = this.x - p.mouseX;
+          let angle = Math.atan2(dy, dx);
+          this.x = p.mouseX + 51 * Math.cos(angle);
+          this.y = p.mouseY + 51 * Math.sin(angle);
+          
+          /*
+          let v = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+          let initialAngle = Math.atan2(this.vy, this.vx);
+          let reboundAngle = Math.PI/2 - initialAngle - 2*angle;
+
+          this.vx = v * Math.cos(reboundAngle);
+          this.vy = v * Math.sin(reboundAngle);
+          */
+
+          //this.color = 'red';
+          //this.fadeOut = true;
+        }
+
+        if (this.fadeOut) {
+          this.fadeCount--;
+            if (this.fadeCount == 0) {
+              this.remove();
+            }
+        }
+
+
+      };
+
+      this.display = function() {
+        p.fill(this.color);
+        p.ellipse(this.x, this.y, this.size);
+      };
+
+      this.remove = function() {
+        let index = particles.indexOf(this);
+        particles.splice(index, 1);
+      }
+
+    }
+
+    function distSquared(x1, y1, x2, y2) {
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        return dx * dx + dy * dy;
+    }
+
 
   };
 }
