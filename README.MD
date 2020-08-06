@@ -1,6 +1,7 @@
 # TODO
 
-[ ] Graph Styling
-[X] Header Animation
+[x] Graph Styling
+[x] Header Animation
 [ ] References / Footnotes
-[X] Responsive
+[x] Responsive
+[ ] Header Animation improvements (responsive, avoid text?)

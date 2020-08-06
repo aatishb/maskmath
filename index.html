@@ -529,14 +529,12 @@
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph2Traces" :layout="graph2Layout"></graph>
+      <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
 
     </div>
   </div>
 
   <div class="container">
-
-    <p><b>Wearing masks reduces R0.</b></p>
 
     <p>
       To stop the spread of COVID-19, we need to bring R0 beneath 1 (and keep it there).
@@ -585,13 +583,12 @@
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout"></graph>
+      <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
 
     </div>
   </div>
 
   <div class="container">
-    <p><b>The more people wear masks, the fewer people will eventually be infected.</b></p>
 
     <p>
       This hill-shaped curve shows us how masks influence the number of people who will be infected in an epidemic.

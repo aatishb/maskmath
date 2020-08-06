@@ -1,14 +1,14 @@
 // custom graph component
 Vue.component('graph', {
 
-  props: ['traces', 'layout'],
+  props: ['traces', 'layout', 'config'],
 
-  template: '<div ref="graph" class="graph" style="width: 700px; height: 700px;"></div>',
+  template: '<div ref="graph" class="graph"></div>',
 
   methods: {
 
     graph() {
-      Plotly.react(this.$refs.graph, this.traces, this.layout);
+      Plotly.react(this.$refs.graph, this.traces, this.layout, this.config);
     },
 
   },
@@ -199,7 +199,10 @@ let app = new Vue({
     eout: 0.5,  // mask effectiveness on exhale
     ein: 0.5,   // mask effectiveness on inhale
     p: 0.5,     // percent of people wearing masks
-    R0: 2.5     // reproductive number R0
+    R0: 2.5,     // reproductive number R0
+    graphBackgroundColor: 'rgb(0,0,51)',
+    graphTextColor: 'rgb(255, 190, 137)',
+    graphTraceColor: 'rgb(254, 199, 81)'
   },
 
   methods: {
@@ -212,30 +215,6 @@ let app = new Vue({
       return this.R0 * (1 - this.ein * p) * (1 - this.eout * p);
     },
 
-    /*
-    findRoot(R0, guess) { // Newton's method for finding equation root
-
-      let estimate = guess;
-      let maxIterations = 10;
-
-      for (let i = 0; i < maxIterations; i++) {
-        estimate = estimate - this.equation(R0, guess) / this.derivative(R0, guess);
-      }
-
-      return estimate;
-
-    },
-
-    equation(R0, a) {
-      return 1 - Math.exp(-a * R0) - a;
-    },
-
-    derivative(R0, a) {
-      return R0 * Math.exp(-a * R0) - 1;
-    }
-    */
-
-
   },
 
   computed: {
@@ -244,74 +223,40 @@ let app = new Vue({
       return new Array(101).fill(0).map((e,i) => i / 100);
     },
 
-    graph1Traces() {
-      return [
-        {
-          x: this.indexArray,
-          y: this.indexArray.map(p => 1 - (1 - this.ein * p) * (1 - this.eout * p) ),
-          mode: 'lines',
-          name: 'Entire Population',
-          line: {
-            color: 'purple'
-          }
-        },
-        {
-          x: this.indexArray,
-          y: this.indexArray.map(p => this.eout * p ),
-          mode: 'lines',
-          name: 'Non-Mask Wearers',
-          line: {
-            color: 'red'
-          }
-        },
-        {
-          x: this.indexArray,
-          y: this.indexArray.map(p => 1 - (1 - this.eout * p) * (1 - this.ein) ),
-          mode: 'lines',
-          name: 'Mask Wearers',
-          line: {
-            color: 'blue'
-          }
-        },
-      ]
-    },
-
-    graph1Layout() {
-      return {
-        title:'Reduction in Virus Transmission Versus Mask Wearership',
-        xaxis: {
-          tickformat: ',.0%',
-        },
-        yaxis: {
-          tickformat: ',.0%',
-          range: [1, 0]
-        }
-      }
-    },
-
     graph2Traces() {
       return [
         {
+          x: [0,1],
+          y: [3,3],
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tonexty',
+          fillcolor: 'rgba(255, 140, 105, 0.2)',
+          line: {color: "transparent"},
+          hoverinfo: 'none'
+        },
+        {
+          x: [0,1],
+          y: [1,1],
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tozeroy',
+          fillcolor: 'rgba(88,229,88, 0.2)',
+          line: {color: "transparent"},
+          hoverinfo: 'none'
+        },
+        {
+          name: 'R0',
           x: this.indexArray,
           y: this.indexArray.map(p => this.R0withmask(p)),
           mode: 'lines',
           line: {
-            color: 'purple'
+            color: this.graphTraceColor,
+            width: 4
           }
-        }
-      ]
-    },
-
-    graph2Layout() {
-      return {
-        title:'R0 Versus Mask Wearership',
-        xaxis: {
-          tickformat: ',.0%',
         },
-        yaxis: {
-          range: [0, 3]
-        }
-      }
+
+      ]
     },
 
     graph3Traces() {
@@ -321,22 +266,102 @@ let app = new Vue({
           y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
           mode: 'lines',
           line: {
-            color: 'purple'
+            color: this.graphTraceColor,
+            width: 4
           }
         }
       ]
     },
 
-    graph3Layout() {
+    graph2Layout() {
       return {
-        title:'Infected Fraction Versus Mask Wearership',
+        title:'<b>Wearing Masks Reduces R0</b>',
+        showlegend: false,
         xaxis: {
+          title: 'Percentage of People Who Wear Masks',
           tickformat: ',.0%',
+          color: this.graphTextColor,
         },
         yaxis: {
+          title: '# People a Contagious Person Infects (R0)',
+          range: [0, 3],
+          color: this.graphTextColor,
+          hoverformat: '.2f',
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 20
+        },
+        annotations: [
+          {
+            x: 0.01,
+            y: 0.95,
+            xref: 'x',
+            yref: 'y',
+            text: 'Epidemic Under Control',
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'lightgreen',
+              size: 20
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'top',
+            opacity: 1
+          },
+          {
+            x: 0.01,
+            y: 1.05,
+            xref: 'x',
+            yref: 'y',
+            text: 'Epidemic Out Of Control',
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'salmon',
+              size: 20
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'bottom',
+            opacity: 1
+          }
+        ]
+
+      }
+    },
+
+    graph3Layout() {
+      return {
+        title:'<b>The more people wear masks, the fewer people will eventually be infected.</b>',
+        xaxis: {
+          title: 'Percentage of People Who Wear Masks',
+          tickformat: ',.0%',
+          color: this.graphTextColor,
+        },
+        yaxis: {
+          title: 'Percentage of People Who Will Be Infected',
           range: [0, 1],
+          color: this.graphTextColor,
           tickformat: '%',
-        }
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 20
+        },
+      }
+    },
+
+    config() {
+      return {
+        responsive: true
       }
     },
 
