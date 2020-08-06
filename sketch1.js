@@ -30,15 +30,19 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     function drawMask(x,y) {
+      // straps
       p.stroke('white');
       p.strokeWeight(emojiSize/15);
       p.drawingContext.setLineDash([]);
       p.line(x - 0.43*emojiSize, y - 0.2*emojiSize, x + 0.27*emojiSize, y + 0.1*emojiSize);
       p.line(x + 0.43*emojiSize, y - 0.2*emojiSize, x - 0.27*emojiSize, y + 0.1*emojiSize);
+
+      // mask
       p.noStroke();
       p.fill('white');
       p.ellipse(x, y, 0.5*emojiSize, 0.37*emojiSize)
 
+      // nose clip
       p.stroke('grey');
       p.strokeWeight(emojiSize/40);
       p.arc(x, y, 0.8*0.5*emojiSize, 0.8*0.35*emojiSize, -Math.PI/2 -0.5, -Math.PI/2 + 0.5);
