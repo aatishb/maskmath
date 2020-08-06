@@ -26,6 +26,10 @@ function sketch(parent) { // we pass the sketch data from the parent
       //console.log(parent.data.mask1);
       p.noLoop();
 
+      for (let i = 0; i < 21; i++) {
+        particles.push(new particle());
+      }
+
       //new ResizeObserver(onResize).observe(target);
     };
 
@@ -50,7 +54,14 @@ function sketch(parent) { // we pass the sketch data from the parent
 
     function drawContagiousPerson() {
       
-      p.text('😐', emojiSize/2, p.height * 0.6);              
+      if (particles.length > 70) {
+        p.text('😫', emojiSize/2, p.height * 0.6);              
+      } else if (particles.length > 60) {
+        p.text('😣', emojiSize/2, p.height * 0.6);              
+      } else {
+        p.text('😐', emojiSize/2, p.height * 0.6);              
+      }
+
       
       if (parent.data.mask1) {
         let x = emojiSize/2;
@@ -154,12 +165,6 @@ function sketch(parent) { // we pass the sketch data from the parent
       }
 
     };
-
-    function onResize() {
-      let width = target.clientWidth;
-      let height = target.clientHeight;
-      //console.log('p5 container resized', width, height);
-    }
 
     // particle class
     function particle() {

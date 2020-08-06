@@ -59,6 +59,7 @@
   text-align: center;
 }
 
+/* three column */
 .small-big-small > div:nth-child(1) {
   flex: 1 0 20%;
   align-items: flex-end;
@@ -87,7 +88,7 @@
   text-align: center;
 }
 
-
+/* two column */
 .big-small > div:nth-child(1) {
   flex: 1 0 60%;
 }
@@ -96,6 +97,7 @@
   flex: 1 0 40%;
 }
 
+/* three column */
 .big-small-small > div:nth-child(1) {
   flex: 1 0 60%;
 }
