@@ -5,14 +5,17 @@ function sketch(parent) { // we pass the sketch data from the parent
   return function( p ) { // p could be any variable name
 
     // p5 sketch goes here
-    let particles = []; 
+    let particles = [];
+    let numParticles; 
+    let target;
 
     p.setup = function() {
-      let target = parent.$el;
+      target = parent.$el;
       let width = target.clientWidth;
       let height = target.clientHeight;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
+      numParticles = 150 * width * height / 570000
       canvas.parent(parent.$el);
       p.noStroke();
     };
@@ -20,8 +23,8 @@ function sketch(parent) { // we pass the sketch data from the parent
     p.draw = function() {
       p.background(0, 0, 51);
 
-      if (particles.length < 50) {
-        for (let i = 0; i < 150; i++) {
+      if (particles.length < numParticles / 3) {
+        for (let i = 0; i < numParticles; i++) {
           particles.push(new particle());
         }
       }
@@ -141,6 +144,18 @@ function sketch(parent) { // we pass the sketch data from the parent
         return dx * dx + dy * dy;
     }
 
+    p.windowResized = function() {
+      //console.log('p5 canvas resized');
+      let width = target.clientWidth;
+      let height = target.clientHeight;
+      p.resizeCanvas(width, height);
+      numParticles = 150 * width * height / 570000
+
+      for (let particle of particles) {
+        particle.remove();
+      }
+
+    };
 
   };
 }
