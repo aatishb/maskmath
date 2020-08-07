@@ -10,11 +10,15 @@ function sketch(parent) { // we pass the sketch data from the parent
     let target;
     let nearbyParticles = 0;
     let worry = 0;
-    // let emojiFont;
+    let emojis = {};
 
-    // p.preload = function() {
-    //   emojiFont = p.loadFont('assets/EmojiOneColor-SVGinOT.ttf');
-    // }
+    p.preload = function() {
+      emojis.neutral = p.loadImage('assets/neutral.png');
+      emojis.confused = p.loadImage('assets/confused.png');
+      emojis.flinch = p.loadImage('assets/flinch.png');
+      emojis.cough = p.loadImage('assets/cough.png');
+      emojis.worried = p.loadImage('assets/worried.png');
+    }
 
     p.setup = function() {
       target = parent.$el;
@@ -26,8 +30,8 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.fill(240);
       p.noStroke();
       emojiSize = height * 0.66;
-      p.textSize(emojiSize);
-      p.textAlign(p.CENTER, p.CENTER);
+      //p.textSize(emojiSize);
+      p.imageMode(p.CENTER);
       // p.textFont(emojiFont);
       //console.log(parent.data.mask1);
       p.noLoop();
@@ -40,38 +44,39 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     function drawMask(x,y) {
+      p.drawingContext.setLineDash([]);
+
       // straps
       p.stroke('white');
       p.strokeWeight(emojiSize/15);
-      p.drawingContext.setLineDash([]);
-      p.line(x - 0.43*emojiSize, y - 0.2*emojiSize, x + 0.27*emojiSize, y + 0.1*emojiSize);
-      p.line(x + 0.43*emojiSize, y - 0.2*emojiSize, x - 0.27*emojiSize, y + 0.1*emojiSize);
+      p.line(x - 0.47*emojiSize, y - 0.25*emojiSize, x + 0.3*emojiSize, y + 0.1*emojiSize);
+      p.line(x + 0.47*emojiSize, y - 0.25*emojiSize, x - 0.3*emojiSize, y + 0.1*emojiSize);
 
       // mask
       p.noStroke();
       p.fill('white');
-      p.ellipse(x, y, 0.5*emojiSize, 0.37*emojiSize)
+      p.ellipse(x, y, 0.6*emojiSize, 0.4*emojiSize)
 
       // nose clip
       p.stroke('grey');
-      p.strokeWeight(emojiSize/40);
-      p.arc(x, y, 0.8*0.5*emojiSize, 0.8*0.35*emojiSize, -Math.PI/2 -0.5, -Math.PI/2 + 0.5);
+      p.strokeWeight(emojiSize/25);
+      p.arc(x, y, 0.7*0.6*emojiSize, 0.7*0.4*emojiSize, -Math.PI/2 -0.5, -Math.PI/2 + 0.5);
     }
 
     function drawContagiousPerson() {
       
       if (particles.length > 70) {
-        p.text('😫', emojiSize/2, p.height * 0.6);              
+        p.image(emojis.cough, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       } else if (particles.length > 60) {
-        p.text('😣', emojiSize/2, p.height * 0.6);              
+        p.image(emojis.flinch, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       } else {
-        p.text('😐', emojiSize/2, p.height * 0.6);              
+        p.image(emojis.neutral, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       }
 
       
       if (parent.data.mask1) {
         let x = emojiSize/2;
-        let y = p.height * 0.6;
+        let y = p.height * 2/3;
         drawMask(x,y);
       }
 
@@ -80,16 +85,16 @@ function sketch(parent) { // we pass the sketch data from the parent
     function drawSusceptiblePerson() {
 
       if (worry > 10) {
-        p.text('😟', p.width - emojiSize/2, p.height * 0.6);      
+        p.image(emojis.worried, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       } else if (worry > 5) {
-        p.text('😕', p.width - emojiSize/2, p.height * 0.6);      
+        p.image(emojis.confused, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       } else {
-        p.text('😐', p.width - emojiSize/2, p.height * 0.6);      
+        p.image(emojis.neutral, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       }
 
       if (parent.data.mask2) {
         let x = p.width - emojiSize/2;
-        let y = p.height * 0.6;
+        let y = p.height * 2/3;
         drawMask(x,y);
       }
 
@@ -124,7 +129,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       for (let particle of particles) {
         particle.display();
         particle.update();
-        nearbyParticles += particle.checkIfNear(p.width - emojiSize/2, p.height * 0.6 - 0.2*emojiSize, emojiSize/2);
+        nearbyParticles += particle.checkIfNear(p.width - emojiSize/2, p.height/2, emojiSize/2);
       }
 
       if (nearbyParticles) {
@@ -175,7 +180,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     // particle class
     function particle() {
 
-      this.y = p.random(0.45 * p.height, 0.55 * p.height);
+      this.y = p.random(0.55 * p.height, 0.65 * p.height);
       this.size = p.random(0.05*emojiSize, 0.14*emojiSize);
       this.x = emojiSize / 2;
       this.maxangle = 2 * p.atan2(p.height/2, p.width);
