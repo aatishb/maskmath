@@ -8,6 +8,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     let particles = [];
     let numParticles; 
     let target;
+    let isVisible = false;
 
     p.setup = function() {
       target = parent.$el;
@@ -18,6 +19,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       numParticles = 150 * width * height / 570000
       canvas.parent(parent.$el);
       p.noStroke();
+      p.noLoop();
     };
 
     p.draw = function() {
@@ -37,7 +39,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       }
 
       p.fill(255,255,255, 50);
-      p.circle(p.mouseX, p.mouseY, 100);
+      p.circle(p.mouseX, p.mouseY, 200);
 
     };
 
@@ -46,6 +48,18 @@ function sketch(parent) { // we pass the sketch data from the parent
     p.dataChanged = function(val, oldVal) {
       // console.log('data changed');
       // console.log('x: ', val.x, 'y: ', val.y);
+    };
+
+
+    // this is a new function we've added to p5
+    // it runs only when the canvas scrolls in or out of the page view
+    p.visibilityChanged = function(isVisible) {
+      //console.log('visibility changed to ', isVisible, Date.now());
+      if (isVisible) {
+        p.loop()
+      } else {
+        p.noLoop();
+      }
     };
 
     // particle class
@@ -60,9 +74,10 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.v0 = p.random(0.1, 5) * (this.x < p.width/2 ? 1 : -1);
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
-      this.color = 'palegoldenrod';
-      this.fadeOut = false;
-      this.fadeCount = 20;
+      this.minSize = 2;
+      //this.color = 'palegoldenrod';
+      // this.fadeOut = false;
+      // this.fadeCount = 20;
 
       this.update = function() {
         
@@ -87,7 +102,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         this.x = this.x + this.vx;
         this.y = this.y + this.vy;
         
-        if (this.size > 2) {
+        if (this.size > this.minSize) {
           this.size = this.size * 0.99;
         }
 
@@ -96,12 +111,12 @@ function sketch(parent) { // we pass the sketch data from the parent
           this.remove();
         }
 
-        if (distSquared(p.mouseX, p.mouseY, this.x, this.y) < 50*50) {
+        if (distSquared(p.mouseX, p.mouseY, this.x, this.y) < 100*100) {
           let dy = this.y - p.mouseY;
           let dx = this.x - p.mouseX;
           let angle = Math.atan2(dy, dx);
-          this.x = p.mouseX + 51 * Math.cos(angle);
-          this.y = p.mouseY + 51 * Math.sin(angle);
+          this.x = p.mouseX + 101 * Math.cos(angle);
+          this.y = p.mouseY + 101 * Math.sin(angle);
           
           /*
           let v = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
@@ -127,7 +142,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       };
 
       this.display = function() {
-        p.fill(this.color);
+        p.fill(238, 232, 170, 200);
         p.ellipse(this.x, this.y, this.size);
       };
 

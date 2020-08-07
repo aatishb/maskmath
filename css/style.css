@@ -75,7 +75,7 @@ a {
 
 .graph {
   width: 100%;
-  height: 700px;
+  height: 75vh;
 }
 
 .graphic {
@@ -153,6 +153,7 @@ a {
 }
 
 .caption {
+  width: 500px;
   margin-top: 0.25rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -192,6 +193,7 @@ a {
 }
 
 .splash {
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
   text-align: center;

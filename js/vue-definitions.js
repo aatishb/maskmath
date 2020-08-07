@@ -219,6 +219,10 @@ let app = new Vue({
 
   computed: {
 
+    fontSize() {
+      return parseInt(window.getComputedStyle(document.getElementById("root")).fontSize.slice(0,-2));
+    },
+
     indexArray() {
       return new Array(101).fill(0).map((e,i) => i / 100);
     },
@@ -288,25 +292,27 @@ let app = new Vue({
 
     graph2Layout() {
       return {
-        title:'<b>Wearing Masks Reduces R0</b>',
+        title:'<b>How Masks Reduce R0</b>',
         showlegend: false,
         xaxis: {
           title: 'Percentage of People Who Wear Masks',
           tickformat: ',.0%',
           color: this.graphTextColor,
+          fixedrange: true
         },
         yaxis: {
           title: '# People a Contagious Person Infects (R0)',
           range: [0, 3],
           color: this.graphTextColor,
           hoverformat: '.2f',
+          fixedrange: true
         },
         paper_bgcolor: this.graphBackgroundColor,
         plot_bgcolor: this.graphBackgroundColor,
         font: {
           family: 'Open Sans, sans-serif',
           color: this.graphTextColor,
-          size: 20
+          size: 0.9 * this.fontSize
         },
         annotations: [
           {
@@ -319,7 +325,7 @@ let app = new Vue({
             font: {
               family: 'Open Sans, sans-serif',
               color: 'lightgreen',
-              size: 20
+              size: 0.9 * this.fontSize
             },
             align: 'left',
             xanchor: 'left',
@@ -336,7 +342,7 @@ let app = new Vue({
             font: {
               family: 'Open Sans, sans-serif',
               color: 'salmon',
-              size: 20
+              size: 0.9 * this.fontSize
             },
             align: 'left',
             xanchor: 'left',
@@ -350,32 +356,35 @@ let app = new Vue({
 
     graph3Layout() {
       return {
-        title:'<b>The more people wear masks, the fewer people will eventually be infected.</b>',
+        title:'<b>How Masks Reduce Infections</b>',
         showlegend: false,
         xaxis: {
           title: 'Percentage of People Who Wear Masks',
           tickformat: ',.0%',
           color: this.graphTextColor,
+          fixedrange: true
         },
         yaxis: {
           title: 'Percentage of People Who Will Be Infected',
           range: [0, 1],
           color: this.graphTextColor,
           tickformat: '%',
+          fixedrange: true
         },
         paper_bgcolor: this.graphBackgroundColor,
         plot_bgcolor: this.graphBackgroundColor,
         font: {
           family: 'Open Sans, sans-serif',
           color: this.graphTextColor,
-          size: 20
+          size: 0.9 * this.fontSize
         },
       }
     },
 
     config() {
       return {
-        responsive: true
+        responsive: true,
+        displayModeBar: false
       }
     },
 

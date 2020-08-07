@@ -11,6 +11,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     let nearbyParticles = 0;
     let worry = 0;
     let emojis = {};
+    let isVisible = false;
 
     p.preload = function() {
       emojis.neutral = p.loadImage('assets/neutral.png');
@@ -36,6 +37,13 @@ function sketch(parent) { // we pass the sketch data from the parent
       for (let i = 0; i < 21; i++) {
         particles.push(new particle());
       }
+
+      emojis.neutral.resize(emojiSize, emojiSize);
+      emojis.confused.resize(emojiSize, emojiSize);
+      emojis.flinch.resize(emojiSize, emojiSize);
+      emojis.cough.resize(emojiSize, emojiSize);
+      emojis.worried.resize(emojiSize, emojiSize);
+
     };
 
     function drawMask(x,y) {
@@ -78,11 +86,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     function drawContagiousPerson() {
       
       if (particles.length > 70) {
-        p.image(emojis.cough, emojiSize/2, p.height/2, emojiSize, emojiSize);              
+        p.image(emojis.cough, emojiSize/2, p.height/2);              
       } else if (particles.length > 60) {
-        p.image(emojis.flinch, emojiSize/2, p.height/2, emojiSize, emojiSize);              
+        p.image(emojis.flinch, emojiSize/2, p.height/2);              
       } else {
-        p.image(emojis.neutral, emojiSize/2, p.height/2, emojiSize, emojiSize);              
+        p.image(emojis.neutral, emojiSize/2, p.height/2);              
       }
 
       
@@ -97,11 +105,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     function drawSusceptiblePerson() {
 
       if (worry > 10) {
-        p.image(emojis.worried, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
+        p.image(emojis.worried, p.width - emojiSize/2, p.height/2);      
       } else if (worry > 5) {
-        p.image(emojis.confused, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
+        p.image(emojis.confused, p.width - emojiSize/2, p.height/2);      
       } else {
-        p.image(emojis.neutral, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
+        p.image(emojis.neutral, p.width - emojiSize/2, p.height/2);      
       }
 
       if (parent.data.mask2) {
@@ -125,8 +133,8 @@ function sketch(parent) { // we pass the sketch data from the parent
       drawSusceptiblePerson();
 
       p.stroke(240);
-      p.strokeWeight(7);
-      p.drawingContext.setLineDash([0, 15]);
+      p.strokeWeight(emojiSize/12);
+      p.drawingContext.setLineDash([0, emojiSize/7]);
 
       if (parent.data.mask1) {
         p.line(1.25 * emojiSize, 10, 1.25 * emojiSize, p.height + 10);
@@ -166,7 +174,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     // this is a new function we've added to p5
     // it runs only when the canvas scrolls in or out of the page view
     p.visibilityChanged = function(isVisible) {
-      //console.log('visibility changed to ', isVisible);
+      //console.log('visibility changed to ', isVisible, Date.now());
       if (isVisible) {
         p.loop()
       } else {
@@ -180,11 +188,16 @@ function sketch(parent) { // we pass the sketch data from the parent
       let height = 0.833 * target.clientHeight;
       p.resizeCanvas(width, height);
       emojiSize = height * 0.66;
-      p.textSize(emojiSize);
 
       for (let particle of particles) {
         particle.remove();
       }
+
+      emojis.neutral.resize(emojiSize, emojiSize);
+      emojis.confused.resize(emojiSize, emojiSize);
+      emojis.flinch.resize(emojiSize, emojiSize);
+      emojis.cough.resize(emojiSize, emojiSize);
+      emojis.worried.resize(emojiSize, emojiSize);
 
     };
 
@@ -205,7 +218,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.color = 'palegoldenrod';
       this.fadeOut = false;
       this.fadeCount = 30;
-      this.minSize = p.max(0.036 * emojiSize, 3);
+      this.minSize = 0.036 * emojiSize;
 
       this.update = function() {
         
