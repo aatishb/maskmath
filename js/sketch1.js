@@ -24,27 +24,23 @@ function sketch(parent) { // we pass the sketch data from the parent
       target = parent.$el;
       let width = target.clientWidth;
       let height = 0.833 * target.clientHeight;
-      //console.log(width, height);
       let canvas = p.createCanvas(width, height);
       canvas.parent(parent.$el);
       p.fill(240);
       p.noStroke();
       emojiSize = height * 0.66;
-      //p.textSize(emojiSize);
       p.imageMode(p.CENTER);
-      // p.textFont(emojiFont);
-      //console.log(parent.data.mask1);
+      p.rectMode(p.CENTER, p.CENTER);
       p.noLoop();
 
       for (let i = 0; i < 21; i++) {
         particles.push(new particle());
       }
-
-      //new ResizeObserver(onResize).observe(target);
     };
 
     function drawMask(x,y) {
       p.drawingContext.setLineDash([]);
+
 
       // straps
       p.stroke('white');
@@ -61,6 +57,22 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.stroke('grey');
       p.strokeWeight(emojiSize/25);
       p.arc(x, y, 0.7*0.6*emojiSize, 0.7*0.4*emojiSize, -Math.PI/2 -0.5, -Math.PI/2 + 0.5);
+
+      /*
+      // surgical mask
+
+      p.stroke('white');
+      p.strokeWeight(emojiSize/15);
+      p.line(x - 0.47*emojiSize, y - 0.25*emojiSize, x, y);
+      p.line(x + 0.47*emojiSize, y - 0.25*emojiSize, x, y);
+      p.line(x - 0.38*emojiSize, y + 0.02*emojiSize, x, y + 0.15*emojiSize);
+      p.line(x + 0.38*emojiSize, y + 0.02*emojiSize, x, y + 0.15*emojiSize);
+
+      p.noStroke();
+      p.fill(158,187,214);
+      p.rect(x, y, 0.55*emojiSize, 0.4*emojiSize, 0.1*emojiSize);
+      */
+
     }
 
     function drawContagiousPerson() {
@@ -141,7 +153,6 @@ function sketch(parent) { // we pass the sketch data from the parent
       if (worry > 21) {worry = 21;}
       if (worry < 0) {worry = 0;}
 
-      //p.ellipse(p.width - emojiSize/2, p.height * 0.6 - 0.2*emojiSize, emojiSize);
       //console.log('nearby particles', nearbyParticles);
     };
 
