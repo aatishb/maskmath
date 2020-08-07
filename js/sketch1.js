@@ -205,6 +205,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.color = 'palegoldenrod';
       this.fadeOut = false;
       this.fadeCount = 30;
+      this.minSize = p.max(0.036 * emojiSize, 3);
 
       this.update = function() {
         
@@ -219,7 +220,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         this.x = this.x + this.vx;
         this.y = this.y + this.vy;
         
-        if (this.size > 0.036 * emojiSize) {
+        if (this.size > this.minSize) {
           this.size = this.size * 0.99;
         }
 
