@@ -10,6 +10,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     let target;
     let nearbyParticles = 0;
     let worry = 0;
+    // let emojiFont;
+
+    // p.preload = function() {
+    //   emojiFont = p.loadFont('assets/EmojiOneColor-SVGinOT.ttf');
+    // }
 
     p.setup = function() {
       target = parent.$el;
@@ -21,9 +26,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.fill(240);
       p.noStroke();
       emojiSize = height * 0.66;
-      p.loadFont('assets/EmojiOneColor-SVGinOT.ttf');
       p.textSize(emojiSize);
       p.textAlign(p.CENTER, p.CENTER);
+      // p.textFont(emojiFont);
       //console.log(parent.data.mask1);
       p.noLoop();
 
