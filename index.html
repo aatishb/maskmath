@@ -32,20 +32,21 @@
 
     <p>
       We <a href="https://www.sciencedirect.com/science/article/pii/S0140673620311429">now know</a> that masks have an outsized effect on halting the spread of COVID-19.
-      And yet some people are still opposed to wearing masks because they view this as a personal choice rather than as a public health issue.
+      And yet, some people oppose wearing masks because they view this as a personal choice rather than as a public health issue.
     </p>
 
     <p>
-      This misses the big picture because masks don't just protect the wearer, they also protect the people around them.
-      Your decision on whether or not to wear a mask impacts your society.
+      This misses the big picture.
+      Masks don't just protect the wearer, they also protect the people around them.
+      Your decision to wear a mask impacts your society.
     </p>
 
-    <p>In fact, we can actually <i>quantify</i> this impact.</p>
+    <p>In fact, we can <i>quantify</i> this impact.</p>
 
     <p>
       In this interactive essay, we’ll calculate the social benefit of wearing masks (or conversely, the social cost of not wearing masks).
-      By doing the math on masks, we'll see how masks can be a surprisingly powerful way to extinguish epidemics.
-      For example, when 60% of people wear masks that are 60% effective, disease transmission will drop by 60% — roughly what's needed to stop the spread of COVID-19.
+      By doing the math on masks, we'll see how masks are a powerful way to extinguish an epidemic.
+      For example, when 60% of people wear 60% effective masks, disease transmission will drop by 60% — roughly what's needed to stop the spread of COVID-19.
     </p>
 
     <h2>Say it, Don't Spray It</h2>
@@ -53,7 +54,7 @@
     <p>
       First, let’s get a ballpark sense for some numbers.
       When a person exhales, they spray out saliva particles of various tiny sizes.
-      If this person is contagious, then their 'mouth spray' is packed with viral particles.
+      If they're contagious, this 'mouth spray' is loaded with viral particles.
       This virus-laden saliva spray is the main way that COVID-19 spreads.
     </p>
 
@@ -67,16 +68,16 @@
 
     <p>
       The more viral particles travel from person to person, the higher the chance of infection.
-      (And once infected, people who inhale more viral particles will generally experience more severe symptoms.)
+      (And once infected, people who inhale more viral particles generally experience more severe symptoms.)
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><b>Transmission Route 1:</b> When a contagious person is near a susceptible person, their 'mouth spray' can transmit disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false"><b>Transmission Route 1:</b> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
 
   <div class="container">
 
-    <p>Masks reduce the amount of mouth spray that travels from a contagious person to a susceptible person (either by blocking or by redirecting the spray), thereby reducing the risk of infection.</p>
+    <p>Masks reduce the amount of mouth spray traveling between people (either by blocking or by redirecting the spray), thereby reducing the risk of infection.</p>
 
     <p>
       It's worth keeping in mind that no mask is perfect.
@@ -103,7 +104,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b>Transmission Route 2:</b> If the contagious person wears a 50% effective mask, disease transmission is reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b>Transmission Route 2:</b> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -111,38 +112,34 @@
 
     <p>
       In general, the effectiveness of a mask varies depending on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For the moment, let’s keep things simple and assume that this mask is equally effective in both directions.
+      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
     </p>
 
-    <p>In that case, if the susceptible person wears this mask whenever they're near a contagious person, their chance of infection will also drop by 50%.</p>
+    <p>In that case, the chance of infection in this route also drops by 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b>Transmission Route 3:</b> If the susceptible person wears a 50% effective mask, disease transmission is also reduced by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b>Transmission Route 3:</b> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
   
   <div class="container">
 
     <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
 
     <p>
-      Well, the first mask filters the air the contagious person breathes <b>out</b>, which cuts the chance of infection in half.
-      The second mask filters the air the susceptible person breathes <b>in</b>, which again cuts the chance of infection in half.
-    </p>
-
-    <p>
-      So when <i>both</i> people are wearing masks the chance of infection is quartered (as compared to when neither of them wear masks).
-      That's a 75% reduction in the risk of infection.
+      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
+      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
+      That's a 75% drop in the chance of infection.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b>Transmission Route 4:</b> When both people wear 50% effective masks, disease transmission is reduced by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b>Transmission Route 4:</b> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
   
   <div class="container">
 
     <p>
       If you think about it, it's surprising that a 50% effective mask can potentially reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the mouth spray is filtered twice: once on the way out, and a second time on the way in.
+      This is possible because when both people wear masks, the odds of infection are halved twice.
       This <b>double protection</b> makes masks much more effective than you might intuitively expect.
     </p>
 
@@ -174,7 +171,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. The numbers here are calculated assuming a 50% effective mask.
+        The four ways that COVID-19 can spread from person to person. These numbers are calculated assuming a 50% effective mask.
       </div>
 
     </div>
@@ -192,7 +189,7 @@
 
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
-    <p>For example, imagine if <b>nobody</b> wore a mask. In this situation we’d only have the first route to consider, and so disease transmission in the population would be unaffected.</p>
+    <p>For example, if <b>nobody</b> wore a mask, we’d only have the first route to consider. So disease transmission in the population would be unaffected.</p>
 
   </div>
 
@@ -217,7 +214,7 @@
       </div>
 
       <div class="caption">
-        If nobody wore a mask, disease transmission would be unaffected.
+        When no one wears a mask, disease transmission remains unaffected.
       </div>
 
     </div>
@@ -226,10 +223,9 @@
   <div class="container">
 
     <p>
-      Conversely, suppose <b>everybody</b> wore a mask.
-      In this scenario, whenever two people meet, they'd both be wearing masks.
+      At the other extreme, if everybody wore a mask then whenever two people meet, they'd both be wearing masks.
       So we’d only have the last route to consider.
-      And if each mask were 50% effective, then disease transmission in the population would drop by 75 percent.
+      If each mask were 50% effective, disease transmission in the population would drop by 75 percent.
     </p>
 
   </div>
@@ -264,12 +260,13 @@
   <div class="container">
 
     <p>
-      In reality, some people wear masks and others don’t, which means that the virus can spread through all four possible routes.
+      In reality, some people wear masks and others don’t.
+      Which means that the virus can spread through all four possible routes.
       Each route has a different likelihood and a different level of risk.
     </p>
 
     <p>
-      When either 0% or 100% of people wear masks, it's straightforward to calculate the benefit that masks provide.
+      When either 0% or 100% of people wear masks, we can calculate the benefit that masks provide.
       The question is, how do we do calculate this in general?
     <p>
 
@@ -335,12 +332,12 @@
     </p>
 
     <p>
-      Meanwhile, people who don’t wear masks can only get infected via the first two routes shown above, which are equally likely when half the population is wearing a mask.
+      Meanwhile, people who don’t wear masks can only get infected via the first two routes, which are equally likely when half the population wears a mask.
       So the drop in disease transmission to mask-wearers is the average of 0% and 50%, which is 25%.
     </p>
 
     <p>
-      Similarly, people who <i>do</i> wear masks can only get infected via the last two routes shown above.
+      And people who <i>do</i> wear masks can only get infected via the last two routes.
       So the drop in disease transmission to mask-wearers is the average of 50% and 75%, which is 62.5%.
     </p>
 
@@ -362,14 +359,16 @@
   <div class="container">
 
     <p>
-      So mask-wearers get the largest benefit from masks (no surprise there).
-      But even non-mask wearers get a modest benefit, by freeloading off other people who wear masks.
-      That’s because the air that they inhale is often filtered by <i>other people’s</i> partially effective masks (shown above in the second route.)
+      So even non-mask wearers get a modest benefit, by freeloading off other people who wear masks.
+      That’s because the air they inhale is often filtered by <i>other people’s</i> masks.
     </p>
 
-    <p>The population as a whole, which is made up of both mask-wearers and non-mask wearers, gets a benefit somewhere in between these two groups.</p>
+    <p>
+      But mask-wearers benefit further, thanks to the added protection that their masks provide.
+      And the population as a whole, which consists of both mask-wearers and non-mask wearers, ends up with a benefit somewhere in between these two groups.
+    </p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks), we’ve worked out how to go from the <b>protection that a mask offers an <i>individual</i></b> to the <b>collective benefit that masks confer to <i>society</i>.</b></p>
+    <p>So in this simplified example (where 50% of people wear 50% effective masks), we’ve worked out how to go from the <b>protection that masks offer an <i>individual</i></b> to the <b>collective benefit that masks confer to <i>society</i>.</b></p>
 
     <h2>Maskology</h2>
 
@@ -455,7 +454,7 @@
 
     <p>
       By filtering exhaled air, masks protect mask-wearers and non-mask wearers alike.
-      And by filtering inhaled air, masks provide additional protection to those who wear them.
+      And by filtering inhaled air, masks provide extra protection to those who wear them.
       As mask wearing increases, disease spread reduces for <b>everyone</b>.
     </p>
 
@@ -466,9 +465,10 @@
     <h2>How To Stop An Epidemic</h2>
 
     <p>
-      You extinguish a fire by starving it of oxygen. 
-      But you don't need to remove all the oxygen, you just need to reduce it enough to stop the fire from spreading.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%, you just need to reduce it enough to stop the disease from growing.
+      You put out a fire by starving it of oxygen.
+      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
+      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
+      If you just lower it enough to stop the disease from spreading, you can extinguish the epidemic.
     </p>
 
     <p>
@@ -476,7 +476,7 @@
       This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
     </p> 
 
-    <p>When R0 is greater than 1, the disease will grow exponentially until we reach <a href="https://en.wikipedia.org/wiki/Herd_immunity">herd immunity</a>, which happens either when sufficiently many people get vaccinated, or get infected and develop immunity to the disease.</p>
+    <p>When R0 is greater than 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
 
     <p>
       But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
@@ -503,7 +503,7 @@
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which can further reduce R0.)
+      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
       By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
     </p>
 
@@ -536,30 +536,31 @@
 
     <p>
       To stop the spread of COVID-19, we need to bring R0 beneath 1 (and keep it there).
-      So how many people need to wear a 50% effective mask in order to stop the spread of COVID-19?
-      What if the masks are 60% effective?
+      How many people need to wear a 50% effective mask to stop the spread of COVID-19?
+      What if the masks were 60% effective?
       Or 70% effective?
     </p>
 
     <p>
-      With this interactive, you can predict the answer to these questions.
+      This interactive lets you predict the answers to these questions.
       (In reality, because people tend to cluster together and not mix randomly, the numbers this model predicts will be an underestimate.)
     </p>
 
-    <p>
-      We can take this one step further.
-      Instead of graphing R0, let's express the power of masks in more relatable <i>human</i> terms.
-    </p>
+    <p>We can take this one step further, by expressing the power of masks in more relatable <i>human</i> terms.</p>
 
     <h2>The Human Cost</h2>
 
-    <p>Masks save lives by reducing the chance of spreading infection which, in turn, shrinks the extent of the epidemic.</p>
+    <p>Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.</p>
 
-    <p>This suggests that we can get a clearer picture if, instead of visualizing R0, we visualize the <b>infected fraction</b> of the population. As more people wear masks, R0 decreases, and so does the number of people who will be infected.</p>
+    <p>
+      This suggests that we can get a clearer picture if, instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      As more people wear masks, R0 decreases.
+      And as R0 shrinks, so does the number of infected people.
+    </p>
 
     <p>By using a widely-used mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.</p>
     
-    <p>Although this model is a considerable simplification of reality (e.g. it assumes random mixing between people and no lockdowns), it provides us with a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
 
   </div>
 
@@ -589,32 +590,35 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the number of people who will be infected in an epidemic.
+      This hill-shaped curve shows us how masks influence the number of infected people in an epidemic.
+    </p>
+
+    <p>
+      When very few people wear masks, we're at the top of the hill, where most people will get infected.
+      And since the top of the hill has a shallow slope, wearing masks initially provides a modest drop in the number of infections.
+    </p>
+
+    <p>
       To end the spread of COVID-19, we need to get to the bottom of this hill.
+      But here's the silver lining: as more people wear masks, the hill grows steeper.
+      Every step to the right takes us further downwards.
+      Which means <b>masks provide greater returns to society as more people wear them</b>.
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill.
-      And since the top of the hill has a shallow slope, this means that, at first, wearing masks provides a modest drop in the number of infections.
-    </p>
-
-    <p>
-      But as more people wear masks, we move further down the hill, and the hill grows steeper. 
-      Every step to the right moves us further downwards.
-      <b>Masks provide greater returns as more people wear them.</b>
-    </p>
-
-    <p>
-      When enough people wear masks, we reach the bottom of the hill, and the risk of infection drops to zero.
+      When enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
       This is how masks can end an epidemic.
       But masks can only end an epidemic if enough people wear them.
     </p>
 
     <p>
       You might wonder how many people have to wear masks to end an epidemic.
-      This depends on how effective the mask is.
+      Well, that depends on how effective the mask is.
+    </p>
+
+    <p>
       By playing with interactive above, you can see that if masks were 100% effective, you'd need a little over a third of the population to wear them to stop the spread of COVID-19.
-      But if masks are 50% effective, you'd need closer to three-quarters of the population to wear them to stop the spread.
+      But if masks were 50% effective, you'd need closer to three-quarters of the population to wear them to stop the spread.
     </p>
 
     <p>
@@ -627,7 +631,7 @@
 
     <p>Together, we can get to the bottom of the hill.</p>
     
-    <p>Together, we can end COVID-19.</p>
+    <p>Together, we can beat COVID-19.</p>
 
   </div>
 
