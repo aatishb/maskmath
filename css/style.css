@@ -316,6 +316,10 @@ a {
     min-height: 500px;
   }
 
+  .caption {
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -331,6 +335,10 @@ a {
   .graph {
     height: 75vh;
     min-height: 400px;
+  }
+
+  .caption {
+    width: 100%;
   }
 
 }
