@@ -38,11 +38,13 @@ function sketch(parent) { // we pass the sketch data from the parent
         particles.push(new particle());
       }
 
+      /*
       emojis.neutral.resize(emojiSize, emojiSize);
       emojis.confused.resize(emojiSize, emojiSize);
       emojis.flinch.resize(emojiSize, emojiSize);
       emojis.cough.resize(emojiSize, emojiSize);
       emojis.worried.resize(emojiSize, emojiSize);
+      */
 
     };
 
@@ -86,11 +88,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     function drawContagiousPerson() {
       
       if (particles.length > 70) {
-        p.image(emojis.cough, emojiSize/2, p.height/2);              
+        p.image(emojis.cough, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       } else if (particles.length > 60) {
-        p.image(emojis.flinch, emojiSize/2, p.height/2);              
+        p.image(emojis.flinch, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       } else {
-        p.image(emojis.neutral, emojiSize/2, p.height/2);              
+        p.image(emojis.neutral, emojiSize/2, p.height/2, emojiSize, emojiSize);              
       }
 
       
@@ -105,11 +107,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     function drawSusceptiblePerson() {
 
       if (worry > 10) {
-        p.image(emojis.worried, p.width - emojiSize/2, p.height/2);      
+        p.image(emojis.worried, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       } else if (worry > 5) {
-        p.image(emojis.confused, p.width - emojiSize/2, p.height/2);      
+        p.image(emojis.confused, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       } else {
-        p.image(emojis.neutral, p.width - emojiSize/2, p.height/2);      
+        p.image(emojis.neutral, p.width - emojiSize/2, p.height/2, emojiSize, emojiSize);      
       }
 
       if (parent.data.mask2) {
@@ -193,11 +195,13 @@ function sketch(parent) { // we pass the sketch data from the parent
         particle.remove();
       }
 
+      /*
       emojis.neutral.resize(emojiSize, emojiSize);
       emojis.confused.resize(emojiSize, emojiSize);
       emojis.flinch.resize(emojiSize, emojiSize);
       emojis.cough.resize(emojiSize, emojiSize);
       emojis.worried.resize(emojiSize, emojiSize);
+      */
 
     };
 

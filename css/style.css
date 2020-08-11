@@ -299,6 +299,7 @@ a {
 
   .graph {
     height: 75vh;
+    min-height: 500px;
   }
 
 }
@@ -311,6 +312,11 @@ a {
 
   .twohundredpx > div {
     height: 50px;
+  }
+
+  .graph {
+    height: 75vh;
+    min-height: 400px;
   }
 
 }
