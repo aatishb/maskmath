@@ -1,3 +1,1 @@
-# TODO
-
-[ ] References / Footnotes
+# An Explorable Essay on How Masks Can End COVID-19
