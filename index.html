@@ -193,7 +193,11 @@
 
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
-    <p>For example, if <b>nobody</b> wore a mask, we’d only have to consider the first route, and disease transmission in the population would be unaffected.</p>
+    <p>
+      For example, if <b>nobody</b> wore a mask, then whenever two people meet at random, the likelihood that neither wear a mask is 100%.
+      Which means we'd only have to consider the first route of transmission.
+      So the population would see no drop in disease transmission.
+    </p>
 
   </div>
 
@@ -227,8 +231,9 @@
   <div class="container">
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, they'd both be wearing masks.
-      So we’d only have to consider the last route.
+      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they both wear masks is 100%.
+      So we’d only have to consider the last route of transmission.
+      If we assume that masks are 50% efffective in each direction, then the population would see a 75% drop in disease transmission.
     </p>
 
   </div>
@@ -265,23 +270,23 @@
     <p>
       In reality, some people wear masks and others don’t.
       Which means that the virus can spread through all four possible routes.
-      Each route has a different likelihood and a different level of risk.
+      And each route will have a different likelihood depending on how many people wear masks.
     </p>
 
     <p>
-      When either 0% or 100% of people wear masks, we can calculate the benefit that masks provide.
-      The question is, how do we do the math <i>in general</i>?
+      When either 0% or 100% of people wear masks, it's easier to calculate the drop in disease transmisison because there's only one route involved.
+      But to do the math <i>in general</i>, we need to average over all four possible routes.
     <p>
 
     <p>Let's try a simple case. Suppose that 50% of people wear masks.</p>
 
     <p>
-      When two people meet at random, the chance that both people are wearing masks is the chance that the first person is wearing a mask multiplied by the chance that the second person is wearing a mask.
-      So the chance that both people are wearing masks is 50% ⨉ 50%, i.e. 25%.
+      When two people meet at random, the likelihood that both people are wearing masks is the chance that the first person is wearing a mask multiplied by the chance that the second person is wearing a mask.
+      So the likelihood that both people wear masks is 50% ⨉ 50%, i.e. 25%.
     </p>
 
     <p>
-      Similarly, you can work out the likelihood of the other three routes.
+      Similarly, you can work out the likelihood of the other three routes of transmission.
       It turns out that when half the population wears masks, each route is equally likely.
       (Can you convince yourself why this has to be true?)
     </p>
