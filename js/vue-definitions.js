@@ -44,10 +44,12 @@ Vue.component('slider', {
 
 // p5 network component
 Vue.component('network', {
+
   template: `
-  <div class="graphic">
-    <p5 src="js/sketch2.js" :data="{maskusage: maskusage}"></p5>
-  </div>`,
+    <div class="component">
+      <p5 src="js/sketch2.js" :data="{maskusage: maskusage}"></p5>
+    </div>`,
+
   props: ['maskusage']
 })
 

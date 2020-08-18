@@ -39,7 +39,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         particles.push(new particle());
       }
       
-      mouseParticle = new particle();
+      mouseParticle = new particle(p.mouseX, p.mouseY);
 
     };
 

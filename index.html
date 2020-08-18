@@ -49,11 +49,7 @@
       For example, we'll see that when 60% of people wear 60% effective masks, disease transmission will drop by about 60% — roughly what's needed to stop the spread of COVID-19.
     </p>
 
-  </div>
-
-  <network :maskusage="0.6"></network>
-
-  <div class="container">
+    <network :maskusage="0.6"></network>
 
     <h2>Say it, Don't Spray It</h2>
 
@@ -203,11 +199,7 @@
       For example, if <b>nobody</b> wore a mask, then whenever two people meet, the likelihood that neither wear a mask is 100%.
     </p>
 
-  </div>
-
-  <network :maskusage="0"></network>
-
-  <div class="container">
+    <network :maskusage="0"></network>
 
     <p>
       So we'd only have to consider the first route of disease transmission, and the population would therefore see no drop in disease transmission.
@@ -248,11 +240,7 @@
       At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they both wear masks is 100%.
     </p>
 
-  </div>
-
-  <network :maskusage="1"></network>
-
-  <div class="container">
+    <network :maskusage="1"></network>
 
     <p>
       In this case, we’d only have to consider the last route of disease transmission.
@@ -303,11 +291,7 @@
 
     <p>Let's try a simple case. Suppose 50% of people wear masks.</p>
 
-  </div>
-
-  <network :maskusage="0.5"></network>
-
-  <div class="container">
+    <network :maskusage="0.5"></network>
 
     <p>
       When two people meet at random, the likelihood that both people wear masks equals the chance that the first person wears a mask multiplied by the chance that the second person wears a mask.
