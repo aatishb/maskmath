@@ -39,7 +39,7 @@ function sketch(parent) { // we pass the sketch data from the parent
         particles.push(new particle());
       }
       
-      mouseParticle = new particle(p.mouseX, p.mouseY);
+      mouseParticle = new particle(true);
 
     };
 
@@ -109,18 +109,17 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     // particle class
-    function particle(posX, posY) {
+    function particle(isMouse = false) {
 
-      this.y = posX ? posX : p.random(0, p.height);
-      this.x = posY ? posY : p.random(0, p.width);
+      this.y = p.random(0, p.height);
+      this.x = p.random(0, p.width);
       this.angle = p.random(0, 2*Math.PI);
       this.wander = bounciness;
       this.v0 = 0;
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
 
-      
-      if (posX) { // mouse masking follows majority
+      if (isMouse) { // mouse masking follows majority
         this.face = parent.data.maskusage >= 0.5 ? emojis.mask : emojis.neutral;
       } else { // everyone else is set randomly according to overall percentage of mask usage
         this.face = (Math.random() < parent.data.maskusage) ? emojis.mask : emojis.neutral;
