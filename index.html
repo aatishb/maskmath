@@ -379,13 +379,13 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often filtered or redirected by <i>other people’s</i> masks.
+      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
       But mask-wearers benefit much more, thanks to the added protection their masks provide.
     </p>
 
     <p>And since the overall population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
 
-    <p>So in this simplified example where 50% of people wear 50% effective masks, we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
 
     <h2>Maskology</h2>
 
@@ -399,18 +399,18 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half splash">
-        <div>People Wearing Masks: {{convertToPercent(p)}}%</div>
+      <label class="row half bigsplash">
+        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
@@ -426,33 +426,33 @@
 
         <div class="column onehundredpx">
           <div class="center">Drop in Disease Transmission</div>
-          <div class="center">{{convertToPercent(d1)}}%</div>
-          <div class="center">{{convertToPercent(d2)}}%</div>
-          <div class="center">{{convertToPercent(d3)}}%</div>
-          <div class="center">{{convertToPercent(d4)}}%</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
         </div>
 
         <div class="column onehundredpx">
           <div class="center">Likelihood of This Route</div>
-          <div class="center">{{convertToPercent(l1)}}%</div>
-          <div class="center">{{convertToPercent(l2)}}%</div>
-          <div class="center">{{convertToPercent(l3)}}%</div>
-          <div class="center">{{convertToPercent(l4)}}%</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
         </div>
 
       </div>
 
 
-      <div class="row half splash">
-        <b>Average Drop in Disease Transmission: {{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}%</b>
+      <div class="row half bigsplash">
+        <b>Average Drop in Disease Transmission: <span>&nbsp;<span class="dotted">{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</span>%</span></b>
       </div>
 
-      <div class="row half splash">
-        Drop in Disease Transmission for Non-Mask Wearers: {{convertToPercent(eout * p)}}%
+      <div class="row half bigsplash">
+        Drop in Disease Transmission for Non-Mask Wearers:<span>&nbsp;<span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
-      <div class="row half splash">
-        Drop in Disease Transmission for Mask-Wearers: {{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}%
+      <div class="row half bigsplash">
+        Drop in Disease Transmission for Mask-Wearers: <span>&nbsp;<span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
