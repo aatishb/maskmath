@@ -34,10 +34,13 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.strokeWeight(2);
       p.imageMode(p.CENTER);
 
-      numParticles = initialParticles * width * height / 570000
+      numParticles = p.round(initialParticles * width * height / 570000);
       for (let i = 0; i < numParticles; i++) {
         particles.push(new particle());
       }
+      
+      mouseParticle = new particle();
+
     };
 
     p.draw = function() {
@@ -73,15 +76,13 @@ function sketch(parent) { // we pass the sketch data from the parent
       }
 
       if (!mouseOnScreen) {
-        if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) {
-          mouseParticle = new particle(p.mouseX, p.mouseY);
+        if (p.mouseX > -particleSize/2 && p.mouseX < p.width + particleSize/2 && p.mouseY > -particleSize/2 && p.mouseY < p.height + particleSize/2) {
           mouseOnScreen = true;
         }
       }
 
       if (mouseOnScreen) {
-        if (!(p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height)) {
-          mouseParticle.remove();
+        if (!(p.mouseX > -particleSize/2 && p.mouseX < p.width + particleSize/2 && p.mouseY > -particleSize/2 && p.mouseY < p.height + particleSize/2)) {
           mouseOnScreen = false;        
         }
       }
@@ -197,17 +198,13 @@ function sketch(parent) { // we pass the sketch data from the parent
       let height = 400;
       p.resizeCanvas(width, height);
 
+      mouseOnScreen = false;
 
-      if (mouseOnScreen) {
-        mouseParticle.remove();
-        mouseOnScreen = false;
-      }
+      particles = [];
 
-      for (let particle of particles) {
-        particle.remove();
-      }
+      numParticles = p.round(initialParticles * width * height / 570000);
+      //console.log(numParticles);
 
-      numParticles = initialParticles * width * height / 570000
       for (let i = 0; i < numParticles; i++) {
         particles.push(new particle());
       }

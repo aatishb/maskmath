@@ -16,7 +16,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       let height = target.clientHeight;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
-      numParticles = 50 * width * height / 570000
+      numParticles = p.round(50 * width * height / 570000);
       canvas.parent(parent.$el);
       p.noStroke();
     };
@@ -163,11 +163,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       let width = target.clientWidth;
       let height = target.clientHeight;
       p.resizeCanvas(width, height);
-      numParticles = 150 * width * height / 570000
 
-      for (let particle of particles) {
-        particle.remove();
-      }
+      particles = [];
+      numParticles = p.round(50 * width * height / 570000);
 
     };
 

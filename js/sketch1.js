@@ -190,10 +190,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.resizeCanvas(width, height);
       emojiSize = height * 0.66;
 
-      for (let particle of particles) {
-        particle.remove();
-      }
-
+      particles = [];
       /*
       emojis.neutral.resize(emojiSize, emojiSize);
       emojis.confused.resize(emojiSize, emojiSize);
