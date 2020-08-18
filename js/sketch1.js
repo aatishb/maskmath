@@ -185,12 +185,17 @@ function sketch(parent) { // we pass the sketch data from the parent
 
     p.windowResized = function() {
       //console.log('p5 canvas resized');
-      let width = target.clientWidth;
-      let height = 0.833 * target.clientHeight;
-      p.resizeCanvas(width, height);
-      emojiSize = height * 0.66;
+      p.resizeCanvas(0, 0);
 
-      particles = [];
+      setTimeout(function(){
+        let width = target.clientWidth;
+        let height = 0.833 * target.clientHeight;
+        p.resizeCanvas(width, height);
+        emojiSize = height * 0.66;
+        particles = [];        
+      }, 50);
+
+
       /*
       emojis.neutral.resize(emojiSize, emojiSize);
       emojis.confused.resize(emojiSize, emojiSize);

@@ -57,19 +57,7 @@ function sketch(parent) { // we pass the sketch data from the parent
 
       let particleArray = mouseOnScreen ? [...particles, mouseParticle] : particles;
 
-      for (let p1 of particleArray) {
-        for (let p2 of particleArray) {
-          if (p1 !== p2) {
-            let distSq = distSquared(p1.x, p1.y, p2.x, p2.y);
-            if (distSq < 100*100) {
-              let dist = Math.sqrt(distSq);
-              let opacity = p.map(dist, 0, 100, 255, 0, true);
-              p.stroke(238, 232, 170, opacity);
-              p.line(p1.x, p1.y, p2.x, p2.y);
-            }
-          }
-        } 
-      }
+      drawEdges(particleArray);
 
       for (let p of particleArray) {
         p.display();
@@ -189,6 +177,22 @@ function sketch(parent) { // we pass the sketch data from the parent
         let dx = x2 - x1;
         let dy = y2 - y1;
         return dx * dx + dy * dy;
+    }
+
+    function drawEdges(particleArray) {
+      for (let p1 of particleArray) {
+        for (let p2 of particleArray) {
+          if (p1 !== p2) {
+            let distSq = distSquared(p1.x, p1.y, p2.x, p2.y);
+            if (distSq < 100*100) {
+              let dist = Math.sqrt(distSq);
+              let opacity = p.map(dist, 0, 100, 255, 0, true);
+              p.stroke(238, 232, 170, opacity);
+              p.line(p1.x, p1.y, p2.x, p2.y);
+            }
+          }
+        } 
+      }
     }
 
     p.windowResized = function() {
