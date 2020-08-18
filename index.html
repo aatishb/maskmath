@@ -20,7 +20,7 @@
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>How Masks Protect Us</h1>
+        <h1>The Marvelous Math of Masks</h1>
         <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
         <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
         <h4>in collaboration with <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
@@ -36,24 +36,31 @@
     </p>
 
     <p>
-      This misses the big picture, because masks don't just protect the wearer, they also protect the people around them.
-      Your decision to wear a mask impacts your society.
+      This misses the big picture, because masks protect both the wearer <i>and</i> the people around them.
+      And this double protection makes masks much more effective than you might expect.
     </p>
-
-    <p>In fact, we can <i>quantify</i> this impact.</p>
 
     <p>
       In this interactive essay, we’ll calculate the social benefit of wearing masks (or conversely, the social cost of not wearing masks).
       By doing the math on masks, we'll see how masks are a powerful way to extinguish an epidemic.
-      For example, when 60% of people wear 60% effective masks, disease transmission will drop by 60% — roughly what's needed to stop the spread of COVID-19.
     </p>
+
+    <p>
+      For example, we'll see that when 60% of people wear 60% effective masks, disease transmission will drop by about 60% — roughly what's needed to stop the spread of COVID-19.
+    </p>
+
+  </div>
+
+  <network :maskusage="0.6"></network>
+
+  <div class="container">
 
     <h2>Say it, Don't Spray It</h2>
 
     <p>
-      First, let’s get a ballpark sense for some numbers.
+      But first, let’s get a ballpark sense for some numbers.
       When a person exhales, they <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">spray out saliva particles</a> of various tiny sizes.
-      If they're contagious, this 'mouth spray' is loaded with viral particles.
+      If they're contagious, then this 'mouth spray' is loaded with viral particles.
       This <a href="https://arxiv.org/pdf/2005.10988.pdf">virus-laden saliva spray</a> is the main way that COVID-19 spreads.
     </p>
 
@@ -88,7 +95,6 @@
       This is similar to how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
       Like umbrellas, masks only work if you use them correctly.
       But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
-      Which makes masks more effective than you might expect.
     </p>
 
     <p>
@@ -180,11 +186,6 @@
 
     </div>
 
-
-  </div>
-
-  <div class="graphic">
-    <p5 src="js/sketch2.js"></p5>
   </div>
 
   <div class="container">
@@ -200,7 +201,16 @@
 
     <p>
       For example, if <b>nobody</b> wore a mask, then whenever two people meet, the likelihood that neither wear a mask is 100%.
-      So we'd only have to consider the first route, and the population would see no drop in disease transmission.
+    </p>
+
+  </div>
+
+  <network :maskusage="0"></network>
+
+  <div class="container">
+
+    <p>
+      So we'd only have to consider the first route of disease transmission, and the population would therefore see no drop in disease transmission.
     </p>
 
   </div>
@@ -236,7 +246,16 @@
 
     <p>
       At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they both wear masks is 100%.
-      So we’d only have to consider the last route of transmission.
+    </p>
+
+  </div>
+
+  <network :maskusage="1"></network>
+
+  <div class="container">
+
+    <p>
+      In this case, we’d only have to consider the last route of disease transmission.
       Assuming masks are 50% effective in each direction, the population would see a 75% drop in disease transmission.
     </p>
 
@@ -283,6 +302,12 @@
     <p>
 
     <p>Let's try a simple case. Suppose 50% of people wear masks.</p>
+
+  </div>
+
+  <network :maskusage="0.5"></network>
+
+  <div class="container">
 
     <p>
       When two people meet at random, the likelihood that both people wear masks equals the chance that the first person wears a mask multiplied by the chance that the second person wears a mask.
@@ -381,7 +406,7 @@
     <h2>Maskology</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/howmaskswork/blob/master/model/The%20Collective%20Benefit%20of%20Wearing%20Masks.ipynb">apply this logic</a> to <i>any values</i> of <b>mask wearership</b> and <b>mask effectiveness</b>.
+      Let's <a href="https://github.com/aatishb/howmaskswork/blob/master/model/The%20Collective%20Benefit%20of%20Wearing%20Masks.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
       Vary the sliders below to see how masks influence the spread of disease.
     </p>
 
@@ -557,7 +582,7 @@
       An important caveat: people don't usually mix randomly.
       People who wear masks may prefer to interact with like-minded people, and may be less likely to interact with those who don't wear masks.
       <br/><br/>
-      Similarly, non-mask wearers might live in clusters where mask wearership is lower than average.
+      Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
       This tendency to cluster with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because non-mask wearers become less likely to benefit from nearby mask-wearers.
       <br/><br/>
       As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."

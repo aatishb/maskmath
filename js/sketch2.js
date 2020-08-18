@@ -8,9 +8,19 @@ function sketch(parent) { // we pass the sketch data from the parent
     let particles = [];
     let mouseParticle;
     let mouseOnScreen = false;
-    let numParticles; 
     let target;
-    let isVisible = false;
+    let emojis = {};
+
+    // VARIABLES
+    let initialParticles = 40; 
+    let particleSize = 30;
+    let drag = 0.99;
+    let bounciness = 0.2;
+
+    p.preload = function() {
+      emojis.neutral = p.loadImage('assets/neutral.png');
+      emojis.mask = p.loadImage('assets/mask.png');
+    }
 
     p.setup = function() {
       target = parent.$el;
@@ -19,11 +29,12 @@ function sketch(parent) { // we pass the sketch data from the parent
       let height = 400;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
-      numParticles = 50 * width * height / 570000
       canvas.parent(parent.$el);
       p.noStroke();
-      p.noLoop();
+      p.strokeWeight(2);
+      p.imageMode(p.CENTER);
 
+      numParticles = initialParticles * width * height / 570000
       for (let i = 0; i < numParticles; i++) {
         particles.push(new particle());
       }
@@ -50,7 +61,7 @@ function sketch(parent) { // we pass the sketch data from the parent
             if (distSq < 100*100) {
               let dist = Math.sqrt(distSq);
               let opacity = p.map(dist, 0, 100, 255, 0, true);
-              p.stroke(255,255,255,opacity);
+              p.stroke(238, 232, 170, opacity);
               p.line(p1.x, p1.y, p2.x, p2.y);
             }
           }
@@ -100,13 +111,19 @@ function sketch(parent) { // we pass the sketch data from the parent
     function particle(posX, posY) {
 
       this.y = posX ? posX : p.random(0, p.height);
-      this.size = 20;
       this.x = posY ? posY : p.random(0, p.width);
       this.angle = p.random(0, 2*Math.PI);
-      this.wander = 0.1;
+      this.wander = bounciness;
       this.v0 = 0;
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
+
+      
+      if (posX) { // mouse masking follows majority
+        this.face = parent.data.maskusage >= 0.5 ? emojis.mask : emojis.neutral;
+      } else { // everyone else is set randomly according to overall percentage of mask usage
+        this.face = (Math.random() < parent.data.maskusage) ? emojis.mask : emojis.neutral;
+      }
 
       this.update = function(posX, posY) {
         
@@ -128,35 +145,37 @@ function sketch(parent) { // we pass the sketch data from the parent
           this.vy += this.ay;
 
           // drag
-          this.vx *= 0.99;
-          this.vy *= 0.99;
+          this.vx *= drag;
+          this.vy *= drag;
           
           this.x = this.x + this.vx;
           this.y = this.y + this.vy;
 
           // wraparound the screen: x
-          if (this.x > p.width) {
-            this.x = 0;
-          } else if (this.x < 0) {
-            this.x = p.width;
+          if (this.x > p.width + particleSize/2) {
+            this.x = -particleSize/2;
+          } else if (this.x < -particleSize/2) {
+            this.x = p.width + particleSize/2;
           }
 
           // wraparound the screen: y
-          if (this.y > p.height) {
-            this.y = 0;
-          } else if (this.y < 0) {
-            this.y = p.height;
+          if (this.y > p.height + particleSize/2) {
+            this.y = -particleSize/2;
+          } else if (this.y < -particleSize/2) {
+            this.y = p.height + particleSize/2;
           }
         }
-
-
 
       };
 
       this.display = function() {
+        p.image(this.face, this.x, this.y, particleSize, particleSize);
+
+        /*
         p.noStroke();
         p.fill(238, 232, 170, 200);
         p.ellipse(this.x, this.y, this.size);
+        */
       };
 
       this.remove = function() {
@@ -173,6 +192,26 @@ function sketch(parent) { // we pass the sketch data from the parent
     }
 
     p.windowResized = function() {
+      //console.log('p5 canvas resized');
+      let width = target.clientWidth;
+      let height = 400;
+      p.resizeCanvas(width, height);
+
+
+      if (mouseOnScreen) {
+        mouseParticle.remove();
+        mouseOnScreen = false;
+      }
+
+      for (let particle of particles) {
+        particle.remove();
+      }
+
+      numParticles = initialParticles * width * height / 570000
+      for (let i = 0; i < numParticles; i++) {
+        particles.push(new particle());
+      }
+
 
     };
 

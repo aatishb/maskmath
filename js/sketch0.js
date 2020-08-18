@@ -16,10 +16,9 @@ function sketch(parent) { // we pass the sketch data from the parent
       let height = target.clientHeight;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
-      numParticles = 150 * width * height / 570000
+      numParticles = 50 * width * height / 570000
       canvas.parent(parent.$el);
       p.noStroke();
-      p.noLoop();
     };
 
     p.draw = function() {

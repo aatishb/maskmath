@@ -42,6 +42,15 @@ Vue.component('slider', {
 })
 
 
+// p5 network component
+Vue.component('network', {
+  template: `
+  <div class="graphic">
+    <p5 src="js/sketch2.js" :data="{maskusage: maskusage}"></p5>
+  </div>`,
+  props: ['maskusage']
+})
+
 // mask animation component
 Vue.component('anim', {
   template: '<p5 src="js/sketch1.js" :data="{mask1: mask1, mask2: mask2, eout: eout, ein: ein}"></p5>',

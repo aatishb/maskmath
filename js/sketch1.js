@@ -32,7 +32,6 @@ function sketch(parent) { // we pass the sketch data from the parent
       emojiSize = height * 0.66;
       p.imageMode(p.CENTER);
       p.rectMode(p.CENTER, p.CENTER);
-      p.noLoop();
 
       for (let i = 0; i < 21; i++) {
         particles.push(new particle());
