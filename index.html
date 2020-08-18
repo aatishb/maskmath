@@ -414,7 +414,7 @@
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <div class="row big-small-small">
+      <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
           <div class="center">Disease Transmission Route</div>
@@ -444,15 +444,15 @@
 
 
       <div class="row half bigsplash">
-        <b>Average Drop in Disease Transmission: <span>&nbsp;<span class="dotted">{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</span>%</span></b>
+        <span>Average Drop in Disease Transmission: <span class="dotted">{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        Drop in Disease Transmission for Non-Mask Wearers:<span>&nbsp;<span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Drop in Disease Transmission for Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        Drop in Disease Transmission for Mask-Wearers: <span>&nbsp;<span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Drop in Disease Transmission for Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>

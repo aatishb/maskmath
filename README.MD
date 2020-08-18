@@ -6,4 +6,5 @@ TODO
 - [ ] polish math writeup
 - [ ] change URL
 - [ ] test in various browsers / devices
+- [x] sliders take up less space
 - [x] responsive improvements
