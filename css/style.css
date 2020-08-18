@@ -76,6 +76,14 @@ a {
   color: #00aeef;
 }
 
+.green {
+  color: rgb(0, 220, 0);
+}
+
+.red {
+  color: rgb(220, 0, 0);
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -208,6 +216,10 @@ a {
 
 .twohundredpx > div {
   height: 200px;
+}
+
+.nocursor {
+  cursor: none;
 }
 
 .splash {

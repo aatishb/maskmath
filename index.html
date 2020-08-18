@@ -37,8 +37,10 @@
 
     <p>
       This misses the big picture, because masks protect both the wearer <i>and</i> the people around them.
-      This <b>double protection</b> makes masks much more effective than you might expect.
+      This <span class="green">double protection</span> makes masks much more effective than you might expect.
     </p>
+
+    <network :maskusage="0.7"></network>
 
     <p>
       In this interactive essay, we’ll calculate the social benefit of wearing masks (or conversely, the social cost of not wearing masks).
@@ -48,8 +50,6 @@
     <p>
       For example, we'll see that when 60% of people wear 60% effective masks, disease transmission will drop by about 60% — roughly what's needed to stop the spread of COVID-19.
     </p>
-
-    <network :maskusage="0.6"></network>
 
     <h2>Say it, Don't Spray It</h2>
 
@@ -196,7 +196,7 @@
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the likelihood that neither wear a mask is 100%.
+      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the likelihood that <span class="red">neither wear a mask</span> is 100%.
     </p>
 
     <network :maskusage="0"></network>
@@ -237,7 +237,7 @@
   <div class="container">
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they both wear masks is 100%.
+      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they <span class="green">both wear masks</span> is 100%.
     </p>
 
     <network :maskusage="1"></network>
@@ -294,7 +294,7 @@
     <network :maskusage="0.5"></network>
 
     <p>
-      When two people meet at random, the likelihood that both people wear masks equals the chance that the first person wears a mask multiplied by the chance that the second person wears a mask.
+      When two people meet at random, the likelihood that <span class="green">both people wear masks</span> equals the chance that the first person wears a mask multiplied by the chance that the second person wears a mask.
       Which in this case is 50% ⨉ 50%, i.e. 25%.
     </p>
 

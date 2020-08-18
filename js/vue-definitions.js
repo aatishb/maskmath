@@ -46,7 +46,7 @@ Vue.component('slider', {
 Vue.component('network', {
 
   template: `
-    <div class="component">
+    <div class="component nocursor">
       <p5 src="js/sketch2.js" :data="{maskusage: maskusage}"></p5>
     </div>`,
 

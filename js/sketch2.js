@@ -12,10 +12,11 @@ function sketch(parent) { // we pass the sketch data from the parent
     let emojis = {};
 
     // VARIABLES
-    let initialParticles = 40; 
+    let initialParticles = 20; 
     let particleSize = 30;
     let drag = 0.99;
     let bounciness = 0.2;
+    let range = 125;
 
     p.preload = function() {
       emojis.neutral = p.loadImage('assets/neutral.png');
@@ -26,7 +27,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       target = parent.$el;
       let width = target.clientWidth;
       //let height = target.clientHeight;
-      let height = 400;
+      let height = 200;
       //console.log(width, height);
       let canvas = p.createCanvas(width, height);
       canvas.parent(parent.$el);
@@ -34,12 +35,8 @@ function sketch(parent) { // we pass the sketch data from the parent
       p.strokeWeight(2);
       p.imageMode(p.CENTER);
 
-      numParticles = p.round(initialParticles * width * height / 570000);
-      for (let i = 0; i < numParticles; i++) {
-        particles.push(new particle());
-      }
-      
-      mouseParticle = new particle(true);
+      createParticles(width);      
+      mouseParticle = new particle(parent.data.maskusage >= 0.5, true);
 
     };
 
@@ -57,7 +54,7 @@ function sketch(parent) { // we pass the sketch data from the parent
 
       let particleArray = mouseOnScreen ? [...particles, mouseParticle] : particles;
 
-      drawEdges(particleArray);
+      drawEdges(particleArray, range);
 
       for (let p of particleArray) {
         p.display();
@@ -97,7 +94,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     };
 
     // particle class
-    function particle(isMouse = false) {
+    function particle(isMasked, isMouse = false) {
 
       this.y = p.random(0, p.height);
       this.x = p.random(0, p.width);
@@ -106,12 +103,18 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.v0 = 0;
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
+      this.isMouse = isMouse;
 
+      /*
       if (isMouse) { // mouse masking follows majority
-        this.face = parent.data.maskusage >= 0.5 ? emojis.mask : emojis.neutral;
+        this.mask = parent.data.maskusage >= 0.5;
       } else { // everyone else is set randomly according to overall percentage of mask usage
-        this.face = (Math.random() < parent.data.maskusage) ? emojis.mask : emojis.neutral;
+        this.mask = (Math.random() < parent.data.maskusage);
       }
+      */
+
+      this.mask = isMasked;
+      this.face =  isMasked ? emojis.mask : emojis.neutral;
 
       this.update = function(posX, posY) {
         
@@ -138,6 +141,18 @@ function sketch(parent) { // we pass the sketch data from the parent
           
           this.x = this.x + this.vx;
           this.y = this.y + this.vy;
+
+          if(mouseOnScreen && !this.isMouse) {
+            let pushDist = 66;
+            if (distSquared(p.mouseX, p.mouseY, this.x, this.y) < pushDist*pushDist) {
+              let dy = this.y - p.mouseY;
+              let dx = this.x - p.mouseX;
+              let angle = Math.atan2(dy, dx);
+              this.x = p.mouseX + (pushDist + 1) * Math.cos(angle);
+              this.y = p.mouseY + (pushDist + 1) * Math.sin(angle);
+            }
+          }
+
 
           // wraparound the screen: x
           if (this.x > p.width + particleSize/2) {
@@ -179,38 +194,58 @@ function sketch(parent) { // we pass the sketch data from the parent
         return dx * dx + dy * dy;
     }
 
-    function drawEdges(particleArray) {
-      for (let p1 of particleArray) {
-        for (let p2 of particleArray) {
-          if (p1 !== p2) {
-            let distSq = distSquared(p1.x, p1.y, p2.x, p2.y);
-            if (distSq < 100*100) {
-              let dist = Math.sqrt(distSq);
-              let opacity = p.map(dist, 0, 100, 255, 0, true);
-              p.stroke(238, 232, 170, opacity);
-              p.line(p1.x, p1.y, p2.x, p2.y);
+    function drawEdges(particleArray, length) {
+
+      let l = particleArray.length;
+
+      for (let i = 0; i < l; i++) {
+        for (let j = 0; j < i; j++) {
+          let p1 = particleArray[i];
+          let p2 = particleArray[j];
+          let distSq = distSquared(p1.x, p1.y, p2.x, p2.y);
+          if (distSq < length*length) {
+            let dist = Math.sqrt(distSq);
+            let opacity = p.map(dist, 50, length, 255, 0, true);
+            let weight = p.map(dist, 50, length, 3, 0, true);
+
+            p.strokeWeight(weight);
+
+            if (p1.mask && p2.mask) {
+              p.stroke(0, 220, 0, opacity);
+            } else if(p1.mask || p2.mask) {
+              p.stroke(180, 180, 0, opacity);
+            } else {
+              p.stroke(220, 0, 0, opacity);
             }
+            p.line(p1.x, p1.y, p2.x, p2.y);
           }
         } 
+      }
+    }
+
+    function createParticles(width) {
+      numParticles = p.round(initialParticles * width/800);
+      let numMasked = p.round(numParticles * parent.data.maskusage);
+
+      for (let i = 0; i < numMasked; i++) {
+        particles.push(new particle(true));
+      }
+
+      for (let i = 0; i < numParticles - numMasked; i++) {
+        particles.push(new particle(false));
       }
     }
 
     p.windowResized = function() {
       //console.log('p5 canvas resized');
       let width = target.clientWidth;
-      let height = 400;
+      let height = 200;
       p.resizeCanvas(width, height);
 
       mouseOnScreen = false;
 
       particles = [];
-
-      numParticles = p.round(initialParticles * width * height / 570000);
-      //console.log(numParticles);
-
-      for (let i = 0; i < numParticles; i++) {
-        particles.push(new particle());
-      }
+      createParticles(width);
 
 
     };
