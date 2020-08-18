@@ -31,6 +31,36 @@ function sketch(parent) { // we pass the sketch data from the parent
 
     p.draw = function() {
 
+      p.background(0, 0, 51);
+
+      for (let particle of particles) {
+        particle.update();
+      }
+
+      if (mouseOnScreen) {
+        mouseParticle.update(p.mouseX, p.mouseY);
+      }
+
+      let particleArray = mouseOnScreen ? [...particles, mouseParticle] : particles;
+
+      for (let p1 of particleArray) {
+        for (let p2 of particleArray) {
+          if (p1 !== p2) {
+            let distSq = distSquared(p1.x, p1.y, p2.x, p2.y);
+            if (distSq < 100*100) {
+              let dist = Math.sqrt(distSq);
+              let opacity = p.map(dist, 0, 100, 255, 0, true);
+              p.stroke(255,255,255,opacity);
+              p.line(p1.x, p1.y, p2.x, p2.y);
+            }
+          }
+        } 
+      }
+
+      for (let p of particleArray) {
+        p.display();
+      }
+
       if (!mouseOnScreen) {
         if (p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height) {
           mouseParticle = new particle(p.mouseX, p.mouseY);
@@ -43,18 +73,6 @@ function sketch(parent) { // we pass the sketch data from the parent
           mouseParticle.remove();
           mouseOnScreen = false;        
         }
-      }
-
-      p.background(0, 0, 51);
-
-      for (let particle of particles) {
-        particle.display();
-        particle.update();
-      }
-
-      if (mouseOnScreen) {
-        mouseParticle.display();
-        mouseParticle.update(p.mouseX, p.mouseY);
       }
 
     };
@@ -82,52 +100,48 @@ function sketch(parent) { // we pass the sketch data from the parent
     function particle(posX, posY) {
 
       this.y = posX ? posX : p.random(0, p.height);
-      this.size = 2;
+      this.size = 20;
       this.x = posY ? posY : p.random(0, p.width);
       this.angle = p.random(0, 2*Math.PI);
-      this.wander = 0.05;
-      this.v0 = 0.1;
+      this.wander = 0.1;
+      this.v0 = 0;
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
-      this.minSize = 2;
-      //this.color = 'palegoldenrod';
-      // this.fadeOut = false;
-      // this.fadeCount = 20;
 
       this.update = function(posX, posY) {
         
         if (posX && posY) {
+
+          // for mouseParticle
           this.x = posX;
           this.y = posY;
+        
         } else {
+ 
+          // brownian motion
           this.angle = p.random(2 * p.PI);
 
           this.ax = this.wander * Math.cos(this.angle);
           this.ay = this.wander * Math.sin(this.angle);
 
-          /*
-          let dy = this.y - p.mouseY;
-          let dx = this.x - p.mouseX;
-          let angle = Math.atan2(dy, dx);
-          let rsq = 1 + dy*dy + dx*dx;
-
-          this.ax += 1000*Math.cos(angle)/rsq;
-          this.ay += 1000*Math.sin(angle)/rsq;
-          */
-
           this.vx += this.ax;
           this.vy += this.ay;
+
+          // drag
+          this.vx *= 0.99;
+          this.vy *= 0.99;
           
           this.x = this.x + this.vx;
           this.y = this.y + this.vy;
 
-          // wraparound the screen
+          // wraparound the screen: x
           if (this.x > p.width) {
             this.x = 0;
           } else if (this.x < 0) {
             this.x = p.width;
           }
 
+          // wraparound the screen: y
           if (this.y > p.height) {
             this.y = 0;
           } else if (this.y < 0) {
@@ -135,9 +149,12 @@ function sketch(parent) { // we pass the sketch data from the parent
           }
         }
 
+
+
       };
 
       this.display = function() {
+        p.noStroke();
         p.fill(238, 232, 170, 200);
         p.ellipse(this.x, this.y, this.size);
       };
