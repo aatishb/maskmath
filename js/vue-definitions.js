@@ -277,6 +277,7 @@ let app = new Vue({
     graph3Traces() {
       return [
         {
+          name: '% Infected',
           x: this.indexArray,
           y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
           type: 'scatter',
