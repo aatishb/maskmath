@@ -1,6 +1,5 @@
-# The Multiplicative Power of Masks
+# [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 ## An Explorable Essay on How Masks Can End COVID-19
-## [aatishb.com/maskmath](https://aatishb.com/maskmath/)
 
 ## Credits
 Created by [Aatish Bhatia](https://aatishb.com/) in collaboration with Henry Reich / [Minute Physics](http://www.youtube.com/minutephysics).
