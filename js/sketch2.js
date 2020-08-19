@@ -143,7 +143,7 @@ function sketch(parent) { // we pass the sketch data from the parent
           this.y = this.y + this.vy;
 
           if(mouseOnScreen && !this.isMouse) {
-            let pushDist = 66;
+            let pushDist = 75;
             if (distSquared(p.mouseX, p.mouseY, this.x, this.y) < pushDist*pushDist) {
               let dy = this.y - p.mouseY;
               let dx = this.x - p.mouseX;

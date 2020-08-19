@@ -118,17 +118,6 @@ function sketch(parent) { // we pass the sketch data from the parent
           this.x = p.mouseX + 101 * Math.cos(angle);
           this.y = p.mouseY + 101 * Math.sin(angle);
           
-          /*
-          let v = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
-          let initialAngle = Math.atan2(this.vy, this.vx);
-          let reboundAngle = Math.PI/2 - initialAngle - 2*angle;
-
-          this.vx = v * Math.cos(reboundAngle);
-          this.vy = v * Math.sin(reboundAngle);
-          */
-
-          //this.color = 'red';
-          //this.fadeOut = true;
         }
 
         if (this.fadeOut) {

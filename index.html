@@ -7,7 +7,7 @@
 <meta name="author" content="Aatish Bhatia">
 
 <head>
-  <title>How Masks Protect Us</title>
+  <title>The Multiplicative Power of Masks</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -20,8 +20,8 @@
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>The Marvelous Math of Masks</h1>
-        <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
+        <h1>The Multiplicative Power of Masks</h1>
+        <h3>An Explorable Essay on How Masks Can Halt COVID-19</h3>
         <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
         <h4>in collaboration with <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
       </div>
@@ -36,20 +36,15 @@
     </p>
 
     <p>
-      This misses the big picture, because masks protect both the wearer <i>and</i> the people around them.
-      This <span class="green">double protection</span> makes masks much more effective than you might expect.
+      This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
+      This <b>double protection</b> makes widespread mask-wearing a powerful way to extinguish an epidemic.
     </p>
 
-    <network :maskusage="0.7"></network>
-
-    <p>
-      In this interactive essay, we’ll calculate the social benefit of wearing masks (or conversely, the social cost of not wearing masks).
-      By doing the math on masks, we'll see how masks are a powerful way to extinguish an epidemic.
-    </p>
+    <network :maskusage="0.6"></network>
 
     <p>
-      For example, when 60% of people wear 60% effective masks, disease transmission drops by about 60% — roughly what's needed to stop the spread of COVID-19.
-    </p>
+      For example, by doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission can drop by as much as 60% — roughly what's needed to stop the spread of COVID-19.
+    </p>      
 
     <h2>Say it, Don't Spray It</h2>
 
@@ -88,7 +83,7 @@
 
     <p>
       Masks don't guarantee safety, they reduce risk.
-      This is similar to how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
+      It's a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
       Like umbrellas, masks only work if you use them correctly.
       But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
     </p>
@@ -146,7 +141,7 @@
 
     <aside>
       This might suggest that you can reduce risk further by wearing more than one mask, or equivalently by wearing a mask with many layers of filtration.
-      The problem is, whenever you add a layer, you also <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">decrease</a> the mask's <a href="https://www.maskfaq.com/test-results">breathability</a>, so you quickly get diminishing returns on the number of layers.
+      The problem is, whenever you add a layer, you <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">decrease</a> the mask's <a href="https://www.maskfaq.com/test-results">breathability</a>, so you quickly get diminishing returns on more layers.
     </aside>
 
     <p>So here again are all four routes through which an airborne disease can spread from person to person.</p>
@@ -177,7 +172,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. These numbers are calculated assuming a 50% effective mask.
+        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
       </div>
 
     </div>
@@ -285,17 +280,17 @@
     </p>
 
     <p>
-      When either 0% or 100% of people wear masks, it's easier to calculate the drop in disease transmission because there's only one route involved.
+      When either 0% or 100% of people wear masks, it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
       But to do the math <i>in general</i>, we need to average over all four possible routes.
     <p>
 
-    <p>Let's try a simple case. Suppose 50% of people wear masks.</p>
+    <p>For example, suppose 50% of people wear masks.</p>
 
     <network :maskusage="0.5"></network>
 
     <p>
-      When two people meet at random, the likelihood that <span class="green">both people wear masks</span> equals the chance that the first person wears a mask multiplied by the chance that the second person wears a mask.
-      Which in this case is 50% ⨉ 50%, i.e. 25%.
+      When two people meet at random, the likelihood that <span class="green">both people wear masks</span> equals the chance the first person wears a mask multiplied by the chance the second person wears a mask.
+      Which in this example is 50% ⨉ 50%, i.e. 25%.
     </p>
 
     <p>
@@ -383,7 +378,7 @@
       But mask-wearers benefit much more, thanks to the added protection their masks provide.
     </p>
 
-    <p>And since the overall population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
 
     <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
 
@@ -502,7 +497,7 @@
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = average number of people that a contagious person encounters <br/>⨉ probability of infection upon contact</div>
+      <div class="splash">R0 = average number of people that a contagious person encounters <br/>⨉ chance of infection upon contact</div>
   </div>
   
   <div class="container">
@@ -528,17 +523,17 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>R0: {{R0}}</div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </label>
@@ -564,7 +559,7 @@
 
     <aside>
       An important caveat: people don't usually mix randomly.
-      People who wear masks may prefer to interact with like-minded people, and may be less likely to interact with those who don't wear masks.
+      People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
       <br/><br/>
       Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
       This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because non-mask wearers become less likely to benefit from nearby mask-wearers.
@@ -586,7 +581,7 @@
     </p>
 
     <p>
-      By using a widely-used mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
+      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
       (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
     </p>
     
@@ -597,17 +592,17 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>R0: {{R0}}</div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
         <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
-      <label class="row half splash">
+      <label class="row half bigsplash">
         <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
         <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
       </label>
@@ -657,7 +652,7 @@
     </p>
 
     <aside>
-      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">helpful</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials. While non-medical masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a well-fitting mask.
+      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials. While non-medical masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a well-fitting mask.
     </aside>
 
     <p>
@@ -687,7 +682,7 @@
     <p>A big thanks to Minute Physics for supporting this essay. Check out our accompanying video!</p>
 
     <p>
-      If you liked this essay and want to see more of this kind of work, you can <b><a href="https://www.patreon.com/aatishb">support me on Patreon</a></b>.
+      If you want to see more of this kind of work, <b><a href="https://www.patreon.com/aatishb">support me on Patreon</a></b>.
       Your support makes this work possible.
     </p>
 
