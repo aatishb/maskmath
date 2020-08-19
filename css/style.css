@@ -244,6 +244,14 @@ a {
   border-bottom: dotted 2px rgba(255, 190, 137, 0.5);  
 }
 
+.solid {
+  border-bottom: solid 2px rgba(255, 190, 137, 0.5);  
+}
+
+.dashed {
+  border-bottom: dashed 2px rgba(255, 190, 137, 0.5);  
+}
+
 .dotted-red {
   border-bottom: dotted 2px rgba(220, 0, 0, 0.5);  
 }
