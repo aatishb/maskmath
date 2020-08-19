@@ -211,11 +211,11 @@ function sketch(parent) { // we pass the sketch data from the parent
             p.strokeWeight(weight);
 
             if (p1.mask && p2.mask) {
-              p.stroke(0, 220, 0, opacity);
+              p.stroke(250, 250, 210, opacity);
             } else if(p1.mask || p2.mask) {
-              p.stroke(180, 180, 0, opacity);
+              p.stroke(255, 160, 122, opacity);
             } else {
-              p.stroke(220, 0, 0, opacity);
+              p.stroke(220, 60, 60, opacity);
             }
             p.line(p1.x, p1.y, p2.x, p2.y);
           }

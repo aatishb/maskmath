@@ -76,16 +76,16 @@ a {
   color: #00aeef;
 }
 
-.green {
-  color: rgb(0, 220, 0);
+.yellow {
+  color: lightgoldenrodyellow;
 }
 
 .red {
-  color: rgb(220, 0, 0);
+  color: rgb(220, 60, 60);
 }
 
-.yellow {
-  color: rgb(180, 180, 0);
+.orange {
+  color: lightsalmon;
 }
 
 .page {

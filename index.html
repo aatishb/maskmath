@@ -91,7 +91,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><b><span class="red">Transmission Route 1:</span></b> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
 
   <div class="container">
 
@@ -121,7 +121,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><b><span class="yellow">Transmission Route 2:</span></b> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -136,7 +136,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><b><span class="yellow">Transmission Route 3:</span></b> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -150,7 +150,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><b><span class="green">Transmission Route 4:</span></b> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -185,9 +185,9 @@
         <div class="column onehundredpx">
           <div class="center">Drop in Disease Transmission</div>
           <div class="center"><span class="red">0%</span></div>
-          <div class="center"><span class="yellow">50%</span></div>
-          <div class="center"><span class="yellow">50%</span></div>
-          <div class="center"><span class="green">75%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
         </div>
 
       </div>
@@ -253,13 +253,13 @@
   <div class="container">
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they <span class="green">both wear masks</span> is 100%.
+      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they <span class="yellow">both wear masks</span> is 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="green">last route</span> of disease transmission.
+      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
       Assuming masks are 50% effective in each direction, the population would see a 75% drop in disease transmission.
     </p>
 
@@ -276,7 +276,7 @@
 
         <div class="column onehundredpx">
           <div class="center">Drop in Disease Transmission</div>
-          <div class="center"><span class="green">75%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
         </div>
 
         <div class="column onehundredpx">
@@ -310,7 +310,7 @@
     <network :maskusage="0.5"></network>
 
     <p>
-      When two people meet at random, the likelihood that <span class="green">both people wear masks</span> equals the chance the first person wears a mask multiplied by the chance the second person wears a mask.
+      When two people meet at random, the likelihood that <span class="yellow">both people wear masks</span> equals the chance the first person wears a mask multiplied by the chance the second person wears a mask.
       Which in this example is 50% ⨉ 50%, i.e. 25%.
     </p>
 
@@ -338,9 +338,9 @@
         <div class="column onehundredpx">
           <div class="center">Drop in Disease Transmission</div>
           <div class="center"><span class="red">0%</span></div>
-          <div class="center"><span class="yellow">50%</span></div>
-          <div class="center"><span class="yellow">50%</span></div>
-          <div class="center"><span class="green">75%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
         </div>
 
         <div class="column onehundredpx">
@@ -364,17 +364,17 @@
 
     <p>
       We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="yellow">50%</span>, <span class="yellow">50%</span> and <span class="green">75%</span>, which is 43.75%.
+      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
     </p>
 
     <p>
       People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="yellow">50%</span>, which is 25%.
+      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
     </p>
 
     <p>
       Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="yellow">50%</span> and <span class="green">75%</span>, which is 62.5%.
+      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
     </p>
 
   </div>
