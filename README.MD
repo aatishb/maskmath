@@ -20,4 +20,4 @@ This interactive uses the following libraries:
 
 If you'd like to translate this article, adapt it, or use it for educational purposes, [drop me a line](https://aatishb.com/). I'd love to hear what you do with it.
 
-If you'd like to see more interactive essays like this, [support my work on Patreon](https://www.patreon.com/aatishb). Your support makes this work possible. 
+If you'd like to see more interactive essays like this, please consider [supporting my work on Patreon](https://www.patreon.com/aatishb). Your support makes this work possible.
