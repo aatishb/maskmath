@@ -4,6 +4,9 @@
 ### Credits
 Created by [Aatish Bhatia](https://aatishb.com/) in collaboration with Henry Reich / [Minute Physics](http://www.youtube.com/minutephysics).
 
+### Learn More
+A writeup of the mathematical results behind this essay can be found [here](https://github.com/aatishb/maskmath/blob/master/model/The%20Collective%20Benefit%20of%20Wearing%20Masks.ipynb).
+
 ### Licenses
 This text is published under a Creative Commons [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. The code is open source and published under the [MIT License](https://github.com/aatishb/maskmath/blob/master/LICENSE). The emojis are [licensed by Twitter](https://twemoji.twitter.com/) and were modified to include a custom mask design. 
 
