@@ -1,13 +1,13 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
-## An Explorable Essay on How Masks Can End COVID-19
+#### An Explorable Essay on How Masks Can End COVID-19
 
-## Credits
+### Credits
 Created by [Aatish Bhatia](https://aatishb.com/) in collaboration with Henry Reich / [Minute Physics](http://www.youtube.com/minutephysics).
 
-## Licenses
+### Licenses
 This text is published under a Creative Commons [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license. The code is open source and published under the [MIT License](https://github.com/aatishb/maskmath/blob/master/LICENSE). The emojis are [licensed by Twitter](https://twemoji.twitter.com/) and were modified to include a custom mask design. 
 
-## Libraries
+### Libraries
 This interactive uses the following libraries:
 - [p5.js](https://p5js.org/) (for canvas animations)
 - [plotly.js](https://plotly.com/javascript/) (for graphing)
