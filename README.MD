@@ -2,8 +2,8 @@
 
 TODO
 
-- [ ] add clustering model to writeup
-- [ ] polish math writeup
+- [x] add clustering model to writeup
+- [x] polish math writeup
 - [x] change URL
 - [ ] test in various browsers / devices
 - [x] sliders take up less space
