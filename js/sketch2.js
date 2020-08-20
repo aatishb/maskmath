@@ -10,6 +10,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     let mouseOnScreen = false;
     let target;
     let emojis = {};
+    let width, height;
 
     // VARIABLES
     let initialParticles = 20; 
@@ -25,18 +26,15 @@ function sketch(parent) { // we pass the sketch data from the parent
 
     p.setup = function() {
       target = parent.$el;
-      let width = target.clientWidth;
-      //let height = target.clientHeight;
-      let height = 200;
-      //console.log(width, height);
+      width = target.clientWidth;
+      height = 200;
       let canvas = p.createCanvas(width, height);
       canvas.parent(parent.$el);
       p.noStroke();
       p.strokeWeight(2);
       p.imageMode(p.CENTER);
 
-      createParticles(width);      
-      mouseParticle = new particle(parent.data.maskusage >= 0.5, true);
+      createParticles(width);
 
     };
 
@@ -79,6 +77,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     p.dataChanged = function(val, oldVal) {
       // console.log('data changed');
       // console.log('x: ', val.x, 'y: ', val.y);
+      createParticles(width);
     };
 
 
@@ -211,9 +210,9 @@ function sketch(parent) { // we pass the sketch data from the parent
             p.strokeWeight(weight);
 
             if (p1.mask && p2.mask) {
-              p.stroke(250, 250, 210, opacity);
+              p.stroke(220, 220, 110, opacity);
             } else if(p1.mask || p2.mask) {
-              p.stroke(255, 160, 122, opacity);
+              p.stroke(220, 142, 0, opacity);
             } else {
               p.stroke(220, 60, 60, opacity);
             }
@@ -224,8 +223,12 @@ function sketch(parent) { // we pass the sketch data from the parent
     }
 
     function createParticles(width) {
+      let maskusage = parent.data.maskusage;
+
       numParticles = p.round(initialParticles * width/800);
-      let numMasked = p.round(numParticles * parent.data.maskusage);
+      let numMasked = p.round(numParticles * maskusage);
+
+      particles = [];
 
       for (let i = 0; i < numMasked; i++) {
         particles.push(new particle(true));
@@ -234,17 +237,18 @@ function sketch(parent) { // we pass the sketch data from the parent
       for (let i = 0; i < numParticles - numMasked; i++) {
         particles.push(new particle(false));
       }
+
+      mouseParticle = new particle(maskusage >= 0.5, true);
+
     }
 
     p.windowResized = function() {
       //console.log('p5 canvas resized');
-      let width = target.clientWidth;
-      let height = 200;
+      width = target.clientWidth;
       p.resizeCanvas(width, height);
 
       mouseOnScreen = false;
 
-      particles = [];
       createParticles(width);
 
 

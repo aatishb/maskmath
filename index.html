@@ -295,19 +295,25 @@
   <div class="container">
 
     <p>
-      In reality, some people wear masks and others don’t.
-      Which means that the virus can spread through all four routes of transmission.
-      And each route will have a different likelihood depending on how many people wear masks.
+      When either <i>everyone</i> or <i>no one</i> wears a mask, it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
     </p>
 
     <p>
-      When either 0% or 100% of people wear masks, it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
-      But to do the math <i>in general</i>, we need to average over all four possible routes.
+      But in reality, some people wear masks and others don’t.
+      Which means that the virus can spread through a mix of all four routes.
+      How likely each route is will depend on how many people wear masks.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
     <p>
-
-    <p>For example, suppose 50% of people wear masks.</p>
-
-    <network :maskusage="0.5"></network>
+      For example, suppose 50% of people wear masks.
+    </p>
 
     <p>
       When two people meet at random, the likelihood that <span class="yellow">both people wear masks</span> equals the chance the first person wears a mask multiplied by the chance the second person wears a mask.

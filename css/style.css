@@ -77,7 +77,7 @@ a {
 }
 
 .yellow {
-  color: lightgoldenrodyellow;
+  color: rgb(220, 220, 110);
 }
 
 .red {
@@ -85,7 +85,7 @@ a {
 }
 
 .orange {
-  color: lightsalmon;
+  color: rgb(220, 142, 0);
 }
 
 .page {
