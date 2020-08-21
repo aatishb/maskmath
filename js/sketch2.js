@@ -77,7 +77,7 @@ function sketch(parent) { // we pass the sketch data from the parent
     p.dataChanged = function(val, oldVal) {
       // console.log('data changed');
       // console.log('x: ', val.x, 'y: ', val.y);
-      createParticles(width);
+      updateParticles(width);
     };
 
 
@@ -103,16 +103,7 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.vx = this.v0 * Math.cos(this.angle);
       this.vy = this.v0 * Math.sin(this.angle);
       this.isMouse = isMouse;
-
-      /*
-      if (isMouse) { // mouse masking follows majority
-        this.mask = parent.data.maskusage >= 0.5;
-      } else { // everyone else is set randomly according to overall percentage of mask usage
-        this.mask = (Math.random() < parent.data.maskusage);
-      }
-      */
-
-      this.mask = isMasked;
+      this.isMasked = isMasked;
       this.face =  isMasked ? emojis.mask : emojis.neutral;
 
       this.update = function(posX, posY) {
@@ -183,7 +174,17 @@ function sketch(parent) { // we pass the sketch data from the parent
       this.remove = function() {
         let index = particles.indexOf(this);
         particles.splice(index, 1);
-      }
+      };
+
+      this.mask = function() {
+        this.isMasked = true;
+        this.face =  emojis.mask;
+      };
+
+      this.unmask = function() {
+        this.isMasked = false;
+        this.face =  emojis.neutral;
+      };
 
     }
 
@@ -209,9 +210,9 @@ function sketch(parent) { // we pass the sketch data from the parent
 
             p.strokeWeight(weight);
 
-            if (p1.mask && p2.mask) {
+            if (p1.isMasked && p2.isMasked) {
               p.stroke(220, 220, 110, opacity);
-            } else if(p1.mask || p2.mask) {
+            } else if(p1.isMasked || p2.isMasked) {
               p.stroke(220, 142, 0, opacity);
             } else {
               p.stroke(220, 60, 60, opacity);
@@ -234,12 +235,31 @@ function sketch(parent) { // we pass the sketch data from the parent
         particles.push(new particle(true));
       }
 
-      for (let i = 0; i < numParticles - numMasked; i++) {
+      for (let i = numMasked; i < numParticles; i++) {
         particles.push(new particle(false));
       }
 
       mouseParticle = new particle(maskusage >= 0.5, true);
+    }
 
+
+    function updateParticles(width) {
+      let maskusage = parent.data.maskusage;
+
+      //numParticles = p.round(initialParticles * width/800);
+      let numParticles = particles.length;
+      let numMasked = p.round(numParticles * maskusage);
+      //console.log(maskusage, numParticles, numMasked);
+
+      for (let i = 0; i < numMasked; i++) {
+        particles[i].mask();
+      }
+
+      for (let i = numMasked; i < numParticles; i++) {
+        particles[i].unmask();
+      }
+
+      mouseParticle = new particle(maskusage >= 0.5, true);
     }
 
     p.windowResized = function() {
