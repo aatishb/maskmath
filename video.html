@@ -36,7 +36,7 @@
 
       <div class="row half bigsplash bigger" style="padding-top: 1rem">
         Drop in Disease Transmission&nbsp;<b><span class="dotted">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span>%</b>
-        &nbsp;<span style="font-size: 2rem;"><i>(</span>&nbsp;<b> > <span class="dotted">{{Math.round(100 * e * p)}}</span>%</b>&nbsp;Intuitive Guess&nbsp;</i><span style="font-size: 2rem;">)</span>
+        &nbsp;<span style="font-size: 2rem;"><i>(</span>&nbsp;<b> <span v-if="Math.round(100*(1 - (1 - e * p) * (1 - e * p))) > Math.round(100 * e * p)">></span><span v-else>=</span> <span class="dotted">{{Math.round(100 * e * p)}}</span>%</b>&nbsp;Intuitive Guess&nbsp;</i><span style="font-size: 2rem;">)</span>
       </div>
 
     </div>
