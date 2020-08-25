@@ -214,7 +214,8 @@ let app = new Vue({
     R0: 2.5,     // reproductive number R0
     graphBackgroundColor: 'rgb(0,0,51)',
     graphTextColor: 'rgb(255, 190, 137)',
-    graphTraceColor: 'rgb(254, 199, 81)'
+    graphTraceColor: 'rgb(254, 199, 81)',
+    expand: false
   },
 
   methods: {

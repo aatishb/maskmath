@@ -58,7 +58,7 @@
 
     <p>
       This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
-      This <b>two-way protection</b> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+      This <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
     </p>
 
     <network :maskusage="0.6"></network>
@@ -218,7 +218,7 @@
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see no drop in disease transmission.
+      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
     </p>
 
   </div>
@@ -260,7 +260,7 @@
 
     <p>
       In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a 75% drop in disease transmission.
+      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
     </p>
 
   </div>
@@ -428,12 +428,12 @@
 
       <label class="row half bigsplash">
         <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
-        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
         <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
-        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
@@ -470,11 +470,11 @@
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission for Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission for Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -483,9 +483,9 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 50% of people wear a 50% effective mask?
-      Or 60% wear a 60% effective mask?
-      Or 70% wear a 70% effective mask?
+      What happens to disease transmission if 60% of people wear a 60% effective mask?
+      Or 90% wear a 50% effective mask?
+      Or 50% wear a 90% effective mask?
       This interactive lets you answer these questions.
     </p>
 
@@ -551,18 +551,18 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>R0: {{R0}}</div>
+        <div>R0: <span class="dotted">{{R0}}</span></div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
-        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
-        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
@@ -579,8 +579,8 @@
 
     <p>
       So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if the masks were 60% effective?
-      Or 70% effective?
+      What if masks were 75% effective?
+      Or 90% effective?
       This interactive lets you predict answers to these questions.
     </p>
 
@@ -589,7 +589,7 @@
       People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
       <br/><br/>
       Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-      This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because non-mask wearers become less likely to benefit from nearby mask-wearers.
+      This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
       <br/><br/>
       As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
     </aside>
@@ -620,18 +620,18 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>R0: {{R0}}</div>
+        <div>R0: <span class="dotted">{{R0}}</span></div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: {{convertToPercent(eout)}}%</div>
-        <slider v-model="eout" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: {{convertToPercent(ein)}}%</div>
-        <slider v-model="ein" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
@@ -669,18 +669,15 @@
     </p>
 
     <p>
-      By playing with interactive above, you'll see that if masks were 100% effective, we'd need a little over a third of the population to wear them to stop the spread of COVID-19.
-      But if masks were 50% effective, we'd need closer to three-quarters of the population to wear them to stop the spread.
+      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
+      And if masks were 75% effective, we'd need about half the population to wear them to stop the spread.
     </p>
 
     <p>
-      The more effective the mask, the faster we can descend the hill.
-      That's why it's important to wear a mask that <a href="https://www.youtube.com/watch?v=RXd7WVmZlK0">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      <b>The more effective the mask, the faster we can descend the hill.</b>
+      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      (For a dramatic demonstration of this fact, watch <a href="https://www.youtube.com/watch?v=sRIdkWKcRbo">this video</a>.)
     </p>
-
-    <aside>
-      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials. While non-medical masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
-    </aside>
 
     <p>
       We all want to get to the bottom of the hill and stop the spread of COVID-19.
@@ -706,11 +703,16 @@
   <div class="container">
     <h2>Credits & References</h2>
 
-    <p>A big thanks to Minute Physics for supporting this essay. Check out our accompanying video!</p>
+    <p>This interactive essay was created in collaboration with Minute Physics. Check out our companion video for a snappy visual take on the math of masks!</p>
 
     <p>
-      If you'd like to see more interactive essays like this, please consider <b><a href="https://www.patreon.com/aatishb">supporting my work on Patreon</a></b>.
+      If you found this essay valuable, please consider <a href="https://www.patreon.com/aatishb">supporting my work on Patreon</a>.
       Your support makes this work possible.
+    </p>
+
+    <p>
+      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
+      While masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
     </p>
 
     <p>
