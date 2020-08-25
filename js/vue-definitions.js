@@ -209,6 +209,7 @@ let app = new Vue({
   data: {
     eout: 0.5,  // mask effectiveness on exhale
     ein: 0.5,   // mask effectiveness on inhale
+    e: 0.5,     // mask effectiveness (used for video viz)
     p: 0.5,     // percent of people wearing masks
     pnetwork: 0.5, // percent of people wearing masks for interactive network graph
     R0: 2.5,     // reproductive number R0

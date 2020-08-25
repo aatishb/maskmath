@@ -240,6 +240,10 @@ a {
   color: rgb(255, 190, 137);
 }
 
+.bigger {
+  font-size: 1.5rem;
+}
+
 .dotted {
   border-bottom: dotted 2px rgba(255, 190, 137, 0.5);  
 }
@@ -341,6 +345,16 @@ a {
 
 .footer a {
   color: rgb(255, 209, 137);
+}
+
+.center-on-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
 }
 
 @media only screen and (max-width: 850px) {
