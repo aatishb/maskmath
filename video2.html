@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>The Multiplicative Power of Masks</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+<div id="root" style="  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash" style="font-size: 1.5rem">
+        <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash" style="font-size: 1.5rem; padding-top: 1rem;">
+        <div>Mask Effectiveness: <b><span class="dotted">{{convertToPercent(e)}}</span>%</b></div>
+        <slider v-model="e" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row bigsplash" style="font-size: 1.5rem; padding-top: 2rem;">
+        <b>Disease Transmission</b>
+      </div>
+
+      <div class="row bigsplash" style="width: 500px;">
+
+          <div style="flex-basis: 50%; display: flex; flex-direction: column; padding-left: 50px;">
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
+              <span style="font-size: 1.25rem;">actual drop</span>
+            </div>
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
+              <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span><span style="font-size: 2rem;">%</span></b>
+            </div>
+          </div>
+
+          <div style="flex-basis: 50%; display: flex; flex-direction: column; opacity: 0.5; padding-right: 50px;">
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
+              <span style="font-size: 1.25rem;">intuitive drop</span>
+            </div>
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
+              <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100 * e * p)}}</span><span style="font-size: 2rem;">%</span></b>
+            </div>
+          </div>
+
+      </div>
+
+
+      <div class="row bigsplash" style="font-size: 1.5rem; padding-top: 1rem; width: 500px;">
+        <graph 
+        :traces="[{
+          x: ['<b>actual</b>', '<b>intuitive</b>'],
+          y: [Math.pow(1 - e * p, 2), 1 - e * p],
+          type: 'bar',
+          marker: {
+            color: ['rgba(192, 234, 171, 1)', 'rgba(192, 234, 171, 0.5)']
+          },
+          hoverinfo: 'none',
+        }]"
+        :layout="{
+          showlegend: false,
+          width: 500,
+          xaxis: {
+            color: this.graphTextColor,
+            showticklabels: false,
+          },
+          yaxis: {
+            range: [0, 1],
+            color: this.graphTextColor,
+            showticklabels: false,
+          },
+          paper_bgcolor: this.graphBackgroundColor,
+          plot_bgcolor: this.graphBackgroundColor,
+          font: {
+            family: 'Open Sans, sans-serif',
+            color: this.graphTextColor,
+            size: 0.9 * this.fontSize
+          },
+          annotations: [
+            {
+              y: Math.pow(1 - e * p, 2),
+              x: 0,
+              xref: 'x',
+              yref: 'y',
+              showarrow: true,
+              arrowhead: 1,
+              arrowsize: 1,
+              arrowwidth: 5,
+              axref: 'x',
+              ayref: 'y',
+              ay: 1,
+              ax: 0,
+              arrowcolor: this.graphTextColor,
+              opacity: 0.5,
+            },
+            {
+              y: 1 - e * p,
+              x: 1,
+              xref: 'x',
+              yref: 'y',
+              showarrow: true,
+              arrowhead: 1,
+              arrowsize: 1,
+              arrowwidth: 5,
+              axref: 'x',
+              ayref: 'y',
+              ay: 1,
+              ax: 1,
+              arrowcolor: this.graphTextColor,
+            },
+
+          ],
+          margin: {
+            l: 50,
+            r: 50,
+            b: 50,
+            t: 0,
+            pad: 0
+          },
+        }"
+        :config="{
+        }">
+        </graph>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
