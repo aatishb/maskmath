@@ -15,30 +15,41 @@
 
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <style>
+    .graph {
+      height: 500px;
+    }
+  </style>
 </head>
 
 <body>
-<div id="root" style="width: 100%; height: 100%;">
+<div id="root">
 
-  <div class="graphic" style="padding-top: 2rem">
+  <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half bigsplash" style="font-size: 1.5rem;">
-        <div>Mask Effectiveness: <b><span class="dotted">{{convertToPercent(e)}}</span>%</b></div>
-        <slider v-model="e" :min="0" :max="0.99" :step="0.01"></slider>
+      <label class="row half bigsplash" style="font-size: 1.5rem; padding-top: 2rem;">
+        <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash" style="font-size: 1.5rem; padding-top: 1rem;">
-        <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
-        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+        <div>Mask Effectiveness: <b><span class="dotted">{{convertToPercent(e)}}</span>%</b></div>
+        <slider v-model="e" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row bigsplash" style="font-size: 1.5rem; padding-top: 2rem;">
         <b>Disease Transmission</b>
       </div>
 
-      <div class="row bigsplash" style="width: 500px;">
+      <div class="row bigsplash" style="width: 500px; position: relative">
+
+          <div style="z-index:2; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+            <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-top: 0.66rem">
+              <span v-if="1 - Math.pow(1 - e * p, 2) > e * p"><</span>
+              <span v-else>=</span>
+            </div>
+          </div>
 
           <div style="flex-basis: 50%; display: flex; flex-direction: column; opacity: 0.66; padding-left: 50px;">
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
@@ -51,7 +62,7 @@
 
           <div style="flex-basis: 50%; display: flex; flex-direction: column; padding-right: 50px;">
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
-              <span style="font-size: 1.25rem;">actual drop</span>
+              <span style="font-size: 1.25rem;">actual drop*</span>
             </div>
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
               <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span><span style="font-size: 2rem;">%</span></b>
@@ -68,9 +79,9 @@
           y: [1 - e * p, Math.pow(1 - e * p, 2)],
           type: 'bar',
           marker: {
-            color: ['rgba(192, 234, 171, 0.5)', 'rgba(192, 234, 171, 1)']
+            color: ['rgba(96, 117, 111, 1)', 'rgba(192, 234, 171, 1)']
           },
-          hoverinfo: 'none',
+          hoverinfo: 'y',
         }]"
         :layout="{
           showlegend: false,
@@ -79,14 +90,11 @@
           xaxis: {
             color: this.graphTextColor,
             showticklabels: false,
-            ticks: '',
           },
           yaxis: {
             range: [0, 1],
             color: this.graphTextColor,
             tickformat: '%',
-            ticks: '',
-            showgrid: false
           },
           paper_bgcolor: this.graphBackgroundColor,
           plot_bgcolor: this.graphBackgroundColor,
@@ -151,16 +159,23 @@
           margin: {
             l: 50,
             r: 50,
-            b: 50,
+            b: 10,
             t: 15,
             pad: 0
           },
         }"
         :config="{
+          displayModeBar: false,
         }">
         </graph>
 
       </div>
+
+      <label class="row bigsplash" style="padding-top: 1rem;">
+        <div>*Assuming a bidirectionally effective mask</div>
+      </label>
+
+      <h2 style="text-align: center;">Masks Work Better Than You Think</h2>
 
     </div>
   </div>
