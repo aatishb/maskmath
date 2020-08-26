@@ -24,14 +24,14 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half bigsplash" style="font-size: 1.5rem">
-        <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
-        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      <label class="row half bigsplash" style="font-size: 1.5rem;">
+        <div>Mask Effectiveness: <b><span class="dotted">{{convertToPercent(e)}}</span>%</b></div>
+        <slider v-model="e" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash" style="font-size: 1.5rem; padding-top: 1rem;">
-        <div>Mask Effectiveness: <b><span class="dotted">{{convertToPercent(e)}}</span>%</b></div>
-        <slider v-model="e" :min="0" :max="0.99" :step="0.01"></slider>
+        <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <div class="row bigsplash" style="font-size: 1.5rem; padding-top: 2rem;">
