@@ -40,21 +40,21 @@
 
       <div class="row bigsplash" style="width: 500px;">
 
-          <div style="flex-basis: 50%; display: flex; flex-direction: column; padding-left: 50px;">
-            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
-              <span style="font-size: 1.25rem;">actual drop</span>
-            </div>
-            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
-              <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span><span style="font-size: 2rem;">%</span></b>
-            </div>
-          </div>
-
-          <div style="flex-basis: 50%; display: flex; flex-direction: column; opacity: 0.5; padding-right: 50px;">
+          <div style="flex-basis: 50%; display: flex; flex-direction: column; opacity: 0.66; padding-left: 50px;">
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
               <span style="font-size: 1.25rem;">intuitive drop</span>
             </div>
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
               <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100 * e * p)}}</span><span style="font-size: 2rem;">%</span></b>
+            </div>
+          </div>
+
+          <div style="flex-basis: 50%; display: flex; flex-direction: column; padding-right: 50px;">
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
+              <span style="font-size: 1.25rem;">actual drop</span>
+            </div>
+            <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
+              <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span><span style="font-size: 2rem;">%</span></b>
             </div>
           </div>
 
@@ -64,25 +64,29 @@
       <div class="row bigsplash" style="font-size: 1.5rem; padding-top: 1rem; width: 500px;">
         <graph 
         :traces="[{
-          x: ['<b>actual</b>', '<b>intuitive</b>'],
-          y: [Math.pow(1 - e * p, 2), 1 - e * p],
+          x: ['<b>intuitive</b>', '<b>actual</b>'],
+          y: [1 - e * p, Math.pow(1 - e * p, 2)],
           type: 'bar',
           marker: {
-            color: ['rgba(192, 234, 171, 1)', 'rgba(192, 234, 171, 0.5)']
+            color: ['rgba(192, 234, 171, 0.5)', 'rgba(192, 234, 171, 1)']
           },
           hoverinfo: 'none',
         }]"
         :layout="{
           showlegend: false,
           width: 500,
+          height: 500,
           xaxis: {
             color: this.graphTextColor,
             showticklabels: false,
+            ticks: '',
           },
           yaxis: {
             range: [0, 1],
             color: this.graphTextColor,
-            showticklabels: false,
+            tickformat: '%',
+            ticks: '',
+            showgrid: false
           },
           paper_bgcolor: this.graphBackgroundColor,
           plot_bgcolor: this.graphBackgroundColor,
@@ -91,25 +95,27 @@
             color: this.graphTextColor,
             size: 0.9 * this.fontSize
           },
+
+          shapes: [
+              {
+                type: 'line',
+                xref: 'paper',
+                yref: 'paper',
+                x0: 0,
+                y0: 1,
+                x1: 1,
+                y1: 1,
+                opacity: 1,
+                line: {
+                    color: 'rgba(255,255,0,0)',
+                    width: 0.5,
+                }
+              }
+          ],
+
           annotations: [
             {
               y: Math.pow(1 - e * p, 2),
-              x: 0,
-              xref: 'x',
-              yref: 'y',
-              showarrow: true,
-              arrowhead: 1,
-              arrowsize: 1,
-              arrowwidth: 5,
-              axref: 'x',
-              ayref: 'y',
-              ay: 1,
-              ax: 0,
-              arrowcolor: this.graphTextColor,
-              opacity: 1,
-            },
-            {
-              y: 1 - e * p,
               x: 1,
               xref: 'x',
               yref: 'y',
@@ -119,18 +125,34 @@
               arrowwidth: 5,
               axref: 'x',
               ayref: 'y',
-              ay: 1,
+              ay: Math.pow(1 - e * p, 2) < 0.97 ? 1.04 : 1,
               ax: 1,
               arrowcolor: this.graphTextColor,
-              opacity: 0.5,
+              opacity: 1,
             },
-
+            {
+              y: 1 - e * p,
+              x: 0,
+              xref: 'x',
+              yref: 'y',
+              showarrow: true,
+              arrowhead: 1,
+              arrowsize: 1,
+              arrowwidth: 5,
+              axref: 'x',
+              ayref: 'y',
+              ay: 1 - e * p < 0.97 ? 1.04 : 1,
+              ax: 0,
+              arrowcolor: this.graphTextColor,
+              opacity: 0.66,
+            },
           ],
+
           margin: {
             l: 50,
             r: 50,
             b: 50,
-            t: 0,
+            t: 15,
             pad: 0
           },
         }"
