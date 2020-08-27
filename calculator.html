@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <style>
     .graph {
-      height: 450px;
+      height: 400px;
     }
   </style>
 </head>
@@ -28,7 +28,9 @@
   <div class="graphic">
     <div class="graphic-container">
 
-      <label class="row half bigsplash" style="font-size: 1.5rem; padding-top: 2rem;">
+      <h2 style="text-align: center;">The Multiplicative Power of Masks</h2>
+
+      <label class="row half bigsplash" style="font-size: 1.5rem;">
         <div>Mask Usage: <b><span class="dotted">{{convertToPercent(p)}}</span>%</b></div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
@@ -53,7 +55,7 @@
 
           <div style="flex-basis: 50%; display: flex; flex-direction: column; opacity: 0.66; padding-left: 50px;">
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
-              <span style="font-size: 1.25rem;">intuitive drop<sup>1</sup></span>
+              <span style="font-size: 1.25rem;">intuitive drop&#8239;<sup>1</sup></span>
             </div>
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
               <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100 * e * p)}}</span><span style="font-size: 2rem;">%</span></b>
@@ -62,7 +64,7 @@
 
           <div style="flex-basis: 50%; display: flex; flex-direction: column; padding-right: 50px;">
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center; padding-bottom: 0.25rem;">
-              <span style="font-size: 1.25rem;">actual drop<sup>2</sup></span>
+              <span style="font-size: 1.25rem;">actual drop&#8239;<sup>2</sup></span>
             </div>
             <div style="flex-basis: 50%; display: flex; justify-content: center; align-items: center;">
               <b><span class="dotted" style="font-size: 3rem;">{{Math.round(100*(1 - (1 - e * p) * (1 - e * p)))}}</span><span style="font-size: 2rem;">%</span></b>
@@ -86,7 +88,7 @@
         :layout="{
           showlegend: false,
           width: 500,
-          height: 450,
+          height: 400,
           xaxis: {
             color: this.graphTextColor,
             showticklabels: false,
@@ -110,14 +112,15 @@
                 xref: 'paper',
                 yref: 'paper',
                 x0: 0,
-                y0: 1,
+                y0: 0.4,
                 x1: 1,
-                y1: 1,
-                opacity: 1,
+                y1: 0.4,
+                opacity: 0.66,
                 line: {
-                    color: 'rgba(255,255,0,0)',
-                    width: 0.5,
-                }
+                    color: 'rgb(0,0,51)',
+                    width: 50,
+                },
+                //layer: 'below',
               },
           ],
 
@@ -154,6 +157,19 @@
               arrowcolor: this.graphTextColor,
               opacity: 0.66,
             },
+            {
+              xref: 'paper',
+              yref: 'y',
+              x: 0.5,
+              y: 0.4,
+              text: 'Drop needed to stop spread of COVID-19',
+              align: 'center',
+              showarrow: false,
+              font: {
+                color: this.graphTextColor
+              },
+              //bgcolor: 'rgb(0,0,51)',
+            }
           ],
 
           margin: {
@@ -172,14 +188,16 @@
       </div>
 
       <label class="row bigsplash" style="padding-top: 1rem;">
-        <div><sup>1</sup> Intuitive drop = mask effectiveness × mask usage</div>
+        <div><sup>1</sup>&#8239;Intuitive drop <span style="font-size: 1.33rem;">=</span> mask effectiveness <span style="font-size: 1.25rem;">×</span> mask usage</div>
       </label>
 
-      <label class="row bigsplash" style="padding-top: 1rem;">
-        <div><sup>2</sup> Assuming masks are equally effective on inhalation & exhalation</div>
+      <label class="row bigsplash">
+        <div><sup>2</sup>&#8239;Assuming masks are equally effective on inhalation & exhalation</div>
       </label>
 
-      <h2 style="text-align: center;"><a href="https://aatishb.com/maskmath/" style="color: rgb(254, 199, 81)">Why Masks Work Better Than You Think</a></h2>
+      <label class="row bigsplash">
+        <div><a href="https://aatishb.com/maskmath/">Learn more</a> about the power of masks.</div>
+      </label>
 
     </div>
   </div>
