@@ -216,7 +216,8 @@ let app = new Vue({
     graphBackgroundColor: 'rgb(0,0,51)',
     graphTextColor: 'rgb(255, 190, 137)',
     graphTraceColor: 'rgb(254, 199, 81)',
-    expand: false
+    expandaside1: false,
+    expandaside2: false
   },
 
   methods: {
