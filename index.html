@@ -36,7 +36,10 @@
 
 <body>
 <div id="root" class="page">
-
+  <select id="language-select">
+    <option value="en">English</option>
+    <option value="he">Hebrew</option>
+  </select>
   <div class="header">
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
@@ -51,9 +54,16 @@
 
   <div class="container">
 
-    <p>
+    <p class="en">
       We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on slowing the spread of COVID-19.
       And yet, some people oppose wearing masks because they view this as a personal choice rather than a public health issue.
+    </p>
+    <p class="he" dir="rtl">
+
+        
+
+
+      ידוע לנו שלמסכות יש השפעה מוגדלת על האטת התפשטות וירוס הקורונה (<a href="https://www.preprints.org/manuscript/202004.0203/v1">1</a>, <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">2</a>, <a href="https://science.sciencemag.org/content/368/6498/1422">3</a>). ועדיין, יש אנשים המתנגדים לעטיית מסכה משום שהם רואים בכך בחירה אישית ולא נושא הרלוונטי לבריאות כלל הציבור.
     </p>
 
     <p>
@@ -710,6 +720,25 @@
 <script src="libraries/p5.min.js"></script>
 <script src="libraries/lambertw.js"></script>
 <script src="js/vue-definitions.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    function setLanguage(languageCode){
+      let relevantParagraphs = document.querySelectorAll(`p.${languageCode}`);
+      relevantParagraphs.forEach(function(p){
+        p.style.display = "block";
+      });
+      let otherParagraphs = document.querySelectorAll(`p:not(.${languageCode})`);
+      otherParagraphs.forEach(function(p){
+        p.style.display = "none";
+      });
+    }
+    let language_select = document.getElementById("language-select");
+    language_select.addEventListener("change", function(e) {
+      setLanguage(e.target.value);
+    })
+    setLanguage("en");
+  }, false);
+</script>
 </body>
 
 </html>
