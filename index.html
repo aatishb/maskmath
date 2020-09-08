@@ -137,7 +137,7 @@
     <p>But what if the susceptible person wears the mask instead?</p>
 
     <p>
-      In general, the effectiveness of a mask varies depending on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
+      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
       For now, let’s keep things simple and assume that this mask is equally effective in either direction.
     </p>
 
@@ -169,12 +169,7 @@
       This <b>double protection</b> makes masks much more effective than you might intuitively expect.
     </p>
 
-    <aside>
-      This might suggest that you can reduce risk further by wearing more than one mask, or equivalently by wearing a mask with many layers of filtration.
-      The problem is, whenever you add a layer, you <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">decrease</a> the mask's <a href="https://www.maskfaq.com/test-results">breathability</a>, so you quickly get diminishing returns on more layers.
-    </aside>
-
-    <p>So here again are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
 
   </div>
 
@@ -221,7 +216,7 @@
     <p>Well, in the extreme limits, this is straightforward.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the likelihood that <span class="red">neither wear a mask</span> is 100%.
+      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
     </p>
 
     <network :maskusage="0"></network>
@@ -230,39 +225,8 @@
       So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
     </p>
 
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <div class="row big-small-small">
-        <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
-          <anim :mask1="false" :mask2="false" ></anim>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
-          <div class="center"><span class="red">0%</span></div>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">Likelihood of This Route</div>
-          <div class="center">100%</div>
-        </div>
-      </div>
-
-      <div class="caption">
-        When no one wears a mask, disease transmission is unaffected.
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container">
-
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the likelihood that they <span class="yellow">both wear masks</span> is 100%.
+      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
     </p>
 
     <network :maskusage="1"></network>
@@ -272,39 +236,8 @@
       Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
     </p>
 
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <div class="row big-small-small">
-        <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
-          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
-          <div class="center"><span class="yellow">75%</span></div>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">Likelihood of This Route</div>
-          <div class="center">100%</div>
-        </div>
-      </div>
-
-      <div class="caption">
-        If everybody wore a 50% effective mask, disease transmission drops by 75%.
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container">
-
     <p>
-      When either <i>everyone</i> or <i>no one</i> wears a mask, it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
     </p>
 
     <p>
@@ -321,16 +254,11 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>suppose 50% of people wear masks</b>.
+      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
+      Similarly, you can work out the chance of the other three disease transmission routes.
     </p>
 
     <p>
-      When two people meet at random, the likelihood that <span class="yellow">both people wear masks</span> equals the chance the first person wears a mask multiplied by the chance the second person wears a mask.
-      Which in this example is 50% ⨉ 50%, i.e. 25%.
-    </p>
-
-    <p>
-      Similarly, you can work out the likelihood of the other three routes of disease transmission.
       When exactly half the population wears masks, it turns out that each route is equally likely.
       (Can you convince yourself why this has to be true?)
     </p>
@@ -359,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Route</div>
+          <div class="center">Chance of This Route</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -464,7 +392,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Likelihood of This Route</div>
+          <div class="center">Chance of This Route</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
