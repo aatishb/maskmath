@@ -36,150 +36,152 @@
 
 <body>
 <div id="root" class="page">
-  <select id="language-select">
-    <option value="en">English</option>
-    <option value="he">Hebrew</option>
-  </select>
   <div class="header">
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>The Multiplicative Power of Masks</h1>
-        <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
-        <h4>in collaboration with <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h1 class="he" dir="rtl">כוחן המכופל של המסכות</h1>
+        <h3 class="he" dir="rtl">כיצד ניתן למגר את וירוס הקורונה בעזרת מסכות</h3>
+        <h4 class="he" dir="rtl">נכתב ע"י <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
+        <h4 class="he" dir="rtl">בשיתוף פעולה עם ערוץ היו-טיוב <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
       </div>
     </div>
   </div>
 
   <div class="container">
 
-    <p class="en">
-      We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on slowing the spread of COVID-19.
-      And yet, some people oppose wearing masks because they view this as a personal choice rather than a public health issue.
-    </p>
     <p class="he" dir="rtl">
-
-        
-
-
       ידוע לנו שלמסכות יש השפעה מוגדלת על האטת התפשטות וירוס הקורונה (<a href="https://www.preprints.org/manuscript/202004.0203/v1">1</a>, <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">2</a>, <a href="https://science.sciencemag.org/content/368/6498/1422">3</a>). ועדיין, יש אנשים המתנגדים לעטיית מסכה משום שהם רואים בכך בחירה אישית ולא נושא הרלוונטי לבריאות כלל הציבור.
     </p>
 
-    <p>
-      This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
-      This <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+    <p class="he" dir="rtl">
+      מחשבה זו מפספסת את התמונה הגדולה מכיוון ש <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">מסכות מגנות על האדם העוטה אותן <i><b>וגם</b></i> על הסובבים אותו</a>.
+      הגנה <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">דו-כיוונית זו</a> גורמת לעטייה גורפת של מסיכות להוות כלי חזק למיגור מגיפה.
+
     </p>
 
     <network :maskusage="0.6"></network>
 
-    <p>
-      By doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission drops by as much as 60% — roughly what's needed to stop the spread of COVID-19.
-    </p>      
+    <p class="he" dir="rtl">
+      ע"י שימוש במתמטיקה נראה כיצד כאשר 60% מהאנשים עוטים מסיכות בעלות יעילות של 60%, קצב העברת מחלות יורד בשיעור של עד 60% - בערך הרמה הדרושה למיגור וירוס הקורונה.
+    </p>
 
     <aside>
       <div class="center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <span style="margin-top: 0.75rem;">
-          Watch the companion video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+        <span style="margin-top: 0.75rem;" class="he" dir="rtl">
+          לצפייה בסרטון הנלווה (אנגלית): <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
         </span>
       </div>
     </aside>
 
-    <h2>Say it, Don't Spray It</h2>
-
-    <p>
-      But first, let’s get a ballpark sense for some numbers.
-      When a person exhales, they <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">spray out saliva particles</a> of various tiny sizes.
-      If they're contagious, then this 'mouth spray' is loaded with viral particles.
-      This <a href="https://arxiv.org/pdf/2005.10988.pdf">virus-laden saliva spray</a> is the main way that COVID-19 spreads.
+    <p class="he" dir="rtl">
+      כאשר אדם נושף <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">נפלטים נתזי רוק</a> בגדלים שונים.
+      אם הוא מדבק, הרי שנתזי רוק אלה עמוסים בחלקיקים נגיפיים,
+      וזוהי <a href="https://arxiv.org/pdf/2005.10988.pdf">דרך ההפצה העיקרית של נגיף הקורונה</a>.
     </p>
 
-    <p>When a contagious person breathes, they spray out roughly <b>a thousand</b> viral particles every minute.</p>
+    <p class="he" dir="rtl"> כשאדם מדבק נושם נפלטים לאוויר בסביבות <b>אלף</b> חלקיקים נגיפיים בדקה.</p>
 
-    <p>When they talk, they spray out roughly <b>ten thousand</b> viral particles every minute.</p>
+    <p class="he" dir="rtl">כשאדם מדבק מדבר נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים בדקה.</p>
 
-    <p>When they cough, they spray out roughly <b>a hundred thousand</b> viral particles.</p>
+    <p class="he" dir="rtl">כשאדם מדבק משתעל נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים.</p>
 
-    <p>And when they sneeze, they spray out roughly <b>a million</b> viral particles.</p>
+    <p class="he" dir="rtl">כאשר אדם מדבק מתעטש, נפלטים לאוויר בסביבות <b>מיליון</b> חלקיקים נגיפיים.</p>
 
-    <p>
-      The more viral particles travel from person to person, the higher the chance of infection.
-      (And if infected, people exposed to more viral particles generally experience <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">more severe symptoms</a>.)
+    <p class="he" dir="rtl">
+      ככל שיותר חלקיקים נגיפיים מועברים מאדם לאדם, כך גדל הסיכוי להידבק
+      (ובמקרה של הידבקות, אנשים שנחשפו ליותר חלקיקים נגיפיים <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">חווים סימפטומים חמורים יותר</a>)
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false">
+    <span class="red he" dir="rtl">דרך הדבקה 1:</span>
+    <!-- TODO translate -->
+    When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.
+  </anim-with-caption>
 
   <div class="container">
 
-    <p>Masks reduce the mouth spray traveling between people — by blocking or by redirecting the spray — thereby reducing the chance of infection.</p>
+    <p class="he" dir="rtl">מסכות מפחיתות את כמות נתזי הרוק העוברים בין אנשים - באמצעות חסימת או הפניית הנתזים - ובכך מקטינות את הסיכוי להדבקה.</p>
 
-    <p>
-      It's worth keeping in mind that no mask is perfect.
-      Even the N95 masks recommend for use by health workers are only guaranteed to block <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% of the hardest-to-block particles</a> (and that’s only if you <a href="https://www.n95decon.org/publications">wear them correctly</a>).
+    <p class="he" dir="rtl">
+      חשוב לזכור שאין מסיכה מושלמת.
+      אפילו מסיכות ה- N95 המומלצות ע"י אנשי רפואה "מתחייבות" לבלום <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% מהחלקיקים הקשים ביותר לבלימה</a> (ורק במידה שהן נעטות <a href="https://www.n95decon.org/publications">כראוי</a>).
+    </p>
+
+    <p class="he" dir="rtl">
+      מסיכות לא מבטיחות אי-הדבקות, אך הן מפחיתות את הסיכון.
+      ממש כמו שמטרייה לא מבטיחה להישאר יבשים, אך היא מקטינה את הסיכוי להירטב
+      בדומה למטריות, מסיכות עובדות רק עם משתמשים בהן כראוי.
+      בשונה ממטריות, המגינות רק על האדם המשתמש בהן, מסיכות מגינות גם על אנשים <i>מסביב</i> לאדם העוטה אותן.
     </p>
 
     <p>
-      Masks don't guarantee safety, they reduce risk.
-      This is a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
-      Like umbrellas, masks only work if you use them correctly.
-      But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
     </p>
 
-    <p>
-    </p>
+    <h2 class="he" dir="rtl">מדוע מסיכות מגינות עלינו פעמיים</h2>
 
-    <h2>Why Masks Protect Us Twice</h2>
-
-    <p>
-      Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
+    <p class="he" dir="rtl">
+      לצורך הדוגמא, נדמיין אדם מדבק העוטה מסיכה בעלת 50% יעילות.
+      משמעות "50% יעילות" היא שעטיית מסיכה זו מפחיתה בחצי את הסיכוי של אדם קרוב להידבק.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5">
+    <span class="orange he" dir="rtl">דרך הדבקה 2:</span>
+    <!-- TODO translate -->
+    When the contagious person wears a 50% effective mask, disease transmission drops by 50%.
+  </anim-with-caption>
 
   <div class="container">
 
-    <p>But what if the susceptible person wears the mask instead?</p>
+    <p class="he" dir="rtl">אך מה אם האדם השני עוטה את המסיכה במקום האדם המדבק?</p>
 
-    <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+    <p class="he" dir="rtl">
+      באופן כללי, לכל מסיכה יש רמת יעילות שונה כאשר <b>שואפים</b> או <b>נושפים</b> דרכה.
+      בינתיים, לצורך הפשטות, נניח שהמסיכה שלנו יעילה באופן זהה בכל כיוון.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p class="he" dir="rtl">במקרה זה, גם בדרך הדבקה זו הסיכוי להידבק פחות ב- 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5">
+    <span class="orange he" dir="rtl">דרך הדבקה 3:</span>
+    <!-- TODO translate -->
+    When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.
+  </anim-with-caption>
   
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+    <p class="he" dir="rtl">מה אם האדם המדבק <i>וגם</i> האדם הנוסף עוטים מסיכה?</p> 
 
-    <p>
-      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
-      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
-      That's a 75% drop in the chance of infection.
+    <p class="he" dir="rtl">
+      המסיכה הראשונה מפחיתה את סיכוי ההדבקה ב- 50%, והמסיכה השנייה מפחיתה את סיכוי ההדבקה ב- 50% נוספים.
+      כלומר כאשר <i>שני</i> אנשים עוטים מסיכה, הסיכוי להדבקה הוא חצי מחצי, כלומר רבע (לעומת המצב בו שניהם לא עוטים מסיכה).
+      במילים אחרות, הסיכוי להידבק פוחת ב- 75%.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5">
+    <span class="yellow he" dir="rtl">דרך הדבקה 4:</span>
+    <!-- TODO translate -->
+    When both people wear 50% effective masks, disease transmission drops by 75%.
+  </anim-with-caption>
   
   <div class="container">
 
-    <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+    <p class="he" dir="rtl">
+      זה עשוי להפתיע שמסיכה בעלת יעילות של 50% יכולה להפחית את סיכוי ההדבקה ב- 75%.
+      זה אפשרי כאשר שני האנשים עוטים מסיכה מכיוון שסיכוי ההדבקה קטן ב- 50% פעמיים.
+      ההגנה <b>הכפולה</b> הזו הופכת עטיית מסיכות ליעילה יותר מכפי שניתן לצפות אינטואיטיבית.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p class="he" dir="rtl">להלן ארבעת הדרכים בהן מחלה הנישאת באוויר מועברת מאדם לאדם</p>
 
   </div>
 
@@ -189,7 +191,9 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">
+            <span class="he">דרך ההעברה</span>
+          </div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -197,7 +201,9 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">
+            <span class="he">הפחתה בסיכוי הידבקות</span>
+          </div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -207,7 +213,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+        <span class="he">ארבעת הדרכים בהן וירוס הקורונה יכול לעבור מאדם לאדם בהינתן מסיכה עם 50% יעילות.</span>
       </div>
 
     </div>
@@ -216,27 +222,27 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2 class="he" dir="rtl">מאנשים לאוכלוסיה</h2>
 
-    <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+    <p class="he" dir="rtl">
+      עד עתה בחנו את העברת המחלה בין שני אנשים.
+      אין ניתן לבצע את קפיצת המדרגה ולהבין כיצד המחלה מופצת <i>בכלל האוכלוסיה</i>?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p class="he" dir="rtl">במקרי הקצה זה פשוט.</p> 
 
-    <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+    <p class="he" dir="rtl">
+      לדוגמא, אם <b>אף אחד</b> לא עוטה מסיכה, אז כל פעם ששני אנשים נפגשים, הסיכוי ש <span class="red he">שניהם לא עוטים מסיכה</span> הוא 100%.
     </p>
 
     <network :maskusage="0"></network>
 
-    <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+    <p class="he" dir="rtl">
+      כך שנצטרך לקחת בחשבון רק את דרך ההדבקה <span class="red he">מספר 1</span> ולא תהיה <span class="red he">כל הפחתה</span> בסיכוי להדבקה.
     </p>
 
-    <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+    <p class="he" dir="rtl">
+      במקרה הקיצון השני, בו <b>כולם</b> עוטים מסיכה, מובטח לנו שהסיכוי לכך ש <span class="yellow he">שניהם עוטים מסיכה</span> הוא 100%.
     </p>
 
     <network :maskusage="1"></network>
@@ -246,11 +252,11 @@
       Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
     </p>
 
-    <p>
+    <p class="en">
       So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
     </p>
 
-    <p>
+    <p class="en">
       But in reality, some people wear masks and others don’t.
       Which means the virus can spread through a mix of all four routes.
       How likely each route is will depend on how many people wear masks.
@@ -263,12 +269,12 @@
 
     <network :maskusage="pnetwork"></network>
 
-    <p>
+    <p class="en">
       For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
       Similarly, you can work out the chance of the other three disease transmission routes.
     </p>
 
-    <p>
+    <p class="en">
       When exactly half the population wears masks, it turns out that each route is equally likely.
       (Can you convince yourself why this has to be true?)
     </p>
@@ -315,17 +321,17 @@
   
   <div class="container">
 
-    <p>
+    <p class="en">
       We can now calculate the <b>average drop in disease transmission in the population</b>.
       Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
     </p>
 
-    <p>
+    <p class="en">
       People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
       So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
     </p>
 
-    <p>
+    <p class="en">
       Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
       So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
     </p>
@@ -347,18 +353,18 @@
   
   <div class="container">
 
-    <p>
+    <p class="en">
       So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
       But mask-wearers benefit much more, thanks to the added protection their masks provide.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p class="en">And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p class="en">So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2 class="en">Maskology</h2>
 
-    <p>
+    <p class="en">
       Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
       Vary the sliders below to see how masks moderate the spread of disease.
     </p>
@@ -429,16 +435,16 @@
   
   <div class="container">
 
-    <p>
+    <p class="en">
       What happens to disease transmission if 60% of people wear a 60% effective mask?
       Or 90% wear a 50% effective mask?
       Or 50% wear a 90% effective mask?
       This interactive lets you answer these questions.
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p class="en">The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
 
-    <p>
+    <p class="en">
       By filtering inhaled air, masks provide first-hand protection to those who wear them.
       And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
     </p>
@@ -462,27 +468,27 @@
     </aside>
 
 
-    <p>
+    <p class="en">
       In fact, masks are even more effective than these numbers suggest.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2 class="en">How To Stop An Epidemic</h2>
 
-    <p>
+    <p class="en">
       You put out a fire by starving it of oxygen.
       But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
       It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
       If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
     </p>
 
-    <p>
+    <p class="en">
       You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
       This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p class="en">When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
 
-    <p>
+    <p class="en">
       But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
       R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
     </p>
@@ -495,18 +501,18 @@
   
   <div class="container">
 
-    <p>
+    <p class="en">
       Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
       And masks decrease <span class="dotted">the second number</span>.
       The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
     </p>
 
-    <p>
+    <p class="en">
       With this in mind, let's re-express the impact of masks in terms of R0.
       The graph below shows how R0 varies as mask-wearing increases.
     </p>
 
-    <p>
+    <p class="en">
       You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
       By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
     </p>
@@ -538,12 +544,12 @@
 
   <div class="container">
 
-    <p>
+    <p class="en">
       To stop the spread of COVID-19, we need to keep R0 beneath 1.
       When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
     </p>
 
-    <p>
+    <p class="en">
       So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
       What if masks were 75% effective?
       Or 90% effective?
@@ -566,25 +572,25 @@
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2 class="en">The Human Cost</h2>
 
-    <p>
+    <p class="en">
       We can take our understanding one step further by expressing the power of masks in more human terms.
       Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
     </p>
 
-    <p>
+    <p class="en">
       As more people wear masks, R0 decreases.
       And as R0 decreases, so does the number of infected people.
       So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
     </p>
 
-    <p>
+    <p class="en">
       By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
       (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p class="en">Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
 
   </div>
 
@@ -613,55 +619,55 @@
 
   <div class="container">
 
-    <p>
+    <p class="en">
       This hill-shaped curve shows us how masks influence the size of an epidemic.
       <b>As more people wear masks, the number of infections plummet.</b>
     </p>
 
-    <p>
+    <p class="en">
       When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
       But every step to the right moves us further down.
       So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
     </p>
 
-    <p>
+    <p class="en">
       To completely stop the spread, we need to get to the bottom of this hill.
       But there's a silver lining: as more people wear masks, the hill grows steeper.
       Which means <b>masks provide greater returns to society as more people wear them</b>.
     </p>
 
-    <p>
+    <p class="en">
       If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
       This is how masks can end an epidemic.
       But masks can only end an epidemic if enough people wear them.
     </p>
 
-    <p>
+    <p class="en">
       You might wonder how many people have to wear masks to end an epidemic.
       Well, that depends on how effective the masks are.
     </p>
 
-    <p>
+    <p class="en">
       By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
       But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
     </p>
 
-    <p>
+    <p class="en">
       <b>The more effective the mask, the faster we can descend the hill.</b>
       That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
     </p>
 
-    <p>
+    <p class="en">
       We all want to get to the bottom of the hill and stop the spread of COVID-19.
       But you can't get there by yourself.
       Each person can only take a tiny step downwards.
     </p>
 
-    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+    <p class="en">However, when many people take this small step, together, we take a giant leap down the hill.</p>
 
-    <p>Together, we can get to the bottom of the hill.</p>
+    <p class="en">Together, we can get to the bottom of the hill.</p>
     
-    <p>Together, we can hit the brakes on COVID-19.</p>
+    <p class="en">Together, we can hit the brakes on COVID-19.</p>
 
   </div>
 
@@ -673,40 +679,40 @@
 
 <div class="page footer">
   <div class="container">
-    <h2>Credits & References</h2>
+    <h2 class="en">Credits & References</h2>
 
-    <p>This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+    <p class="en">This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
 
-    <p>Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
+    <p class="en">Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
 
-    <p>
+    <p class="en">
       Many thanks to <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> for their helpful feedback on drafts of this essay.
     </p>
 
-    <p>
+    <p class="en">
       If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">support my work on Patreon</a></b>.
     </p>
 
-    <p>
+    <p class="en">
       Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
       While masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
     </p>
 
-    <p>
+    <p class="en">
       For the algebra enthusiasts among you (you know who you are), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">here's a writeup</a> covering the math in more detail.
       The graphs in this essay extend the work of <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> to account for the bidirectional effectiveness of masks.
     </p>
 
-    <p>
+    <p class="en">
       The bidirectional model of masks underlying this essay was to my knowledge first published in a preprint by <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Table S3 and Fig S4). 
       This was highlighted by Howard et al in their <a href="https://www.preprints.org/manuscript/202004.0203/v3">review article</a> and <a href="https://www.fast.ai/2020/04/13/masks-summary/">accompanying essay</a>, and further popularized by <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> in the Atlantic, and by <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> in the New Yorker, who writes, <i>"The more effective the mask, the bigger the impact."</i>
     </p>
 
-    <p>
+    <p class="en">
       This text is published under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license. The source code is available <a href="https://github.com/aatishb/maskmath">on Github</a>. The emojis are created by <a href="https://twemoji.twitter.com/">Twitter</a> and were modified to include a custom mask design.
     </p>
 
-    <p>
+    <p class="en">
       Thanks for reading, and stay safe! 😷
     </p>
 
@@ -720,25 +726,6 @@
 <script src="libraries/p5.min.js"></script>
 <script src="libraries/lambertw.js"></script>
 <script src="js/vue-definitions.js"></script>
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
-    function setLanguage(languageCode){
-      let relevantParagraphs = document.querySelectorAll(`p.${languageCode}`);
-      relevantParagraphs.forEach(function(p){
-        p.style.display = "block";
-      });
-      let otherParagraphs = document.querySelectorAll(`p:not(.${languageCode})`);
-      otherParagraphs.forEach(function(p){
-        p.style.display = "none";
-      });
-    }
-    let language_select = document.getElementById("language-select");
-    language_select.addEventListener("change", function(e) {
-      setLanguage(e.target.value);
-    })
-    setLanguage("en");
-  }, false);
-</script>
 </body>
 
 </html>
