@@ -164,12 +164,12 @@
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+      Em um primeiro momento, é contra-intuitivo que uma máscara 50% eficaz possa reduzir o risco de infecção em 75%.
+      Isso é possível porque, quando ambas as pessoas usam máscaras, a chance de infecção cai pela metade duas vezes.
+      Esta <b>dupla proteção</b> torna as máscaras muito mais eficazes do que a nossa intuição pode nos dizer.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>Abaixo, estão as quatro vias pelas quais uma doença transmitida pelo ar pode se espalhar de pessoa para pessoa.</p>
 
   </div>
 
@@ -179,7 +179,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Via de Transmissão de Doença</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Diminuição na Transmissão da Doença</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -197,7 +197,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+        As quatro maneiras pelas quais a COVID-19 pode se espalhar de pessoa para pessoa. Isso pressupõe uma máscara com 50% de eficácia.
       </div>
 
     </div>
@@ -206,61 +206,62 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>Do Indivíduo para a População</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      Até agora, examinamos apenas a transmissão de doenças entre duas pessoas.
+      Como podemos fazer para entender a transmissão de doenças em <i>toda a população</i>?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p>Bem, no limite, é mais fácil de pensar.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Por exemplo, se <b>ninguém</b> usasse máscara, sempre que duas pessoas se encontrassem, a chance de que <span class = "red">nenhum dos dois usasse máscara</span> seria de 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
-    </p>
+      Portanto, teríamos apenas que considerar a <span class = "red">primeira via</span> de transmissão da doença, e a população não veria <span class = "red">queda</span> na transmissão da doença.
+      </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
-    </p>
+      No outro extremo, se <b>todos</b> usassem máscara, sempre que duas pessoas se encontrassem, a chance de que ambas <span class = "yellow">usassem máscaras</span> seria de 100%.
+     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+
+      Nesse caso, teríamos que considerar apenas a <span class = "yellow">última via</span> de transmissão da doença.
+      Assumindo que as máscaras fossem 50% eficazes em cada direção, a população veria uma <span class = "yellow">queda de 75%</span> na transmissão da doença.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Portanto, quando <i>todos</i> usam máscara (ou quando <i>ninguém</i> usa), é fácil calcular a queda na transmissão de doenças na população, porque há apenas uma via de transmissão envolvida.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Mas, na realidade, algumas pessoas usam máscaras e outras não.
+      O que significa que o vírus pode se espalhar por uma combinação das quatro vias.
+      A probabilidade de cada via dependerá de quantas pessoas usam máscaras.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Uso de Máscaras: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Por exemplo, <b>se 50% das pessoas usarem máscaras</b>, sempre que duas pessoas se encontrarem aleatoriamente, a chance de <span class = "yellow">ambas as pessoas usarem máscaras</span> é de 50% ⨉ 50 %, ou seja, 25%.
+      Da mesma forma, você pode calcular a chance das outras três vias de transmissão de doenças.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Quando exatamente metade da população usa máscaras, verifica-se que cada via é igualmente provável.
+      (Você consegue se convencer de por que isso é verdade?)
     </p>
 
   </div>
@@ -271,7 +272,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Via de Transmissão da Doença</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +280,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Diminuição na Transmissão da Doença</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +288,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilidade Desta Via</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +298,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        As quatro maneiras pelas quais a COVID-19 pode ser transmitida de pessoa para pessoa, assumindo que 50% das pessoas usem uma máscara 50% eficaz.
       </div>
 
     </div>
