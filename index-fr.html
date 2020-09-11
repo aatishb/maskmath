@@ -188,7 +188,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Baisse de la transmission de la maladie</div>
+          <div class="center">Baisse de la transmission</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -207,38 +207,44 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>Des personnes à la population</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      Jusqu'ici nous n'avons considéré que la transmission de la maladie entre deux personnes.
+      Comment pouvons nous passer à la compréhension de la transmission de la maladie dans
+      <i>la population toute entière</i> ?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p>Eh bien, en commençant par les limites extrêmes, c'est assez simple.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Par exemple, si <b>personne</b> ne porte de masque, alors quand deux personnes se rencontrent, la probabilité
+      <span class="red">qu'aucune des deux ne porte de masque</span> est de 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      Donc nous n'aurions qu'à considérer le <span class="red">premier mode</span> de transmission de la maladie,
+      et la population ne verrait <span class="red">aucune réduction</span> de la transmisison.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      À l'autre extrême, si <b>tout le monde</b> porte un masque, alors quand deux personnes se rencontrent, la probabilité
+      que <span class="yellow">les deux portent un masque</span> est de 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      Dans ce cas, nous n'aurions à considérer que le <span class="yellow">dernier mode</span> de transmission de la maladie.
+      En supposant que les masques sont efficaces à 50% dans les deux directions, la population verrait une <span class="yellow">chute de 75%</span>
+      de la transmission de la maladie.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Donc quand <i>tout le monde</i> porte un masque (ou quand <i>personne</i> ne porte de masque), c'est simple de calculer
+      la réduction de la transmission de la maladie, parce qu'il n'y a qu'un mode de transmission en jeu.
     </p>
 
     <p>
@@ -255,7 +261,8 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
+      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that
+      <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
       Similarly, you can work out the chance of the other three disease transmission routes.
     </p>
 
