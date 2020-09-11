@@ -347,19 +347,19 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Donc même les non-porteurs tirent un bénéfice modeste, parce que l'air qu'ils inspirent est souvent filtrée par les masques <i>d'autres personnes</i>.
+      Mais les porteurs de masque en profitent bien plus, grâce à la protection supplémentaire qu'il leur apporte.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>Et puisque la population est constituée de porteurs et non-porteurs de masque, le bénéfice moyen se situe entre les bénéfices de chaque groupe.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>Donc dans cet exemple simplifié (où 50% des gens portent des masques efficaces à 50%) nous avons trouvé comment aller du <b>bénéfice que le masque offre à un <i>individu</i></b> au <b>bénéfice moyen que le masque apporte à la <i>population</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>Masquologie</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">Appliquons cette logique</a> à <i>n'importe quelle valeur</i> d'<b>utilisation du masque</b> et <b>d'efficacité du masque</b>.
+      Faites bouger les curseurs ci-dessous pour voir comment les masques limitent la diffusion de la maladie.
     </p>
 
   </div>
@@ -368,24 +368,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Port du masque: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacité du masque à l'expiration: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacité du masque à l'inspiration: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Mode de transmission</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -393,7 +393,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Baisse de transmission</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -401,7 +401,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilité de ce mode</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -412,15 +412,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Baisse moyenne de transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Baisse de transmission aux non-porteurs de masque: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Baisse de transmission aux porteurs de masque: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
