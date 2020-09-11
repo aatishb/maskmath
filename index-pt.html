@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt">
 
 <head>
 
   <meta charset="utf-8">
-  <title>The Multiplicative Power of Masks</title>
+  <title>O Poder Multiplicativo das Máscaras de Proteção Facial</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An Explorable Essay on How Masks Can End COVID-19">
+  <meta name="description" content="Um Ensaio Interativo Sobre Como as Máscaras Podem Acabar Com a COVID-19">
   <meta name="author" content="Aatish Bhatia">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -19,18 +19,18 @@
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why Masks Work Better Than You Think: An Interactive Essay">
-  <meta name="twitter:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them.">
+  <meta name="twitter:title" content="Por que as Máscaras Funcionam Melhor do que Você Pensa: Um Ensaio Interativo">
+  <meta name="twitter:description" content="Mesmo máscaras parcialmente eficazes podem interromper a propagação da COVID-19, desde que um número suficiente de pessoas as use.">
   <meta name="twitter:site" content="@aatishb">
   <!-- Twitter Summary card images must be at least 120x120px -->
   <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
   
   <!-- Open Graph data -->
-  <meta property="og:title" content="Why Masks Work Better Than You Think: An Interactive Essay" />
+  <meta property="og:title" content="Por que as Máscaras Funcionam Melhor do que Você Pensa: Um Ensaio Interativo" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://aatishb.com/maskmath/" />
   <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
-  <meta property="og:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them." />
+  <meta property="og:description" content="Mesmo máscaras parcialmente eficazes podem interromper a propagação da COVID-19, desde que um número suficiente de pessoas as use." />
 
 </head>
 
@@ -41,10 +41,10 @@
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>The Multiplicative Power of Masks</h1>
-        <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
-        <h4>in collaboration with <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h1>O Poder Multiplicativo das Máscaras de Proteção Facial</h1>
+        <h3>Um Ensaio Interativo Sobre Como as Máscaras Podem Acabar Com a COVID-19</h3>
+        <h4>por <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
+        <h4>em colaboração com <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
       </div>
     </div>
   </div>
@@ -52,31 +52,31 @@
   <div class="container">
 
     <p>
-      We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on slowing the spread of COVID-19.
-      And yet, some people oppose wearing masks because they view this as a personal choice rather than a public health issue.
+      Nós <a href="https://www.preprints.org/manuscript/202004.0203/v1">agora</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">sabemos</a> <a href="https://science.sciencemag.org/content/368/6498/1422">que</a> as máscaras têm um efeito muito grande de retardamento da propagação da COVID-19.
+      Mesmo assim, algumas pessoas se opõem ao uso de máscaras porque veem isso como uma escolha pessoal, e não uma questão de saúde pública.
     </p>
 
     <p>
-      This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
-      This <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+      Essa visão desconsidera um quadro mais amplo, porque <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8"> as máscaras protegem quem as usa <i>e</i> as pessoas ao seu redor</a>.
+      Esta <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf"> proteção bidirecional</a> torna o uso generalizado de máscaras uma forma poderosa de extinguir uma epidemia.
     </p>
 
     <network :maskusage="0.6"></network>
 
     <p>
-      By doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission drops by as much as 60% — roughly what's needed to stop the spread of COVID-19.
+      Fazendo os cálculos sobre o uso de máscaras, veremos que quando 60% das pessoas usam máscaras que sejam 60% eficazes, a transmissão de doenças cai em até 60% - aproximadamente o que é necessário para impedir a propagação de COVID-19.
     </p>      
 
     <aside>
       <div class="center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <span style="margin-top: 0.75rem;">
-          Watch the companion video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+          Assista ao vídeo complementar: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Por Que as Máscaras Funcionam MELHOR do Que Você Imagina</a>
         </span>
       </div>
     </aside>
 
-    <h2>Say it, Don't Spray It</h2>
+    <h2>Pode falar, mas sem cuspir</h2>
 
     <p>
       But first, let’s get a ballpark sense for some numbers.
