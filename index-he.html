@@ -42,8 +42,10 @@
       <div>
         <h1>כוחן המכופל של המסיכות</h1>
         <h3>כיצד ניתן למגר את וירוס הקורונה בעזרת מסיכות</h3>
-        <h4>נכתב ע"י <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
-        <h4>בשיתוף פעולה עם ערוץ היו-טיוב <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h5>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">Hebrew</a>
+        </h5>
       </div>
     </div>
   </div>
@@ -524,7 +526,13 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'How Masks Reduce R0',
+        'Percentage of People Who Wear Masks',
+        '# People a Contagious Person Infects (R0)',
+        'Epidemic Under Control',
+        'Epidemic Out Of Control'
+      )" :config="config"></graph>
 
     </div>
   </div>
@@ -599,7 +607,11 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
+      <graph :traces="graph3Traces" :layout="graph3Layout(
+        'How Masks Reduce Infections',
+        'Percentage of People Who Wear Masks',
+        'Percentage of People Who Will Be Infected'
+      )" :config="config"></graph>
 
     </div>
   </div>

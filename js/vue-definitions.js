@@ -230,6 +230,97 @@ let app = new Vue({
       return this.R0 * (1 - this.ein * p) * (1 - this.eout * p);
     },
 
+    graph2Layout(title, xaxistitle, yaxistitle, annotation1, annotation2) {
+      return {
+        title:'<b>' + title + '</b>',
+        showlegend: false,
+        xaxis: {
+          title: xaxistitle,
+          tickformat: ',.0%',
+          color: this.graphTextColor,
+          fixedrange: true
+        },
+        yaxis: {
+          title: yaxistitle,
+          range: [0, 3],
+          color: this.graphTextColor,
+          hoverformat: '.2f',
+          fixedrange: true
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 0.9 * this.fontSize
+        },
+        annotations: [
+          {
+            x: 0.01,
+            y: 0.95,
+            xref: 'x',
+            yref: 'y',
+            text: annotation1,
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'lightgreen',
+              size: 0.9 * this.fontSize
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'top',
+            opacity: 1
+          },
+          {
+            x: 0.01,
+            y: 1.05,
+            xref: 'x',
+            yref: 'y',
+            text: annotation2,
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'salmon',
+              size: 0.9 * this.fontSize
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'bottom',
+            opacity: 1
+          }
+        ]
+
+      }
+    },
+
+    graph3Layout(title, xaxistitle, yaxistitle) {
+      return {
+        title:'<b>' + title + '</b>',
+        showlegend: false,
+        xaxis: {
+          title: xaxistitle,
+          tickformat: ',.0%',
+          color: this.graphTextColor,
+          fixedrange: true
+        },
+        yaxis: {
+          title: yaxistitle,
+          range: [0, 1],
+          color: this.graphTextColor,
+          tickformat: '%',
+          fixedrange: true
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 0.9 * this.fontSize
+        },
+      }
+    },
+
   },
 
   computed: {
@@ -304,97 +395,6 @@ let app = new Vue({
           hoverinfo: 'none'
         }
       ]
-    },
-
-    graph2Layout() {
-      return {
-        title:'<b>How Masks Reduce R0</b>',
-        showlegend: false,
-        xaxis: {
-          title: 'Percentage of People Who Wear Masks',
-          tickformat: ',.0%',
-          color: this.graphTextColor,
-          fixedrange: true
-        },
-        yaxis: {
-          title: '# People a Contagious Person Infects (R0)',
-          range: [0, 3],
-          color: this.graphTextColor,
-          hoverformat: '.2f',
-          fixedrange: true
-        },
-        paper_bgcolor: this.graphBackgroundColor,
-        plot_bgcolor: this.graphBackgroundColor,
-        font: {
-          family: 'Open Sans, sans-serif',
-          color: this.graphTextColor,
-          size: 0.9 * this.fontSize
-        },
-        annotations: [
-          {
-            x: 0.01,
-            y: 0.95,
-            xref: 'x',
-            yref: 'y',
-            text: 'Epidemic Under Control',
-            showarrow: false,
-            font: {
-              family: 'Open Sans, sans-serif',
-              color: 'lightgreen',
-              size: 0.9 * this.fontSize
-            },
-            align: 'left',
-            xanchor: 'left',
-            yanchor: 'top',
-            opacity: 1
-          },
-          {
-            x: 0.01,
-            y: 1.05,
-            xref: 'x',
-            yref: 'y',
-            text: 'Epidemic Out Of Control',
-            showarrow: false,
-            font: {
-              family: 'Open Sans, sans-serif',
-              color: 'salmon',
-              size: 0.9 * this.fontSize
-            },
-            align: 'left',
-            xanchor: 'left',
-            yanchor: 'bottom',
-            opacity: 1
-          }
-        ]
-
-      }
-    },
-
-    graph3Layout() {
-      return {
-        title:'<b>How Masks Reduce Infections</b>',
-        showlegend: false,
-        xaxis: {
-          title: 'Percentage of People Who Wear Masks',
-          tickformat: ',.0%',
-          color: this.graphTextColor,
-          fixedrange: true
-        },
-        yaxis: {
-          title: 'Percentage of People Who Will Be Infected',
-          range: [0, 1],
-          color: this.graphTextColor,
-          tickformat: '%',
-          fixedrange: true
-        },
-        paper_bgcolor: this.graphBackgroundColor,
-        plot_bgcolor: this.graphBackgroundColor,
-        font: {
-          family: 'Open Sans, sans-serif',
-          color: this.graphTextColor,
-          size: 0.9 * this.fontSize
-        },
-      }
     },
 
     config() {
