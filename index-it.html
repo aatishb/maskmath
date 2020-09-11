@@ -58,7 +58,7 @@
 
     <p>
       Questo è un approccio miope, perché <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8"> le mascherine proteggono chi le porta <i>ma anche</i> il resto delle persone attorno</a>.
-      Questa <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">protezione "a doppia corsia"</a> rende l'uso esteso delle mascherine uno strumento effice per estinguere un epidemia.
+      Questa <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">protezione "a doppia corsia"</a> rende l'uso esteso delle mascherine uno strumento efficace per estinguere un epidemia.
     </p>
 
     <network :maskusage="0.6"></network>
@@ -81,8 +81,8 @@
     <p>
       Ma prima, cerchiamo di fare un po' di chiarezza su alcuni numeri. 
       Quando una persona espira, emette <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">particelle di saliva</a> di diverse misure.
-      Se la persona è contagiosa, questi "schizzi di sputo" sono carichi di particelle virali. 
-      Questo <a href="https://arxiv.org/pdf/2005.10988.pdf">spruzzo di saliva carico di virus</a> è la causa principale della diffusione del COVID-19.
+      Se la persona è contagiosa, questo "spruzzo orale" è pieno di particelle virali. 
+      Gli <a href="https://arxiv.org/pdf/2005.10988.pdf">schizzi di saliva carichi di virus</a> sono la causa principale della diffusione del COVID-19.
     </p>
 
     <p>Quando una persona contagiosa respira, emette circa <b>mille</b> particelle virali al minuto.</p>
@@ -100,7 +100,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><span class="red">Percorso di Contagio n.1:</span> Quando una persona contagiosa si avvicina ad un altra persona, i suoi 'schizzi di sputo' possono disseminare la malattia.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false"><span class="red">Modalità di Trasmissione n.1:</span> Quando una persona contagiosa si avvicina ad un altra persona, il suo 'spruzzo orale' può disseminare la malattia.</anim-with-caption>
 
   <div class="container">
 
@@ -113,8 +113,8 @@
 
     <p>
       Le mascherine non garantiscono immunità, ma aiutano a ridurre i rischi di contagio. 
-      È un po' come un ombrello, che non garantisce di farti rimanere asciutto, ma di sicuro abbassa la probabilità di bagnarsi. 
-      E come gli ombrelli, le mascherine funzionano solo se le usi correttamente. 
+      È un po' come un ombrello, che non garantisce di rimanere asciutto, ma di sicuro abbassa la probabilità di bagnarsi. 
+      E come gli ombrelli, le mascherine funzionano solo se usate correttamente. 
       Ma a differenza degli ombrelli, che proteggono soltanto le persone che li usano, le mascherine proteggono anche chi è <i>nelle vicinanze</i> di chi le porta. 
     </p>
 
@@ -130,36 +130,36 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><span class="orange">Modalità di Trasmissione n.2:</span> Se la persona contagiosa porta una mascherina efficace al 50%, il contagio viene ridotto del 50%.</anim-with-caption>
 
   <div class="container">
 
-    <p>But what if the susceptible person wears the mask instead?</p>
+    <p>Ma che succede se invece a portare la mascherina è la persona che riceve gli schizzi di saliva?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      In generale, l'efficacia di una mascherina cambia a seconda se si <b>inspira</b> or <b>espira</b>. 
+      Però per adesso semplifichiamo, e assumiamo di avere una mascherina con un'efficacia identica in entrambe le direzioni. 
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>In questo caso, la probabilità di infezione viene ridotta, in modo simile, del 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Modalità di Trasmissione n.3:</span> Quando il ricevente porta una mascherina efficae al 50%, la propagazione dei contagi diminuisce del 50%.</anim-with-caption>
   
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+    <p>Cosa succede se sia la persona contagiosa <i>e anche</i> quella ricevente portano una mascherina?</p> 
 
     <p>
-      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
-      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
-      That's a 75% drop in the chance of infection.
+      Allora, la prima mascherina riduce la probabilità di infezione della metà, poi la seconda mascherina riduce ulteriormente la probabilità di un'altra metà. 
+      Quindi quando <i>entrambe</i> le persone portano mascherine, la probabilità di infezione è ridotta alla metà della metà, ovvero al 25% (se paragonata alla situazione in cui nessuno dei due porta una mascherina).
+      Questo equivale ad un calo della probabilità di infezione del 75%. 
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Modalità di Trasmissione n.4:</span> Quando entrambe le persone portano una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 75%.</anim-with-caption>
   
   <div class="container">
 
