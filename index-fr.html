@@ -248,27 +248,27 @@
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Mais en réalité, certaines personnes portent un masque, et d'autres n'en portent pas.
+      Ce qui veut dire que le virus peut se diffuser en suivant un mix des quatre modes de transmission.
+      La probabilité de chaque mode de transmission dépend du nombre de personnes qui portent un masque.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Port du masque: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that
-      <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Par exemple, <b>si 50% des gens portent des masques</b>, alors chaque fois que deux personnes se rencontrent au hasard,
+      la probabilité que <span class="yellow">les deux personnes portent un masque</span> est 50% ⨉ 50%, soit 25%.
+      De la même manière, vous pouvez calculer la probabilité des trois autres modes de transmission.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Quand exactement la moitié de la population porte un masque, il se trouve que chaque mode de transmission est
+      également probable. (Pouvez-vous démontrer pourquoi cela est vrai ?)
     </p>
 
   </div>
@@ -279,7 +279,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Mode de transmission</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Baisse de la transmission</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -295,7 +295,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilité de ce mode</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -305,7 +305,8 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Les quatre modes de transmission de la COVID-19 de personne à personne, en supposant que 50% des gens portent un masque
+        efficace à 50%.
       </div>
 
     </div>
