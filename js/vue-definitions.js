@@ -64,19 +64,19 @@ Vue.component('anim', {
 Vue.component('anim-with-caption', {
 
   template:   `
-  <div class="graphic">
+  <div class="graphic" dir="ltr">
     <div class="graphic-container">
 
       <div class="row small-big-small twohundredpx">
 
         <div class="center">
-            <div class="label">Contagious<br/>Person</div>
+            <div class="label">{{ contagiousperson }}</div>
         </div>
 
         <anim :mask1="mask1" :mask2="mask2" :eout="eout" :ein="ein"></anim>
 
         <div class="center">
-            <div class="label">Susceptible<br/>Person</div>
+            <div class="label">{{ susceptibleperson }}</div>
         </div>
 
       </div>
@@ -88,7 +88,7 @@ Vue.component('anim-with-caption', {
     </div>
   </div>`,
 
-  props: ['mask1', 'mask2', 'eout', 'ein']
+  props: ['mask1', 'mask2', 'eout', 'ein', 'contagiousperson', 'susceptibleperson']
 
 })
 
