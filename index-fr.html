@@ -465,49 +465,49 @@
       En fait, les masques sont encore plus efficaces que ces nombres ne le suggèrent.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Comment arrêter une épidémie</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      On éteint un feu en le privant d'oxygène.
+      Mais il n'y a pas besoin de se débarrasser de tout l'oxygène, il suffit juste de le réduire suffisamment pour empêcher que le feu ne se propage.
+      Il en va de même pour une épidémie - il n'y a pas besoin de bloquer la transmission de la maladie à 100%.
+      Si vous limitez la transmission juste assez pour que la maladie ne se propage plus, vous pouvez mettre un terme à l'épidémie.
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Vous avez probablement entendu le terme "R0" en épidémiologie, que l'on prononce "R zéro".
+      Il s'agit du <a href="https://fr.wikipedia.org/wiki/Nombre_de_reproduction_de_base">nombre de personnes qu'une personne contagieuse peut infecter</a> dans une population qui n'a aucune immunité à la maladie.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>Quand le R0 dépasse 1, la maladie va se diffuser de manière exponentielle, jusqu'à ce qu'assez de personnes soient vaccinées, ou qu'elles soient infectées et qu'elles développent une immunité à la maladie.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Mais, ainsi que Ed Yong l'écrit dans "The Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">le R0 n'est pas une fatalité <i>("R0 is not destiny")</i></a>.
+      Le R0 est un produit de deux nombres: le nombre moyen de personnes qu'une personne contagieuse rencontre, et la probabilité d'une infection lors d'un contact.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">nombre moyen de personnes rencontrées par une personne contagieuse</span> <br>⨉ <span class="dotted">probabilité d'une infection lors d'un contact</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      La distanciation sociale, les quarantaines et le confinement permettent de réduire <span class="dashed">le premier nombre</span>.
+      Et les masques réduisent <span class="dotted">le second nombre</span>.
+      Le but de toutes ces stratégies de santé publique est de contrôler l'épidémie en maintenant le R0 en dessous de 1.
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      En ayant cela à l'esprit, essayons de réécrire l'impact des masques en fonction du R0.
+      Le graphique ci-dessous montre comment le R0 varie lorsque le taux de port du masque augmente.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Vous pouvez utiliser le premier curseur pour faire varier le R0, qui pour la COVID-19 est entre 2 et 3 (en l'absence de toute mesure de santé publique comme la distanciation sociale, qui réduit le R0).
+      En faisant varier l'efficacité des masques, vous pouvez voir comment ils peuvent aider à contrôler l'épidémie.
     </p>
 
   </div>
@@ -521,12 +521,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacité du masque à l'expiration : <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacité du masque à l'inspiration: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
