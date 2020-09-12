@@ -6,6 +6,15 @@
   "commit": false,
   "contributors": [
     {
+      "login": "aatishb",
+      "name": "Aatish Bhatia",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1878638?v=4",
+      "profile": "https://aatishb.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
       "login": "reichhen",
       "name": "Henry",
       "avatar_url": "https://avatars0.githubusercontent.com/u/3393273?v=4",
