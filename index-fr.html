@@ -153,8 +153,7 @@
 
     <p>
       Eh bien, le premier masque divise les chances d'infection par deux, et le second masque les divise à nouveau par deux.
-      Donc quand <i>les deux</i> personnes portent un masque, la probabilité d'infection est la moitié de la moitié, soit 25% (par rapport
-      à quand personne ne porte de masque).
+      Donc quand <i>les deux</i> personnes portent un masque, la probabilité d'infection est la moitié de la moitié, soit 25% (par rapport à quand personne ne porte de masque).
       C'est une réduction de 75% des chances d'infection.
     </p>
 
@@ -211,40 +210,34 @@
 
     <p>
       Jusqu'ici nous n'avons considéré que la transmission de la maladie entre deux personnes.
-      Comment pouvons nous passer à la compréhension de la transmission de la maladie dans
-      <i>la population toute entière</i> ?
+      Comment pouvons nous passer à la compréhension de la transmission de la maladie dans <i>la population toute entière</i> ?
     </p> 
 
     <p>Eh bien, en commençant par les limites extrêmes, c'est assez simple.</p> 
 
     <p>
-      Par exemple, si <b>personne</b> ne porte de masque, alors quand deux personnes se rencontrent, la probabilité
-      <span class="red">qu'aucune des deux ne porte de masque</span> est de 100%.
+      Par exemple, si <b>personne</b> ne porte de masque, alors quand deux personnes se rencontrent, la probabilité <span class="red">qu'aucune des deux ne porte de masque</span> est de 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      Donc nous n'aurions qu'à considérer le <span class="red">premier mode</span> de transmission de la maladie,
-      et la population ne verrait <span class="red">aucune réduction</span> de la transmisison.
+      Donc nous n'aurions qu'à considérer le <span class="red">premier mode</span> de transmission de la maladie, et la population ne verrait <span class="red">aucune réduction</span> de la transmisison.
     </p>
 
     <p>
-      À l'autre extrême, si <b>tout le monde</b> porte un masque, alors quand deux personnes se rencontrent, la probabilité
-      que <span class="yellow">les deux portent un masque</span> est de 100%.
+      À l'autre extrême, si <b>tout le monde</b> porte un masque, alors quand deux personnes se rencontrent, la probabilité que <span class="yellow">les deux portent un masque</span> est de 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
       Dans ce cas, nous n'aurions à considérer que le <span class="yellow">dernier mode</span> de transmission de la maladie.
-      En supposant que les masques sont efficaces à 50% dans les deux directions, la population verrait une <span class="yellow">chute de 75%</span>
-      de la transmission de la maladie.
+      En supposant que les masques sont efficaces à 50% dans les deux directions, la population verrait une <span class="yellow">chute de 75%</span> de la transmission de la maladie.
     </p>
 
     <p>
-      Donc quand <i>tout le monde</i> porte un masque (ou quand <i>personne</i> ne porte de masque), c'est simple de calculer
-      la réduction de la transmission de la maladie, parce qu'il n'y a qu'un mode de transmission en jeu.
+      Donc quand <i>tout le monde</i> porte un masque (ou quand <i>personne</i> ne porte de masque), c'est simple de calculer la réduction de la transmission de la maladie, parce qu'il n'y a qu'un mode de transmission en jeu.
     </p>
 
     <p>
@@ -261,8 +254,7 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      Par exemple, <b>si 50% des gens portent des masques</b>, alors chaque fois que deux personnes se rencontrent au hasard,
-      la probabilité que <span class="yellow">les deux personnes portent un masque</span> est 50% ⨉ 50%, soit 25%.
+      Par exemple, <b>si 50% des gens portent des masques</b>, alors chaque fois que deux personnes se rencontrent au hasard, la probabilité que <span class="yellow">les deux personnes portent un masque</span> est 50% ⨉ 50%, soit 25%.
       De la même manière, vous pouvez calculer la probabilité des trois autres modes de transmission.
     </p>
 
@@ -305,8 +297,7 @@
       </div>
 
       <div class="caption">
-        Les quatre modes de transmission de la COVID-19 de personne à personne, en supposant que 50% des gens portent un masque
-        efficace à 50%.
+        Les quatre modes de transmission de la COVID-19 de personne à personne, en supposant que 50% des gens portent un masque efficace à 50%.
       </div>
 
     </div>
@@ -561,8 +552,7 @@
         De la même manière, les non-porteurs peuvent vivre dans des clusters où l'utilisation du masque est moins fréquente que la moyenne.
         Cette tendance à rencontrer des gens aux préférences similaires <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminue le pouvoir de protection des masques</a> parce que <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">les non porteurs ont moins de chance de bénéficier de la proximité de porteurs de masque</a>.
         <br/><br/>
-        Ainsi que <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, et Ashleigh Tuite</a> l'écrivent dans leur analyse, "l'impact des masques et autres protections faciales sur la transmission de la COVID-19 sera probablement plus grand si l'on fait attention à en assurer la disponibilité auprès des populations désavantagées"
-        (<i>"the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."</i>)
+        Ainsi que <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, et Ashleigh Tuite</a> l'écrivent dans leur analyse, "l'impact des masques et autres protections faciales sur la transmission de la COVID-19 sera probablement plus grand si l'on fait attention à en assurer la disponibilité auprès des populations désavantagées" (<i>"the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."</i>)
       </span>
     </aside>
 
