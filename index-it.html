@@ -137,7 +137,7 @@
     <p>Ma che succede se invece a portare la mascherina è la persona che riceve gli schizzi di saliva?</p>
 
     <p>
-      In generale, l'efficacia di una mascherina cambia a seconda se si <b>aspira</b> o <b>espira</b>. 
+      In generale, l'efficacia di una mascherina cambia a seconda se si <b>inspira</b> o <b>espira</b>. 
       Però per adesso semplifichiamo, e supponiamo di avere una mascherina con un'efficacia identica in entrambe le direzioni. 
     </p>
 
@@ -145,11 +145,11 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Modalità di Trasmissione n.3:</span> Quando il ricevente porta una mascherina efficae al 50%, la propagazione dei contagi diminuisce del 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Modalità di Trasmissione n.3:</span> Quando il ricevente porta una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 50%.</anim-with-caption>
   
   <div class="container">
 
-    <p>Cosa succede se sia la persona contagiosa <i>e anche</i> quella a rischio portano una mascherina?</p> 
+    <p>Cosa succede se sia la persona contagiosa <i>che anche</i> quella a rischio portano una mascherina?</p> 
 
     <p>
       Allora, la prima mascherina riduce la probabilità di infezione della metà, poi la seconda mascherina riduce ulteriormente la probabilità di un'altra metà. 
@@ -342,7 +342,7 @@
       Ma chi porta la mascherina ha un beneficio molto più alto, grazie alla protezione aggiuntiva della propria mascherina. 
     </p>
 
-    <p>E visto che la popolazione consiste sia di portatori di mascherina che di non portatori di mascherina, il beneficio medio giace in un punto a metà tra questi due.</p>
+    <p>E visto che la popolazione consiste sia di portatori di mascherina che di non-portatori di mascherina, il beneficio medio giace in un punto a metà tra questi due.</p>
 
     <p>Quindi, in questo esempio semplificato (in cui il 50% della popolazione porta una mascherina efficace al 50%) siamo riusciti a capire come arrivare dal <b>beneficio che una mascherina offre all'<i>individuo</i></b> alla <b>media del beneficio che le mascherine offrono all'intera <i>popolazione</i>.</b></p>
 
@@ -369,7 +369,7 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Efficacia in Aspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacia in Inspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -407,7 +407,7 @@
       </div>
 
       <div class="row half bigsplash">
-        <span>Riduzione per i Non Portatori di Mascherine: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Riduzione per i Non-Portatori di Mascherine: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
@@ -429,7 +429,7 @@
     <p>Conclusione: <b>Se aumentano le persone che portano la mascherina, aumenta la sicurezza di tutti.</b></p>
 
     <p>
-      Filtrando l'aria in aspirazione, le mascherine proteggono direttamente chi le porta. 
+      Filtrando l'aria in inspirazione, le mascherine proteggono direttamente chi le porta. 
       E filtrando l'aria in espirazione (o ridirezionandola), le mascherine proteggono indirettamente <i>tutti</i> - anche chi non le usa. 
     </p>
 
@@ -443,7 +443,7 @@
         Il CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">non raccomanda</a> il loro uso per la popolazione generale, perché queste mascherine aumentano i rischi di diffusione.
         Puoi constatare questo fatto nell'infografica qui sopra.
         <br><br>
-        Prima seleziona un valore alto di efficacia delle mascherine sia in aspirazione che in espirazione (con la percentuale di uso posizionata da qualche parte nel mezzo)
+        Prima seleziona un valore alto di efficacia delle mascherine sia in inspirazione che in espirazione (con la percentuale di uso posizionata da qualche parte nel mezzo)
         Più o meno questa è la situazione per le mascherine N95 senza valvole. 
         Adesso sposta l'efficacia in espirazione verso zero e osserva come la probabilità di trasmissione dei contagi sale, particolarmente per chi non porta una mascherina. 
         <br><br>
@@ -517,7 +517,7 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Efficacia Mascherine in Aspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacia Mascherine in Inspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
