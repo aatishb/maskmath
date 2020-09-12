@@ -307,18 +307,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Agora podemos calcular a <b>diminuição média na transmissão de doenças na população</b>.
+      Como definimos que cada via de transmissão seja igualmente provável, esta média é apenas a média de <span class = "red">0%</span>, <span class = "orange">50%</span> , <span class = "orange">50%</span> e <span class = "yellow">75% </span>, isto é, 43,75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Pessoas que <i>não</i> usam máscaras podem ser infectadas pelas duas primeiras vias, o que é igualmente provável quando metade da população usa máscara.
+      Portanto, a diminuição na transmissão da doença para quem não usa máscara é a média entre <span class = "red">0%</span> e <span class = "orange">50%</span>, isto é, 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Por outro lado, as pessoas que <i>usam</i> máscaras podem ser infectadas pelas duas últimas vias.
+      Portanto, a diminuição na transmissão de doenças para usuários de máscara é a média entre <span class = "orange">50%</span> e <span class = "yellow">75%</span>, isto é, é 62,5%.
     </p>
 
   </div>
@@ -326,12 +326,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Diminuição Média na Transmissão da Doença = <span style="font-size: 2rem;"><b>43,75</b></span>%</div>
+        <div class="splash">Diminuição na Transmissão da Doença para <b>Não Usuários de Máscara</b> = 25%</div>
+        <div class="splash">Diminuição na Transmissão da Doença para <b>Usuários de Máscara</b> = 62,5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Considerando que 50% das pessoas utilizem máscaras 50% eficazes.)
       </div>
     </div>
   </div>
@@ -339,19 +339,19 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Portanto, mesmo quem não usa máscara obtém um benefício modesto, porque o ar que inalam é frequentemente mediado pelas máscaras das <i>outras pessoas</i>.
+      Mas os usuários de máscaras se beneficiam muito mais, graças à proteção adicional que suas máscaras oferecem.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>E como a população consiste em usuários de máscara e não usuários de máscara, o benefício médio fica entre o benefício para esses dois grupos.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>Portanto, neste exemplo simplificado (em que 50% das pessoas usam máscaras 50% eficazes), descobrimos como partir do <b>benefício que as máscaras oferecem a um <i>indivíduo</i> </b> e chegar ao <b>benefício médio que as máscaras oferecem a uma <i>população</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>Desmascarando as Máscaras</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Vamos <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb"> agora aplica essa lógica</a> a <i>quaisquer valores</i> de <b>percentual de utilização de máscaras</b> e <b>eficácia das máscaras</b>.
+      Utilize os controles deslizantes abaixo para ver como as máscaras afetam a propagação de doenças.
     </p>
 
   </div>
@@ -360,24 +360,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Percentual de Utilização de Máscaras: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Eficácia das Máscaras na Exalação: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Eficácia das Máscaras na Inalação:: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Via de Transmissão da Doença</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -385,7 +385,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Diminuição na Transmissão da Doença</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -393,7 +393,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilidade de Transmissão por Esta Via</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -404,15 +404,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Diminuição Média na Transmissão da Doença: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Diminuição da Transmissão da Doença Entre Quem Não Utiliza Máscaras: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Diminuição da Transmissão da Doença Entre Quem Utiliza Máscaras: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -421,40 +421,40 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      O que acontecerá com a transmissão da doença se 60% das pessoas usarem uma máscara 60% eficaz?
+      Ou 90% usarem uma máscara 50% eficaz?
+      Ou 50% usarem uma máscara 90% eficaz?
+      Utilize os controles deslizantes acima para descobrir.
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>A conclusão é que: <b>quando mais pessoas utilizam máscaras, todos ficam mais seguros.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Ao filtrar o ar inalado, as máscaras fornecem proteção em primeira mão para quem as usa.
+      E ao filtrar ou redirecionar o ar exalado, as máscaras fornecem proteção adicional para <i>todos</i> - incluindo pessoas que não usam máscaras.
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
-        <span v-if="!expandaside1"> (Click to expand)</span>
+      <span @click="expandaside1 = true;">E no caso das máscaras que não filtram o ar exalado?
+        <span v-if="!expandaside1"> (Clique para abrir)</span>
       </span>
 
       <span v-if="expandaside1">
-        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
-        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
-        You can see this for yourself in the interactive above.
+        Algumas máscaras N95 possuem <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">válvulas ou aberturas</a> que liberam ar sem filtrá-lo.
+        O CDC (Centro de Controle e Prevenção de Doenças do governo dos EUA) <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recomenda que não sejam utilizadas</a> essas máscaras no âmbito da saúde pública, porque elas colocam outras pessoas em risco.
+        Você pode verificar isso acima.
         <br><br>
-        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-        This represents a highly effective mask like an N95.
-        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        Primeiro, defina a eficácia de inspiração e expiração para um valor alto (com o percentual de utilização de máscaras em algum valor intermediário).
+        Isso representa uma máscara altamente eficaz como uma N95.
+        Agora arraste a eficácia da expiração para zero e observe como a transmissão de doenças aumenta, especialmente entre aqueles que não usam máscaras.
         <br><br>
-        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+        Se você já possuir uma dessas máscaras, o CDC recomenda <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">cobrir a válvula de exalação</a> com uma máscara cirúrgica.
       </span>
     </aside>
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      Na verdade, as máscaras são ainda mais eficazes do que esses números sugerem.
     </p>
 
     <h2>How To Stop An Epidemic</h2>
