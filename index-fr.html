@@ -373,12 +373,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Efficacité du masque à l'expiration: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacité du masque à l'expiration : <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Efficacité du masque à l'inspiration: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacité du masque à l'inspiration : <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -569,22 +569,22 @@
     <h2>Le coût humain</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Nous pouvons pousser notre compréhension un cran plus loin en calculant le pouvoir des masques en termes plus humains.
+      Les masques sauvent des vies en réduisant les chances d'infection, ce à son tour réduit les effet de l'épidémie.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Plus les gens portent un masque, plus le R0 diminute.
+      Quand le R0 diminue, le nombre de personnes infectées également.
+      Donc nous pouvons avoir une vision plus claire si au lieu de visualiser le R0, nous visualison la <b>fraction infectée</b> de la population.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      En utilisant un modèle mathématique couramment adopté, connu sous le nom de  <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8les_compartimentaux_en_%C3%A9pid%C3%A9miologie">modèle SIR</a>, on peut calculer la relation entre le R0 et la fraction de la population qui sera infectée.
+      (Pour en savoir plus à propos des modèles SIR, je recommande de regarder cette <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellente vidéo</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Bien que ce modèle soit une simplification considérable (par exemple, il présume un mix aléatoire entre les individus, et aucun confinement), il nous offre un ordre de grandeur du coût humain associé au fait de ne pas porter de masque.</p>
 
   </div>
 
@@ -597,12 +597,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacité du masque à l'expiration : <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacité du masque à l'inspiration :  <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -614,26 +614,26 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Cette courbe en forme de colline nous montre comment les masques influencent la taille de l'épidémie.
+      <b>Plus il y a de gens qui portent un masque, plus le nombre d'infections s'effondre.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Quand très peu de gends portent un masque, nous sommes en haut de la colline, et la plupart des gens finiront par être infectés.
+      Mais chaque pas vers la droite nous fait descendre plus bas.
+      Donc même des masques partiellement efficaces, et partiellement utilisés, peuvent aider à réduire la diffusion de la COVID-19.
     </p>
 
     <p>
-      To completely stop the spread, we need to get to the bottom of this hill.
-      But there's a silver lining: as more people wear masks, the hill grows steeper.
-      Which means <b>masks provide greater returns to society as more people wear them</b>.
+      Pour stopper entièrement la diffusion, nous devons aller en bas de cette colline.
+      Mais il y a un cercle vertueux: plus il y a des gens qui portent un masque, plus la colline est pentue.
+      Ce qui veut dire que <b>les masques apportent un bénéfice de plus en plus important à la société au fur et à mesure que de plus en plus de personnes en portent</b>.
     </p>
 
     <p>
-      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
-      This is how masks can end an epidemic.
-      But masks can only end an epidemic if enough people wear them.
+      Si assez de personnes portent un masque, nous pouvons atteindre le bas de la colline, où la probabilité d'infection est de zéro.
+      C'est comme cela que les masques peuvent mettre un terme à une épidémie.
+      Mais les masques ne peuvent le faire que si assez de personnes les portent.
     </p>
 
     <p>
