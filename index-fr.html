@@ -444,7 +444,7 @@
 
     <aside>
       <span @click="expandaside1 = true;">Qu'en est-il des masques qui ne filtrent pas l'air expiré ? 
-        <span v-if="!expandaside1"> (Cliquez pour étendre)</span>
+        <span v-if="!expandaside1"> (Cliquez pour ouvrir)</span>
       </span>
 
       <span v-if="expandaside1">
@@ -538,34 +538,35 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Pour stopper la diffusion de la COVID-19, nous devons maintenir le R0 en dessous de 1.
+      Lorsque c'est le cas, en moyenne, une personne contagieuse infecte moins d'une autre personne, et l'épidemie s'arrête progressivement.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Donc combien de personnes doivent porter un masque efficace à 50% pour stopper la diffusion de la COVID-19 ?
+      Et si les masques étaient efficaces à 75% ?
+      Ou bien à 90% ?
+      Cet outil interactif vous permet de prédire la réponse à ces questions.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">Une remarque importante: les gens ne se rencontrent pas au hasard. 
+        <span v-if="!expandaside2"> (cliquez pour ouvrir)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Les gens qui portent des masques ont probablement plus de chances de recontrer d'autres porteurs de masques, et moins de chance de rencontrer des non porteurs.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        De la même manière, les non-porteurs peuvent vivre dans des clusters où l'utilisation du masque est moins fréquente que la moyenne.
+        Cette tendance à rencontrer des gens aux préférences similaires <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminue le pouvoir de protection des masques</a> parce que <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">les non porteurs ont moins de chance de bénéficier de la proximité de porteurs de masque</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Ainsi que <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, et Ashleigh Tuite</a> l'écrivent dans leur analyse, "l'impact des masques et autres protections faciales sur la transmission de la COVID-19 sera probablement plus grand si l'on fait attention à en assurer la disponibilité auprès des populations désavantagées"
+        (<i>"the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."</i>)
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Le coût humain</h2>
 
     <p>
       We can take our understanding one step further by expressing the power of masks in more human terms.
