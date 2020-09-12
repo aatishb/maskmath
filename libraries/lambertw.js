@@ -215,3 +215,11 @@ if (typeof module !== 'undefined') {
   }
 }
 
+/** Stuck here **/
+let constantWidths = document.querySelectorAll('div:not(.splash) > span.dotted, span > span.dotted');
+constantWidths.forEach(el => {
+  let wrapper = document.createElement('div');
+  wrapper.classList.add('constant-width');
+  el.parentNode.insertBefore(wrapper, el);
+  wrapper.appendChild(el);
+});
