@@ -19,14 +19,14 @@
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez: un essai interactif">
+  <meta name="twitter:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez : un essai interactif">
   <meta name="twitter:description" content="Même des masques partiellement efficaces peuvent stopper la diffusion de la COVID-19, à condition qu'assez de gens en portent.">
   <meta name="twitter:site" content="@aatishb">
   <!-- Twitter Summary card images must be at least 120x120px -->
   <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
   
   <!-- Open Graph data -->
-  <meta property="og:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez: un essai interactif" />
+  <meta property="og:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez : un essai interactif" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://aatishb.com/maskmath/" />
   <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
@@ -73,7 +73,7 @@
       <div class="center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <span style="margin-top: 0.75rem;">
-          Visionnez la vidéo associée: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+          Visionnez la vidéo associée : <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
         </span>
       </div>
     </aside>
@@ -102,7 +102,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="red">Mode de transmission 1:</span> Quand un personne contagieuse est proche d'une personne saine, son "spray buccal" peut répandre la maladie.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="red">Mode de transmission 1 :</span> Quand un personne contagieuse est proche d'une personne saine, son "spray buccal" peut répandre la maladie.</anim-with-caption>
 
   <div class="container">
 
@@ -132,7 +132,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="orange">Mode de transmission 2:</span> Quand la personne contagieuse porte un masque efficace à 50%, la transmission de la maladie chute de 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="orange">Mode de transmission 2 :</span> Quand la personne contagieuse porte un masque efficace à 50%, la transmission de la maladie chute de 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -147,7 +147,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="orange">Mode de transmission 3:</span> Quand la personne saine porte un masque efficace à 50%, la transmission de la maladie chute de 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="orange">Mode de transmission 3 :</span> Quand la personne saine porte un masque efficace à 50%, la transmission de la maladie chute de 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -161,7 +161,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="yellow">Mode de transmission 4:</span> Quand les deux personnes portent un masque efficace à 50%, la transmission de la maladie chute de 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="yellow">Mode de transmission 4 :</span> Quand les deux personnes portent un masque efficace à 50%, la transmission de la maladie chute de 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -249,7 +249,7 @@
     </p>
 
     <label class="row half bigsplash">
-      <div>Port du masque: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Port du masque : <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
@@ -405,15 +405,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Réduction moyenne de la transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Réduction moyenne de la transmission : <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Réduction de la transmission aux non-porteurs de masque: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Réduction de la transmission aux non-porteurs de masque : <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Réduction de la transmission aux porteurs de masque: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Réduction de la transmission aux porteurs de masque : <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -428,7 +428,7 @@
       Cet outil interactif vous permet de répondre à ces questions.
     </p>
 
-    <p>Conclusion: <b>quand plus de gens portent un masque, tout le monde s'en porte mieux.</b></p>
+    <p>Conclusion : <b>quand plus de gens portent un masque, tout le monde s'en porte mieux.</b></p>
 
     <p>
       En filtrant l'air inspiré, les masques protègent directement ceux qui les portent.
@@ -476,7 +476,7 @@
 
     <p>
       Mais, comme Ed Yong l'écrit dans "The Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">le R0 n'est pas une fatalité <i>("R0 is not destiny")</i></a>.
-      Le R0 est un produit de deux nombres: le nombre moyen de personnes qu'une personne contagieuse rencontre, et la probabilité d'une infection lors d'un contact.
+      Le R0 est un produit de deux nombres : le nombre moyen de personnes qu'une personne contagieuse rencontre, et la probabilité d'une infection lors d'un contact.
     </p>
 
   </div>
@@ -509,7 +509,7 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <div>R0 : <span class="dotted">{{R0}}</span></div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
@@ -519,7 +519,7 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Efficacité du masque à l'inspiration: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacité du masque à l'inspiration : <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -550,7 +550,7 @@
 
     <aside>
 
-      <span @click="expandaside2 = true;">Une remarque importante: les gens ne se rencontrent pas au hasard. 
+      <span @click="expandaside2 = true;">Une remarque importante : les gens ne se rencontrent pas au hasard. 
         <span v-if="!expandaside2"> (cliquez pour ouvrir)</span>
       </span>
       
@@ -590,7 +590,7 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <div>R0 : <span class="dotted">{{R0}}</span></div>
         <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
       </label>
 
@@ -628,7 +628,7 @@
 
     <p>
       Pour stopper entièrement la diffusion, nous devons aller en bas de cette colline.
-      Mais il y a un cercle vertueux: plus il y a des gens qui portent un masque, plus la colline est pentue.
+      Mais il y a un cercle vertueux : plus il y a des gens qui portent un masque, plus la colline est pentue.
       Ce qui veut dire que <b>les masques apportent un bénéfice de plus en plus important à la société au fur et à mesure que de plus en plus de gens en portent</b>.
     </p>
 
