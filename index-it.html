@@ -543,7 +543,7 @@
     <aside>
 
       <span @click="expandaside2 = true;">Precisazione importante: le persone di solito non si mescolano in maniera del tutto casuale. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+        <span v-if="!expandaside2"> (Clicca per espandere)</span>
       </span>
       
       <span v-if="expandaside2">
@@ -556,25 +556,25 @@
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Il Costo Umano</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Possiamo fare ancora un passo in più ed esprimere il valore delle mascherine in termini più propriamente umani. 
+      Le mascherine salvano vite, abbassando le probabilità di infezione che, a loro volta, riducono l'estensione dell'epidemia. 
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Se più persone portano mascherine, il valore di R0 si riduce. 
+      Se il valore di R0 si riduce, anche il numero di persone infette si riduce. 
+      E quindi possiamo ottenere un quadro più chiaro se invece di visualizzare il valore R0, mostriamo la <b>frazione infetta</b> della popolazione. 
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Usando un modello matematico molto adottato per le epidemie, noto come <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">modello SIR</a>, possiamo stabilire una relazione tra R0 e la frazione della popolazione che prima o poi verrà contagiata.
+      (Per saperne di più di modelli SIR, raccomando la visione di questo <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">video eccellente (originale in inglese)</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Anche se questo modello è sviluppato semplificando notevolmente (presuppone un mescolamento casuale tra persone e nessuna misura di isolamento sociale), ci offre una stima approssimativa del costo umano del non mettere mascherine.</p>
 
   </div>
 
@@ -587,12 +587,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacia Mascherine in Espirazione: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacia Mascherine in Aspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
