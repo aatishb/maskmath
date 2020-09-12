@@ -40,6 +40,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://aatishb.com"><img src="https://avatars2.githubusercontent.com/u/1878638?v=4" width="100px;" alt=""/><br /><sub><b>Aatish Bhatia</b></sub></a><br /><a href="#maintenance-aatishb" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/reichhen"><img src="https://avatars0.githubusercontent.com/u/3393273?v=4" width="100px;" alt=""/><br /><sub><b>Henry</b></sub></a><br /><a href="#ideas-reichhen" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
