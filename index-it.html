@@ -459,46 +459,46 @@
     <h2>Come Bloccare un'Epidemia</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      Il fuoco si spegne per mancanza di ossigeno. 
+      Ma non c'è bisogno di rimuovere completamente l'ossigeno in una stanza, basta togliere abbastanza ossigeno per evitare che il fuoco si propaghi. 
+      È la stessa cosa per un'epidemia - non c'è bisogno di ridurre la trasmissione dei contagi del 100%. 
+      Se si riesce ad abbassare la diffusione in maniera sufficiente da evitare che la malattia si diffonda ulteriormente, si può sconfiggere l'epidemia. 
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Probabilmente a questo punto hai già sentito parlare del termine epidemiologico R0. 
+      Questo è il <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">il numero di persone che una persona infetta può contagiare</a> in una popolazione completamente sprovvista di anticorpi contro quella malattia.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>Quando il valore R0 è maggiore di 1, i contagi aumenteranno esponenzialmente fino a quando un numero di persone sufficiente riceverà un vaccino o svilupperà un'immunità alla malattia.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Eppure, come scrive Ed Yong sull'Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 non è una condanna"</a>.
+      R0 è semplicemente il prodotto di due numeri: il numero medio di persone che un individuo contagioso incontra e la probabilità di infezione per ogni incontro.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">numero medio di persone che un individuo incontra</span> <br>⨉ <span class="dotted">probabilità di infezione per incontro</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      Distanziamento sociale, quarantene e chiusura forzata di stabili e eventi sono misure prese per diminuire il <span class="dashed">primo numero</span>.
+      Le mascherine invece riducono il <span class="dotted">secondo numero</span>.
+      Tutte queste strategie nell'insieme servono a riportare l'epidemia sotto controllo, cercando di abbassare R0 sotto il valore di 1. 
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Tenendo tutto questo in considerazione, cerchiamo di ridefinire l'impatto delle mascherine in termini di R0. 
+      Il grafico qua sotto mostra la variazione di R0 in funzione dell'incremento dell'uso delle mascherine. 
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Il primo rigo modifica il valore di R0, che per il COVID-19 è tra 2 e 3 (se lo si calcola in assenza di altre misure di controllo come il distanziamento sociale, che lo abbassa ulteriormente). 
+      Aggiustando l'efficacia delle mascherine, si può notare come le mascherine possano riportare l'epidemia sotto controllo. 
     </p>
 
   </div>
@@ -512,12 +512,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efficacia Mascherine in Espirazione: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efficacia Mascherine in Aspirazione: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -529,30 +529,30 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Per fermare la diffusione del COVID-19, dobbiamo mantenere R0 sotto il valore di 1. 
+      Quando ci si riesce, in media una persona contagiosa infetterà meno di un'altra persona, e l'epidemia rallenterà velocemente. 
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Quindi, in quanti dobbiamo portare una mascherina con un'efficacia del 50% per bloccare il COVID-19? 
+      E quanti se invece le mascherine fossero efficaci al 75%? 
+      Oppure al 90%?
+      Interagendo con questa animazione si possono ottenere risposte a queste domande. 
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
+      <span @click="expandaside2 = true;">Precisazione importante: le persone di solito non si mescolano in maniera del tutto casuale. 
         <span v-if="!expandaside2"> (Click to expand)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Di solito persone che portano la mascherina interagiscono di più con altri portatori di mascherina. 
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        E allo stesso modo, i non portatori di mascherina di solito vivono in gruppi e distretti in cui l'uso delle mascherine è inferiore alla media di tutta la popolazione. 
+        Questa tendenza di frequentare altri con preferenza simili alle proprie <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> purtroppo diminuisce la potenza protettiva delle mascherine</a> perché <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">chi non porta la mascherina ha meno possibilità di beneficiare dell'uso di una mascherina delle persone che ha intorno</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Come <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer e Ashleigh Tuite</a> hanno scritto recentemente, "l'impatto delle mascherine e altre barriere facciali nella lotta contro il COVID-19 è ottimizzale se si assicura la disponibilità di mascherine anche per i ceti sociali svantaggiati".
       </span>
     </aside>
 
