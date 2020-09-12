@@ -31,6 +31,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "nlehuen",
+      "name": "Nicolas Lehuen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/69256?v=4",
+      "profile": "http://nicolas.lehuen.com/",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
