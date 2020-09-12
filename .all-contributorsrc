@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "reichhen",
+      "name": "Henry",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3393273?v=4",
+      "profile": "https://github.com/reichhen",
+      "contributions": [
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "maskmath",
+  "projectOwner": "aatishb",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
