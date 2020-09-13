@@ -604,7 +604,9 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces()" :layout="graph3Layout(
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
         'How Masks Reduce Infections',
         'Percentage of People Who Wear Masks',
         'Percentage of People Who Will Be Infected'

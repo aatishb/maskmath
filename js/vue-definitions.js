@@ -321,7 +321,7 @@ let app = new Vue({
       }
     },
 
-    graph3Traces(percentInfected='% Infected') {
+    graph3Traces(percentInfected) {
       return [
         {
           name: percentInfected,
