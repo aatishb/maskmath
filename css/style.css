@@ -314,6 +314,13 @@ a {
   color: rgb(255, 161, 155);
 }
 
+.header h5 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 0.75rem;
+  color: rgb(255, 161, 155);
+}
+
 .overlay {
   display: flex;
   flex-direction: row;
