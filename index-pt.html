@@ -80,7 +80,7 @@
 
     <p>
       Mas primeiro, vamos ter uma noção aproximada de alguns números.
-      Quando uma pessoa expira, ela <a href="https://www.youtube.com/watch?v=f57LXUbrtPU"> pulveriza no ar partículas de saliva</a> de vários tamanhos diminutos.
+      Durante a expiração, uma pessoa <a href="https://www.youtube.com/watch?v=f57LXUbrtPU"> pulveriza no ar partículas de saliva</a> de vários tamanhos diminutos.
       Se a pessoa estiver no estágio contagioso, então este 'spray bucal' estará carregado com partículas virais.
       Este <a href="https://arxiv.org/pdf/2005.10988.pdf"> spray de saliva cheio de vírus</a> é a principal forma de transmissão da COVID-19.
     </p>
@@ -104,7 +104,7 @@
 
   <div class="container">
 
-    <p>As máscaras reduzem a troca de partículas de saliva entre as pessoas - bloqueando ou redirecionando-as - reduzindo assim a chance de infecção.</p>
+    <p>As máscaras reduzem a troca de partículas de saliva entre as pessoas - bloqueando ou redirecionando-as - reduzindo, assim, a chance de infecção.</p>
 
     <p>
       Vale lembrar que nenhuma máscara é perfeita.
@@ -112,8 +112,8 @@
     </p>
 
     <p>
-      As máscaras não garantem segurança, reduzem o risco.
-      É muito parecido com o fato de que um guarda-chuva não garante que você ficará seca(o), mas reduz sua chance de se molhar.
+      As máscaras não garantem segurança, mas reduzem o risco de exposição.
+      É muito parecido com um guarda-chuva, que não garante que você ficará seca(o), mas reduz sua chance de se molhar.
       Como guarda-chuvas, as máscaras só funcionam se você as usar corretamente.
       Mas, ao contrário dos guarda-chuvas, que protegem apenas as pessoas que os usam, as máscaras também protegem as pessoas <i>ao redor</i> de quem as usam.
     </p>
@@ -137,7 +137,7 @@
     <p>Mas e se for a pessoa suscetível que utilizar a máscara?</p>
 
     <p>
-      Em geral, a eficácia de uma máscara depende se você está <b>inspirando</b> ou <b>expirando</b> através dela.
+      Em geral, a eficácia de uma máscara é diferente se você está <b>inspirando</b> ou <b>expirando</b> através dela.
       Por enquanto, vamos pensar no caso mais simples e assumir que a máscara seja igualmente eficaz em qualquer direção.
     </p>
 
@@ -164,8 +164,8 @@
   <div class="container">
 
     <p>
-      Em um primeiro momento, é contraintuitivo que uma máscara 50% eficaz possa reduzir o risco de infecção em 75%.
-      Isso é possível porque, quando ambas as pessoas usam máscaras, a chance de infecção cai pela metade duas vezes.
+      Em um primeiro momento, é contraintuitivo pensar que uma máscara 50% eficaz possa reduzir o risco de infecção em 75%. 
+      Mas isso é possível porque, quando ambas as pessoas usam máscaras, a chance de infecção cai pela metade duas vezes.
       Esta <b>dupla proteção</b> torna as máscaras muito mais eficazes do que a nossa intuição pode nos dizer.
     </p>
 
@@ -197,7 +197,7 @@
       </div>
 
       <div class="caption">
-        As quatro maneiras pelas quais a COVID-19 pode se disseminar de pessoa para pessoa. Isso pressupõe uma máscara com 50% de eficácia.
+        As quatro maneiras pelas quais a COVID-19 pode se disseminar de pessoa para pessoa, pressupondo uma máscara com 50% de eficácia.
       </div>
 
     </div>
@@ -261,7 +261,6 @@
 
     <p>
       Quando exatamente metade da população usa máscaras, verifica-se que cada via é igualmente provável.
-      (Você consegue se convencer de por que isso é verdade?)
     </p>
 
   </div>
@@ -347,7 +346,7 @@
 
     <p>Portanto, neste exemplo simplificado (em que 50% das pessoas usam máscaras 50% eficazes), descobrimos como partir do <b>benefício que as máscaras oferecem a um <i>indivíduo</i> </b> e chegar ao <b>benefício médio que as máscaras oferecem a uma <i>população</i>.</b></p>
 
-    <h2>Desmascarando as Máscaras</h2>
+    <h2>Mascaralogia</h2>
 
     <p>
       Vamos <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">agora aplicar essa lógica</a> a <i>quaisquer valores</i> de <b>percentual de utilização de máscaras</b> e <b>eficácia das máscaras</b>.
@@ -393,7 +392,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Probabilidade de Transmissão</div>
+          <div class="center">Probabilidade Desta Via</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -475,13 +474,13 @@
 
     <p>
       Mas como Ed Yong escreveu na revista <i>The Atlantic</i>, <a href = "https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 não é o destino"</a>.
-      R0 é o produto de dois números: o número médio de pessoas que uma pessoa em estágio contagioso encontra e a chance de infecção no contato.
+      R0 é o produto de dois números: a quantidade média de pessoas que uma pessoa em estágio contagioso encontra e a probabilidade de infecção no contato.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">número médio de pessoas que uma pessoa em estágio contagioso encontra</span> <br>⨉ <span class="dotted">chance de infecção no contato</span></div>
+      <div class="splash">R0 = <span class="dashed">quantidade média de pessoas que uma pessoa em estágio contagioso encontra</span> <br> ⨉ (multiplicada por) <span class="dotted">probabilidade de infecção no contato</span></div>
   </div>
   
   <div class="container">
@@ -567,7 +566,7 @@
     <p>
       À medida que mais pessoas usam máscaras, o R0 diminui.
       E à medida que R0 diminui, também diminui o número de pessoas infectadas.
-      Assim, podemos ter uma imagem mais clara se, ao invés de visualizar R0, visualizarmos a <b>fração infectada</b> da população.
+      Assim, podemos ter uma imagem mais clara se, ao invés de visualizar R0, olharmos para a <b>fração infectada</b> da população.
     </p>
 
     <p>
@@ -575,7 +574,7 @@
       (Para saber mais sobre os modelos SIR, recomendo assistir a este <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excelente vídeo</a>.)
     </p>
     
-    <p>Embora este modelo seja uma simplificação considerável (por exemplo, assume o encontro aleatório entre as pessoas e nenhuma forma de <i>lockdown</i>), ele nos oferece uma estimativa aproximada do custo humano de não usar máscaras.
+    <p>Embora este modelo seja uma simplificação considerável (por exemplo, pressupõe o encontro aleatório entre as pessoas e nenhuma forma de <i>lockdown</i>), ele nos oferece uma estimativa do custo humano de não usar máscaras.
     </p>
 
   </div>
@@ -619,7 +618,7 @@
     <p>
       Para interromper completamente a propagação, precisamos chegar à base desta colina.
       Mas há um lado positivo: à medida que mais pessoas usam máscaras, a colina fica mais íngreme.
-      O que significa que <b>máscaras proporcionam maior retorno à sociedade à medida que mais pessoas as usam</b>.
+      O que significa que <b>máscaras são mais benéficas à sociedade à medida que mais pessoas as usam</b>.
     </p>
 
     <p>
@@ -635,11 +634,11 @@
 
     <p>
       Ao brincar com o gráfico interativo acima, você verá que, se as máscaras fossem 50% eficazes, precisaríamos de cerca de três quartos da população utilizando-as para impedir a disseminação doa COVID-19.
-      Mas se as máscaras fossem 75% eficazes, só precisaríamos que metade da população as usasse para impedir a propagação.
+      Mas, se as máscaras fossem 75% eficazes, só precisaríamos que metade da população as usasse para impedir a propagação.
     </p>
 
     <p>
-      <b> Quanto mais eficaz for a máscara, mais rápido podemos descer a colina.</b>
+      <b>Quanto mais eficaz for a máscara, mais rápido podemos descer a colina.</b>
       É por isso que é importante usar uma máscara que <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf"> vede bem o entorno de sua boca <i>e</i> nariz</a>, e seja feita de um material filtrante eficaz.
     </p>
 
@@ -690,7 +689,7 @@
     </p>
 
     <p>
-      O modelo bidirecional de máscaras considerado neste ensaio foi, até onde sei, publicado pela primeira vez em uma pré-impressão por <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Tabela S3 e Figura S4).
+      O modelo bidirecional de máscaras considerado neste ensaio foi, até onde sei, publicado pela primeira vez em uma pré-impressão por <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al.</a> (Tabela S3 e Figura S4).
       Isso foi destacado por Howard et al. em seu <a href="https://www.preprints.org/manuscript/202004.0203/v3">artigo de revisão</a> e <a href="https://www.fast.ai/2020/04/13/masks-summary/">ensaio de acompanhamento</a>, e ainda mais popularizado por <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> na revista <i>The Atlantic</i>, e por <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> na revista <i>The New Yorker</i>, que escreveu, <i>"Quanto mais eficaz for a máscara, maior será o impacto."</i>
     </p>
 
