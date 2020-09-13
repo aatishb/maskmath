@@ -321,6 +321,34 @@ let app = new Vue({
       }
     },
 
+    graph3Traces(percentInfected='% Infected') {
+      return [
+        {
+          name: percentInfected,
+          x: this.indexArray,
+          y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tozeroy',
+          fillcolor: 'rgba(255, 50, 50, 0.2)',
+          line: {
+            color: this.graphTraceColor,
+            width: 4
+          }
+        },
+        {
+          x: [0,1],
+          y: [1,1],
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tonexty',
+          fillcolor: 'rgba(50, 255, 50, 0.2)',
+          line: {color: "transparent"},
+          hoverinfo: 'none'
+        }
+      ]
+    },
+
   },
 
   computed: {
@@ -369,33 +397,7 @@ let app = new Vue({
       ]
     },
 
-    graph3Traces() {
-      return [
-        {
-          name: '% Infected',
-          x: this.indexArray,
-          y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
-          type: 'scatter',
-          mode: 'lines',
-          fill: 'tozeroy',
-          fillcolor: 'rgba(255, 50, 50, 0.2)',
-          line: {
-            color: this.graphTraceColor,
-            width: 4
-          }
-        },
-        {
-          x: [0,1],
-          y: [1,1],
-          type: 'scatter',
-          mode: 'lines',
-          fill: 'tonexty',
-          fillcolor: 'rgba(50, 255, 50, 0.2)',
-          line: {color: "transparent"},
-          hoverinfo: 'none'
-        }
-      ]
-    },
+    
 
     config() {
       return {
