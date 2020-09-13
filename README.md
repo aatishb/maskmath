@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -19,6 +19,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/reichhen"><img src="https://avatars0.githubusercontent.com/u/3393273?v=4" width="100px;" alt=""/><br /><sub><b>Henry</b></sub></a><br /><a href="#ideas-reichhen" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/DeepSpace2"><img src="https://avatars1.githubusercontent.com/u/6841988?v=4" width="100px;" alt=""/><br /><sub><b>Adi Vaknin</b></sub></a><br /><a href="#translation-DeepSpace2" title="Translation">🌍</a></td>
     <td align="center"><a href="http://nicolas.lehuen.com/"><img src="https://avatars1.githubusercontent.com/u/69256?v=4" width="100px;" alt=""/><br /><sub><b>Nicolas Lehuen</b></sub></a><br /><a href="#translation-nlehuen" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/albannabla"><img src="https://avatars0.githubusercontent.com/u/52819459?v=4" width="100px;" alt=""/><br /><sub><b>Alban nablA</b></sub></a><br /><a href="#translation-albannabla" title="Translation">🌍</a></td>
   </tr>
 </table>
 
