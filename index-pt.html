@@ -476,13 +476,13 @@
 
     <p>
       Mas como Ed Yong escreveu na revista <i>The Atlantic</i>, <a href = "https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 não é o destino"</a>.
-      R0 é o produto de dois números: a quantidade média de pessoas que uma pessoa em estágio contagioso encontra e a probabilidade de infecção no contato.
+      R0 é o produto de dois números: a quantidade média de pessoas que uma pessoa em estágio contagioso encontra e a probabilidade de infecção da pessoa suscetível no contato.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">quantidade média de pessoas que uma pessoa em estágio contagioso encontra</span> <br> ⨉ (multiplicada por) <span class="dotted">probabilidade de infecção no contato</span></div>
+      <div class="splash">R0 = <span class="dashed">quantidade média de pessoas que uma pessoa em estágio contagioso encontra</span> <br> ⨉ (multiplicada por) <span class="dotted">probabilidade de infecção da pessoa suscetível no contato</span></div>
   </div>
   
   <div class="container">
@@ -526,7 +526,7 @@
       <graph :traces="graph2Traces" :layout="graph2Layout(
         'Como as máscaras reduzem R0',
         'Percentual da população que usa máscara',
-        'N° de pessoas que alguém em estágio contagioso infecta (R0)',
+        'N° de pessoas infectadas por alguém em estágio contagioso (R0)',
         'Epidemia sob controle',
         'Epidemia fora de controle'
       )" :config="config"></graph>
