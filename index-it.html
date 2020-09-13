@@ -43,7 +43,7 @@
       <div>
         <h1>La Potenza Moltiplicativa delle Mascherine</h1>
         <h3>Articolo Interattivo sul Come le Mascherine Possano Mettere Fine al Covid-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h4>di <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <h5>
           <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a>
         </h5>
@@ -102,7 +102,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Modalità di Trasmissione n.1:</span> Quando una persona contagiosa si avvicina ad un altra persona, il suo 'spruzzo orale' può disseminare la malattia.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Persona Contagiosa" susceptibleperson="Persona a Rischio"><span class="red">Modalità di Trasmissione n.1:</span> Quando una persona contagiosa si avvicina ad un altra persona, il suo 'spruzzo orale' può disseminare la malattia.</anim-with-caption>
 
   <div class="container">
 
@@ -132,7 +132,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Modalità di Trasmissione n.2:</span> Se la persona contagiosa porta una mascherina efficace al 50%, il contagio viene ridotto del 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona Contagiosa" susceptibleperson="Persona a Rischio"><span class="orange">Modalità di Trasmissione n.2:</span> Se la persona contagiosa porta una mascherina efficace al 50%, il contagio viene ridotto del 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -147,7 +147,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Modalità di Trasmissione n.3:</span> Quando il ricevente porta una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona Contagiosa" susceptibleperson="Persona a Rischio"><span class="orange">Modalità di Trasmissione n.3:</span> Quando il ricevente porta una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -161,7 +161,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Modalità di Trasmissione n.4:</span> Quando entrambe le persone portano una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona Contagiosa" susceptibleperson="Persona a Rischio"><span class="yellow">Modalità di Trasmissione n.4:</span> Quando entrambe le persone portano una mascherina efficace al 50%, la propagazione dei contagi diminuisce del 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -524,11 +524,11 @@
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout(
-        'How Masks Reduce R0',
-        'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
-        'Epidemic Under Control',
-        'Epidemic Out Of Control'
+        'Come le Mascherine Riducono R0',
+        'Percentuale di Persone che Porta Mascherine',
+        '# di persone che un individue contagioso infetta (R0)',
+        'Epidemia sotto controllo',
+        'Epidemia fuori controllo'
       )" :config="config"></graph>
 
     </div>
@@ -605,9 +605,9 @@
       </label>
 
       <graph :traces="graph3Traces" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        'Come le Mascherine Abbassano Il Numero di Infezioni',
+        'Percentuale di Persone che Porta Mascherine',
+        'Percentuale di Persone Infette Al Termine dell'Epidemia'
       )" :config="config"></graph>
 
     </div>
