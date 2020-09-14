@@ -405,15 +405,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Среднее снижение передачи заболевания: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Снижение распространения заболевания для тех, кто не носит маску: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Снижение распространения заболевания для тех, кто носит маску: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -422,43 +422,43 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      Что случится с распространением заболевания, если 60% людей будут носить маски, эффективные на 60%?
+      Или если 90% будут носить маски с 50%-й эффективностью?
+      Или если 50% будут носить маски с 90%-й эффективностью?
+      Этот интерактивный гаджет позволит тебе найти ответы на эти вопросы.
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>Вывод: <b>Чем больше людей носит маски, тем это безопаснее для всех.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Путем фильтрации вдыхаемого воздуха, маски обеспечивают первичную защиту для тех, кто их носит.
+      А путем фильтрации или перенаправления выдыхаемого воздуха, маски обеспечивают вторичную защиту для <i>всех</i> — включая тех, кто не носит маски.
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
-        <span v-if="!expandaside1"> (Click to expand)</span>
+      <span @click="expandaside1 = true;">Как насчет масок, которые не фильтруют выдыхаемый воздух? 
+        <span v-if="!expandaside1"> (Нажми, чтобы развернуть)</span>
       </span>
 
       <span v-if="expandaside1">
-        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
-        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
-        You can see this for yourself in the interactive above.
+        Некоторые N95 маски снабжены <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">клапанами или отверстиями</a>, которые выпускают воздух без фильтрации.
+        CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">рекомедует не надевать</a> эти маски в помещениях медицинского обслуживания, так как они создают риск заболевания для других людей.
+        Ты можешь в этом убедиться с помощью интерактивного гаджета, приведенного выше.
         <br><br>
-        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-        This represents a highly effective mask like an N95.
-        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        Сначала поставь эффективность при вдыхании и выдыхании на большую величину (при среднем значении частоты ношения масок в населении).
+        Это соответствует высокоэффективным маскам вроде N95.
+        Теперь приведи эффективность при выдыхании ближе к нулю и наблюдай за тем, как распространение заболевания набирает обороты, особенно среди тех, кто не носит маски.
         <br><br>
-        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+        Если у тебя уже есть N95 маска, CDC рекомендует <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">покрывать выдыхательный клапан</a> хирургической маской.
       </span>
     </aside>
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      На самом деле, маски еще более эффективны, чем можно судить по этим выкладкам.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Как остановить эпидемию</h2>
 
     <p>
       You put out a fire by starving it of oxygen.
