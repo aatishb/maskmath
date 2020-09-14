@@ -604,7 +604,9 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout(
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
         'Come le Mascherine Abbassano Il Numero di Infezioni',
         'Percentuale di Persone che Porta Mascherine',
         'Percentuale di Persone Infette Al Termine dell\'Epidemia'
