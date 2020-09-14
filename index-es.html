@@ -113,7 +113,7 @@
 
     <p>
       Las mascarillas no garantizan seguridad, pero si disminuyen el riesgo.
-      Así cómo un paraguas no  garantiza que se va a permanecer seco pero reduce la posibilidad de mojarse.
+      Así cómo un paraguas no  garantiza que se va a permanecer seco pero reduce la probabilidad de mojarse.
       Al igual que los paraguas, las mascarillas solo funcionan si son usadas correctamente. 
       Pero a diferencia de los paraguas, que solo protegen a quien los usa, las mascarillas también protegen a las personas <i>alrededor</i> de quien la usa.
     </p>
@@ -216,34 +216,34 @@
     <p>Bueno, en los limites extremos, esto es sencillo.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Por ejemplo, si <b>nadie</b> usara una mascarilla entonces cada vez que dos personas se encuentras la probabilidad de que <span class="red">ninguno use una </span> es del 100%. 
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      Entonces, solo estaríamos considerando <span class="red">la primera ruta</span> transmisión de la enfermedad, y la población no vería <span class="red">una reducción</span> en la trasmisión de la enfermedad.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      En el otro extremo, si <b>todos</b> usaran una mascarilla, entonces, cada ve que dos personas se encontraran, la probabilidad de que<span class="yellow">ambos estén usando una mascarilla </span> es del 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      En este caso, solo tendríamos que considerar la <span class="yellow">última ruta</span> de transmisión de la enfermedad.
+      Asumiendo que las mascarillas son efectivas al 50% en cada dirección. La población vería una <span class="yellow">disminución del 75% </span> en la transmisión de la enfermedad.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Entonces, si  <i>todos</i> utilizaran la mascarilla (O si <i>nadie</i> usa uan), es sencillo calcular la disminución en la transmisión de la enfermedad en la población porque solo ay una ruta involucrada.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Pero en realidad somos algunas personas usan mascarillas y otras no.
+      Lo que significa que el virus se puede propagar a través d e una combinación de las cuatro rutas. 
+      La probabilidad de cada ruta dependerá de cuantas personas usen una mascarilla.  
     </p>
 
     <label class="row half bigsplash">
@@ -254,13 +254,13 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Por ejemplo: <b>si el 50% de las personas utilizaran mascarillas</b>, entonces cada vez que dos personas se encuentren aleatoriamente, la probabilidad de que <span class="yellow">ambas personas</span> es de 50% ⨉ 50%, es decir: 25%.
+      De la misma manera puede trabajar la probabilidad de las otras rutas de transmisión de la enfermedad. 
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Cuando exactamente la mitad de la población usa mascarillas, resulta que cualquiera de las rutas tienen la misma probabilidad.
+      (¿Puedes convencerte de por qué esto tiene que ser cierto?)
     </p>
 
   </div>
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Ruta de transmisión de la enfermedad </div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Disminución en la transmisión de la enfermedad</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilidad de esta ruta</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Las cuatro maneras en que  la COVID-19 puede transmitirse de persona a persona, asumiendo que el 50% de las personas en usan mascarillas del 50% de efectividad.
       </div>
 
     </div>
@@ -306,18 +306,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Ahora podemos calcular el  <b>la reducción promedio de la transmisión de la enfermedad en la población.</b>.
+      Dado que hemos configurado las cosas para que cada ruta sea igualmente probable, este es solo el promedio de <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> y <span class="yellow">75%</span>, que es de 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Las personas que  <i>no</i> se infectan por medio de las dos primeras rutas, , que son igualmente probables cuando la mitad de la población usa una mascarilla.
+      Por lo tanto, la disminución en la transmisión de enfermedades en aquellas personas que no usan mascarilla es de un <span class="red">0%</span> y <span class="orange">50%</span>, que es de 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Mientras tanto, las personas que  <i>do</i> wusan mascarilla se infectan a través de las dos últimas rutas.
+      Por lo tanto, la disminución de la enfermedad en personas que hacen uso de la mascarilla es en promedio el <span class="orange">50%</span> y <span class="yellow">75%</span>, que es de 62.5%.
     </p>
 
   </div>
@@ -325,12 +325,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Disminución promedio en la transmisión de la enfermedad =<span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Disminución de la transmisión de enfermedades en quienes <b>no usan mascarilla</b> = 25%</div>
+        <div class="splash">Disminución de la transmisión de a enfermedad en quienes  <b>usan mascarilla</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Suponiendo que el 50% de las personas usan una mascarilla con 50% de efectividad.)
       </div>
     </div>
   </div>
@@ -338,19 +338,19 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Por consiguiente, incluso los que no usan una mascarilla se ven beneficiados modestamente porque el aire que inhalan a menudo esta mediado por  <i>las mascarillas de otras personas</i>.
+      Pero aquellas personas que usan mascarilla se benefician mucho mas gracias a la protección adicional que brindan sus mascarillas. 
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>Y dado que la población esta formada por personas que usan y personas que no usan las mascarillas, el beneficio promedio se encuentra entre el beneficio de estos dos grupos.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>Entonces, en este ejemplo simplificado (donde el 50% de las personas usan mascarillas con el 50% de efectividad). Hemos descubierto cómo pasar del  <b>beneficio que ofrecen las mascarillas a un <i>individuo</i></b> al <b>beneficio promedio que las mascarillas ofrecen a una <i>población</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>La ciencia e las mascarillas</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Apliquemos<a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">esta lógica </a> a <i>cualquir valor</i> de <b>uso</b> y <b>efectividad de las mascarillas</b>.
+       Juega con los controles deslizantes a continuación para ver como las mascarillas moderan la propagación de una enfermedad.  
     </p>
 
   </div>
@@ -359,24 +359,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Uso de la mascarilla: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Mask Efectividad de las mascarillas al exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efectividad de las mascarilla al inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Ruta de transmisión de la enfermedad </div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -384,7 +384,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Disminución en la transmisión de la enfermedad</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -392,7 +392,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilidad de esta ruta</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -403,15 +403,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Disminución promedio en la transmisión de la enfermedad: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Disminución de la transmisión de la enfermedad en quienes no usan mascarilla: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Disminución de la transmisión de la enfermedad en quienes hacen uso de la mascarilla: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -420,85 +420,85 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      ¿Qué le sucede a la transmisión de la enfermedad si el 60% de las personas usaran una mascarilla con una efectividad del 60%? 
+      ¿O el 90% utilizara una mascarilla con un 50% de efectividad?
+      ¿O un 50% utilizara una mascarilla 90% efectiva? 
+      Este ejercicio interactivo te deja contestar estas preguntas.
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>La conclusión:  <b>Cuando mas persona usan una mascarillas, todos están mas seguros.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Al filtrar el aire inhalado, las mascarillas brindan protección de primera mano a quienes las usan.
+      Y al filtrar o redirigir el aire exhalado las mascarillas brindan una protección de segunda mano para  <i>todos</i> — incluidas aquellas personas que no usan mascarilla.
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
-        <span v-if="!expandaside1"> (Click to expand)</span>
+      <span @click="expandaside1 = true;">¿Qué pasa con las mascarillas que no filtran el aire exhalado?
+        <span v-if="!expandaside1"> (Clic para expandir)</span>
       </span>
 
       <span v-if="expandaside1">
-        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
-        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
-        You can see this for yourself in the interactive above.
+        Algunas mascarillas N95 vienen con<a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">válvulas o aberturas </a> que liberan aire sin filtrarlo.
+        El CDC<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">no recomienda</a> el uso de estas mascarillas en el sector de la salud publica ya que pone en riesgo a otras personas. 
+        Puedes ver esto en el ejercicio interactivo anterior/anteriormente mostrado. 
         <br><br>
-        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-        This represents a highly effective mask like an N95.
-        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        Primero establezca la efectividad de la inhalación y la exhalación en un valor alto (Con el uso de las mascarilla en algún valor en el medio).
+        Esto representa unas mascarilla de alta efectividad como una N95.
+        Ahora arrastre la efectividad de la exhalación hacia cero y observe como aumenta la transmisión de enfermedades, particularmente entre quienes no usan mascarilla. 
         <br><br>
-        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+        Si ya tienes una de estas mascarillas, el CDC recomienda  <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">cubrir la válvula de exhalación con una mascarilla quirúrgica. 
       </span>
     </aside>
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      De hecho, las mascarillas son incluso mas efectivas que lo que sugieren los números. 
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Cómo detener una epidemia</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      Apagas un incendio privándolo de oxigeno.
+      Pero no necesitas deshacerte de todo el oxigeno, solo necesitas reducir lo suficiente para detener la propagación del fuego.
+      Lo mismo ocurre con una epidemia. No es necesario reducir la transmisión de una enfermedad en un 100%.
+      Si lo baja lo suficiente para detener la propagación de la enfermedad, puede erradicar la epidemia. 
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Probablemente has escuchado del termino epidemiológico R0, pronunciado R-cero
+      Este es <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">Este es el numero de personas que una persona contagiada puede infectar</a> en una población  sin inmunidad previa a la enfermedad.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>Cuando R0 excede 1, la enfermedad crecerá exponencialmente asta que se vacunen suficientes personas o hasta que se infecten y desarrollen inmunidad a la enfermedad.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Pero como Ed Yong en la revista 'the Atlantic', <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 no es el destino"</a>.
+      R0 es el producto de dos números: el promedio en el número de personas con las que una persona contagiada se encuentra y la probabilidad de infección al contacto/después del contacto. 
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">número medio de personas que se encuentra una persona contagiada </span> <br>⨉ <span class="dotted">posibilidad de infección por contacto </span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      El distanciamiento social, las cuarentenas y los encierros disminuyen <span class="dashed">el primer número</span>.
+      Y las mascarillas disminuyen <span class="dotted">el segundo número</span>.
+      El objetivo de todas estas estrategias de salud publica es controlar la epidemia al reducir R0 por debajo de 1. 
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Con esto en mente, volvamos a expresar el impacto de las mascarillas en términos de R0. 
+      La siguiente gráfica muestra como R0 varía a medida que aumenta el uso de mascarillas. 
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Puede usar el primer control deslizante para varias R0, que para COVID-19 esta entre 2 y 3 (eso es en ausencia de otras medidas de salud publica como el distanciamiento social, que reducirían en mayor medida R0). 
+      Al variar la efectividad de las mascarillas podrá ver como su uso ayuda a controlar una epidemia. 
     </p>
 
   </div>
@@ -512,12 +512,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efectividad de las mascarillas al exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efectividad de las mascarilla al inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -529,52 +529,56 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Para detener la propagación de la COVID-19, necesitamos mantener R0 por debajo de 1. 
+      Cuando esto ocurre, en promedio, una persona contagiada infectará a menos de una persona, y la epidemia se detendrá. 
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Entonces ¿Cuántas personas necesitan usar una mascarilla 50% efectiva para detener la propagación de COVID-19?
+      ¿Y si las mascarillas tuviesen una efectividad del 75%? 
+      ¿O 90% de efectividad?
+      Este ejercicio interactivo te permite predecir las respuestas a estas preguntas. 
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">Una advertencia importante: las personas no suelen mezclarse al azar. 
+        <span v-if="!expandaside2"> (Clic para ampliar)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Las personas que usan mascarillas tienen mayor probabilidad de interactuar con otras personas que usen mascarillas y menos probabilidades de interactuar con personas que no las usen. 
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        De manera similar, las personas que no usan mascarilla pueden vivir en grupos donde el uso de mascarilla es menor en promedio.
+        Esta tendencia a interactuar con otras personas que tienen preferencias similares <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">disminuye el poder protector de las mascarillas </a> porque <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">mascarillas porque es menos probable que quienes no las usan se beneficien de las personas cercanas que si las usan =</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Como escriben<a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, y  Ashleigh Tuite</a> en su análisis, “Es probable que el impacto de las mascarillas y otras cubiertas faciales en la reducción  de COVID-19 sea mayor si se prest atención a garantizar la disponibilidad para las poblaciones desfavorecidas". 
+
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>El costo humano</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Podemos llevar nuestra comprensión un paso mas allá al expresar el poder de las mascarillas en términos mas humanos. 
+      Las mascarillas salvan vidas al reducir la posibilidad de infección, lo que, a su vez reduce la extensión de la epidemia. 
+
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      
+      A medida que mas personas usan mascarillas, R0 disminuye. 
+      Y a medida que R0 disminuye, también lo hace el numero de personas infectadas.
+      Entonces podemos tener un  imagen mas clara si en lugar de visualizar R0, visualizamos la  <b>fracción infectada </b> de la población. 
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Al utilizar un modelo matemático de epidemias ampliamente adoptado conocido como <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">modelo SIR</a>, podemos relacionar R0 con la fracción de personas que eventualmente se infectaran. 
+      (Para mayor información sobre los modelos SIR, recomiendo ver <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">este excelente video).</a>
+      
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Aunque este modelo es una simplificación considerable (p.ej. asume una mezcla aleatoria de personas y sin asilamiento), nos ofrece una estimación aproximada del costo humano de no usar mascarillas.</p>
 
   </div>
 
@@ -587,12 +591,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efectividad de las mascarillas al exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efectividad de las mascarillas al inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -604,54 +608,54 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Esta curva en forma de colina nos muestra como las mascarillas influencian el tamaño de una epidemia. 
+      <b>A medida que mas gente hace uso de las mascarillas, la cantidad de infecciones se desploma.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Cuando muy pocas personas usan mascarillas, estamos en el pico de la colina y la mayoría de las personas eventualmente se infectaran. 
+      Pero cada paso a la derecha nos hace descender más.
+      Entonces, incluso las mascarillas parcialmente efectivas, cuando se adoptan puede ayudar a reducir la propagación de COVID-19. 
     </p>
 
     <p>
-      To completely stop the spread, we need to get to the bottom of this hill.
-      But there's a silver lining: as more people wear masks, the hill grows steeper.
-      Which means <b>masks provide greater returns to society as more people wear them</b>.
+      Para detener por completo la propagación, debemos llegar al pie/ la base de esta colina.
+      Pero hay un lado positivo: a medida que mas personas usan mascarillas, la colina se vuelve mas empinada. 
+      Lo que significa <b> que las mascarillas brindan mayores beneficios a la sociedad a medida que mas personas las usan. </b>.
     </p>
 
     <p>
-      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
-      This is how masks can end an epidemic.
-      But masks can only end an epidemic if enough people wear them.
+      Si suficientes personas usan mascarillas, podríamos alcanzar la base de la colina, donde la probabilidad de infección es cero.
+      Así es como las mascarillas pueden acabar con una epidemia.
+      Pero las mascarillas solo pueden acabar con una epidemia si suficientes personas las usan. 
     </p>
 
     <p>
-      You might wonder how many people have to wear masks to end an epidemic.
-      Well, that depends on how effective the masks are.
+      Quizás te preguntes cuantas personas tienen que usar mascarilla para poner fina una epidemia
+      Bueno, eso depende de cuan efectivas sean las mascarillas.
     </p>
 
     <p>
-      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
-      But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
+      Al jugar con el ejercicio interactivo anterior, verás que si las mascarillas son 50% efectivas, necesitaríamos que aproximadamente tres cuartos/ tres cuartas partes de la población las usaran para detener la transmisión de COVID-19.
+      Pero si las mascarillas son 75% efectivas solo necesitaríamos que la mitad de la población las usara para detener la propagación.
     </p>
 
     <p>
-      <b>The more effective the mask, the faster we can descend the hill.</b>
-      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      <b>Cuanto mas efectiva sea una mascarilla, mas rápido descenderá la colina.</b>
+      Es por esto que e importante usar una mascarilla <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">que selle herméticamente a boca <i>and</i> nariz</a>,y que este hecha de un material filtrante eficaz. 
     </p>
 
     <p>
-      We all want to get to the bottom of the hill and stop the spread of COVID-19.
-      But you can't get there by yourself.
-      Each person can only take a tiny step downwards.
+      Todos queremos llegar a la base de la colina y detener la propagación de la COVID-19
+      Pero no se puede llegar solo. 
+      Cada persona puede dar un pequeño paso hacia abajo.
     </p>
 
-    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+    <p>Sin embargo, cuando muchas personas dan este pequeño paso, juntos damos un salto cuesta abajo.</p>
 
-    <p>Together, we can get to the bottom of the hill.</p>
+    <p>Juntos podemos llegar al pie de la colina.</p>
     
-    <p>Together, we can hit the brakes on COVID-19.</p>
+    <p>Juntos podemos frenar la COVID-19.</p>
 
   </div>
 
@@ -663,22 +667,22 @@
 
 <div class="page footer">
   <div class="container">
-    <h2>Credits & References</h2>
+    <h2>Créditos y referencias</h2>
 
-    <p>This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+    <p>Este esnayo fue creado por<a href="https://twitter.com/aatishb">Aatish Bhatia</a> en colaboración con <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
 
-    <p>Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
+    <p>Mira nuestro<a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">video complementario </a> para obtener una visión ágil de las matemáticas de las mascarillas! El video fue apoyado por la Fundación <a href="https://www.hsfoundation.org/">Fundación Heising-Simons</a>. Aquí está la <a href="https://aatishb.com/maskmath/calculator.html">calculadora matemática de las mascarillas</a> que se muestra ene l video.</p>
 
     <p>
-      Many thanks to <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> for their helpful feedback on drafts of this essay.
+      Muchas gracias a<a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, y <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> por sus útiles comentario sobre los borradores de este ensayo.
     </p>
 
     <p>
-      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">support my work on Patreon</a></b>.
+      Si este ensyao te pareció interesante y te gustaría ver más trabajos como est een el futuro puedes<b><a href="https://www.patreon.com/aatishb">apoyar mi trabajo en Patreon</a></b>.
     </p>
 
     <p>
-      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
+      Aquí están <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
       While masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
     </p>
 
@@ -693,11 +697,11 @@
     </p>
 
     <p>
-      This text is published under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license. The source code is available <a href="https://github.com/aatishb/maskmath">on Github</a>. The emojis are created by <a href="https://twemoji.twitter.com/">Twitter</a> and were modified to include a custom mask design.
+      Este texto fue públicado bajo una licencia Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. El código fuente está dispobible <a href="https://github.com/aatishb/maskmath">en Github</a>. Los emojis fueron creado por <a href="https://twemoji.twitter.com/">Twitter</a> y se modificaron para incluir un diseño de máscararillas personalizado.
     </p>
 
     <p>
-      Thanks for reading, and stay safe! 😷
+      Muchas gracias por leer, cuídate! 😷
     </p>
 
   </div>
