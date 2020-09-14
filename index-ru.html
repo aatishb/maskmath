@@ -340,19 +340,19 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Таким образом, даже те, кто не носит маску, получает небольшую пользу, так как воздух, которым они дышат, часто опосредован масками, которые носят <i>другие люди</i>.
+      Но те, кто носит маски, получают гораздо больше пользы благодаря защите, обеспечиваемой их собственными масками.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>И так как население состоит и их тех, кто носит маску, и тех, кто ее не носит, то общий эффект получается чем-то средним между эффектами на эти две группы людей.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>В этом упрощенном примере (где 50% населения носит маски, эффективные на 50%), мы выяснили, как перейти от <b>пользы, приносимой масками <i>одному человеку</i></b>, к <b>среднему эффекту масок на <i>целое население</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>"Маскология"</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Давай <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">применим этот ход мыслей</a> к <i>произвольным значениям</i> <b>доли населения, носящей маски</b> и <b>эффективности масок</b>.
+      Поварьируй слайдеры, приведенные ниже, чтобы увидеть, как маски влияют на распространение заболевания.
     </p>
 
   </div>
@@ -366,19 +366,19 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Эффективность маски при выдыхании: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Эффективность маски при вдыхании: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Путь передачи заболевания</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -386,7 +386,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Снижение распространения заболевания</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -394,7 +394,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Вероятность данного пути передачи</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
