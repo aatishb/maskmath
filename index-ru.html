@@ -218,34 +218,34 @@
     <p>В крайних случаях, это довольно просто.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Например, если бы <b>никто</b> не носил маску, то при любой встрече между двумя людьми вероятность того, что <span class="red">ни один из них не носит маску</span> составляет 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      Так что нам нужно учитывать только <span class="red">первый путь</span> передачи заболевания, и таким образом не будет наблюдаться <span class="red">никакого снижения</span> в распространении заболевания.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      В противоположном крайнем случае, если бы <b>все</b> носили маску, то при любой встрече между двумя людьми вероятность того, что <span class="yellow">оба из них носят маску</span> составляет 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      В этом случае нам нужно рассматривать только <span class="yellow">последний путь</span> передачи заболевания.
+      Полагая, что маски эффективны на 50% в обоих направлениях, во всем населении будет наблюдаться <span class="yellow">75%-е снижение</span> в распространении заболевания.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Таким образом, когда <i>все</i> носят маску (или когда <i>никто</i> ее не носит), рассчитать снижение распространения заболевания в населении просто, так как взаимодействие происходит только по одному из рассмотренных путей передачи.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Но в действительности, некоторые люди носят маску, а некоторые нет.
+      Что означает, что вирус может распространяться по комбинации всех четырех путей передачи.
+      Насколько вероятен каждый из путей передачи зависит от того, сколько людей носят маску.
     </p>
 
     <label class="row half bigsplash">
@@ -256,13 +256,13 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Например, <b>если 50% людей носит маску</b>, то когда два человека случайно встречаются, то вероятность того, что <span class="yellow">оба из них носят маску</span> составляет 50% ⨉ 50%, т.е. 25%.
+      Подобным образом ты можешь вычислить и вероятность остальных трех путей передачи. 
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Когда ровно половина населения носит маску, то выходит, что все четыре пути передачи равновероятны.
+      (Можешь ли ты убедить себя сам, что это действительно так?)
     </p>
 
   </div>
@@ -273,7 +273,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Путь передачи заболевания</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -281,7 +281,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Снижение распространения заболевания</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -289,7 +289,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Вероятность данного пути</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -299,7 +299,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Четыре пути передачи COVID-19 от человека к человеку, при допущении, что 50% людей носят маску, эффективную на 50%.
       </div>
 
     </div>
@@ -308,18 +308,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Теперь мы можем вычислить <b>среднее снижение распространения заболевания в населении</b>.
+      Так как мы устроили все так, что каждый из путей передачи имеет равную вероятность, это составляет среднее от <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> и <span class="yellow">75%</span>, то есть 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Люди, которые <i>не носят</i> маску, могут заразиться через первые два пути передачи, которые имеют одинаковую вероятность, когда половина населения носит маску.
+      Таким образом, снижение распространения заболевания для тех, кто не носит маску, составляет среднее от <span class="red">0%</span> и <span class="orange">50%</span>, то есть 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Между тем, люди, которые <i>носят</i> маску, могут заразиться через последние два пути передачи.
+      Таким образом, снижение распространения заболевания для тех, кто носит маску, составляет среднее от <span class="orange">50%</span> и <span class="yellow">75%</span>, то есть 62.5%.
     </p>
 
   </div>
@@ -327,12 +327,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Среднее Снижение распространения заболевания = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Снижение распространения заболевания для <b>тех, кто не носит маску</b> = 25%</div>
+        <div class="splash">Снижение распространения заболевания для <b>тех, кто носит маску</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Полагая, что 50% людей носит маску, эффективную на 50%.)
       </div>
     </div>
   </div>
