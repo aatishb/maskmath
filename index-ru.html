@@ -564,25 +564,25 @@
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Во сколько человеческих жизней обходится эпидемия</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Мы можем углубить наше понимание эпидемии путем выражения эффекта масок в отношении человеческих жизней. 
+      Маски спасают человеческие жизни, снижая вероятность инфекции, что, в свою очередь, сужает размах эпидемии.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Чем больше людей носит маски, тем меньше R0.
+      А чем меньше R0, тем меньше число инфицированных людей.
+      Так что мы можем прояснить картину происходящего, если вместо R0 мы попытаемся визуализировать <b>долю инфицированного населения</b>.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Используя широко применяемую математическую модель эпидемий, известную как <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR-модель</a>, мы можем соотнести R0 с долей населения, которая в итоге окажется инфицированной.
+      (Если ты хочешь узнать больше о SIR-моделях, я рекомендую посмотреть вот это <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">замечательное видео</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Несмотря на то, что эта модель представляет собой значительное упрощение (например, она полагает случайное взаимодействие между людьми и отсутствие карантина), она предоставляет приблизительную оценку ущерба человеческим жизням от неношения масок.</p>
 
   </div>
 
@@ -595,19 +595,19 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Эффективность масок при выдыхании: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Эффективность масок при вдыхании: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        'Как маски снижают инфекции',
+        'Доля людей, которые носят маски',
+        'Доля людей, которые будут инфицированы'
       )" :config="config"></graph>
 
     </div>
@@ -616,14 +616,14 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Эта холмообразная кривая демонстрирует влияние масок на размах эпидемии.
+      <b>По мере того, как все больше людей носит маски, число инфекций резко падает.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Когда лишь немногие носят маски, иы находимся на вершине холма, и большинство людей в итоге оказываются зараженными.
+      Но каждый шаг вправо двигает нас вниз по кривой.
+      Так что даже частично эффективные маски, носимые долей населения, могут способствовать снижению распространения COVID-19.
     </p>
 
     <p>
