@@ -139,35 +139,35 @@
     <p>Но что если вместо этого восприимчивый человек носит маску?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      В целом, эффективность маски зависит от того, <b>вдыхаешь</b> или <b>выдыхаешь</b> ли ты через нее.
+      Пока давай рассмотрим упрощенный случай и будем считать, что маска одинаково эффективна в обоих направлениях.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>В таком случае, вероятность инфекции этим путем также снижается на 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Зараженный человек" susceptibleperson="Восприимчивый человек"><span class="orange">Путь передачи 3:</span> Когда восприимчивый человек носит маску, эффективную на 50%, распространение болезни снижается на 50%.</anim-with-caption>
   
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+    <p>Что если и зараженный <i>и</i> восприимчивый человек оба будут носить маску?</p> 
 
     <p>
-      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
-      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
-      That's a 75% drop in the chance of infection.
+      Первая маска снижает вероятность инфекции вдвое, и вторая также снижает вероятность инфекции вдвое.
+      Так что, когда <i>оба</i> человека носят маску, вероятность заражения составляет половину от половины, то есть 25% (по сравнению со случаем, когда ни один из двух людей носит маску).
+      В целом, это представляет снижение вероятности инфекции на 75%.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Зараженный человек" susceptibleperson="Восприимчивый человек"><span class="yellow">Путь передачи 4:</span> Когда оба человека носят маску, эффективную на 50%, распространение болезни снижается на 75%.</anim-with-caption>
   
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
+      Если подумать, то кажется неожиданным, что маски, эффективные на 50%, могут снизить вероятность заражения на 75%.
+      Это возможно благодаря тому, что, когда оба человека носят маску, вероятность инфекции уменьшается вдвое дважды.
       This <b>double protection</b> makes masks much more effective than you might intuitively expect.
     </p>
 
