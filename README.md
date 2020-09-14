@@ -20,7 +20,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/DeepSpace2"><img src="https://avatars1.githubusercontent.com/u/6841988?v=4" width="100px;" alt=""/><br /><sub><b>Adi Vaknin</b></sub></a><br /><a href="#translation-DeepSpace2" title="Translation">🌍</a> <a href="https://github.com/aatishb/maskmath/commits?author=DeepSpace2" title="Code">💻</a></td>
     <td align="center"><a href="http://nicolas.lehuen.com/"><img src="https://avatars1.githubusercontent.com/u/69256?v=4" width="100px;" alt=""/><br /><sub><b>Nicolas Lehuen</b></sub></a><br /><a href="#translation-nlehuen" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/albannabla"><img src="https://avatars0.githubusercontent.com/u/52819459?v=4" width="100px;" alt=""/><br /><sub><b>Alban nablA</b></sub></a><br /><a href="#translation-albannabla" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/gnegrelligarcia"><img src="https://avatars1.githubusercontent.com/u/71154843?v=4" width="100px;" alt=""/><br /><sub><b>gnegrelligarcia</b></sub></a><br /><a href="#translation-gnegrelligarcia" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/gnegrelligarcia"><img src="https://avatars1.githubusercontent.com/u/71154843?v=4" width="100px;" alt=""/><br /><sub><b>gnegrelligarcia</b></sub></a><br /><a href="#translation-gnegrelligarcia" title="Translation">🌍</a> <a href="https://github.com/aatishb/maskmath/issues?q=author%3Agnegrelligarcia" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
