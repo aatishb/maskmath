@@ -45,7 +45,7 @@
         <h3>Un ensayo interactivo de cómo las mascarillas pueden acabar con la COVID-19</h3>
         <h4>por <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <h5>
-          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-es.html">Español</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
         </h5>
       </div>
     </div>
@@ -102,7 +102,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Persona contagiada" susceptibleperson="Persona suceptible"><span class="red">Ruta de transmisión 1:</span> Cuando una persona contagiada se encuentra cerca de una persona susceptible, sus ‘Aerosoles bucales’ pueden propagar la enfermedad.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="red">Ruta de transmisión 1:</span> Cuando una persona contagiada se encuentra cerca de una persona susceptible, sus ‘Aerosoles bucales’ pueden propagar la enfermedad.</anim-with-caption>
 
   <div class="container">
 
@@ -132,7 +132,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona contagiada" susceptibleperson="Persona suceptible"><span class="orange">Ruta de transmisión 2: </span> Cuando una persona contagiosa usa una mascarilla con 50% de eficacia, la transmisión de la enfermedad se reduce un 50%.</anim-with-caption>
+  anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptibe"><span class="orange">Ruta de transmisión 2: </span> Cuando una persona contagiosa usa una mascarilla con 50% de eficacia, la transmisión de la enfermedad se reduce un 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -523,14 +523,8 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph2Traces" :layout="graph2Layout(
- 'Como las mascarillas reducen R0',
-        'Porcentaje de personas que usan mascarilla',
-        '# Personas que una persona contagiada infecta (R0)',
-        'Epidemia bajo control',
-        'Epidemia bajo control'
-      )" :config="config"></graph>
-      
+      <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
+
     </div>
   </div>
 
@@ -608,12 +602,8 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-        <graph :traces="graph3Traces" :layout="graph3Layout(
-        'Como las mascaillas reducen infecciones',
-        'Porcentaje de personas que usan mascarilla',
-        'Porcentaje de personas que será infectadas'
-      )" :config="config"></graph>
-      
+      <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
+
     </div>
   </div>
 
