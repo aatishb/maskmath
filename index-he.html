@@ -34,685 +34,686 @@
 
 </head>
 
-<body dir="rtl">
-<div id="root" class="page">
-  <div class="header">
-    <p5 src="js/sketch0.js"></p5>
-    <div class="overlay">
-      <div>
-        <h1>כוחן המכופל של המסיכות</h1>
-        <h3>כיצד ניתן למגר את וירוס הקורונה בעזרת מסיכות</h3>
-        <h4>נכתב ע"י <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">ערוץ היו-טיוב Minute Physics</a></h4>
-        <h5>
-          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a>
-        </h5>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-
-    <p>
-      ידוע לנו שלמסיכות יש השפעה מוגדלת על האטת התפשטות וירוס הקורונה (<a href="https://www.preprints.org/manuscript/202004.0203/v1">1</a>, <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">2</a>, <a href="https://science.sciencemag.org/content/368/6498/1422">3</a>). ועדיין, יש אנשים המתנגדים לעטיית מסיכה משום שהם רואים בכך בחירה אישית ולא נושא הרלוונטי לבריאות כלל הציבור.
-    </p>
-
-    <p>
-      מחשבה זו מפספסת את התמונה הגדולה מכיוון ש <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">מסיכות מגנות על האדם העוטה אותן <i><b>וגם</b></i> על הסובבים אותו</a>.
-      הגנה <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">דו-כיוונית זו</a> גורמת לעטייה גורפת של מסיכות להוות כלי חזק למיגור מגיפה.
-
-    </p>
-
-    <network :maskusage="0.6"></network>
-
-    <p>
-      ע"י שימוש במתמטיקה נראה כיצד כאשר 60% מהאנשים עוטים מסיכות בעלות יעילות של 60%, קצב העברת מחלות יורד בשיעור של עד 60% - בערך הרמה הדרושה למיגור וירוס הקורונה.
-    </p>
-
-    <aside>
-      <div class="center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <span style="margin-top: 0.75rem;">
-          לצפייה בסרטון הנלווה (אנגלית): <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
-        </span>
-      </div>
-    </aside>
-
-    <p>
-      כאשר אדם נושף <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">נפלטים נתזי רוק</a> בגדלים שונים.
-      אם הוא מדבק, הרי שנתזי רוק אלה עמוסים בחלקיקים נגיפיים,
-      וזוהי <a href="https://arxiv.org/pdf/2005.10988.pdf">דרך ההפצה העיקרית של נגיף הקורונה</a>.
-    </p>
-
-    <p> כשאדם מדבק נושם נפלטים לאוויר בסביבות <b>אלף</b> חלקיקים נגיפיים בדקה.</p>
-
-    <p>כשאדם מדבק מדבר נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים בדקה.</p>
-
-    <p>כשאדם מדבק משתעל נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים.</p>
-
-    <p>כאשר אדם מדבק מתעטש, נפלטים לאוויר בסביבות <b>מיליון</b> חלקיקים נגיפיים.</p>
-
-    <p>
-      ככל שיותר חלקיקים נגיפיים מועברים מאדם לאדם, כך גדל הסיכוי להידבק
-      (ובמקרה של הידבקות, אנשים שנחשפו ליותר חלקיקים נגיפיים <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">חווים סימפטומים חמורים יותר</a>)
-    </p>
-
-  </div>
-
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
-    <span><span class="red">אופן הדבקה 1:</span> כאשר אדם מדבק מתקרב לאדם אחר, נתזי הרוק שלהם עלולים להפיץ את הנגיף</span>
-  </anim-with-caption>
-
-  <div class="container">
-
-    <p>מסיכות מפחיתות את כמות נתזי הרוק העוברים בין אנשים - באמצעות חסימת או הפניית הנתזים - ובכך מקטינות את הסיכוי להדבקה.</p>
-
-    <p>
-      חשוב לזכור שאין מסיכה מושלמת.
-      אפילו מסיכות ה- N95 המומלצות ע"י אנשי רפואה "מתחייבות" לבלום <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% מהחלקיקים הקשים ביותר לבלימה</a> (ורק במידה שהן נעטות <a href="https://www.n95decon.org/publications">כראוי</a>).
-    </p>
-
-    <p>
-      מסיכות לא מבטיחות אי-הדבקות, אך הן מפחיתות את הסיכון.
-      ממש כמו שמטרייה לא מבטיחה להישאר יבשים, אך היא מקטינה את הסיכוי להירטב
-      בדומה למטריות, מסיכות עובדות רק עם משתמשים בהן כראוי.
-      בשונה ממטריות, המגינות רק על האדם המשתמש בהן, מסיכות מגינות גם על אנשים <i>מסביב</i> לאדם העוטה אותן.
-    </p>
-
-    <p>
-    </p>
-
-    <h2>מדוע מסיכות מגינות עלינו פעמיים</h2>
-
-    <p>
-      לצורך הדוגמא, נדמיין אדם מדבק העוטה מסיכה בעלת 50% יעילות.
-      משמעות "50% יעילות" היא שעטיית מסיכה זו מפחיתה בחצי את הסיכוי של אדם קרוב להידבק.
-    </p>
-
-  </div>
-
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
-    <span><span class="orange">אופן הדבקה 2: </span>כאשר אדם מדבק עוטה מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 50%</span>
-  </anim-with-caption>
-
-  <div class="container">
-
-    <p>אך מה אם האדם השני עוטה את המסיכה במקום האדם המדבק?</p>
-
-    <p>
-      באופן כללי, לכל מסיכה יש רמת יעילות שונה כאשר <b>שואפים</b> או <b>נושפים</b> דרכה.
-      בינתיים, לצורך הפשטות, נניח שהמסיכה שלנו יעילה באופן זהה בכל כיוון.
-    </p>
-
-    <p>במקרה זה, גם באופן הדבקה זה הסיכוי להידבק פחות ב- 50%.</p>
-
-  </div>
-
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
-    <span><span class="orange">אופן הדבקה 3: </span>כאשר האדם הנוסף עוטה מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 50%</span>
-  </anim-with-caption>
-  
-  <div class="container">
-
-    <p>מה אם האדם המדבק <i>וגם</i> האדם הנוסף עוטים מסיכה?</p> 
-
-    <p>
-      המסיכה הראשונה מפחיתה את סיכוי ההדבקה ב- 50%, והמסיכה השנייה מפחיתה את סיכוי ההדבקה ב- 50% נוספים.
-      כלומר כאשר <i>שני</i> אנשים עוטים מסיכה, הסיכוי להדבקה הוא חצי מחצי, כלומר רבע (לעומת המצב בו שניהם לא עוטים מסיכה).
-      במילים אחרות, הסיכוי להידבק פוחת ב- 75%.
-    </p>
-
-  </div>
-
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
-    <span><span class="yellow">אופן הדבקה 4:</span>כאשר שני האנשים עוטים מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 75%</span>
-  </anim-with-caption>
-  
-  <div class="container">
-
-    <p>
-      זה עשוי להפתיע שמסיכה בעלת יעילות של 50% יכולה להפחית את סיכוי ההדבקה ב- 75%.
-      זה אפשרי כאשר שני האנשים עוטים מסיכה מכיוון שסיכוי ההדבקה קטן ב- 50% פעמיים.
-      ההגנה <b>הכפולה</b> הזו הופכת עטיית מסיכות ליעילה יותר מכפי שניתן לצפות אינטואיטיבית.
-    </p>
-
-    <p>להלן ארבעת הדרכים בהן מחלה הנישאת באוויר מועברת מאדם לאדם:</p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <div class="row big-small">
-
-        <div class="column onehundredpx">
-          <div class="center">
-            <span >דרך ההעברה</span>
+<body>
+  <div dir="rtl">
+    <div id="root" class="page">
+      <div class="header">
+        <p5 src="js/sketch0.js"></p5>
+        <div class="overlay">
+          <div>
+            <h1>כוחן המכופל של המסיכות</h1>
+            <h3>כיצד ניתן למגר את וירוס הקורונה בעזרת מסיכות</h3>
+            <h4>נכתב ע"י <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">ערוץ היו-טיוב Minute Physics</a></h4>
+            <h5>
+              <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a>
+            </h5>
           </div>
-          <anim :mask1="false" :mask2="false"></anim>
-          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
-          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
-          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
         </div>
+      </div>
 
-        <div class="column onehundredpx">
+      <div class="container">
+
+        <p>
+          ידוע לנו שלמסיכות יש השפעה מוגדלת על האטת התפשטות וירוס הקורונה (<a href="https://www.preprints.org/manuscript/202004.0203/v1">1</a>, <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">2</a>, <a href="https://science.sciencemag.org/content/368/6498/1422">3</a>). ועדיין, יש אנשים המתנגדים לעטיית מסיכה משום שהם רואים בכך בחירה אישית ולא נושא הרלוונטי לבריאות כלל הציבור.
+        </p>
+
+        <p>
+          מחשבה זו מפספסת את התמונה הגדולה מכיוון ש <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">מסיכות מגנות על האדם העוטה אותן <i><b>וגם</b></i> על הסובבים אותו</a>.
+          הגנה <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">דו-כיוונית זו</a> גורמת לעטייה גורפת של מסיכות להוות כלי חזק למיגור מגיפה.
+
+        </p>
+
+        <network :maskusage="0.6"></network>
+
+        <p>
+          ע"י שימוש במתמטיקה נראה כיצד כאשר 60% מהאנשים עוטים מסיכות בעלות יעילות של 60%, קצב העברת מחלות יורד בשיעור של עד 60% - בערך הרמה הדרושה למיגור וירוס הקורונה.
+        </p>
+
+        <aside>
           <div class="center">
-            <span >הפחתה בסיכוי הידבקות</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span style="margin-top: 0.75rem;">
+              לצפייה בסרטון הנלווה (אנגלית): <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+            </span>
           </div>
-          <div class="center"><span class="red">0%</span></div>
-          <div class="center"><span class="orange">50%</span></div>
-          <div class="center"><span class="orange">50%</span></div>
-          <div class="center"><span class="yellow">75%</span></div>
-        </div>
+        </aside>
+
+        <p>
+          כאשר אדם נושף <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">נפלטים נתזי רוק</a> בגדלים שונים.
+          אם הוא מדבק, הרי שנתזי רוק אלה עמוסים בחלקיקים נגיפיים,
+          וזוהי <a href="https://arxiv.org/pdf/2005.10988.pdf">דרך ההפצה העיקרית של נגיף הקורונה</a>.
+        </p>
+
+        <p> כשאדם מדבק נושם נפלטים לאוויר בסביבות <b>אלף</b> חלקיקים נגיפיים בדקה.</p>
+
+        <p>כשאדם מדבק מדבר נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים בדקה.</p>
+
+        <p>כשאדם מדבק משתעל נפלטים לאוויר בסביבות <b>עשרת אלפים</b> חלקיקים נגיפיים.</p>
+
+        <p>כאשר אדם מדבק מתעטש, נפלטים לאוויר בסביבות <b>מיליון</b> חלקיקים נגיפיים.</p>
+
+        <p>
+          ככל שיותר חלקיקים נגיפיים מועברים מאדם לאדם, כך גדל הסיכוי להידבק
+          (ובמקרה של הידבקות, אנשים שנחשפו ליותר חלקיקים נגיפיים <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">חווים סימפטומים חמורים יותר</a>)
+        </p>
 
       </div>
 
-      <div class="caption">
-        <span>ארבעת הדרכים בהן וירוס הקורונה יכול לעבור מאדם לאדם בהינתן מסיכה עם 50% יעילות.</span>
-      </div>
+      <anim-with-caption :mask1="false" :mask2="false" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
+        <span><span class="red">אופן הדבקה 1:</span> כאשר אדם מדבק מתקרב לאדם אחר, נתזי הרוק שלהם עלולים להפיץ את הנגיף</span>
+      </anim-with-caption>
 
-    </div>
+      <div class="container">
 
-  </div>
+        <p>מסיכות מפחיתות את כמות נתזי הרוק העוברים בין אנשים - באמצעות חסימת או הפניית הנתזים - ובכך מקטינות את הסיכוי להדבקה.</p>
 
-  <div class="container">
+        <p>
+          חשוב לזכור שאין מסיכה מושלמת.
+          אפילו מסיכות ה- N95 המומלצות ע"י אנשי רפואה "מתחייבות" לבלום <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% מהחלקיקים הקשים ביותר לבלימה</a> (ורק במידה שהן נעטות <a href="https://www.n95decon.org/publications">כראוי</a>).
+        </p>
 
-    <h2>מאנשים לאוכלוסיה</h2>
+        <p>
+          מסיכות לא מבטיחות אי-הדבקות, אך הן מפחיתות את הסיכון.
+          ממש כמו שמטרייה לא מבטיחה להישאר יבשים, אך היא מקטינה את הסיכוי להירטב
+          בדומה למטריות, מסיכות עובדות רק עם משתמשים בהן כראוי.
+          בשונה ממטריות, המגינות רק על האדם המשתמש בהן, מסיכות מגינות גם על אנשים <i>מסביב</i> לאדם העוטה אותן.
+        </p>
 
-    <p>
-      עד עתה בחנו את העברת המחלה בין שני אנשים.
-      אין ניתן לבצע את קפיצת המדרגה ולהבין כיצד המחלה מופצת <i>בכלל האוכלוסיה</i>?
-    </p> 
+        <p>
+        </p>
 
-    <p>במקרי הקצה זה פשוט.</p> 
+        <h2>מדוע מסיכות מגינות עלינו פעמיים</h2>
 
-    <p>
-      לדוגמא, אם <b>אף אחד</b> לא עוטה מסיכה, אז כל פעם ששני אנשים נפגשים, הסיכוי ש <span class="red">שניהם לא עוטים מסיכה</span> הוא 100%.
-    </p>
-
-    <network :maskusage="0"></network>
-
-    <p>
-      כך שנצטרך לקחת בחשבון רק את אופן ההדבקה <span class="red">מספר 1</span> ולא תהיה <span class="red">כל הפחתה</span> בסיכוי להדבקה.
-    </p>
-
-    <p>
-      במקרה הקיצון השני, בו <b>כולם</b> עוטים מסיכה, מובטח לנו שהסיכוי לכך ש <span class="yellow">שניהם עוטים מסיכה</span> הוא 100%.
-    </p>
-
-    <network :maskusage="1"></network>
-
-    <p>
-      במקרה הזה עלינו לקחת בחשבון רק את<span class="yellow">אופן ההדבקה האחרון</span>. בהנחה שהמסיכות שלנו בעלות יעילות של 50% לשני הכיוונים (שאיפה ונשיפה), נהנה מצניחה של <span class="yellow">75%</span> בהעברת המחלה.
-    </p>
-
-    <p>
-      לסיכום, כאשר <i>כולם</i> עוטים מסיכה (או כאשר כולם <i>לא</i>), מאוד פשוט לחשב את הצניחה בשיעור העברת המחלה באוכלוסיה מכיוון שיש לקחת בחשבון רק אופן הדבקה בודד.
-    </p>
-
-    <p>
-      אך במציאות, חלק מהאנשים עוטים מסיכה וחלק לא.
-      כלומר הוירוס יכול להתפשט ע"י שילוב של כל ארבעת האופנים.
-      השכיחות של כל אופן תלוייה במספר האנשים העוטים מסיכה.
-    </p>
-
-    <label class="row half bigsplash">
-      <div>אחוז השימוש במסיכה <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
-      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
-    </label>
-
-    <network :maskusage="pnetwork"></network>
-
-    <p>
-      לדוגמא, 
-      <b>אם 50% מהאנשים עוטים מסיכה</b>,
-      אז בכל מפגש בין שני אנשים שרירותיים, הסיכוי ש
-      <span class="yellow">שני האנשים עוטים מסיכה</span>
-       הוא 50% כפול 50%, כלומר 25%.
-       ניתן לחשב באופן דומה את האחוזים עבור שלושת אופני ההדבקה האחרים.
-
-    </p>
-
-    <p>
-      כאשר בדיוק חצי מהאוכלוסיה עוטה מסיכה לכל אופני ההדבקה שכיחות זהה להתקיים (נסו לשכנע את עצמכם מדוע).
-    </p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <div class="row big-small-small">
-
-        <div class="column onehundredpx">
-          <div class="center">דרך ההעברה</div>
-          <anim :mask1="false" :mask2="false"></anim>
-          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
-          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
-          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">הפחתה בסיכוי הידבקות</div>
-          <div class="center"><span class="red">0%</span></div>
-          <div class="center"><span class="orange">50%</span></div>
-          <div class="center"><span class="orange">50%</span></div>
-          <div class="center"><span class="yellow">75%</span></div>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">סיכוי לדרך זו</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-        </div>
+        <p>
+          לצורך הדוגמא, נדמיין אדם מדבק העוטה מסיכה בעלת 50% יעילות.
+          משמעות "50% יעילות" היא שעטיית מסיכה זו מפחיתה בחצי את הסיכוי של אדם קרוב להידבק.
+        </p>
 
       </div>
 
-      <div class="caption">
-        ארבעת הדרכים בהן וירוס הקורונה יכול לעבור מאדם לאדם בהנחה ש- 50% מהאנשים עוטים מסיכות בעלות יעילות של 50%
-      </div>
+      <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
+        <span><span class="orange">אופן הדבקה 2: </span>כאשר אדם מדבק עוטה מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 50%</span>
+      </anim-with-caption>
 
-    </div>
-  </div>
-  
-  <div class="container">
+      <div class="container">
 
-    <p>
-      עכשיו ניתן לחשב את <b>שיעור הפחתת העברת המחלה הממוצע באוכלוסיה</b>.
-      מכיוון שהסכמנו שלכל אופן הדבקה שכיחות זהה, מדובר פשוט בממוצע של <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> ו- <span class="yellow">75%</span>, שהוא 43.75%.
-    </p>
+        <p>אך מה אם האדם השני עוטה את המסיכה במקום האדם המדבק?</p>
 
-    <p>
-      אנשים ש <i>לא</i> עוטים מסיכה נדבקים דרך שני אופני ההדבקה הראשונים, השכיחים באותה המידה כאשר מחצית מהאוכלוסיה עוטה מסיכה.
-      כלומר שיעור ההפחתה בהעברת המחלה עבור אלו שלא עוטים מסיכה הוא הממוצע של <span class="red">0%</span> ו- <span class="orange">50%</span>, שהוא 25%.
-    </p>
+        <p>
+          באופן כללי, לכל מסיכה יש רמת יעילות שונה כאשר <b>שואפים</b> או <b>נושפים</b> דרכה.
+          בינתיים, לצורך הפשטות, נניח שהמסיכה שלנו יעילה באופן זהה בכל כיוון.
+        </p>
 
-    <p>
-      לעומת זאת, אנשים <i>העוטים</i> מסיכה נדבקים דרך שני אופני ההדבקה האחרונים.
-      כלומר שיעור ההפחתה בהעברת המחלה עבור אלו שעוטים מסיכה הוא הממוצע של <span class="orange">50%</span> ו- <span class="yellow">75%</span>, שהוא 62.5%.
-    </p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-      <div class="column">
-        <div class="splash">שיעור הפחתה ממוצע בהעברת המחלה = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">שיעור הפחתה בהעברת המחלה עבור <b>לא עוטי מסיכה</b> = 25%</div>
-        <div class="splash">שיעור הפחתה בהעברת המחלה עבור <b>עוטי מסיכה</b> = 62.5%</div>
-      </div>
-      <div class="caption">
-        (בהנחה ש- 50% מהאנשים עוטים מסיכות בעלות יעילות 50%)
-      </div>
-    </div>
-  </div>
-  
-  <div class="container">
-
-    <p>
-      כך שגם אנשים שלא עוטים מסיכה מפיקים תועלת מהמסיכות, שכן האוויר שהם נושמים סונן ע"י מסיכות של <i>אנשים אחרים</i>.
-      יחד עם זאת, אנשים העוטים מסיכות מפיקים הרבה יותר תועלת שכן הם מוגנים גם ע"י המסיכות שלהם עצמם.
-    </p>
-
-    <p>מכיוון שהאוכלוסיה מורכבת גם מאנשים שלא עוטים מסיכה וגם מכאלו שכן, התועלת הממוצעת היא איפשהו בין התועלות הנפרדות של שתי קבוצות אלו</p>
-
-    <p>
-      ניתן לשנות את הערכים השונים ולראות כיצד כל אחד משפיע על אחוזי ההדבקה.
-      <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">לחצו לקבלת הסבר על המודל המתמטי</a>
-    </p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <label class="row half bigsplash">
-        <div>אחוז השימוש במסיכה: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
-        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
-      </label>
-
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
-        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
-
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
-        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
-
-      <div class="row big-small-small padabove">
-
-        <div class="column onehundredpx">
-          <div class="center">דרך ההעברה</div>
-          <anim :mask1="false" :mask2="false"></anim>
-          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
-          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
-          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">הפחתה בסיכוי הידבקות</div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
-        </div>
-
-        <div class="column onehundredpx">
-          <div class="center">סיכוי לדרך זו</div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
-          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
-        </div>
+        <p>במקרה זה, גם באופן הדבקה זה הסיכוי להידבק פחות ב- 50%.</p>
 
       </div>
 
-
-      <div class="row half bigsplash">
-        <span>שיעור הפחתה ממוצע בהעברת המחלה: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
-      </div>
-
-      <div class="row half bigsplash">
-        <span>שיעור הפחתה בהעברת המחלה עבור לא עוטי מסיכה: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
-      </div>
-
-      <div class="row half bigsplash">
-        <span>שיעור הפחתה בהעברת המחלה עבור עוטי מסיכה: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
-      </div>
-
-    </div>
-  </div>
-  
-  <div class="container">
-
-    <p>
-      מה קורה לשיעור ההדבקה אם 60% מהאנשים עוטים מסיכות בעלות 60% יעילות?
-      או אם 90% עוטים מסיכה בעלת 50% יעילות?
-      או אם 50% עוטים מסיכה בעלת 90% יעילות?
-      האנימציה האינטרקטיבית למעלה מאפשרת לכם לגלות בעצמכם.
-    </p>
-
-    <p>המסקנה: <b>ככל שיותר אנשים עוטים מסיכות, כולנו בטוחים יותר.</b></p>
-
-    <p>
-      מסיכות מספקות הגנה לאנשים העוטים אותן ע"י סינון האוויר הנשאף,
-      והגנה לכולם ע"י סינון או הפניית האוויר הננשף, כולל אנשים ש<i>לא</i> עוטים אותן.
-    </p>
-
-    <aside>
-      <span @click="expandaside1 = true;">מה לגבי מסיכות שלא מסננות את האוויר הננשף?
-        <span v-if="!expandaside1"> (לחצו לקריאה)</span>
-      </span>
-
-      <span v-if="expandaside1">
-        בחלק ממסיכות ה- N95 <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread"> ישנם שסתומים</a> המאפשרים לאוויר לעבור דרכם ללא סינון.
-        ה- CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">ממליץ נגד</a> עטיית מסיכות אלו בציבור שכן הן מהוות סכנה לאנשים אחרים.
-        ניתן לראות כיצד באנימציה האינטרקטיבית למעלה.
-        <br><br>
-        תחילה הגדירו ערך גבוה עבור אחוזי היעילות בנשיפה ובשאיפה. 
-        התחילו להוריד את אחוזי היעילות בנשיפה ושימו לב כיצד אחוזי העברת המחלה עולים, בעיקר עבור אנשים שלא עוטים מסיכה.
-      </span>
-    </aside>
-
-
-    <p>
-      למעשה, במציאות מסיכות יעילות יותר לעומת מה שהמספרים הללו מציגים.
-    </p>
-
-    <h2>כיצד לבלום מגיפה</h2>
-
-    <p>
-      ניתן לכבות להבה ע"י חניקתה מחמצן.
-      אך אין צורך להיפטר מכל החמצן, אלא רק מהכמות הדרושה לאש כדי להתקיים.
-      כך גם עם מגיפה: אין צורך לבלום את ההעברת המחלה ב- 100%,
-      אלא מספיק להוריד את קצב ההדבקה לכזה שיעצור את התפשטותה.
-    </p>
-
-    <p>
-      באפידומולוגיה קיים מונח הנקרא R0,
-      המייצג את <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%94%D7%94%D7%AA%D7%A8%D7%91%D7%95%D7%AA_%D7%94%D7%91%D7%A1%D7%99%D7%A1%D7%99">מספר האנשים שאדם מדבק מסוגל להדביק</a> באוכלוסייה ללא חסינות קודמת למחלה.
-    </p> 
-
-    <p>כאשר R0 גדול מ- 1, המחלה מתפשטת בקצב אקספוננציאלי עד שמספיק אנשים מתחסנים, או עד שמספיק אנשים נדבקים ומפתחים עמידות למחלה.</p>
-
-    <p>
-      אבל, כפי ש- Ed Yong כותב ב- "the Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 איננו גורל"</a>.
-      R0 הינו מכפלה של שני: המספר הממוצע של אנשים אותם אדם מדבק פוגש, והסיכוי להדבקה בכל מפגש.
-    </p>
-
-  </div>
-
-  <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">המספר הממוצע של אנשים אותם אדם מדבק פוגש</span> <br>⨉ <span class="dotted">הסיכוי להדבקה בכל מפגש</span></div>
-  </div>
-  
-  <div class="container">
-
-    <p>
-      ריחוק חברתי וסגרים מקטינים את <span class="dashed">המספר הראשון</span>.
-      ומסיכות מפחיתות את <span class="dotted">המספר השני</span>.
-      מטרת כל האסטרטגיות הנ"ל הן למגר את המגיפה ע"י הקטנת R0 לערך הנמוך מ- 1.
-    </p>
-
-    <p>
-      כעת ביכולתינו לבטא את השפעתן של מסיכות על R0.
-    </p>
-
-    <p>
-      ניתן לשנות את ערך R0 (שעבור וירוס הקורונה הוא בין 2 ל- 3 ללא שימוש באסטרטגיות הנ"ל).
-      ניתן לראות כיצד מסיכות מסייעות בהקטנת R0 ע"י שינוי אחוזי יעילותן.    
-    </p>
-
-  </div>
-
-  <div class="graphic">
-    <div class="graphic-container">
-
-      <label class="row half bigsplash">
-        <div>R0: <span class="dotted">{{R0}}</span></div>
-        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
-      </label>
-
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
-        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
-
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
-        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
-
-      <graph :traces="graph2Traces" :layout="graph2Layout(
-        'R0 כיצד מסיכות מקטינות את',
-        'אחוז האנשים העוטים מסיכה',
-        'מספר האנשים הנדבקים על-ידי אדם מדבק אחד',
-        'מגיפה תחת שליטה',
-        'מגיפה שיצאה משליטה'
-      )" :config="config"></graph>
-
-    </div>
-  </div>
-
-  <div class="container">
-
-    <p>
-      על מנת לבלום את התפשטות הקורונה עלינו לשמור על R0 מתחת ל- 1.
-      כשזה יקרה, אדם מדבק ידביק בממוצע פחות מאדם אחד.
-    </p>
-
-    <p>
-      אז, כמה אנשים צריכים לעטות מסיכות בעלות יעילות של 50% על מנת שזה יקרה?
-      מה עם המסיכות היו בעלות יעילות של 75%?
-      או של 95%?
-      הגרף האינטרקטיבי למעלה מאפשר לשערך תשובות לשאלות אלה.
-    </p>
-
-    <aside>
-
-      <span @click="expandaside2 = true;">הסתייגות חשובה: אנשים לרוב לא נוטים להתערות באופן שרירותי. 
-        <span v-if="!expandaside2"> (לחצו לקריאה)</span>
-      </span>
+      <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
+        <span><span class="orange">אופן הדבקה 3: </span>כאשר האדם הנוסף עוטה מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 50%</span>
+      </anim-with-caption>
       
-      <span v-if="expandaside2">
-        אנשים העוטים מסיכות עשויים להיות בעלי סיכוי גבוה יותר לקיים אינטראקציה עם עוטי מסיכות אחרים, ופחות עם אנשים שאינם עוטי מסיכות.
-        <br/><br/>
-        באופן דומה, אנשים שלא עוטים מסיכות עשויים לחיות בריכוזים או איזורים שבהם השימוש במסיכות נמוך מהממוצע.
-        נטייה זו לקיים אינטראקציה עם אחרים בעלי העדפות דומות <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> מפחיתה את כוחן של מסיכות </a> מכיוון ש <a href = " https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb"> אנשים שלא עוטים מסיכות לא מפיקים תועלת מעוטי המסיכות הסמוכים </a>.
-        <br/><br/>
-        כפי ש <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> דייוויד פישמן, איימי גריר ואשלי טויטה </a> כותבים בניתוחם, "ההשפעה של מסיכות וכיסויי פנים אחרים בהפחתת העברת וירוס הקורונה עשויים להיות הגדולים ביותר אם תשומת לב תבטיח זמינות לאוכלוסיות מוחלשות. "
-      </span>
-    </aside>
+      <div class="container">
 
-    <h2>המחיר האנושי</h2>
+        <p>מה אם האדם המדבק <i>וגם</i> האדם הנוסף עוטים מסיכה?</p> 
 
-    <p>
-      אנו יכולים לקחת את הבנתנו צעד אחד קדימה על ידי ביטוי כוחן של המסיכות במונחים אנושיים יותר.
-      מסיכות מצילות חיים על ידי הפחתת הסיכוי להדבקה, אשר, בתורו, מקטין את מימדי המגיפה.
-    </p>
+        <p>
+          המסיכה הראשונה מפחיתה את סיכוי ההדבקה ב- 50%, והמסיכה השנייה מפחיתה את סיכוי ההדבקה ב- 50% נוספים.
+          כלומר כאשר <i>שני</i> אנשים עוטים מסיכה, הסיכוי להדבקה הוא חצי מחצי, כלומר רבע (לעומת המצב בו שניהם לא עוטים מסיכה).
+          במילים אחרות, הסיכוי להידבק פוחת ב- 75%.
+        </p>
 
-    <p>
-      ככל שיותר אנשים עוטים מסיכות, R0 קטן.
-      ככל ש- R0 קטן, כך קטן מספר האנשים הנדבקים.
-      כך שבמקום לחשוב על R0 כמספר, אנו יכולים לחשוב על האחוז באוכלוסיה שנדבק במחלה.
-    </p>
+      </div>
 
-    <p>
-      על ידי שימוש במודל מתמטי נרחב של מגיפות המכונה <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology"> מודל SIR </a>, אנו יכולים לשייך את R0 לאחוז האנשים אשר בסופו של דבר יידבק
-      (למידע נוסף על מודלי SIR, מומלץ לצפות ב <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">סרטון הזה</a>).
-    </p>
-    
-    <p>אף על פי שמודל זה מופשט ביותר (למשל, הוא מניח עירבוב אקראי בין אנשים וללא סגרים) הוא מציע לנו הערכה טובה של העלות האנושית לאי עטיית מסיכות.</p>
+      <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="אדם מדבק" susceptibleperson="אדם פגיע">
+        <span><span class="yellow">אופן הדבקה 4:</span>כאשר שני האנשים עוטים מסיכה בעלת יעילות של 50%, שיעור העברת החיידקים צונח ב- 75%</span>
+      </anim-with-caption>
+      
+      <div class="container">
 
-  </div>
+        <p>
+          זה עשוי להפתיע שמסיכה בעלת יעילות של 50% יכולה להפחית את סיכוי ההדבקה ב- 75%.
+          זה אפשרי כאשר שני האנשים עוטים מסיכה מכיוון שסיכוי ההדבקה קטן ב- 50% פעמיים.
+          ההגנה <b>הכפולה</b> הזו הופכת עטיית מסיכות ליעילה יותר מכפי שניתן לצפות אינטואיטיבית.
+        </p>
 
-  <div class="graphic">
-    <div class="graphic-container">
+        <p>להלן ארבעת הדרכים בהן מחלה הנישאת באוויר מועברת מאדם לאדם:</p>
 
-      <label class="row half bigsplash">
-        <div>R0: <span class="dotted">{{R0}}</span></div>
-        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
-      </label>
+      </div>
 
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
-        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
+      <div class="graphic">
+        <div class="graphic-container">
 
-      <label class="row half bigsplash">
-        <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
-        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
-      </label>
+          <div class="row big-small">
 
-      <graph :traces="graph3Traces(
-        'נדבקים %'
-        )" :layout="graph3Layout(
-        'כיצד מסיכות מקטינות אחוזי ההדבקה',
-        'אחוז האנשים העוטים מסיכה',
-        'אחוז האנשים שיידבקו'
-      )" :config="config"></graph>
+            <div class="column onehundredpx">
+              <div class="center">
+                <span >דרך ההעברה</span>
+              </div>
+              <anim :mask1="false" :mask2="false"></anim>
+              <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+              <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+              <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+            </div>
+
+            <div class="column onehundredpx">
+              <div class="center">
+                <span >הפחתה בסיכוי הידבקות</span>
+              </div>
+              <div class="center"><span class="red">0%</span></div>
+              <div class="center"><span class="orange">50%</span></div>
+              <div class="center"><span class="orange">50%</span></div>
+              <div class="center"><span class="yellow">75%</span></div>
+            </div>
+
+          </div>
+
+          <div class="caption">
+            <span>ארבעת הדרכים בהן וירוס הקורונה יכול לעבור מאדם לאדם בהינתן מסיכה עם 50% יעילות.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <h2>מאנשים לאוכלוסיה</h2>
+
+        <p>
+          עד עתה בחנו את העברת המחלה בין שני אנשים.
+          אין ניתן לבצע את קפיצת המדרגה ולהבין כיצד המחלה מופצת <i>בכלל האוכלוסיה</i>?
+        </p> 
+
+        <p>במקרי הקצה זה פשוט.</p> 
+
+        <p>
+          לדוגמא, אם <b>אף אחד</b> לא עוטה מסיכה, אז כל פעם ששני אנשים נפגשים, הסיכוי ש <span class="red">שניהם לא עוטים מסיכה</span> הוא 100%.
+        </p>
+
+        <network :maskusage="0"></network>
+
+        <p>
+          כך שנצטרך לקחת בחשבון רק את אופן ההדבקה <span class="red">מספר 1</span> ולא תהיה <span class="red">כל הפחתה</span> בסיכוי להדבקה.
+        </p>
+
+        <p>
+          במקרה הקיצון השני, בו <b>כולם</b> עוטים מסיכה, מובטח לנו שהסיכוי לכך ש <span class="yellow">שניהם עוטים מסיכה</span> הוא 100%.
+        </p>
+
+        <network :maskusage="1"></network>
+
+        <p>
+          במקרה הזה עלינו לקחת בחשבון רק את<span class="yellow">אופן ההדבקה האחרון</span>. בהנחה שהמסיכות שלנו בעלות יעילות של 50% לשני הכיוונים (שאיפה ונשיפה), נהנה מצניחה של <span class="yellow">75%</span> בהעברת המחלה.
+        </p>
+
+        <p>
+          לסיכום, כאשר <i>כולם</i> עוטים מסיכה (או כאשר כולם <i>לא</i>), מאוד פשוט לחשב את הצניחה בשיעור העברת המחלה באוכלוסיה מכיוון שיש לקחת בחשבון רק אופן הדבקה בודד.
+        </p>
+
+        <p>
+          אך במציאות, חלק מהאנשים עוטים מסיכה וחלק לא.
+          כלומר הוירוס יכול להתפשט ע"י שילוב של כל ארבעת האופנים.
+          השכיחות של כל אופן תלוייה במספר האנשים העוטים מסיכה.
+        </p>
+
+        <label class="row half bigsplash">
+          <div>אחוז השימוש במסיכה <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+          <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+        </label>
+
+        <network :maskusage="pnetwork"></network>
+
+        <p>
+          לדוגמא, 
+          <b>אם 50% מהאנשים עוטים מסיכה</b>,
+          אז בכל מפגש בין שני אנשים שרירותיים, הסיכוי ש
+          <span class="yellow">שני האנשים עוטים מסיכה</span>
+          הוא 50% כפול 50%, כלומר 25%.
+          ניתן לחשב באופן דומה את האחוזים עבור שלושת אופני ההדבקה האחרים.
+
+        </p>
+
+        <p>
+          כאשר בדיוק חצי מהאוכלוסיה עוטה מסיכה לכל אופני ההדבקה שכיחות זהה להתקיים (נסו לשכנע את עצמכם מדוע).
+        </p>
+
+      </div>
+
+      <div class="graphic">
+        <div class="graphic-container">
+
+          <div class="row big-small-small">
+
+            <div class="column onehundredpx">
+              <div class="center">דרך ההעברה</div>
+              <anim :mask1="false" :mask2="false"></anim>
+              <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+              <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+              <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+            </div>
+
+            <div class="column onehundredpx">
+              <div class="center">הפחתה בסיכוי הידבקות</div>
+              <div class="center"><span class="red">0%</span></div>
+              <div class="center"><span class="orange">50%</span></div>
+              <div class="center"><span class="orange">50%</span></div>
+              <div class="center"><span class="yellow">75%</span></div>
+            </div>
+
+            <div class="column onehundredpx">
+              <div class="center">סיכוי לדרך זו</div>
+              <div class="center">25%</div>
+              <div class="center">25%</div>
+              <div class="center">25%</div>
+              <div class="center">25%</div>
+            </div>
+
+          </div>
+
+          <div class="caption">
+            ארבעת הדרכים בהן וירוס הקורונה יכול לעבור מאדם לאדם בהנחה ש- 50% מהאנשים עוטים מסיכות בעלות יעילות של 50%
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="container">
+
+        <p>
+          עכשיו ניתן לחשב את <b>שיעור הפחתת העברת המחלה הממוצע באוכלוסיה</b>.
+          מכיוון שהסכמנו שלכל אופן הדבקה שכיחות זהה, מדובר פשוט בממוצע של <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> ו- <span class="yellow">75%</span>, שהוא 43.75%.
+        </p>
+
+        <p>
+          אנשים ש <i>לא</i> עוטים מסיכה נדבקים דרך שני אופני ההדבקה הראשונים, השכיחים באותה המידה כאשר מחצית מהאוכלוסיה עוטה מסיכה.
+          כלומר שיעור ההפחתה בהעברת המחלה עבור אלו שלא עוטים מסיכה הוא הממוצע של <span class="red">0%</span> ו- <span class="orange">50%</span>, שהוא 25%.
+        </p>
+
+        <p>
+          לעומת זאת, אנשים <i>העוטים</i> מסיכה נדבקים דרך שני אופני ההדבקה האחרונים.
+          כלומר שיעור ההפחתה בהעברת המחלה עבור אלו שעוטים מסיכה הוא הממוצע של <span class="orange">50%</span> ו- <span class="yellow">75%</span>, שהוא 62.5%.
+        </p>
+
+      </div>
+
+      <div class="graphic">
+        <div class="graphic-container">
+          <div class="column">
+            <div class="splash">שיעור הפחתה ממוצע בהעברת המחלה = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+            <div class="splash">שיעור הפחתה בהעברת המחלה עבור <b>לא עוטי מסיכה</b> = 25%</div>
+            <div class="splash">שיעור הפחתה בהעברת המחלה עבור <b>עוטי מסיכה</b> = 62.5%</div>
+          </div>
+          <div class="caption">
+            (בהנחה ש- 50% מהאנשים עוטים מסיכות בעלות יעילות 50%)
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+
+        <p>
+          כך שגם אנשים שלא עוטים מסיכה מפיקים תועלת מהמסיכות, שכן האוויר שהם נושמים סונן ע"י מסיכות של <i>אנשים אחרים</i>.
+          יחד עם זאת, אנשים העוטים מסיכות מפיקים הרבה יותר תועלת שכן הם מוגנים גם ע"י המסיכות שלהם עצמם.
+        </p>
+
+        <p>מכיוון שהאוכלוסיה מורכבת גם מאנשים שלא עוטים מסיכה וגם מכאלו שכן, התועלת הממוצעת היא איפשהו בין התועלות הנפרדות של שתי קבוצות אלו</p>
+
+        <p>
+          ניתן לשנות את הערכים השונים ולראות כיצד כל אחד משפיע על אחוזי ההדבקה.
+          <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">לחצו לקבלת הסבר על המודל המתמטי</a>
+        </p>
+
+      </div>
+
+      <div class="graphic">
+        <div class="graphic-container">
+
+          <label class="row half bigsplash">
+            <div>אחוז השימוש במסיכה: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+            <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+            <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+            <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <div class="row big-small-small padabove">
+
+            <div class="column onehundredpx">
+              <div class="center">דרך ההעברה</div>
+              <anim :mask1="false" :mask2="false"></anim>
+              <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+              <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+              <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+            </div>
+
+            <div class="column onehundredpx">
+              <div class="center">הפחתה בסיכוי הידבקות</div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+            </div>
+
+            <div class="column onehundredpx">
+              <div class="center">סיכוי לדרך זו</div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+              <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+            </div>
+
+          </div>
+
+
+          <div class="row half bigsplash">
+            <span>שיעור הפחתה ממוצע בהעברת המחלה: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+          </div>
+
+          <div class="row half bigsplash">
+            <span>שיעור הפחתה בהעברת המחלה עבור לא עוטי מסיכה: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+          </div>
+
+          <div class="row half bigsplash">
+            <span>שיעור הפחתה בהעברת המחלה עבור עוטי מסיכה: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="container">
+
+        <p>
+          מה קורה לשיעור ההדבקה אם 60% מהאנשים עוטים מסיכות בעלות 60% יעילות?
+          או אם 90% עוטים מסיכה בעלת 50% יעילות?
+          או אם 50% עוטים מסיכה בעלת 90% יעילות?
+          האנימציה האינטרקטיבית למעלה מאפשרת לכם לגלות בעצמכם.
+        </p>
+
+        <p>המסקנה: <b>ככל שיותר אנשים עוטים מסיכות, כולנו בטוחים יותר.</b></p>
+
+        <p>
+          מסיכות מספקות הגנה לאנשים העוטים אותן ע"י סינון האוויר הנשאף,
+          והגנה לכולם ע"י סינון או הפניית האוויר הננשף, כולל אנשים ש<i>לא</i> עוטים אותן.
+        </p>
+
+        <aside>
+          <span @click="expandaside1 = true;">מה לגבי מסיכות שלא מסננות את האוויר הננשף?
+            <span v-if="!expandaside1"> (לחצו לקריאה)</span>
+          </span>
+
+          <span v-if="expandaside1">
+            בחלק ממסיכות ה- N95 <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread"> ישנם שסתומים</a> המאפשרים לאוויר לעבור דרכם ללא סינון.
+            ה- CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">ממליץ נגד</a> עטיית מסיכות אלו בציבור שכן הן מהוות סכנה לאנשים אחרים.
+            ניתן לראות כיצד באנימציה האינטרקטיבית למעלה.
+            <br><br>
+            תחילה הגדירו ערך גבוה עבור אחוזי היעילות בנשיפה ובשאיפה. 
+            התחילו להוריד את אחוזי היעילות בנשיפה ושימו לב כיצד אחוזי העברת המחלה עולים, בעיקר עבור אנשים שלא עוטים מסיכה.
+          </span>
+        </aside>
+
+
+        <p>
+          למעשה, במציאות מסיכות יעילות יותר לעומת מה שהמספרים הללו מציגים.
+        </p>
+
+        <h2>כיצד לבלום מגיפה</h2>
+
+        <p>
+          ניתן לכבות להבה ע"י חניקתה מחמצן.
+          אך אין צורך להיפטר מכל החמצן, אלא רק מהכמות הדרושה לאש כדי להתקיים.
+          כך גם עם מגיפה: אין צורך לבלום את ההעברת המחלה ב- 100%,
+          אלא מספיק להוריד את קצב ההדבקה לכזה שיעצור את התפשטותה.
+        </p>
+
+        <p>
+          באפידומולוגיה קיים מונח הנקרא R0,
+          המייצג את <a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%94%D7%94%D7%AA%D7%A8%D7%91%D7%95%D7%AA_%D7%94%D7%91%D7%A1%D7%99%D7%A1%D7%99">מספר האנשים שאדם מדבק מסוגל להדביק</a> באוכלוסייה ללא חסינות קודמת למחלה.
+        </p> 
+
+        <p>כאשר R0 גדול מ- 1, המחלה מתפשטת בקצב אקספוננציאלי עד שמספיק אנשים מתחסנים, או עד שמספיק אנשים נדבקים ומפתחים עמידות למחלה.</p>
+
+        <p>
+          אבל, כפי ש- Ed Yong כותב ב- "the Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 איננו גורל"</a>.
+          R0 הינו מכפלה של שני: המספר הממוצע של אנשים אותם אדם מדבק פוגש, והסיכוי להדבקה בכל מפגש.
+        </p>
+
+      </div>
+
+      <div class="graphic">
+          <div class="splash">R0 = <span class="dashed">המספר הממוצע של אנשים אותם אדם מדבק פוגש</span> <br>⨉ <span class="dotted">הסיכוי להדבקה בכל מפגש</span></div>
+      </div>
+      
+      <div class="container">
+
+        <p>
+          ריחוק חברתי וסגרים מקטינים את <span class="dashed">המספר הראשון</span>.
+          ומסיכות מפחיתות את <span class="dotted">המספר השני</span>.
+          מטרת כל האסטרטגיות הנ"ל הן למגר את המגיפה ע"י הקטנת R0 לערך הנמוך מ- 1.
+        </p>
+
+        <p>
+          כעת ביכולתינו לבטא את השפעתן של מסיכות על R0.
+        </p>
+
+        <p>
+          ניתן לשנות את ערך R0 (שעבור וירוס הקורונה הוא בין 2 ל- 3 ללא שימוש באסטרטגיות הנ"ל).
+          ניתן לראות כיצד מסיכות מסייעות בהקטנת R0 ע"י שינוי אחוזי יעילותן.    
+        </p>
+
+      </div>
+
+      <div class="graphic">
+        <div class="graphic-container">
+
+          <label class="row half bigsplash">
+            <div>R0: <span class="dotted">{{R0}}</span></div>
+            <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+            <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+            <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <graph :traces="graph2Traces" :layout="graph2Layout(
+            'R0 כיצד מסיכות מקטינות את',
+            'אחוז האנשים העוטים מסיכה',
+            'מספר האנשים הנדבקים על-ידי אדם מדבק אחד',
+            'מגיפה תחת שליטה',
+            'מגיפה שיצאה משליטה'
+          )" :config="config"></graph>
+
+        </div>
+      </div>
+
+      <div class="container">
+
+        <p>
+          על מנת לבלום את התפשטות הקורונה עלינו לשמור על R0 מתחת ל- 1.
+          כשזה יקרה, אדם מדבק ידביק בממוצע פחות מאדם אחד.
+        </p>
+
+        <p>
+          אז, כמה אנשים צריכים לעטות מסיכות בעלות יעילות של 50% על מנת שזה יקרה?
+          מה עם המסיכות היו בעלות יעילות של 75%?
+          או של 95%?
+          הגרף האינטרקטיבי למעלה מאפשר לשערך תשובות לשאלות אלה.
+        </p>
+
+        <aside>
+
+          <span @click="expandaside2 = true;">הסתייגות חשובה: אנשים לרוב לא נוטים להתערות באופן שרירותי. 
+            <span v-if="!expandaside2"> (לחצו לקריאה)</span>
+          </span>
+          
+          <span v-if="expandaside2">
+            אנשים העוטים מסיכות עשויים להיות בעלי סיכוי גבוה יותר לקיים אינטראקציה עם עוטי מסיכות אחרים, ופחות עם אנשים שאינם עוטי מסיכות.
+            <br/><br/>
+            באופן דומה, אנשים שלא עוטים מסיכות עשויים לחיות בריכוזים או איזורים שבהם השימוש במסיכות נמוך מהממוצע.
+            נטייה זו לקיים אינטראקציה עם אחרים בעלי העדפות דומות <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> מפחיתה את כוחן של מסיכות </a> מכיוון ש <a href = " https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb"> אנשים שלא עוטים מסיכות לא מפיקים תועלת מעוטי המסיכות הסמוכים </a>.
+            <br/><br/>
+            כפי ש <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> דייוויד פישמן, איימי גריר ואשלי טויטה </a> כותבים בניתוחם, "ההשפעה של מסיכות וכיסויי פנים אחרים בהפחתת העברת וירוס הקורונה עשויים להיות הגדולים ביותר אם תשומת לב תבטיח זמינות לאוכלוסיות מוחלשות. "
+          </span>
+        </aside>
+
+        <h2>המחיר האנושי</h2>
+
+        <p>
+          אנו יכולים לקחת את הבנתנו צעד אחד קדימה על ידי ביטוי כוחן של המסיכות במונחים אנושיים יותר.
+          מסיכות מצילות חיים על ידי הפחתת הסיכוי להדבקה, אשר, בתורו, מקטין את מימדי המגיפה.
+        </p>
+
+        <p>
+          ככל שיותר אנשים עוטים מסיכות, R0 קטן.
+          ככל ש- R0 קטן, כך קטן מספר האנשים הנדבקים.
+          כך שבמקום לחשוב על R0 כמספר, אנו יכולים לחשוב על האחוז באוכלוסיה שנדבק במחלה.
+        </p>
+
+        <p>
+          על ידי שימוש במודל מתמטי נרחב של מגיפות המכונה <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology"> מודל SIR </a>, אנו יכולים לשייך את R0 לאחוז האנשים אשר בסופו של דבר יידבק
+          (למידע נוסף על מודלי SIR, מומלץ לצפות ב <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">סרטון הזה</a>).
+        </p>
+        
+        <p>אף על פי שמודל זה מופשט ביותר (למשל, הוא מניח עירבוב אקראי בין אנשים וללא סגרים) הוא מציע לנו הערכה טובה של העלות האנושית לאי עטיית מסיכות.</p>
+
+      </div>
+
+      <div class="graphic">
+        <div class="graphic-container">
+
+          <label class="row half bigsplash">
+            <div>R0: <span class="dotted">{{R0}}</span></div>
+            <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בנשיפה: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+            <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <label class="row half bigsplash">
+            <div>אחוז יעילות המסיכה בשאיפה: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+            <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+          </label>
+
+          <graph :traces="graph3Traces(
+            'נדבקים %'
+            )" :layout="graph3Layout(
+            'כיצד מסיכות מקטינות אחוזי ההדבקה',
+            'אחוז האנשים העוטים מסיכה',
+            'אחוז האנשים שיידבקו'
+          )" :config="config"></graph>
+
+        </div>
+      </div>
+
+      <div class="container">
+
+        <p>
+          הגרף הנ"ל מציג כיצד מסיכות משפיעות על גודלה של מגיפה.
+          <b>מספר ההדבקות צונח ככל שיותר אנשים עוטים מסיכות.</b>
+        </p>
+
+        <p>
+          כאשר אנשים ספורים עוטים מסיכה אנו נמצאים בראש העקומה, ורוב האנשים יידבקו.
+          אבל כל צעד ימינה מוביל למורד העקומה.
+          כלומר אפילו עטיית מסיכות בעלות יעילות חלקית הנעטות חלק מהזמן (=ע"י חלק מן האנשים) מסוגלת להאט את התפשטות הקורונה.
+        </p>
+
+        <p>
+          על מנת לבלום לגמרי את ההתפשטות אנו צריכים להגיע לתחתית העקומה.
+          אם מספיק אנשים יעטו מסיכה נוכל להגיע אל תחתית העקומה, כלומר סיכויי הדבקה אפסיים.
+        </p>
+
+        <p>
+          כמה אנשים צריכים לעטות מסיכה על מנת לבלום את המגיפה? התשובה תלוייה באחוזי יעילות המסיכות.
+        </p>
+
+        <p>
+          ב"משחק" עם הגרף האינטרקטיבי למעלה, ניתן לראות שבהינתן מסיכות בעלות 50% יעילות, יש צורך לעטיית מסיכות ע"י ~75% מהאוכלוסיה.
+          אך אם המסיכות היו בעלות 75% יעילות, היינו צריכים ש"רק" 50% מהאוכלוסיה יעטו אותן.
+        </p>
+
+        <p>
+          <b>ככל שהמסיכות יעילות יותר כך ניתן לרדת במורד העקומה מהר יותר.</b>
+          זו הסיבה שחשוב לעטות מסיכות ש<a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">אוטמות היטב את הפה <b>ו</b>האף</a>, ושעשויות מחומר מסנן יעיל.
+        </p>
+        
+        <p>
+          כולנו רוציע להגיע אל תחתית העקומה מהר יותר ולעצור את התפשטות הקורונה.
+          אך לא ניתן לעשות זאת לבד.
+          על אדם יכול לתרום צעד קטן לדרכינו מטה.
+        </p>
+
+        <p>עם זאת, כאשר אנשים רבים עושים את הצעד הקטן הזה, יחד, אנו לוקחים קפיצה ענקית במורד העקומה.</p>
+
+        <p>יחד, אנו מסוגלים להגיע אל תחתית העקומה</p>
+        
+        <p>יחד, אנו מסוגלים לבלום את הקורונה</p>
+
+      </div>
+
+      <div class="ending">
+        <p5 src="js/sketch0.js"></p5>
+      </div>
 
     </div>
+
+    <div class="page footer">
+      <div class="container">
+        <h2>קריטים ומקורות קריאה נוספים</h2>
+
+        <p>נכתב ע"י <a href="https://twitter.com/aatishb">Aatish Bhatia</a> בשיתוף פעולה עם <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+
+        <p>לצפייה <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">בסרטון הנלווה (אנגלית)</a> המכיל עזרים ויזואלים נוספים. הסרטון נתמך ע"י <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. <a href="https://aatishb.com/maskmath/calculator.html">המחשבון המוצג בסרטון</a>.</p>
+
+        <p>
+          תודות ל: <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, ו<a href="https://this-vijay.github.io/">Vijay Ravikumar</a> על הפידבק שסיפקו לטיוטות של מאמר זה.
+        </p>
+
+        <p>
+          אם אהבתם את מאמר זה והינכם מעוניינים בתכנים דומים נוספים בעתיד, <b><a href="https://www.patreon.com/aatishb">תמכו בי באתר Patreon</a></b>.
+        </p>
+
+        <p>
+          מקורות מידע נוספים:<br>
+          <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">1</a><br><a href="https://www.maskfaq.com/test-results">2</a><br><a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">3</a>
+        </p>
+
+        <p>
+          לחובבי האלגברה, <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">המודל המתמטי</a> עם הסברים מפורטים.
+          הגרפים במאמר זה מרחיבים את עבודתם של <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a>.
+        </p>
+
+        <p>
+          עד כמה שידוע, המודל הדו-כיווני ליעילותן של מסיכות פורסם לראשונה ע"י <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (טבלה S3 ואיור S4). 
+          צויין ע"י Howard et al <a href="https://www.preprints.org/manuscript/202004.0203/v3">במאמר זה</a> ו<a href="https://www.fast.ai/2020/04/13/masks-summary/">ובמאמר זה</a>, ופורסם שוב ע"י <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> ב"the Atlantic", וע"י <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> ב"New Yorker", שכתב, <i>"ככל שהמסיכה יעילה יותר, כך ההשפעה תהיה גדולה יותר
+            ."</i>
+        </p>
+
+        <p>
+          טקסט זה מפורסם תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. קוד המקור זמין <a href="https://github.com/aatishb/maskmath">ב Github</a>. האימוג'י נוצרו ע"י <a href="https://twemoji.twitter.com/">Twitter</a> ושונו על מנת לכלול מסיכה מותאמת אישית.
+        </p>
+
+        <p>
+          תודה על הקריאה ושמרו על עצמכם! 😷
+        </p>
+
+      </div>
+    </div>
   </div>
-
-  <div class="container">
-
-    <p>
-      הגרף הנ"ל מציג כיצד מסיכות משפיעות על גודלה של מגיפה.
-      <b>מספר ההדבקות צונח ככל שיותר אנשים עוטים מסיכות.</b>
-    </p>
-
-    <p>
-      כאשר אנשים ספורים עוטים מסיכה אנו נמצאים בראש העקומה, ורוב האנשים יידבקו.
-      אבל כל צעד ימינה מוביל למורד העקומה.
-      כלומר אפילו עטיית מסיכות בעלות יעילות חלקית הנעטות חלק מהזמן (=ע"י חלק מן האנשים) מסוגלת להאט את התפשטות הקורונה.
-    </p>
-
-    <p>
-      על מנת לבלום לגמרי את ההתפשטות אנו צריכים להגיע לתחתית העקומה.
-      אם מספיק אנשים יעטו מסיכה נוכל להגיע אל תחתית העקומה, כלומר סיכויי הדבקה אפסיים.
-    </p>
-
-    <p>
-      כמה אנשים צריכים לעטות מסיכה על מנת לבלום את המגיפה? התשובה תלוייה באחוזי יעילות המסיכות.
-    </p>
-
-    <p>
-      ב"משחק" עם הגרף האינטרקטיבי למעלה, ניתן לראות שבהינתן מסיכות בעלות 50% יעילות, יש צורך לעטיית מסיכות ע"י ~75% מהאוכלוסיה.
-      אך אם המסיכות היו בעלות 75% יעילות, היינו צריכים ש"רק" 50% מהאוכלוסיה יעטו אותן.
-    </p>
-
-    <p>
-      <b>ככל שהמסיכות יעילות יותר כך ניתן לרדת במורד העקומה מהר יותר.</b>
-      זו הסיבה שחשוב לעטות מסיכות ש<a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">אוטמות היטב את הפה <b>ו</b>האף</a>, ושעשויות מחומר מסנן יעיל.
-    </p>
-    
-    <p>
-      כולנו רוציע להגיע אל תחתית העקומה מהר יותר ולעצור את התפשטות הקורונה.
-      אך לא ניתן לעשות זאת לבד.
-      על אדם יכול לתרום צעד קטן לדרכינו מטה.
-    </p>
-
-    <p>עם זאת, כאשר אנשים רבים עושים את הצעד הקטן הזה, יחד, אנו לוקחים קפיצה ענקית במורד העקומה.</p>
-
-    <p>יחד, אנו מסוגלים להגיע אל תחתית העקומה</p>
-    
-    <p>יחד, אנו מסוגלים לבלום את הקורונה</p>
-
-  </div>
-
-  <div class="ending">
-    <p5 src="js/sketch0.js"></p5>
-  </div>
-
-</div>
-
-<div class="page footer">
-  <div class="container">
-    <h2>קריטים ומקורות קריאה נוספים</h2>
-
-    <p>נכתב ע"י <a href="https://twitter.com/aatishb">Aatish Bhatia</a> בשיתוף פעולה עם <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
-
-    <p>לצפייה <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">בסרטון הנלווה (אנגלית)</a> המכיל עזרים ויזואלים נוספים. הסרטון נתמך ע"י <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. <a href="https://aatishb.com/maskmath/calculator.html">המחשבון המוצג בסרטון</a>.</p>
-
-    <p>
-      תודות ל: <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, ו<a href="https://this-vijay.github.io/">Vijay Ravikumar</a> על הפידבק שסיפקו לטיוטות של מאמר זה.
-    </p>
-
-    <p>
-      אם אהבתם את מאמר זה והינכם מעוניינים בתכנים דומים נוספים בעתיד, <b><a href="https://www.patreon.com/aatishb">תמכו בי באתר Patreon</a></b>.
-    </p>
-
-    <p>
-      מקורות מידע נוספים:<br>
-      <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">1</a><br><a href="https://www.maskfaq.com/test-results">2</a><br><a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">3</a>
-    </p>
-
-    <p>
-      לחובבי האלגברה, <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">המודל המתמטי</a> עם הסברים מפורטים.
-      הגרפים במאמר זה מרחיבים את עבודתם של <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a>.
-    </p>
-
-    <p>
-      עד כמה שידוע, המודל הדו-כיווני ליעילותן של מסיכות פורסם לראשונה ע"י <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (טבלה S3 ואיור S4). 
-      צויין ע"י Howard et al <a href="https://www.preprints.org/manuscript/202004.0203/v3">במאמר זה</a> ו<a href="https://www.fast.ai/2020/04/13/masks-summary/">ובמאמר זה</a>, ופורסם שוב ע"י <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> ב"the Atlantic", וע"י <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> ב"New Yorker", שכתב, <i>"ככל שהמסיכה יעילה יותר, כך ההשפעה תהיה גדולה יותר
-        ."</i>
-    </p>
-
-    <p>
-      טקסט זה מפורסם תחת רישיון <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. קוד המקור זמין <a href="https://github.com/aatishb/maskmath">ב Github</a>. האימוג'י נוצרו ע"י <a href="https://twemoji.twitter.com/">Twitter</a> ושונו על מנת לכלול מסיכה מותאמת אישית.
-    </p>
-
-    <p>
-      תודה על הקריאה ושמרו על עצמכם! 😷
-    </p>
-
-  </div>
-</div>
-
 <script src="libraries/plotly-basic.min.js"></script>
 <script src="libraries/vue.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
