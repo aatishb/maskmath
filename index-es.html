@@ -147,7 +147,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Ruta de transmisión 3: </span> Cuando la persona susceptible usa una mascarilla con un 50% de efectividad, la transmisión de la enfermedad disminuye un 50%. </anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptibe"><span class="orange">Ruta de transmisión 3: </span> Cuando la persona susceptible usa una mascarilla con un 50% de efectividad, la transmisión de la enfermedad disminuye un 50%. </anim-with-caption>
   
   <div class="container">
 
@@ -161,7 +161,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Ruta de transmisión 4: </span> Cuando ambas personas usan mascarillas con el 50% de efectividad, la transmisión de la enfermedad disminuye en un 75%. </anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptibe"><span class="yellow">Ruta de transmisión 4: </span> Cuando ambas personas usan mascarillas con el 50% de efectividad, la transmisión de la enfermedad disminuye en un 75%. </anim-with-caption>
   
   <div class="container">
 
@@ -523,7 +523,13 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Cómo las mascarillas reducen R0',
+        'Porcentaje de personas que usan mascarilla',
+        '#personas que una persona contagiosa infecta (R0)',
+        'Epidemia bajo control',
+        'Epidemia fuera de control'
+      )" :config="config"></graph>
 
     </div>
   </div>
@@ -602,7 +608,13 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
+        'Cómo las mascarillas reducen infecciones',
+        'Porcentaje de personas que usan mascarilla',
+        'Porcentaje de personas que se infectarán'
+      )" :config="config"></graph>
 
     </div>
   </div>
