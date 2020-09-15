@@ -1,0 +1,80 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "aatishb",
+      "name": "Aatish Bhatia",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1878638?v=4",
+      "profile": "https://aatishb.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "reichhen",
+      "name": "Henry",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3393273?v=4",
+      "profile": "https://github.com/reichhen",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "DeepSpace2",
+      "name": "Adi Vaknin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6841988?v=4",
+      "profile": "https://github.com/DeepSpace2",
+      "contributions": [
+        "translation",
+        "code"
+      ]
+    },
+    {
+      "login": "nlehuen",
+      "name": "Nicolas Lehuen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/69256?v=4",
+      "profile": "http://nicolas.lehuen.com/",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "albannabla",
+      "name": "Alban nablA",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/52819459?v=4",
+      "profile": "https://github.com/albannabla",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "gnegrelligarcia",
+      "name": "gnegrelligarcia",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/71154843?v=4",
+      "profile": "https://github.com/gnegrelligarcia",
+      "contributions": [
+        "translation",
+        "bug"
+      ]
+    },
+    {
+      "login": "ulkar-aghayeva",
+      "name": "Ulkar Aghayeva",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11365706?v=4",
+      "profile": "https://github.com/ulkar-aghayeva",
+      "contributions": [
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "maskmath",
+  "projectOwner": "aatishb",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -64,19 +64,19 @@ Vue.component('anim', {
 Vue.component('anim-with-caption', {
 
   template:   `
-  <div class="graphic">
+  <div class="graphic" dir="ltr">
     <div class="graphic-container">
 
       <div class="row small-big-small twohundredpx">
 
         <div class="center">
-            <div class="label">Contagious<br/>Person</div>
+            <div class="label">{{ contagiousperson }}</div>
         </div>
 
         <anim :mask1="mask1" :mask2="mask2" :eout="eout" :ein="ein"></anim>
 
         <div class="center">
-            <div class="label">Susceptible<br/>Person</div>
+            <div class="label">{{ susceptibleperson }}</div>
         </div>
 
       </div>
@@ -88,7 +88,7 @@ Vue.component('anim-with-caption', {
     </div>
   </div>`,
 
-  props: ['mask1', 'mask2', 'eout', 'ein']
+  props: ['mask1', 'mask2', 'eout', 'ein', 'contagiousperson', 'susceptibleperson']
 
 })
 
@@ -230,6 +230,125 @@ let app = new Vue({
       return this.R0 * (1 - this.ein * p) * (1 - this.eout * p);
     },
 
+    graph2Layout(title, xaxistitle, yaxistitle, annotation1, annotation2) {
+      return {
+        title:'<b>' + title + '</b>',
+        showlegend: false,
+        xaxis: {
+          title: xaxistitle,
+          tickformat: ',.0%',
+          color: this.graphTextColor,
+          fixedrange: true
+        },
+        yaxis: {
+          title: yaxistitle,
+          range: [0, 3],
+          color: this.graphTextColor,
+          hoverformat: '.2f',
+          fixedrange: true
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 0.9 * this.fontSize
+        },
+        annotations: [
+          {
+            x: 0.01,
+            y: 0.95,
+            xref: 'x',
+            yref: 'y',
+            text: annotation1,
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'lightgreen',
+              size: 0.9 * this.fontSize
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'top',
+            opacity: 1
+          },
+          {
+            x: 0.01,
+            y: 1.05,
+            xref: 'x',
+            yref: 'y',
+            text: annotation2,
+            showarrow: false,
+            font: {
+              family: 'Open Sans, sans-serif',
+              color: 'salmon',
+              size: 0.9 * this.fontSize
+            },
+            align: 'left',
+            xanchor: 'left',
+            yanchor: 'bottom',
+            opacity: 1
+          }
+        ]
+
+      }
+    },
+
+    graph3Layout(title, xaxistitle, yaxistitle) {
+      return {
+        title:'<b>' + title + '</b>',
+        showlegend: false,
+        xaxis: {
+          title: xaxistitle,
+          tickformat: ',.0%',
+          color: this.graphTextColor,
+          fixedrange: true
+        },
+        yaxis: {
+          title: yaxistitle,
+          range: [0, 1],
+          color: this.graphTextColor,
+          tickformat: '%',
+          fixedrange: true
+        },
+        paper_bgcolor: this.graphBackgroundColor,
+        plot_bgcolor: this.graphBackgroundColor,
+        font: {
+          family: 'Open Sans, sans-serif',
+          color: this.graphTextColor,
+          size: 0.9 * this.fontSize
+        },
+      }
+    },
+
+    graph3Traces(percentInfected) {
+      return [
+        {
+          name: percentInfected,
+          x: this.indexArray,
+          y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tozeroy',
+          fillcolor: 'rgba(255, 50, 50, 0.2)',
+          line: {
+            color: this.graphTraceColor,
+            width: 4
+          }
+        },
+        {
+          x: [0,1],
+          y: [1,1],
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tonexty',
+          fillcolor: 'rgba(50, 255, 50, 0.2)',
+          line: {color: "transparent"},
+          hoverinfo: 'none'
+        }
+      ]
+    },
+
   },
 
   computed: {
@@ -278,124 +397,7 @@ let app = new Vue({
       ]
     },
 
-    graph3Traces() {
-      return [
-        {
-          name: '% Infected',
-          x: this.indexArray,
-          y: this.indexArray.map(p => Math.max(1 + gsl_sf_lambert_W0(- this.R0withmask(p) * Math.exp(-this.R0withmask(p)))/this.R0withmask(p), 0) ),
-          type: 'scatter',
-          mode: 'lines',
-          fill: 'tozeroy',
-          fillcolor: 'rgba(255, 50, 50, 0.2)',
-          line: {
-            color: this.graphTraceColor,
-            width: 4
-          }
-        },
-        {
-          x: [0,1],
-          y: [1,1],
-          type: 'scatter',
-          mode: 'lines',
-          fill: 'tonexty',
-          fillcolor: 'rgba(50, 255, 50, 0.2)',
-          line: {color: "transparent"},
-          hoverinfo: 'none'
-        }
-      ]
-    },
-
-    graph2Layout() {
-      return {
-        title:'<b>How Masks Reduce R0</b>',
-        showlegend: false,
-        xaxis: {
-          title: 'Percentage of People Who Wear Masks',
-          tickformat: ',.0%',
-          color: this.graphTextColor,
-          fixedrange: true
-        },
-        yaxis: {
-          title: '# People a Contagious Person Infects (R0)',
-          range: [0, 3],
-          color: this.graphTextColor,
-          hoverformat: '.2f',
-          fixedrange: true
-        },
-        paper_bgcolor: this.graphBackgroundColor,
-        plot_bgcolor: this.graphBackgroundColor,
-        font: {
-          family: 'Open Sans, sans-serif',
-          color: this.graphTextColor,
-          size: 0.9 * this.fontSize
-        },
-        annotations: [
-          {
-            x: 0.01,
-            y: 0.95,
-            xref: 'x',
-            yref: 'y',
-            text: 'Epidemic Under Control',
-            showarrow: false,
-            font: {
-              family: 'Open Sans, sans-serif',
-              color: 'lightgreen',
-              size: 0.9 * this.fontSize
-            },
-            align: 'left',
-            xanchor: 'left',
-            yanchor: 'top',
-            opacity: 1
-          },
-          {
-            x: 0.01,
-            y: 1.05,
-            xref: 'x',
-            yref: 'y',
-            text: 'Epidemic Out Of Control',
-            showarrow: false,
-            font: {
-              family: 'Open Sans, sans-serif',
-              color: 'salmon',
-              size: 0.9 * this.fontSize
-            },
-            align: 'left',
-            xanchor: 'left',
-            yanchor: 'bottom',
-            opacity: 1
-          }
-        ]
-
-      }
-    },
-
-    graph3Layout() {
-      return {
-        title:'<b>How Masks Reduce Infections</b>',
-        showlegend: false,
-        xaxis: {
-          title: 'Percentage of People Who Wear Masks',
-          tickformat: ',.0%',
-          color: this.graphTextColor,
-          fixedrange: true
-        },
-        yaxis: {
-          title: 'Percentage of People Who Will Be Infected',
-          range: [0, 1],
-          color: this.graphTextColor,
-          tickformat: '%',
-          fixedrange: true
-        },
-        paper_bgcolor: this.graphBackgroundColor,
-        plot_bgcolor: this.graphBackgroundColor,
-        font: {
-          family: 'Open Sans, sans-serif',
-          color: this.graphTextColor,
-          size: 0.9 * this.fontSize
-        },
-      }
-    },
+    
 
     config() {
       return {

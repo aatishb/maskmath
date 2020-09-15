@@ -43,8 +43,10 @@
       <div>
         <h1>The Multiplicative Power of Masks</h1>
         <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a></h4>
-        <h4>in collaboration with <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h5>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
+        </h5>
       </div>
     </div>
   </div>
@@ -100,7 +102,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
 
   <div class="container">
 
@@ -130,7 +132,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -145,7 +147,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -159,7 +161,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -521,7 +523,13 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph2Traces" :layout="graph2Layout" :config="config"></graph>
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'How Masks Reduce R0',
+        'Percentage of People Who Wear Masks',
+        '# People a Contagious Person Infects (R0)',
+        'Epidemic Under Control',
+        'Epidemic Out Of Control'
+      )" :config="config"></graph>
 
     </div>
   </div>
@@ -596,7 +604,13 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout" :config="config"></graph>
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
+        'How Masks Reduce Infections',
+        'Percentage of People Who Wear Masks',
+        'Percentage of People Who Will Be Infected'
+      )" :config="config"></graph>
 
     </div>
   </div>

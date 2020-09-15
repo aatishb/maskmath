@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>O poder multiplicativo das máscaras de proteção facial</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um ensaio interativo sobre como as máscaras podem acabar com a COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Por que as máscaras funcionam melhor do que você pensa: um ensaio interativo">
+  <meta name="twitter:description" content="Mesmo máscaras parcialmente eficazes podem interromper a propagação da COVID-19, desde que um número suficiente de pessoas as use.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Por que as máscaras funcionam melhor do que você pensa: um ensaio interativo" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Mesmo máscaras parcialmente eficazes podem interromper a propagação da COVID-19, desde que um número suficiente de pessoas as use." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>O poder multiplicativo das máscaras de proteção facial</h1>
+        <h3>Um ensaio interativo sobre como as máscaras podem acabar com a COVID-19</h3>
+        <h4>Por <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h5>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a>
+        </h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Nós <a href="https://www.preprints.org/manuscript/202004.0203/v1">agora</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">sabemos</a> <a href="https://science.sciencemag.org/content/368/6498/1422">que</a> as máscaras têm um efeito muito grande de retardamento da propagação da COVID-19.
+      Mesmo assim, algumas pessoas se opõem ao uso de máscaras porque veem isso como uma escolha pessoal, e não uma questão de saúde pública.
+    </p>
+
+    <p>
+      Essa visão desconsidera um quadro mais amplo, porque <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8"> as máscaras protegem quem as usa <i>e</i> as pessoas ao seu redor</a>.
+      Esta <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf"> proteção bidirecional</a> torna o uso generalizado de máscaras uma forma poderosa de extinguir uma epidemia.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Fazendo cálculos sobre o uso de máscaras, veremos que quando 60% das pessoas usam máscaras que são 60% eficazes, a transmissão de doenças cai em até 60% - aproximadamente o que é necessário para impedir a propagação da COVID-19.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Assista ao vídeo complementar: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Por que as máscaras funcionam MELHOR do que você imagina</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Pode falar, mas sem cuspir</h2>
+
+    <p>
+      Mas primeiro, vamos ter uma noção aproximada de alguns números.
+      Durante a expiração, uma pessoa <a href="https://www.youtube.com/watch?v=f57LXUbrtPU"> pulveriza no ar partículas de saliva</a> de vários tamanhos diminutos.
+      Se a pessoa estiver no estágio contagioso, então este 'spray bucal' estará cheio de partículas virais.
+      Este <a href="https://arxiv.org/pdf/2005.10988.pdf"> spray de saliva cheio de vírus</a> é a principal forma de transmissão da COVID-19.
+    </p>
+
+    <p>Quando uma pessoa contagiosa respira, ela pulveriza no ar cerca de <b>mil</b> partículas virais por minuto.</p>
+
+    <p>Quando fala, pulveriza cerca de <b>dez mil</b> partículas virais por minuto.</p>
+
+    <p>Quando tosse, pulveriza cerca de <b>cem mil</b> partículas virais.</p>
+
+    <p>E quando espirra, pulveriza cerca de <b>um milhão</b> de partículas virais.</p>
+
+    <p>
+      Quanto mais partículas virais viajarem de pessoa para pessoa, maior será a chance de infecção.
+      (E, se infectadas, as pessoas expostas a mais partículas virais geralmente apresentam <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">sintomas mais graves</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Pessoa em estágio contagioso" susceptibleperson="Pessoa suscetível"><span class="red">Via de transmissão 1:</span> Quando uma pessoa em estágio contagioso está perto de uma pessoa suscetível, suas partículas de saliva podem disseminar a doença</anim-with-caption>
+
+  <div class="container">
+
+    <p>As máscaras reduzem a troca de partículas de saliva entre as pessoas - bloqueando ou redirecionando-as - reduzindo, assim, a chance de infecção.</p>
+
+    <p>
+      Vale lembrar que nenhuma máscara é perfeita.
+      Mesmo as máscaras N95 recomendadas para uso por profissionais de saúde só têm garantia de bloqueio <a href="https://www.youtube.com/watch?v=eAdanPfQdCA"> de 95% das partículas mais difíceis de bloquear</a> (e isso só se você <a href="https://www.n95decon.org/publications"> as utilizar corretamente</a>).
+    </p>
+
+    <p>
+      As máscaras não garantem segurança, mas reduzem o risco de exposição.
+      É muito parecido com um guarda-chuva, que não garante que você ficará seca(o), mas reduz sua chance de se molhar.
+      Como guarda-chuvas, as máscaras só funcionam se você as usar corretamente.
+      Mas, ao contrário dos guarda-chuvas, que protegem apenas as pessoas que os usam, as máscaras também protegem as pessoas <i>ao redor</i> de quem as usam.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Por que as máscaras nos protegem duplamente</h2>
+
+    <p>
+      Vamos imaginar que uma pessoa que esteja contagiosa use uma máscara com 50% de eficácia.
+      Por '50% de eficácia', quero dizer que usar esta máscara reduz pela metade a chance de infectar uma pessoa suscetível próxima.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Pessoa em estágio contagioso" susceptibleperson="Pessoa suscetível"><span class="orange">Via de transmissão 2:</span> Quando a pessoa que está contagiosa usa uma máscara 50% eficaz, a transmissão da doença cai 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Mas e se for a pessoa suscetível que utilizar a máscara?</p>
+
+    <p>
+      Em geral, a eficácia de uma máscara é diferente se você está <b>inspirando</b> ou <b>expirando</b> através dela.
+      Por enquanto, vamos pensar no caso mais simples e assumir que a máscara seja igualmente eficaz em qualquer direção.
+    </p>
+
+    <p>Nesse caso, a chance de infecção por essa via também cai 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Pessoa em estágio contagioso" susceptibleperson="Pessoa suscetível"><span class="orange">Via de transmissão 3:</span> Quando a pessoa suscetível usa uma máscara 50% eficaz, a transmissão da doença cai 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>E se tanto a pessoa que estiver contagiosa <i>quanto</i> a pessoal suscetível utilizar uma máscara?</p> 
+
+    <p>
+      Bem, a primeira máscara reduz a chance de infecção pela metade, e a segunda máscara reduz novamente pela metade a chance de infecção.
+      Portanto, quando <i>ambas</i> as pessoas usam máscaras, a chance de infecção é metade da metade, ou seja, 25% (em comparação a quando nenhuma delas usa máscara).
+      Isso representa uma queda de 75% na chance de infecção.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Pessoa em estágio contagioso" susceptibleperson="Pessoa suscetível"><span class="yellow">Via de transmissão 4:</span> Quando ambas as pessoas usam máscaras 50% eficazes, a transmissão da doença cai 75%</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Em um primeiro momento, é contraintuitivo pensar que uma máscara 50% eficaz possa reduzir o risco de infecção em 75%. 
+      Mas isso é possível porque, quando ambas as pessoas usam máscaras, a chance de infecção cai pela metade duas vezes.
+      Esta <b>dupla proteção</b> torna as máscaras muito mais eficazes do que a nossa intuição pode nos dizer.
+    </p>
+
+    <p>Abaixo, estão as quatro vias pelas quais uma doença transmitida pelo ar pode se espalhar de pessoa para pessoa.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissão da doença</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Diminuição na transmissão da doença</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        As quatro maneiras pelas quais a COVID-19 pode se disseminar de pessoa para pessoa, pressupondo uma máscara com 50% de eficácia.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>Do indivíduo para a população</h2>
+
+    <p>
+      Até agora, examinamos apenas a transmissão de doenças entre duas pessoas.
+      Como podemos fazer para entender a transmissão de doenças em <i>toda a população</i>?
+    </p> 
+
+    <p>Inicialmente, é mais fácil pensar nos casos limítrofes.</p> 
+
+    <p>
+      Por exemplo, se <b>ninguém</b> usasse máscara, sempre que duas pessoas se encontrassem, a chance de que <span class = "red">nenhum dos dois usasse máscara</span> seria de 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      Portanto, teríamos apenas que considerar a <span class = "red">primeira via</span> de transmissão da doença, e a população não veria <span class = "red">diminuição</span> na transmissão da doença.
+      </p>
+
+    <p>
+      No outro extremo, se <b>todos</b> usassem máscara, sempre que duas pessoas se encontrassem, a chance de que ambas <span class = "yellow">usassem máscaras</span> seria de 100%.
+     </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+
+      Nesse caso, teríamos que considerar apenas a <span class = "yellow">última via</span> de transmissão da doença.
+      Assumindo que as máscaras fossem 50% eficazes em cada direção, a população veria uma <span class = "yellow">diminuição de 75%</span> na transmissão da doença.
+    </p>
+
+    <p>
+      Portanto, quando <i>todos</i> usam máscara (ou quando <i>ninguém</i> usa), é fácil calcular a diminuição na transmissão de doenças na população, porque há apenas uma via de transmissão envolvida.
+    </p>
+
+    <p>
+      Mas, na realidade, algumas pessoas usam máscaras e outras não.
+      O que significa que o vírus pode se espalhar por uma combinação das quatro vias.
+      A probabilidade de cada via dependerá de quantas pessoas usarem máscaras.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Uso de máscaras: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Por exemplo, <b>se 50% das pessoas usarem máscaras</b>, sempre que duas pessoas se encontrarem aleatoriamente, a chance de <span class = "yellow">ambas as pessoas usarem máscaras</span> será de 50% ⨉ 50 %, ou seja, 25%.
+      Da mesma forma, você pode calcular a chance das outras três vias de transmissão de doenças.
+    </p>
+
+    <p>
+      Quando exatamente metade da população usa máscaras, verifica-se que cada via é igualmente provável.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissão da doença</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Diminuição na transmissão da doença</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Probabilidade desta via</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        As quatro maneiras pelas quais a COVID-19 pode ser transmitida de pessoa para pessoa, assumindo que 50% das pessoas usem uma máscara 50% eficaz.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Agora podemos calcular a <b>diminuição média na transmissão de doenças na população</b>.
+      Como definimos que cada via de transmissão seja igualmente provável, esta média é apenas a média de <span class = "red">0%</span>, <span class = "orange">50%</span>, <span class = "orange">50%</span> e <span class = "yellow">75%</span>, isto é, 43,75%.
+    </p>
+
+    <p>
+      Pessoas que <i>não</i> usam máscaras podem ser infectadas pelas duas primeiras vias, o que é igualmente provável quando metade da população usa máscara.
+      Portanto, a diminuição na transmissão da doença para quem não usa máscara é a média entre <span class = "red">0%</span> e <span class = "orange">50%</span>, isto é, 25%.
+    </p>
+
+    <p>
+      Por outro lado, as pessoas que <i>usam</i> máscaras podem ser infectadas pelas duas últimas vias.
+      Portanto, a diminuição na transmissão de doenças para usuários de máscara é a média entre <span class = "orange">50%</span> e <span class = "yellow">75%</span>, isto é, é 62,5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Diminuição média na transmissão da doença = <span style="font-size: 2rem;"><b>43,75</b></span>%</div>
+        <div class="splash">Diminuição na transmissão da doença para <b>não usuários de máscara</b> = 25%</div>
+        <div class="splash">Diminuição na transmissão da doença para <b>usuários de máscara</b> = 62,5%</div>
+      </div>
+      <div class="caption">
+        (Considerando que 50% das pessoas utilizem máscaras 50% eficazes.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Portanto, mesmo quem não usa máscara obtém um benefício moderado, porque o ar que inspiram é filtrado pelas máscaras das <i>outras pessoas</i>.
+      Mas os usuários de máscaras se beneficiam muito mais, graças à proteção adicional que suas máscaras oferecem.
+    </p>
+
+    <p>E como a população consiste em usuários de máscara e não usuários de máscara, o benefício médio fica entre o benefício para esses dois grupos.</p>
+
+    <p>Portanto, neste exemplo simplificado (em que 50% das pessoas usam máscaras 50% eficazes), descobrimos como partir do <b>benefício que as máscaras oferecem a um <i>indivíduo</i> </b> e chegar ao <b>benefício médio que as máscaras oferecem a uma <i>população</i>.</b></p>
+
+    <h2>Mascaralogia</h2>
+
+    <p>
+      Vamos <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">agora aplicar essa lógica</a> a <i>quaisquer valores</i> de <b>percentual de utilização de máscaras</b> e <b>eficácia das máscaras</b>.
+      Utilize os controles deslizantes abaixo para ver como as máscaras afetam a propagação de doenças.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Percentual de utilização de máscaras: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na expiração: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na inspiração: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissão da doença</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Diminuição na transmissão da doença</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Probabilidade desta via</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Diminuição média na transmissão da doença: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Diminuição da transmissão da doença entre não usuários de máscaras: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Diminuição da transmissão da doença entre usuários de máscaras: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      O que acontecerá com a transmissão da doença se 60% das pessoas usarem máscaras 60% eficazes?
+      Ou 90% usarem máscaras 50% eficazes?
+      Ou 50% usarem máscaras 90% eficazes?
+      Você pode utilizar os controles deslizantes acima para descobrir.
+    </p>
+
+    <p>A conclusão é que: <b>quando mais pessoas utilizam máscaras, todos ficam mais seguros.</b></p>
+
+    <p>
+      Ao filtrar o ar inspirado, as máscaras fornecem proteção em primeira mão para quem as usa.
+      E ao filtrar ou redirecionar o ar expirado, as máscaras fornecem proteção adicional para <i>todos</i> - incluindo pessoas que não usam máscaras.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">E no caso das máscaras que não filtram o ar expirado?
+        <span v-if="!expandaside1"> (Clique para abrir)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Algumas máscaras N95 possuem <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">válvulas ou aberturas</a> que liberam ar sem filtrá-lo.
+        O CDC (Centro de Controle e Prevenção de Doenças do governo dos EUA) <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recomenda que não sejam utilizadas</a> essas máscaras no âmbito da saúde pública, porque elas colocam outras pessoas em risco.
+        Você pode verificar isso acima.
+        <br><br>
+        Primeiro, defina a eficácia de inspiração e expiração para um valor alto (com o percentual de utilização de máscaras em algum valor intermediário).
+        Isso representa uma máscara altamente eficaz como uma N95.
+        Agora arraste a eficácia da expiração para zero e observe como a transmissão de doenças aumenta, especialmente entre aqueles que não usam máscaras.
+        <br><br>
+        Se você já possuir uma dessas máscaras, o CDC recomenda <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">cobrir a válvula de expiração</a> com uma máscara cirúrgica.
+      </span>
+    </aside>
+
+
+    <p>
+      Na verdade, as máscaras são ainda mais eficazes do que esses números sugerem.
+    </p>
+
+    <h2>Como parar uma epidemia</h2>
+
+    <p>
+      Você consegue apagar um foco de incêndio deixando-o sem oxigênio.
+      Mas você não precisa retirar todo o oxigênio, você só precisa reduzi-lo o suficiente para impedir que o fogo se espalhe.
+      O mesmo ocorre com uma epidemia - você não precisa reduzir a transmissão da doença em 100%.
+      Se você a reduzir o suficiente para impedir a propagação da doença, você pode interromper a epidemia.
+    </p>
+
+    <p>
+      Talvez você tenha ouvido falar sobre o termo epidemiológico R0, pronunciado R-zero.
+      Este é <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">o número de pessoas que uma pessoa em estágio contagioso pode infectar</a> em uma população sem imunidade prévia à doença.
+    </p> 
+
+    <p>Quando R0 excede 1, a doença cresce exponencialmente até que um número suficiente de pessoas seja vacinado ou até que um número suficiente de pessoas seja infectado e desenvolva imunidade à doença.</p>
+
+    <p>
+      Mas como Ed Yong escreveu na revista <i>The Atlantic</i>, <a href = "https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 não é o destino"</a>.
+      R0 é o produto de dois números: a quantidade média de pessoas que uma pessoa em estágio contagioso encontra e a probabilidade de infecção da pessoa suscetível no contato.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">quantidade média de pessoas que uma pessoa em estágio contagioso encontra</span> <br> ⨉ (multiplicada por) <span class="dotted">probabilidade de infecção da pessoa suscetível no contato</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Distanciamento social, quarentenas e <i>lockdowns</i> diminuem <span class = "dashed">o primeiro número</span>.
+      E as máscaras diminuem <span class = "dotted">o segundo número</span>.
+      O objetivo de todas essas estratégias de saúde pública é colocar a epidemia sob controle trazendo R0 abaixo de 1.
+    </p>
+
+    <p>
+      Com isso em mente, vamos expressar o impacto das máscaras em termos de R0.
+      O gráfico abaixo mostra como R0 varia conforme aumenta o uso das máscaras.
+    </p>
+
+    <p>
+      Você pode utilizar o primeiro controle deslizante para variar R0, que para a COVID-19 é entre 2 e 3 (isto é, na ausência de outras medidas de saúde pública, como distanciamento social, que reduzem ainda mais R0).
+      Ao variar a eficácia das máscaras, você pode ver como as máscaras podem ajudar a controlar uma epidemia.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na expiração: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na inspiração: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Como as máscaras reduzem R0',
+        'Percentual da população que usa máscara',
+        'N° de pessoas infectadas por alguém em estágio contagioso (R0)',
+        'Epidemia sob controle',
+        'Epidemia fora de controle'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Para interromper a propagação da COVID-19, precisamos manter R0 abaixo de 1.
+      Quando isso acontece, em média, uma pessoa contagiosa infectará menos de uma pessoa e a epidemia irá acabar.
+    </p>
+
+    <p>
+      Então, quantas pessoas precisam usar uma máscara 50% eficaz para impedir a propagação da COVID-19?
+      E se as máscaras fossem 75% eficazes?
+      Ou 90% eficazes?
+      Este gráfico interativo permite prever as respostas a essas perguntas.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Uma observação importante: de modo geral, as pessoas não se encontram aleatoriamente. 
+        <span v-if="!expandaside2"> (Clique para expandir)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        Pessoas que usam máscaras podem ser mais propensas a interagir com outros usuários de máscaras e menos propensas a interagir com pessoas que não usam máscaras.
+        <br/><br/>
+        Da mesma forma, quem não usa máscara pode viver em grupos onde o uso da máscara é inferior à média.
+        Essa tendência de interagir com outras pessoas que têm preferências semelhantes <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminui o poder de proteção das máscaras</a> porque <a href = " https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">não usuários de máscaras têm menores chances de serem beneficiados pelo uso de máscaras de pessoas ao seu redor</a>.
+        <br/><br/>
+        Como <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer e Ashleigh Tuite</a> escrevem em suas análises, "o impacto de máscaras e outras formas de cobertura facial na redução da transmissão da COVID-19 provavelmente serão maiores se houver o cuidado de garantir sua disponibilidade para as populações menos favorecidas."
+      </span>
+    </aside>
+
+    <h2>O custo humano</h2>
+
+    <p>
+      Podemos levar nossa compreensão um passo adiante, expressando o poder das máscaras em termos mais humanos.
+      As máscaras salvam vidas ao reduzir a chance de infecção, o que, por sua vez, diminui a extensão da epidemia.
+    </p>
+
+    <p>
+      À medida que mais pessoas usam máscaras, o R0 diminui.
+      E à medida que R0 diminui, também diminui o número de pessoas infectadas.
+      Assim, podemos ter uma imagem mais clara se, ao invés de visualizar R0, olharmos para a <b>fração infectada</b> da população.
+    </p>
+
+    <p>
+      Utilizando um modelo matemático amplamente adotado na modelagem de epidemias conhecido como <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">modelo SIR</a>, podemos relacionar R0 à fração de pessoas que eventualmente será infectada.
+      (Para saber mais sobre os modelos SIR, recomendo assistir a este <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excelente vídeo</a>.)
+    </p>
+    
+    <p>Embora este modelo seja uma simplificação considerável (por exemplo, pressupõe o encontro aleatório entre as pessoas e nenhuma forma de <i>lockdown</i>), ele nos oferece uma estimativa do custo humano de não usar máscaras.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na expiração: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Eficácia das máscaras na inspiração: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
+        'Como as máscaras reduzem o número de infecções',
+        'Percentual da população que usa máscara',
+        'Percentual da população que será infectada'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Esta curva em forma de colina nos mostra como as máscaras influenciam a extensão de uma epidemia.
+      <b>À medida que mais pessoas usam máscaras, o número de infecções despenca.</b>
+    </p>
+
+    <p>
+      Quando muito poucas pessoas usam máscaras, estamos no topo da colina e a maioria das pessoas acaba se infectando.
+      Mas cada passo para a direita nos leva mais para baixo.
+      Portanto, mesmo máscaras parcialmente eficazes, quando parcialmente adotadas, podem ajudar a reduzir a disseminação da COVID-19.
+    </p>
+
+    <p>
+      Para interromper completamente a propagação, precisamos chegar à base desta colina.
+      Mas há um lado positivo: à medida que mais pessoas usam máscaras, a colina fica mais íngreme.
+      O que significa que <b>máscaras são mais benéficas à sociedade à medida que mais pessoas as usam</b>.
+    </p>
+
+    <p>
+      Se um número suficiente de pessoas usarem máscaras, poderemos chegar à base da colina, onde a chance de infecção é zero.
+      É assim que as máscaras podem acabar com uma epidemia.
+      Mas as máscaras só podem acabar com uma epidemia se um número suficiente de pessoas as usarem.
+    </p>
+
+    <p>
+      Você pode estar se perguntando quantas pessoas precisam usar máscaras para acabar com uma epidemia.
+      Bem, isso depende da eficácia das máscaras.
+    </p>
+
+    <p>
+      Ao brincar com o gráfico interativo acima, você verá que, se as máscaras fossem 50% eficazes, precisaríamos de cerca de três quartos da população utilizando-as para impedir a disseminação doa COVID-19.
+      Mas, se as máscaras fossem 75% eficazes, só precisaríamos que metade da população as usasse para impedir a propagação.
+    </p>
+
+    <p>
+      <b>Quanto mais eficaz for a máscara, mais rápido podemos descer a colina.</b>
+      É por isso que é importante usar uma máscara que <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf"> vede bem o entorno de sua boca <i>e</i> nariz</a>, e seja feita de um material filtrante eficaz.
+    </p>
+
+    <p>
+      Todos nós queremos chegar ao pé da colina e impedir a propagação da COVID-19.
+      Mas não se pode chegar lá sozinho.
+      Cada pessoa só consegue dar um pequeno passo para baixo.
+    </p>
+
+    <p>Porém, quando muitas pessoas dão esse pequeno passo, juntos, damos um salto gigante colina abaixo.</p>
+
+    <p>Juntos, podemos chegar à base da colina.</p>
+    
+    <p>Juntos, podemos parar a COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Créditos e Referências</h2>
+
+    <p>Este ensaio foi criado por <a href="https://twitter.com/aatishb">Aatish Bhatia</a> em colaboração com <a href="https://twitter.com/minutephysics">Henry Reich</a>. A tradução para Português Brasileiro foi preparada por <a href="https://br.linkedin.com/in/gabriel-negrelli-garcia">Gabriel Negrelli Garcia</a> e revisada por <a href="https://www.linkedin.com/in/juanreislopes/">Juan Reis Lopes</a>.</p>
+
+    <p>Dê uma olhada no <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">vídeo complementar</a> para uma abordagem visual e rápida da matemática das máscaras! O vídeo foi apoiado pela <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Aqui você encontrará a <a href="https://aatishb.com/maskmath/calculator.html">calculadora da matemática das máscaras</a> apresentada no vídeo.</p>
+
+    <p>
+      Muito obrigado a <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, e <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> por seus comentários construtivos sobre as versões preliminares deste ensaio.
+    </p>
+
+    <p>
+      Se você achou este ensaio valioso e gostaria de ver mais trabalhos como este no futuro, você pode <b><a href="https://www.patreon.com/aatishb">apoiar meu trabalho no Patreon</a></b>.
+    </p>
+
+    <p>
+      Aqui estão <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">alguns</a> <a href="https://www.maskfaq.com/test-results">recursos</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">informativos</a> sobre a capacidade de filtragem de materiais comumente utilizados em máscaras.
+      Embora as máscaras variem muito em eficácia, dependendo de seu material e ajuste, alguns materiais podem <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">ultrapassar</a> <a href="https://www.maskfaq.com/test-results">80%</a> em sua capacidade de filtragem quando usados em uma máscara hermeticamente fechada.
+    </p>
+
+    <p>
+      Para aqueles de vocês que gostam de álgebra (vocês sabem quem são), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">aqui está um artigo</a> que cobre a matemática em mais detalhes.
+      Os gráficos apresentados neste ensaio estendem o trabalho de <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al.</a> para considerar a eficácia bidirecional das máscaras.
+    </p>
+
+    <p>
+      O modelo bidirecional de máscaras considerado neste ensaio foi, até onde sei, publicado pela primeira vez em uma pré-impressão por <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al.</a> (Tabela S3 e Figura S4).
+      Isso foi destacado por Howard et al. em seu <a href="https://www.preprints.org/manuscript/202004.0203/v3">artigo de revisão</a> e <a href="https://www.fast.ai/2020/04/13/masks-summary/">ensaio de acompanhamento</a>, e ainda mais popularizado por <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> na revista <i>The Atlantic</i>, e por <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> na revista <i>The New Yorker</i>, que escreveu, <i>"Quanto mais eficaz for a máscara, maior será o impacto."</i>
+    </p>
+
+    <p>
+      Este texto é publicado sob uma licença Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. O código fonte está disponível <a href="https://github.com/aatishb/maskmath">no Github</a>. Os emojis foram criados pelo <a href="https://twemoji.twitter.com/">Twitter</a> e foram modificados para incluir um design de máscara personalizado.
+    </p>
+
+    <p>
+      Obrigado por ler e fique segura(o)! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
