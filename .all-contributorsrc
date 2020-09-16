@@ -69,6 +69,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "quackduck",
+      "name": "Ishan Goel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/38882631?v=4",
+      "profile": "https://github.com/quackduck",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

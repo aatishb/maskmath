@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -22,6 +22,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/albannabla"><img src="https://avatars0.githubusercontent.com/u/52819459?v=4" width="100px;" alt=""/><br /><sub><b>Alban nablA</b></sub></a><br /><a href="#translation-albannabla" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/gnegrelligarcia"><img src="https://avatars1.githubusercontent.com/u/71154843?v=4" width="100px;" alt=""/><br /><sub><b>gnegrelligarcia</b></sub></a><br /><a href="#translation-gnegrelligarcia" title="Translation">🌍</a> <a href="https://github.com/aatishb/maskmath/issues?q=author%3Agnegrelligarcia" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/ulkar-aghayeva"><img src="https://avatars0.githubusercontent.com/u/11365706?v=4" width="100px;" alt=""/><br /><sub><b>Ulkar Aghayeva</b></sub></a><br /><a href="#translation-ulkar-aghayeva" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/quackduck"><img src="https://avatars0.githubusercontent.com/u/38882631?v=4" width="100px;" alt=""/><br /><sub><b>Ishan Goel</b></sub></a><br /><a href="https://github.com/aatishb/maskmath/commits?author=quackduck" title="Documentation">📖</a></td>
   </tr>
 </table>
 
