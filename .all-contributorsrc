@@ -96,6 +96,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "ismarou",
+      "name": "ismarou",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33368247?v=4",
+      "profile": "https://github.com/ismarou",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
