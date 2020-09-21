@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -26,6 +26,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/quackduck"><img src="https://avatars0.githubusercontent.com/u/38882631?v=4" width="100px;" alt=""/><br /><sub><b>Ishan Goel</b></sub></a><br /><a href="https://github.com/aatishb/maskmath/commits?author=quackduck" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/mariapaula9926"><img src="https://avatars1.githubusercontent.com/u/71100538?v=4" width="100px;" alt=""/><br /><sub><b>mariapaula9926</b></sub></a><br /><a href="#translation-mariapaula9926" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://pankgeorg.com"><img src="https://avatars1.githubusercontent.com/u/8681967?v=4" width="100px;" alt=""/><br /><sub><b>Παναγιώτης Γεωργακόπουλος</b></sub></a><br /><a href="#translation-pankgeorg" title="Translation">🌍</a></td>
   </tr>
 </table>
 

@@ -87,6 +87,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "pankgeorg",
+      "name": "Παναγιώτης Γεωργακόπουλος",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8681967?v=4",
+      "profile": "https://pankgeorg.com",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
