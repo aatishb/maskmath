@@ -60,7 +60,7 @@
     </p>
 
     <p>
-      Takový pohled ale pomíjí, že <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">ochrana obličeje chrání nositele <i>a zároveň</i> i lidi v jejich okolí</a>.
+      Takový pohled ale pomíjí, že ochrana obličeje chrání nositele <i>a zároveň</i> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8"></a>i lidi v jejich okolí</a>.
       Tato <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">obousměrná ochrana</a> dělá z hromadného nošení roušek a respirátorů výborný nástroj ke zpomalení a ukončení pandemie.
     </p>
 
@@ -105,7 +105,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Scénář přenosu 1:</span> Když je nakažlivý jedinec poblíž jiného člověka, svým prskáním může šířit virovou infekci.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="red">Scénář přenosu 1:</span> Když je nakažlivý jedinec poblíž jiného člověka, svým prskáním může šířit virovou infekci.</anim-with-caption>
 
   <div class="container">
 
@@ -137,7 +137,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Scénář přenosu 2:</span> Když má na sobě nakažlivý člověk roušku s 50% účinností, klesá riziko nákazy o polovinu, tedy na 50 %.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 2:</span> Když má na sobě nakažlivý člověk roušku s 50% účinností, klesá riziko nákazy o polovinu, tedy na 50 %.</anim-with-caption>
 
   <div class="container">
 
@@ -148,11 +148,11 @@
       Prozatím si to ale zjednodušíme a budeme předpokládat, že účinnost je oběma směry stejná. Dále si ukážeme, proč je to složitější.
     </p>
 
-    <p>Každopádně, v tomto případě rovněž šance nákazy klesá na polovinu. </p>
+    <p>Každopádně, v tomto případě rovněž šance nákazy klesá na polovinu.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Scénář přenosu 3:</span>Když má příjemce na sobě roušku s 50% účinností, riziko nákazy se snižuje o 50 %. </anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 3:</span>Když má příjemce na sobě roušku s 50% účinností, riziko nákazy se snižuje o 50 %. </anim-with-caption>
   
   <div class="container">
 
@@ -165,17 +165,17 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Scénář přenosu 4:</span> Když oba lidé mají roušku s 50% účinností, šance přenosu klesá o 75 %.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="yellow">Scénář přenosu 4:</span> Když oba lidé mají roušku s 50% účinností, šance přenosu klesá o 75 %.</anim-with-caption>
   
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+      Je celkem pozoruhodné, že rouška s 50% účinností může snížit riziko infekce o 75 %. 
+      Funguje to díky tomu, že mají roušku dva lidé, a tak se půlení odehraje ne jednou, ale dvakrát.
+      Tato <b>dvojitá ochrana</b> dělá z roušek a respirátorů silnější zbraň, než by se mohlo na první pohled zdát.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>Podívejme se na čtyři scénáře, kterými se infikované kapénky mohou šířit od člověka k člověku.</p>
 
   </div>
 
@@ -185,7 +185,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Přenos infikovaných kapének</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -193,7 +193,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Pokles šance infekce</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -203,7 +203,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+        Čtyři různé scénáře, kterými se může kapénková infekce přenášet. Předpokládáme bariéru s 50% účinností.
       </div>
 
     </div>
@@ -212,61 +212,62 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>Od jednotlivců k celé společnosti</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      Zatím jsme se zaměřili jen na interakci dvou lidí. Ale jak roušky a respirátory ovlivní šíření
+      nakažlivé nemoci v rámci <i>celé populace</i>?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p>Když se podíváme na extrémní příklady, je to celkem jasné.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Třeba když nebude nosit roušku <b>nikdo</b>, je <b>stoprocentní</b> šance, že každé setkání, ke kterému dojde, <span class="red">budou oba bez roušky</span>.
+      
+
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      V takovém případě bychom počítali jen s <span class="red">prvním scénářem přenosu</span> infekce, a celospolečensky by nedošlo <span class="red">k žádnému</span> snížení šíření nákazy.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      Na druhé straně, pokud by <b>všichni</b> nosili roušky, kdykoli by se dva lidé potkali, byla by 100% šance, že <span class="yellow">oba lidé mají roušku</span>. 
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      V takovém případě by stačilo brát v potaz ten <span call="yellow">čtvrtý scénář</span> přenosu, tedy mezi dvěma lidmi s ochranou obličeje. V takovém případě by – při 50% účinnosti roušky –  v rámci celé populace počet <span class="yellow">infekcí klesl o 75 %</span>.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Takže když roušky nosí <i>všichni</i> (a nebo když je nenosí <i>nikdo</i>), je snadné spočítat dopad na celou společnost, protože stačí brát v potaz jen jeden koeficient poklesu, jen jeden scénář přenosu.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Ve skutečnosti někteří lidé roušku či respirátor mají a jiní nemají.
+      Což znamená, že virus se šíří kombinací všech čtyř scénářů.
+      Jaký je jejich podíl? To záleží na tom, jaké procento populace nosí roušky a respirátory.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Podíl lidí s ochranou obličeje: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Například pokud by  <b>50 % lidí používalo ochranu obličeje</b>, pak u náhodného setkání dvou lidí je šance, že <span class="yellow"> mají oba z nich roušku</span> 50% krát 50%, tedy 25%.
+      Stejně tak můžete dopočítat pravděpodobnosti ostatních tří scénářů.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Když přesně polovina populace nosí roušky, vychází to tak, že je každý ze scénářů stejně pravděpodobný.
+      (Sami si zkuste odvodit, z čeho to vyplývá.)
     </p>
 
   </div>
@@ -303,7 +304,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Čtyři scénáře přenosu a jejich rozložení v populaci, uvažujeme-lie 50% účinnost roušek, které nosí 50 % lidí.  
       </div>
 
     </div>
@@ -312,18 +313,17 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Nyní můžeme spočítat, o koli <b>průměrně poklesne přenos infekcí v populaci</b>.
+      Protože v našem příkladě je každý ze scénářů stejně pravděpodobný, výsledek je průměrem všech čtyř pravděpodobností z jednotlivých scénářů: <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> a <span class="yellow">75%</span>, což je 43,75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Lidé, kteří roušky <i>nenosí</i> se mohou nakazit jedním z prvních dvou scénářů (Scénář 1 a Scénář 2), pokles jejich infekcí je tedy průměrem <span class="red">0 %</span> a <span class="orange">50 %</span>, což je 25 %.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Naopak lidé, kteří roušky <i>nosí</i>, se mohou nakazit jedním ze zbývajících scénářů (3 nebo 4).
+      Pravděpodobnost, že se nakazí, tedy u nich poklesne o průměr čísel <span class="orange">50 %</span> a <span class="yellow">75 %</span>, což je 62,5 %.
     </p>
 
   </div>
@@ -331,12 +331,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Průměrný pokles infekcí celkem = <span style="font-size: 2rem;"><b>43,75</b></span>%</div>
+        <div class="splash">Pokles infekcí pro <b>lidi bez ochrany</b> = 25 %</div>
+        <div class="splash">Pokles infekcí pro <b>lidi s ochranou</b> = 62,5 %</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Předpokládáme, že 50 % lidí nosí roušku s 50% účinností.)
       </div>
     </div>
   </div>
@@ -344,19 +344,22 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Takže i ti, kteří roušky nenosí, jsou částečně chráněni díky rouškám ostatních. Vzduch, který vdechují, totiž neobsahuje kapénky zachycené <i>rouškami či respirátory těch, kteří je nosí</i>.
+      Ale ti, kteří ochranu obličeje mají, jsou chráněni více, jelikož ochrana funguje oběma směry.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>
+      Protože jsou v populaci ti, kteří ochranu nosí, i ti, kteří ji nenosí, celkový přínos pro populace leží mezi přínosem pro obě skupiny. </p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>V našem zjednodušeném příkladu (50% lidí nosí roušku, která je účinná na 50 %) jsme spočítali <b>výhodu, kterou rouška poskytuje <i>jednotlivci</i></b> a na základě toho pak spočítali i <b>průměrný přínos roušek pro <i>celou populaci</i></b>.
+      
+ </p>
 
-    <h2>Maskology</h2>
+    <h2>Prskologie</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Pojďme tento <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">matematický model</a> aplikovat na libovolné hodnoty <b>podílu lidí s ochranou</b> a <b>průměrnou účinnost ochrany</b>.
+      Pomocí posuvníků můžete ověřit, jaký vliv mají tyto parametry na šíření infekce.
     </p>
 
   </div>
@@ -365,24 +368,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Podíl lidí s ochranou: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (vydechovaný vzduch): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (vdechovaný vzduch): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Způsob přenosu infekce</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -390,7 +393,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Pokles infekcí</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -398,7 +401,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Pravděpodobnost scénáře</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -409,15 +412,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Průměrný pokles přenosu infekcen: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span> %</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Pokles infekcí u lidí s ochranou: <span class="dotted">{{convertToPercent(eout * p)}}</span> %</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Pokles infekcí u lidí bez ochrany: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span> %</span>
       </div>
 
     </div>
