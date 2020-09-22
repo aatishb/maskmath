@@ -5,7 +5,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>The Multiplicative Power of Masks</title>
+  <title>Překvapivě mnohonásobná účinnost roušek a respirátorů </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="An Explorable Essay on How Masks Can End COVID-19">
@@ -19,18 +19,18 @@
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Why Masks Work Better Than You Think: An Interactive Essay">
-  <meta name="twitter:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them.">
+  <meta name="twitter:title" content="Proč roušky a respirátory fungují lépe, než si myslíte: Interaktivní vysvětlení">
+  <meta name="twitter:description" content="Přestože jsou roušky a respirátory účinné jen částečně, mohou zastavit šíření infekce COVID-19. Stačí, když je bude nosit dostatek lidí.">
   <meta name="twitter:site" content="@aatishb">
   <!-- Twitter Summary card images must be at least 120x120px -->
   <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
   
   <!-- Open Graph data -->
-  <meta property="og:title" content="Why Masks Work Better Than You Think: An Interactive Essay" />
+  <meta property="og:title" content="Roušky a respirátory fungují lépe, než si myslíte: Interaktivní vysvětlení" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://aatishb.com/maskmath/" />
   <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
-  <meta property="og:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them." />
+  <meta property="og:description" content="Přestože jsou roušky a respirátory účinné jen částečně, mohou zastavit šíření infekce COVID-19. Stačí, když je bude nosit dostatek lidí." />
 
 </head>
 
@@ -41,11 +41,11 @@
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>The Multiplicative Power of Masks</h1>
-        <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h1>Překvapivě mnohonásobná <br>účinnost roušek a respirátorů</h1>
+        <h3>Interaktivní vysvětlení toho, jak ochranné pomůcky mohou ukončit pandemii COVID-19</h3>
+        <h4><a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <h5>
-          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-cs.html">Česky</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
         </h5>
       </div>
     </div>
@@ -54,34 +54,37 @@
   <div class="container">
 
     <p>
-      We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on slowing the spread of COVID-19.
-      And yet, some people oppose wearing masks because they view this as a personal choice rather than a public health issue.
+      Nyní <a href="https://www.preprints.org/manuscript/202004.0203/v1">již</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">víme</a>, <a href="https://science.sciencemag.org/content/368/6498/1422">že</a> roušky a respirátory mají významný vliv na zpomalení šíření nákazy COVID-19.
+      Někteří lidé ale stále proti jejich nošení vystupují. Vnímají je jako otázku osobní svobody a volby, nikoli jako otázku ochrany veřejného zdraví.
+      
     </p>
 
     <p>
-      This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
-      This <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+      Takový pohled ale pomíjí, že <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">ochrana obličeje chrání nositele <i>a zároveň</i> i lidi v jejich okolí</a>.
+      Tato <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">obousměrná ochrana</a> dělá z hromadného nošení roušek a respirátorů výborný nástroj ke zpomalení a ukončení pandemie.
     </p>
 
     <network :maskusage="0.6"></network>
 
     <p>
-      By doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission drops by as much as 60% — roughly what's needed to stop the spread of COVID-19.
+      Podívejme se na příklad: pokud pouhých 60 % lidí bude nosit ochranu obličeje, která účinkuje na pouhých 60 %, přesto takový krok povede ke snížení nových infekcí až o 60 %, což je přibližně snížení potřebné k zastavení šíření COVID-19. (Na čísle 60 není nic výjimečného, jde víceméně o náhodu.)
     </p>      
 
     <aside>
       <div class="center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <span style="margin-top: 0.75rem;">
-          Watch the companion video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+          Podívejtese na video Minute Physics (anglicky): <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Proč fungují roušky lépe, než si myslíte</a>
         </span>
       </div>
     </aside>
 
-    <h2>Say it, Don't Spray It</h2>
+    <h2>Neprskej, když mluvíš!</h2>
 
     <p>
-      But first, let’s get a ballpark sense for some numbers.
+      Napřed trocha čísel, pro představu. Když člověk vydechuje, <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">šíří do okolí</a> kousky slin, kapénky různých velikostí. 
+      Pokud je člověk nakažlivý, pak tento jeho "prsko-sprej" obsahuje virové částice (nejmenší jednotky viru, tzv. viriony). 
+      
       When a person exhales, they <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">spray out saliva particles</a> of various tiny sizes.
       If they're contagious, then this 'mouth spray' is loaded with viral particles.
       This <a href="https://arxiv.org/pdf/2005.10988.pdf">virus-laden saliva spray</a> is the main way that COVID-19 spreads.
