@@ -99,7 +99,7 @@
 
     <p>
       Čím více virových částic putuje od člověka k člověku, tím vyšší je riziko, že dojde k nákaze.
-      (A když k nákaze dojde, tak platí, že větší dávka virových částic zvyšuje šanci na <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">vážnější symptomy</a>.)
+      (A když k nákaze dojde, tak platí, že větší dávka virových částic zvyšuje riziko <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">vážnějších symptomů</a>.)
 
     </p>
 
@@ -121,7 +121,7 @@
     <p>
       Roušky a respirátory nejsou zárukou bezpečí. Snižují ale riziko nákazy.
 
-      Je to podobné, jako když se před deštěm chráníte pomocí deštníku. Deštník nezaručuje, že na vás nekápne ani kapka, ale výrazně snižuje počet kapek, které na vás dopadnou. A stejně jako deštiník, také roušky a respirátory fungují jen tehdy, když je správně používáte.<br>
+      Je to podobné, jako když se před deštěm chráníte pomocí deštníku. Deštník nezaručuje, že na vás nespadne ani kapka, ale výrazně snižuje počet kapek, které na vás dopadnou. A stejně jako deštník, také roušky a respirátory fungují jen tehdy, když je správně používáte.<br>
       Ale narozdíl od deštníku, který před deštěm chrání jen vás, chrání roušky a respirátory i lidi ve vašem <i>okolí</i>.
     </p>
 
@@ -131,13 +131,13 @@
     <p>
       Představme si, že infekční člověk má na sobě roušku s 50% účinností.
 
-      50% účinností se myslí že šance přenosu nákazy na osobu poblíž se snížila o polovinu.  
+      50% účinností se myslí že pravděpodobnost přenosu nákazy na osobu poblíž se snížila o polovinu.  
       
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 2:</span> Když má na sobě nakažlivý člověk roušku s 50% účinností, klesá riziko nákazy o polovinu, tedy na 50 %.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 2:</span> Když má na sobě nakažlivý člověk roušku s 50% účinností, klesá riziko nákazy o polovinu, tedy na 50 % původní pravděpodobnosti.</anim-with-caption>
 
   <div class="container">
 
@@ -148,7 +148,7 @@
       Prozatím si to ale zjednodušíme a budeme předpokládat, že účinnost je oběma směry stejná. Dále si ukážeme, proč je to složitější.
     </p>
 
-    <p>Každopádně, v tomto případě rovněž šance nákazy klesá na polovinu.</p>
+    <p>Každopádně, v tomto případě rovněž pravděpodbnost nákazy klesá na polovinu.</p>
 
   </div>
 
@@ -159,13 +159,13 @@
     <p>Co když má ochranu obličeje nakažlivý člověk <i>a zároveň</i> i poblíž stojící osoba?</p> 
 
     <p>
-      Rouška nakažlivého člověka sníží šanci nákazy o polovinu. A rouška druhého člověka sníží tuto poloviční šanci o polovinu. Takže když mají ochranu <i>oba</i> lidé, šance nákazy je oproti situaci bez ochrany čtvrtinová (25 %, polovina poloviny).
-      To je 75% pokles šance přenosu infekce.
+      Rouška nakažlivého člověka sníží šanci nákazy o polovinu. A rouška druhého člověka sníží tuto poloviční šanci o polovinu. Takže když mají ochranu <i>oba</i> lidé, pravděpodobnost nákazy je oproti situaci bez ochrany čtvrtinová (25 %, polovina poloviny).
+      To je pokles pravděpodobnosti přenosu infekce o 75 %.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="yellow">Scénář přenosu 4:</span> Když oba lidé mají roušku s 50% účinností, šance přenosu klesá o 75 %.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="yellow">Scénář přenosu 4:</span> Když oba lidé mají roušku s 50% účinností, pravděpodobnost přenosu klesá o 75 %.</anim-with-caption>
   
   <div class="container">
 
@@ -193,7 +193,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Pokles šance infekce</div>
+          <div class="center">Pokles pravděpodobnosti infekce</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -261,7 +261,7 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      Například pokud by  <b>50 % lidí používalo ochranu obličeje</b>, pak u náhodného setkání dvou lidí je šance, že <span class="yellow"> mají oba z nich roušku</span> 50% krát 50%, tedy 25%.
+      Například pokud by  <b>50 % lidí používalo ochranu obličeje</b>, pak u náhodného setkání dvou lidí je šance, že <span class="yellow"> mají oba z nich roušku,</span> 50 % krát 50 %, tedy 25 %.
       Stejně tak můžete dopočítat pravděpodobnosti ostatních tří scénářů.
     </p>
 
@@ -295,16 +295,16 @@
 
         <div class="column onehundredpx">
           <div class="center">Podíl scénáře</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
-          <div class="center">25%</div>
+          <div class="center">25 %</div>
+          <div class="center">25 %</div>
+          <div class="center">25 %</div>
+          <div class="center">25 %</div>
         </div>
 
       </div>
 
       <div class="caption">
-        Čtyři scénáře přenosu a jejich rozložení v populaci, uvažujeme-lie 50% účinnost roušek, které nosí 50 % lidí.  
+        Čtyři scénáře přenosu a jejich rozložení v populaci, uvažujeme-li 50% účinnost roušek, které nosí 50 % lidí.  
       </div>
 
     </div>
@@ -313,12 +313,12 @@
   <div class="container">
 
     <p>
-      Nyní můžeme spočítat, o koli <b>průměrně poklesne přenos infekcí v populaci</b>.
-      Protože v našem příkladě je každý ze scénářů stejně pravděpodobný, výsledek je průměrem všech čtyř pravděpodobností z jednotlivých scénářů: <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> a <span class="yellow">75%</span>, což je 43,75%.
+      Nyní můžeme spočítat, o kolik <b>průměrně poklesne přenos infekcí v populaci</b>.
+      Protože v našem příkladě je každý ze scénářů stejně pravděpodobný, výsledek je průměrem všech čtyř pravděpodobností z jednotlivých scénářů: <span class="red">0 %</span>, <span class="orange">50 %</span>, <span class="orange">50 %</span> a <span class="yellow">75%</span>, což je 43,75 %.
     </p>
 
     <p>
-      Lidé, kteří roušky <i>nenosí</i> se mohou nakazit jedním z prvních dvou scénářů (Scénář 1 a Scénář 2), pokles jejich infekcí je tedy průměrem <span class="red">0 %</span> a <span class="orange">50 %</span>, což je 25 %.
+      Lidé, kteří roušky <i>nenosí</i>, se mohou nakazit jedním z prvních dvou scénářů (Scénář 1 a Scénář 2), pokles jejich infekcí je tedy průměrem <span class="red">0 %</span> a <span class="orange">50 %</span>, což je 25 %.
     </p>
 
     <p>
@@ -349,9 +349,9 @@
     </p>
 
     <p>
-      Protože jsou v populaci ti, kteří ochranu nosí, i ti, kteří ji nenosí, celkový přínos pro populace leží mezi přínosem pro obě skupiny. </p>
+      Protože jsou v populaci ti, kteří ochranu nosí, i ti, kteří ji nenosí, celkový přínos pro populaci leží mezi přínosem pro obě skupiny. </p>
 
-    <p>V našem zjednodušeném příkladu (50% lidí nosí roušku, která je účinná na 50 %) jsme spočítali <b>výhodu, kterou rouška poskytuje <i>jednotlivci</i></b> a na základě toho pak spočítali i <b>průměrný přínos roušek pro <i>celou populaci</i></b>.
+    <p>V našem zjednodušeném příkladu (50 % lidí nosí roušku, která je účinná na 50 %) jsme spočítali <b>výhodu, kterou rouška poskytuje <i>jednotlivci</i></b> a na základě toho pak spočítali i <b>průměrný přínos roušek pro <i>celou populaci</i></b>.
       
  </p>
 
@@ -412,7 +412,7 @@
 
 
       <div class="row half bigsplash">
-        <span>Průměrný pokles přenosu infekcen: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span> %</span>
+        <span>Průměrný pokles přenosu infekce: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span> %</span>
       </div>
 
       <div class="row half bigsplash">
@@ -429,14 +429,14 @@
   <div class="container">
 
     <p>
-      Jak poklesne přenos infekce, když bude mít 60% lidí ochranu s 60% účinností?
+      Jak poklesne přenos infekce, když bude mít 60 % lidí ochranu s 60% účinností?
       
       Nebo  90 % lidí roušku s 50% účinností?
       Nebo 50 % lidí respirátor s 90% účinností?
       Vyzkoušejte si to na interaktivní ukázce níže:
     </p>
 
-    <p>Závěr je zjevný: <b>Čím více lidí nosí roušky a respirátory, tím menší je šance na nákazu.</b></p>
+    <p>Závěr je zjevný: <b>Čím více lidí nosí roušky a respirátory, tím menší je pravděpodobnost přenosu infekce.</b></p>
 
     <p>
       Tím, že filtrují vdechovaný vzduch, chrání respirátory (a částečně roušky) své nositele.
@@ -456,7 +456,7 @@
         <br><br>
         Nejprve nastavte vysokou účinnost při nádechu i výdechu (a používání ochrany někde uprostřed).
         To je situace, kdy řada lidí používá účinné FFP2 (N95) respirátory.
-        Nyní přetáhněte posuvník účinnosti při výdechu k nule. Sledujte, jak šance na nákazu narostla, zejména u těch, kteří nenosí ochranu.
+        Nyní přetáhněte posuvník účinnosti při výdechu k nule. Sledujte, jak pravděpodobnost nákazy narostla, zejména u těch, kteří nenosí ochranu.
         <br><br>
         Pokud už takový respirátor s ventilem vlastníte, CDC doporučuje <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">nosit přes ventilek</a> chirurgickou ústenku.
       </span>
@@ -482,7 +482,7 @@
     </p> 
 
     <p>
-      Pokud je R0 vyšší než 1, tak se nákaza bude šířit stále rychleji, a to dokud nenakazí všechny lidi bez imunity, nebo dokud se nenajde vakcína.</p>
+      Pokud je R0 vyšší než 1, tak se nákaza bude šířit stále rychleji, dokud nenakazí všechny lidi bez imunity, nebo dokud se nenajde vakcína.</p>
 
     <p>
       Ale číslo R0 <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">není</a> nijak "osudově dané". Je to výsledek dvou čísel: počtu lidí, které nakažlivý člověk průměrně potká, a pravděpodobnosti nákazy při průměrném kontaktu dvou lidí. 
@@ -497,7 +497,7 @@
   <div class="container">
 
     <p>
-      Dostatečný vzájemný odstup, karanténa a uzavírání podniků snižuje <span class="dashed">to první číslo</span>
+      Dostatečný vzájemný odstup, karanténa a uzavírání podniků snižují <span class="dashed">to první číslo</span>
       
       Roušky a respirátory pomáhají snížit <span class="dotted">to druhé číslo</span>.
       Cílem všech těchto hromadných opatření je dostat šíření epidemie pod kontrolu snížením R0 pod hodnotu 1.
@@ -506,12 +506,12 @@
 
     <p>
       Pojďme se tedy podívat, jaký vliv mají roušky a respirátory na reprodukční číslo R0.
-      Následující grafu ukazuje, co se děje s číslem R0, když stoupá podíl lidí s ochranou obličeje.
+      Následující graf ukazuje, co se děje s číslem R0, když stoupá podíl lidí s ochranou obličeje.
     </p>
 
     <p>
-      Prvním posuvníkem můžete nastavit počáteční hodnotu R0, která se u COVID-19 pohybuje mezi 2 a 3 (v situaci bez jakýchkoli opatření, každé další opatření může R0 dále snížít).
-      Dále můžete nastavit různou účinnost roušek a respirátorů v popualci a podívat se, jak ochrana obličeje přispívá ke zpomalení a potlačení epidemie.
+      Prvním posuvníkem můžete nastavit počáteční hodnotu R0, která se u COVID-19 pohybuje mezi 2 a 3 (v situaci bez jakýchkoli opatření, každé další opatření může R0 dále snížit).
+      Dále můžete nastavit různou účinnost roušek a respirátorů, jejich rozšíření v populaci, a podívat se, jak ochrana obličeje přispívá ke zpomalení a potlačení epidemie.
     </p>
 
   </div>
@@ -537,7 +537,7 @@
       <graph :traces="graph2Traces" :layout="graph2Layout(
         'Jak roušky a respirátory snižují index nakažlivosti R0',
         'Procento lidí, kteří nosí ochranu',
-        'Kolik lidí nakazí jeden nakažlivý(R0)',
+        'Kolik lidí nakazí jeden nakažlivý (R0)',
         'Epidemie pod kontrolou',
         'Epidemie se vymyká kontrole'
       )" :config="config"></graph>
@@ -572,7 +572,7 @@
         Je to důsledkem tendence mít ve svém okolí podobně smýšlející lidi s podobnými názory a pohledy. Tento jev <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">snižuje</a> ochrannou sílu roušek a respirátorů, a to především tím, že lidé bez ochrany obličeje <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">jsou o něco méně chráněni</a> rouškami a respirátory těch, kteří je nosí. 
         
         <br/><br/>
-        Jak <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ve své analýze</a> píší David Fisman, Amy Greer a Ashleigh Tuite, "dopad nošení roušek a nebo jiné ochrany obličeje na šíření infekce COVID-19 bude největší, pokud bude zajištěna jejich dostupnost i pro znevýhodněné skupiny obyvatelstva". 
+        Jak <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ve své analýze</a> píší David Fisman, Amy Greer a Ashleigh Tuite, "dopad nošení roušek anebo jiné ochrany obličeje na šíření infekce COVID-19 bude největší, pokud bude zajištěna jejich dostupnost i pro znevýhodněné skupiny obyvatelstva". 
       </span>
     </aside>
 
@@ -588,8 +588,7 @@
       S poklesem R0 klesá i počet nakažených lidí.
       Namísto vizualizace R0 si tedy můžeme ukázat, jak nošení ochrany obličeje pohne <i>podílem nakažených lidí</i> v populaci.
       As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      
     </p>
 
     <p>
@@ -651,7 +650,7 @@
     </p>
 
     <p>
-      Když bude ochranu nosit dostatek lidí, dostaneme dolů na té křivce, kde je nulová šance nákazy.
+      Když bude ochranu nosit dostatek lidí, dostaneme se na té křivce dolů, kde je nulová pravděpodobnost nákazy.
       A tímto způsobem může ochrana obličeje ukončit epidemii COVID-19. 
       Ale jen za předpokladu, že bude roušky a respirátory nosit dostatek lidí.
     </p>
@@ -663,16 +662,16 @@
 
     <p>
       Experimentujte s grafem výše. Uvidíte, že když budou roušky fungovat na 50 %, potřebujeme, aby je nosily alespoň tři čtvrtiny populace. 
-      Když by ale průměrná ochrana byla účinná na 75%, stačilo by, kdyby takovou ochranu nosila polovina lidí a šíření COVID-19 by se zastavilo.
+      Pokud by ale průměrná ochrana byla účinná na 75 %, stačilo by, kdyby takovou ochranu nosila polovina lidí a šíření COVID-19 by se zastavilo.
     </p>
 
     <p>
       <b>Čím vyšší účinnost roušek a respirátorů, tím rychleji se křivka svažuje.</b>
-      Proto je velmi důležité nosit účinnou ochranu. Takovou, která <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">perfektně přiléhá</a> kolem úst <i>a</i> nosu a která je z materiálu fungujícího jako účinný filtru.
+      Proto je velmi důležité nosit účinnou ochranu. Takovou, která <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">perfektně přiléhá</a> kolem úst <i>a</i> nosu a která je z materiálu fungujícího jako účinný filtr.
     </p>
 
     <p>
-      Všichni se chceme po křivce sjet až dolů a ukončit šíření COVID-19. 
+      Všichni chceme po křivce sjet až dolů a ukončit šíření COVID-19. 
       Každý sám za sebe to ale nezvládneme. 
       Každý z nás může za sebe udělat jen malý krůček.
     </p>
@@ -701,21 +700,20 @@
     <p>Podívejte se na <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">doprovodné video</a> s jasným vysvětlením rouškové matematiky! Video bylo podpořeno nadací <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Zde je  <a href="https://aatishb.com/maskmath/calculator.html">roušková kalkulačka</a>, která je vidět na videu.</p>
 
     <p>
-      Mnoho díků za jejich připomínky a komentáře při vzniku této interaktivní eseje patří těmto lidem: <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, <a href="https://this-vijay.github.io/">Vijay Ravikumar</a>.
+      Mnoho díků za připomínky a komentáře při vzniku této interaktivní eseje patří těmto lidem: <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, <a href="https://this-vijay.github.io/">Vijay Ravikumar</a>.
     </p>
 
     <p>
-      Pokud se vám toto interaktivní vysvětlení líbilo a chtěli byste více takových, můžete 
-      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">autora podpořit na platformě Patreon</a></b>.
+      Pokud se vám toto interaktivní vysvětlení líbilo a chtěli byste více takových, můžete <b><a href="https://www.patreon.com/aatishb">autora podpořit na platformě Patreon</a></b>.
     </p>
 
     <p>
       Zde jsou <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">některé</a> <a href="https://www.maskfaq.com/test-results">informativní</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">zdroje</a> týkající se filtrovacích schopností různých materiálů, ze kterých se dělají roušky a respirátory. 
-      Materiály se mezi sebou hodně lidí, některé mohou svými schopnostmi filtrovat<a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">přesáhnout</a> <a href="https://www.maskfaq.com/test-results">80%</a>, za předpokladu, že je ochrana správně nasazena.
+      Materiály se mezi sebou hodně lidí, některé mohou svými schopnostmi filtrovat <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">přesáhnout</a> <a href="https://www.maskfaq.com/test-results">80%</a>, za předpokladu, že je ochrana správně nasazena.
     </p>
 
     <p>
-      Pro ty z vás, které zajímá matematická podstata použitých výpočtů (nehlašte se všichni) je zde  <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">podrobnější popis</a>.
+      Pro ty z vás, které zajímá matematická podstata použitých výpočtů (nehlaste se všichni) je zde  <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">podrobnější popis</a>.
       Grafy v tomto vysvětlení jsou rozšířením práce  <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> popisující obousměrné působení roušek a respirátorů.
     </p>
 
@@ -731,7 +729,7 @@
     </p>
 
     <p>
-      Děkujeme za dočtení, a dávejte na sebe pozor! 😷
+      Děkujeme za dočtení... a dávejte na sebe pozor! 😷
     </p>
 
   </div>
