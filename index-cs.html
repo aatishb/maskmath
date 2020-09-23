@@ -126,7 +126,7 @@
     </p>
 
  
-    <h2>Bariéra před obličejem nás chrání hned dvakrát</h2>
+    <h2>Bariéra před obličejem nás chrání dvakrát</h2>
 
     <p>
       Představme si, že infekční člověk má na sobě roušku s 50% účinností.
@@ -278,7 +278,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Způsob přenosu infekce</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -286,7 +286,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Pokles infekcí</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -294,7 +294,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Podíl scénáře</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -373,12 +373,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vydechovaný vzduch): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (výdech): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vdechovaný vzduch): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (nádech): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -401,7 +401,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Pravděpodobnost scénáře</div>
+          <div class="center">Podíl scénáře</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -525,21 +525,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vydechovaný vzduch):: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (výdech): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vdechovaný vzduch):: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (nádech): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout(
-        'How Masks Reduce R0',
-        'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
-        'Epidemic Under Control',
-        'Epidemic Out Of Control'
+        'Jak roušky a respirátory snižují index nakažlivosti R0',
+        'Procento lidí, kteří nosí ochranu',
+        'Kolik lidí nakazí jeden nakažlivý(R0)',
+        'Epidemie pod kontrolou',
+        'Epidemie se vymyká kontrole'
       )" :config="config"></graph>
 
     </div>
@@ -572,7 +572,7 @@
         Je to důsledkem tendence mít ve svém okolí podobně smýšlející lidi s podobnými názory a pohledy. Tento jev <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">snižuje</a> ochrannou sílu roušek a respirátorů, a to především tím, že lidé bez ochrany obličeje <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">jsou o něco méně chráněni</a> rouškami a respirátory těch, kteří je nosí. 
         
         <br/><br/>
-        Jak <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ve své analýze </a> píší David Fisman, Amy Greer a Ashleigh Tuite, "dopad nošení roušek a nebo jiné ochrany obličeje na šíření infekce COVID-19 bude největší, pokud bude zajištěna jejich dostupnost i pro znevýhodněné skupiny obyvatelstva". 
+        Jak <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ve své analýze</a> píší David Fisman, Amy Greer a Ashleigh Tuite, "dopad nošení roušek a nebo jiné ochrany obličeje na šíření infekce COVID-19 bude největší, pokud bude zajištěna jejich dostupnost i pro znevýhodněné skupiny obyvatelstva". 
       </span>
     </aside>
 
@@ -594,7 +594,7 @@
 
     <p>
       S využitím často používaného matematického modelu (<a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>) můžeme spočítat, jak se číslo R0 projeví na počtu nakažených lidí. 
-      (O modelech SIR se více dozvíte v tomto výborně zpracovaném <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">videu</a> .)
+      (O modelech SIR se více dozvíte v tomto výborně zpracovaném <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">videu</a>.)
     </p>
     
     <p>
@@ -612,12 +612,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vydechovaný vzduch): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (výdech): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Účinnost ochrany (vdechovaný vzduch): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (nádech): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
