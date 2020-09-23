@@ -429,85 +429,89 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      Jak poklesne přenos infekce, když bude mít 60% lidí ochranu s 60% účinností?
+      
+      Nebo  90 % lidí roušku s 50% účinností?
+      Nebo 50 % lidí respirátor s 90% účinností?
+      Vyzkoušejte si to na interaktivní ukázce níže:
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>Závěr je zjevný: <b>Čím více lidí nosí roušky a respirátory, tím menší je šance na nákazu.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Tím, že filtrují vdechovaný vzduch, chrání respirátory (a částečně roušky) své nositele.
+      A tím, že respirátory a roušky filtrují vydechovaný vzduch, chrání <i>všechny</i> v okolí, včetně těch, kteří ochranu nemají.
+ 
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
-        <span v-if="!expandaside1"> (Click to expand)</span>
+      <span @click="expandaside1 = true;">A co respirátory, které nefiltrují vydechovaný vzduch?
+        <span v-if="!expandaside1"> (Kliknutím rozbalíte podrobnosti)</span>
       </span>
 
       <span v-if="expandaside1">
-        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
-        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
-        You can see this for yourself in the interactive above.
+        Některé respirátory mají <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">otvory nebo ventily</a>, které ven vypouštějí nefiltrovaný vydechovaný vzduch.
+        Americká CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">nedoporučuje</a> používání těchto typů, protože vystavuje lidi v okolí riziku infekce.
+        Na interaktivním grafu si můžete vyzkoušet, jak to funguje.
         <br><br>
-        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-        This represents a highly effective mask like an N95.
-        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        Nejprve nastavte vysokou účinnost při nádechu i výdechu (a používání ochrany někde uprostřed).
+        To je situace, kdy řada lidí používá účinné FFP2 (N95) respirátory.
+        Nyní přetáhněte posuvník účinnosti při výdechu k nule. Sledujte, jak šance na nákazu narostla, zejména u těch, kteří nenosí ochranu.
         <br><br>
-        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+        Pokud už takový respirátor s ventilem vlastníte, CDC doporučuje <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">nosit přes ventilek</a> chirurgickou ústenku.
       </span>
     </aside>
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      Roušky a respirátory jsou dokonce ještě účinnější, než ukazují tato čísla.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Jak zastavit epidemii</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      Když chcete uhasit oheň, musíte zamezit přístupu kyslíku.
+      Ale nemusíte oheň od kyslíku odříznout úplně. Stačí, když přísun kyslíku snížíte natolik, aby oheň nemohl dále růst.
+      To samé platí u epidemií – nemusíte snížit přenos infekcí úplně, na 0 %. 
+      Stačí, když přenos infekcí snížíte jen natolik, aby se šíření zpomalilo. Tím epidemii zadusíte.
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Zřejmě jste slyšeli o epidemiologickém termínu R0 ("er nula"). Jedná se o <a href="https://cs.wikipedia.org/wiki/Index_naka%C5%BElivosti">index nakažlivosti</a>, též zvaný základní reprodukční číslo.
+      Udává počet lidí, kteří se nakazí od jednoho nakažlivého člověka v populaci bez imunity.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>
+      Pokud je R0 vyšší než 1, tak se nákaza bude šířit stále rychleji, a to dokud nenakazí všechny lidi bez imunity, nebo dokud se nenajde vakcína.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Ale číslo R0 <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">není</a> nijak "osudově dané". Je to výsledek dvou čísel: počtu lidí, které nakažlivý člověk průměrně potká, a pravděpodobnosti nákazy při průměrném kontaktu dvou lidí. 
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">průměrný počet lidí, které nakažený potká</span> <br>⨉ <span class="dotted">pravděpodobnost přenosu infekce při kontaktu</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      Dostatečný vzájemný odstup, karanténa a uzavírání podniků snižuje <span class="dashed">to první číslo</span>
+      
+      Roušky a respirátory pomáhají snížit <span class="dotted">to druhé číslo</span>.
+      Cílem všech těchto hromadných opatření je dostat šíření epidemie pod kontrolu snížením R0 pod hodnotu 1.
+      
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Pojďme se tedy podívat, jaký vliv mají roušky a respirátory na reprodukční číslo R0.
+      Následující grafu ukazuje, co se děje s číslem R0, když stoupá podíl lidí s ochranou obličeje.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Prvním posuvníkem můžete nastavit počáteční hodnotu R0, která se u COVID-19 pohybuje mezi 2 a 3 (v situaci bez jakýchkoli opatření, každé další opatření může R0 dále snížít).
+      Dále můžete nastavit různou účinnost roušek a respirátorů v popualci a podívat se, jak ochrana obličeje přispívá ke zpomalení a potlačení epidemie.
     </p>
 
   </div>
@@ -521,12 +525,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (vydechovaný vzduch):: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (vdechovaný vzduch):: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -544,52 +548,58 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Abychom zastavili šíření COVID-19, musíme dostat číslo R0 pod hodnotu 1.
+      Když se to podaří, znamená to, že jeden nakažený předá infekci v průměru méně než jedné osobě, a epidemie se zastaví.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Kolik lidí tedy musí nosit 50% účinnou roušku, aby to stačilo na zastavení epidemie?
+      A co kdyby nosili ochranu se 75% účinností?
+      Nebo respirátory s 90% účinností?
+      Vyzkoušejte si různé možnosti a kombinace.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">Podstatný háček: lidé se obvykle nepohybují náhodně
+        <span v-if="!expandaside2"> (Kliknutím zobrazíte podrobnosti)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Lidé, kteří nosí ochranu, se nejspíše budou častěji vídat s dalšími lidmi, kteří rovněž nosí ochranu. S lidmi bez ochrany se během svého dne potkají méně často.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        A naopak lidé bez roušky se častěji budou vídat s dalšími lidmi bez roušek.
+        Je to důsledkem tendence mít ve svém okolí podobně smýšlející lidi s podobnými názory a pohledy. Tento jev <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">snižuje</a> ochrannou sílu roušek a respirátorů, a to především tím, že lidé bez ochrany obličeje <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">jsou o něco méně chráněni</a> rouškami a respirátory těch, kteří je nosí. 
+        
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Jak <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ve své analýze </a> píší David Fisman, Amy Greer a Ashleigh Tuite, "dopad nošení roušek a nebo jiné ochrany obličeje na šíření infekce COVID-19 bude největší, pokud bude zajištěna jejich dostupnost i pro znevýhodněné skupiny obyvatelstva". 
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Jakou cenu platíme</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Pojďme se na sílu roušek a respirátorů podívat z jiného úhlu.
+      Roušky a respirátory zachraňují lidské životy. Snižují totiž počet nakažených, což snižuje počet lidí, kteří během pandemie zemřou.
     </p>
 
     <p>
+      Čím více lidí nosí roušky a respirátory, tím více klesá reprodukční číslo R0.
+      S poklesem R0 klesá i počet nakažených lidí.
+      Namísto vizualizace R0 si tedy můžeme ukázat, jak nošení ochrany obličeje pohne <i>podílem nakažených lidí</i> v populaci.
       As more people wear masks, R0 decreases.
       And as R0 decreases, so does the number of infected people.
       So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      S využitím často používaného matematického modelu (<a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>) můžeme spočítat, jak se číslo R0 projeví na počtu nakažených lidí. 
+      (O modelech SIR se více dozvíte v tomto výborně zpracovaném <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">videu</a> .)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>
+      Tento model výrazně zjednodušuje (předpokládá náhodné potkávání lidí a nulová opatření). Ukazuje nám ale přibližný odhad 
+      toho, kolik lidí může nošení roušek a respirátorů ochránit před nákazou. A naopak, kolik lidí se nakazí, když roušky/respirátory nikdo nenosí. </p>
 
   </div>
 
@@ -602,19 +612,19 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Účinnost ochrany (vydechovaný vzduch): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Účinnost ochrany (vdechovaný vzduch): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        'Jak roušky snižují infekce',
+        'Procento lidí, kteří nosí ochranu',
+        'Procento nakažených lidí'
       )" :config="config"></graph>
 
     </div>
@@ -623,54 +633,56 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Křivka ukazuje, jak nošení roušek a respirátorů ovlivňuje dopad epidemie na společnost.
+      <b>Čím více lidí nosí ochranu, tím méně lidí se nakazí.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Když nosí roušky a respirátory jen málo lidí, jsme v horní části křivky, a postupně se virem nakazí většina lidí. 
+      S každým krokem doprava – s tím, jak stoupá procento lidí s ochranou – jdeme dolů, tedy snižuje se počet infikovaných.
+      Je zřejmé, že i když jen účinnost ochrany jen částečná a ne všichni ochranu nosí, přesto může toto opatření zpomalit epidemii.
     </p>
 
     <p>
-      To completely stop the spread, we need to get to the bottom of this hill.
-      But there's a silver lining: as more people wear masks, the hill grows steeper.
-      Which means <b>masks provide greater returns to society as more people wear them</b>.
+      K úplnému zastavení šíření infekce se musíme dostat do spodní části křivky. 
+      Ale je tu povzbudivá zpráva: čím více lidí nosí roušky a respirátory, tím strměji se křivka svažuje a tím více se šíření zpomaluje. 
+      Znamená to, že <b>čím více lidí nosí roušky a respirátory, tím vetší z toho má užitek celá populace</b>.
+      
     </p>
 
     <p>
-      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
-      This is how masks can end an epidemic.
-      But masks can only end an epidemic if enough people wear them.
+      Když bude ochranu nosit dostatek lidí, dostaneme dolů na té křivce, kde je nulová šance nákazy.
+      A tímto způsobem může ochrana obličeje ukončit epidemii COVID-19. 
+      Ale jen za předpokladu, že bude roušky a respirátory nosit dostatek lidí.
     </p>
 
     <p>
-      You might wonder how many people have to wear masks to end an epidemic.
-      Well, that depends on how effective the masks are.
+      Možná se ptáte, jaké procento lidí musí nosit ochranu obličeje, aby se podařilo epidemii ukončit.
+      To záleží na účinnosti nošených roušek a respirátorů.
     </p>
 
     <p>
-      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
-      But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
+      Experimentujte s grafem výše. Uvidíte, že když budou roušky fungovat na 50 %, potřebujeme, aby je nosily alespoň tři čtvrtiny populace. 
+      Když by ale průměrná ochrana byla účinná na 75%, stačilo by, kdyby takovou ochranu nosila polovina lidí a šíření COVID-19 by se zastavilo.
     </p>
 
     <p>
-      <b>The more effective the mask, the faster we can descend the hill.</b>
-      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      <b>Čím vyšší účinnost roušek a respirátorů, tím rychleji se křivka svažuje.</b>
+      Proto je velmi důležité nosit účinnou ochranu. Takovou, která <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">perfektně přiléhá</a> kolem úst <i>a</i> nosu a která je z materiálu fungujícího jako účinný filtru.
     </p>
 
     <p>
-      We all want to get to the bottom of the hill and stop the spread of COVID-19.
-      But you can't get there by yourself.
-      Each person can only take a tiny step downwards.
+      Všichni se chceme po křivce sjet až dolů a ukončit šíření COVID-19. 
+      Každý sám za sebe to ale nezvládneme. 
+      Každý z nás může za sebe udělat jen malý krůček.
     </p>
 
-    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+    <p>
+      Pokud ale tento malý krůček udělá hodně lidí, společně jako populace skočíme dolů o pořádný kus.</p>
 
-    <p>Together, we can get to the bottom of the hill.</p>
+    <p>Společně se můžeme dostat dolů z křivky infekcí.</p>
     
-    <p>Together, we can hit the brakes on COVID-19.</p>
+    <p>Společně můžeme šlápnout na brzdu a zastavit COVID-19.</p>
 
   </div>
 
@@ -682,41 +694,44 @@
 
 <div class="page footer">
   <div class="container">
-    <h2>Credits & References</h2>
+    <h2>Autoři a odkazy</h2>
 
-    <p>This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+    <p>Toto interaktivní vysvětlení vytvořil <a href="https://twitter.com/aatishb">Aatish Bhatia</a> ve spolupráci s <a href="https://twitter.com/minutephysics">Henry Reichem</a>.</p>
 
-    <p>Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
+    <p>Podívejte se na <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">doprovodné video</a> s jasným vysvětlením rouškové matematiky! Video bylo podpořeno nadací <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Zde je  <a href="https://aatishb.com/maskmath/calculator.html">roušková kalkulačka</a>, která je vidět na videu.</p>
 
     <p>
-      Many thanks to <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> for their helpful feedback on drafts of this essay.
+      Mnoho díků za jejich připomínky a komentáře při vzniku této interaktivní eseje patří těmto lidem: <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, <a href="https://this-vijay.github.io/">Vijay Ravikumar</a>.
     </p>
 
     <p>
-      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">support my work on Patreon</a></b>.
+      Pokud se vám toto interaktivní vysvětlení líbilo a chtěli byste více takových, můžete 
+      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">autora podpořit na platformě Patreon</a></b>.
     </p>
 
     <p>
-      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
-      While masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
+      Zde jsou <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">některé</a> <a href="https://www.maskfaq.com/test-results">informativní</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">zdroje</a> týkající se filtrovacích schopností různých materiálů, ze kterých se dělají roušky a respirátory. 
+      Materiály se mezi sebou hodně lidí, některé mohou svými schopnostmi filtrovat<a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">přesáhnout</a> <a href="https://www.maskfaq.com/test-results">80%</a>, za předpokladu, že je ochrana správně nasazena.
     </p>
 
     <p>
-      For the algebra enthusiasts among you (you know who you are), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">here's a writeup</a> covering the math in more detail.
-      The graphs in this essay extend the work of <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> to account for the bidirectional effectiveness of masks.
+      Pro ty z vás, které zajímá matematická podstata použitých výpočtů (nehlašte se všichni) je zde  <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">podrobnější popis</a>.
+      Grafy v tomto vysvětlení jsou rozšířením práce  <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> popisující obousměrné působení roušek a respirátorů.
     </p>
 
     <p>
-      The bidirectional model of masks underlying this essay was to my knowledge first published in a preprint by <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Table S3 and Fig S4). 
-      This was highlighted by Howard et al in their <a href="https://www.preprints.org/manuscript/202004.0203/v3">review article</a> and <a href="https://www.fast.ai/2020/04/13/masks-summary/">accompanying essay</a>, and further popularized by <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> in the Atlantic, and by <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> in the New Yorker, who writes, <i>"The more effective the mask, the bigger the impact."</i>
+      Pokud vím, tak obousměrný model působení byl poprvé publikován v pre-printu 
+      The bidirectional model of masks underlying this essay was to my knowledge first published in a preprint by <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Tabulka S3 a Ilustrace S4). 
+      Na to upozornil Howard et al v jejich <a href="https://www.preprints.org/manuscript/202004.0203/v3">přehledovém článku</a> a  <a href="https://www.fast.ai/2020/04/13/masks-summary/">doprovodném komentáři</a>, a dále o tomto modelu psali <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> v článku pro The Atlantic a  <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> v článku pro The New Yorker. Ten poznamenal: <i>"Čím je ochrana účinnější, tím je dopad větší."</i>
     </p>
 
     <p>
-      This text is published under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license. The source code is available <a href="https://github.com/aatishb/maskmath">on Github</a>. The emojis are created by <a href="https://twemoji.twitter.com/">Twitter</a> and were modified to include a custom mask design.
+      Tento text je publikován pod licencí Creative Commons
+      This text is published under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Zdrojový kód je dostupný <a href="https://github.com/aatishb/maskmath">na platformě Github</a>. Použité emotikony pocházejí z <a href="https://twemoji.twitter.com/">Twitteru</a> a byly upraveny pro použití vlastních typů roušek.
     </p>
 
     <p>
-      Thanks for reading, and stay safe! 😷
+      Děkuji za dočtení, a dávejte na sebe pozor! 😷
     </p>
 
   </div>
