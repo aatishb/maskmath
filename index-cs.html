@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="cs">
 
 <head>
 
@@ -41,8 +41,8 @@
     <p5 src="js/sketch0.js"></p5>
     <div class="overlay">
       <div>
-        <h1>Překvapivě mnohonásobná <br>účinnost roušek a respirátorů</h1>
-        <h3>Interaktivní vysvětlení toho, jak ochranné pomůcky mohou ukončit pandemii COVID-19</h3>
+        <h1>Překvapivá účinnost<br> roušek a respirátorů</h1>
+        <h3>Interaktivní vysvětlení toho, jak mohou ochranné pomůcky ukončit pandemii COVID-19</h3>
         <h4><a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <h5>
           <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-cs.html">Česky</a> &middot; <a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
@@ -152,7 +152,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 3:</span>Když má příjemce na sobě roušku s 50% účinností, riziko nákazy se snižuje o 50 %. </anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Nakažlivá osoba" susceptibleperson="Osoba poblíž"><span class="orange">Scénář přenosu 3: </span>Když má příjemce na sobě roušku s 50% účinností, riziko nákazy se snižuje o 50 %. </anim-with-caption>
   
   <div class="container">
 
@@ -416,11 +416,11 @@
       </div>
 
       <div class="row half bigsplash">
-        <span>Pokles infekcí u lidí s ochranou: <span class="dotted">{{convertToPercent(eout * p)}}</span> %</span>
+        <span>Pokles infekcí u lidí bez ochrany: <span class="dotted">{{convertToPercent(eout * p)}}</span> %</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Pokles infekcí u lidí bez ochrany: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span> %</span>
+        <span>Pokles infekcí u lidí s ochranou: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span> %</span>
       </div>
 
     </div>
@@ -696,7 +696,7 @@
   <div class="container">
     <h2>Autoři a odkazy</h2>
 
-    <p>Toto interaktivní vysvětlení vytvořil <a href="https://twitter.com/aatishb">Aatish Bhatia</a> ve spolupráci s <a href="https://twitter.com/minutephysics">Henry Reichem</a>.</p>
+    <p>Toto interaktivní vysvětlení vytvořil <a href="https://twitter.com/aatishb">Aatish Bhatia</a> ve spolupráci s <a href="https://twitter.com/minutephysics">Henry Reichem</a>. Do češtiny esej přeložil <a href="https://www.pavelkasik.com">Pavel Kasík</a></p>
 
     <p>Podívejte se na <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">doprovodné video</a> s jasným vysvětlením rouškové matematiky! Video bylo podpořeno nadací <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Zde je  <a href="https://aatishb.com/maskmath/calculator.html">roušková kalkulačka</a>, která je vidět na videu.</p>
 
