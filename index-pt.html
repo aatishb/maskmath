@@ -45,7 +45,7 @@
         <h3>Um ensaio interativo sobre como as máscaras podem acabar com a COVID-19</h3>
         <h4>Por <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <h5>
-          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a>
+          <a href="index.html">English</a> &middot; <a href="index-he.html">עברית</a> &middot; <a href="index-fr.html">Français</a> &middot; <a href="index-it.html">Italiano</a> &middot; <a href="index-pt.html">Português Brasileiro</a> &middot; <a href="index-ru.html">Русский</a> &middot; <a href="index-es.html">Español</a> &middot; <a href="index-el.html">Ελληνικά</a>
         </h5>
       </div>
     </div>
@@ -73,7 +73,7 @@
       <div class="center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <span style="margin-top: 0.75rem;">
-          Assista ao vídeo complementar: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Por que as máscaras funcionam MELHOR do que você imagina</a>
+          Assista ao vídeo complementar: <a href="https://www.youtube-nocookie.com/watch?v=Y47t9qLc9I4">Por que as máscaras funcionam MELHOR do que você imagina</a>
         </span>
       </div>
     </aside>
@@ -605,7 +605,9 @@
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
-      <graph :traces="graph3Traces" :layout="graph3Layout(
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
         'Como as máscaras reduzem o número de infecções',
         'Percentual da população que usa máscara',
         'Percentual da população que será infectada'
