@@ -1,4 +1,4 @@
-// custom graph component
+﻿// custom graph component
 Vue.component('graph', {
 
   props: ['traces', 'layout', 'config'],
@@ -200,6 +200,12 @@ Vue.component('p5', {
 
 })
 
+// translation hyperlink
+Vue.component('translation', {
+  props: ['item'],
+  template: `<span> &middot; <a v-bind:href='item.link'>{{item.name}}</a></span>`
+})
+
 
 /* main Vue instance */
 let app = new Vue({
@@ -217,7 +223,19 @@ let app = new Vue({
     graphTextColor: 'rgb(255, 190, 137)',
     graphTraceColor: 'rgb(254, 199, 81)',
     expandaside1: false,
-    expandaside2: false
+    expandaside2: false,
+    translations: 
+    [ 
+      { link: 'index-he.html', name: 'עברית' },
+      { link: 'index-fr.html', name: 'Français' },
+      { link: 'index-it.html', name: 'Italiano' },
+      { link: 'index-pt.html', name: 'Português Brasileiro' },
+      { link: 'index-ru.html', name: 'Русский' },
+      { link: 'index-es.html', name: 'Español' },
+      { link: 'index-el.html', name: 'Ελληνικά' },
+      { link: 'index-cs.html', name: 'Česky' },
+      { link: 'index-uk.html', name: 'Українська' },
+    ]
   },
 
   methods: {
