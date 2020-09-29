@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://pankgeorg.com"><img src="https://avatars1.githubusercontent.com/u/8681967?v=4" width="100px;" alt=""/><br /><sub><b>Παναγιώτης Γεωργακόπουλος</b></sub></a><br /><a href="#translation-pankgeorg" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/ismarou"><img src="https://avatars2.githubusercontent.com/u/33368247?v=4" width="100px;" alt=""/><br /><sub><b>ismarou</b></sub></a><br /><a href="https://github.com/aatishb/maskmath/pulls?q=is%3Apr+reviewed-by%3Aismarou" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/progproc"><img src="https://avatars1.githubusercontent.com/u/47752037?v=4" width="100px;" alt=""/><br /><sub><b>progproc</b></sub></a><br /><a href="#translation-progproc" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/professor-k"><img src="https://avatars2.githubusercontent.com/u/572940?v=4" width="100px;" alt=""/><br /><sub><b>Andriy Kvasnytsya</b></sub></a><br /><a href="#translation-professor-k" title="Translation">🌍</a></td>
   </tr>
 </table>
 

@@ -114,6 +114,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "professor-k",
+      "name": "Andriy Kvasnytsya",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/572940?v=4",
+      "profile": "https://github.com/professor-k",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
