@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Kekuatan Masker yang Berlipat Ganda</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sebuah Bahasan Interaktif Bagaimana Penggunaan Masker Dapat Menghentikan COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sebuah Pembahasan Interaktif: Mengapa Masker Bekerja Lebih Baik Dari Apa Yang Kamu Kira">
+  <meta name="twitter:description" content="Meskipun masker yang tidak terlalu efektif, ternyata dapat menghentikan penyebaran COVID-19, selama banyak orang yang juga menggunakannya.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Sebuah Pembahasan Interaktif: Mengapa Masker Bekerja Lebih Baik Dari Apa Yang Kamu Kira" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Meskipun masker yang tidak terlalu efektif, ternyata dapat menghentikan penyebaran COVID-19, selama banyak orang yang juga menggunakannya." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>Kekuatan Masker yang Berlipat Ganda</h1>
+        <h3>Sebuah Bahasan Interaktif Bagaimana Penggunaan Masker Dapat Menghentikan COVID-19</h3>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+
+    <p>
+    Saat <a href="https://www.preprints.org/manuscript/202004.0203/v1">ini</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">kita</a> <a href="https://science.sciencemag.org/content/368/6498/1422">tahu</a>, kalau pemakaian masker bisa membantu memperlambat penyebaran COVID-19.
+    Namun, beberapa orang enggan untuk menggunakan masker karena mereka memandang hal ini sebagai hak pribadi daripada masalah kesehatan bersama.
+    </p>
+
+
+    <p>
+      Sayangnya, banyak juga yang belum memahami jika sesungguhnya <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masker tidak hanya melindungi sang pemakai <i>namun</i> orang disekitarnya juga</a>.
+      Jadi, <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">perlindungan dua-arah inilah</a> yang membuat penggunaan masker pada semua orang sangatlah efektif untuk mengakhiri pendemi.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Dengan melakukan perhitungan matematis pada penggunaan masker, kita akan melihat bagaimana jika 60% orang menggunakan masker dengan efektifitas 60%, dapat menurunkan transmisi penyakit sebanyak 60% — kira-kira cukup untuk menghentikan penyebaran COVID-19.
+    </p>  
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Tonton video pembahasan ini: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Mengapa Masker LEBIH BAIK Dari Yang Kamu Pikirkan</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Bicarakan, Jangan Semprotkan!</h2>
+
+    <p>
+      Pertama-tama, mari kita ambil gambaran kasar dari jumlah data yang ada.
+      Ketika seseorang menghembuskan nafas, mereka <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">menyebarkan partikel saliva</a> dalam jumlah yang amat kecil.
+      Jika mereka terinfeksi, maka 'cipratan cairan dari mulut atau hidung' ini akan mengandung partikel virus.
+      Nah, <a href="https://arxiv.org/pdf/2005.10988.pdf">cipratan cairan yang mengandung virus ini</a> merupakan penyebab utama mengapa COVID-19 dapat menyebar.
+    </p>
+
+    <p>Ketika orang yang terinfeksi bernafas, mereka menyebarkan kira-kira <b>seribu</b> partikel virus setiap menit.</p>
+
+    <p>Ketika mereka berbicara, mereka menyebarkan kira-kira <b>sepuluh ribu</b> partikel virus setiap menit.</p>
+
+    <p>Ketika mereka batuk, mereka menyebarkan kira-kira <b>seratus ribu</b> partikel virus.</p>
+
+    <p>Ketika mereka bersin, mereka menyebarkan kira-kira <b>satu juta</b> partikel virus.</p>
+
+    <p>
+      Semakin banyak partikel virus yang berpindah dari satu orang ke orang lain, semakin tinggi kemungkinan seseorang dapat terinfeksi juga.
+      (Dan ketika terinfeksi, orang yang terpapar lebih banyak partikel virus dapat mengalami <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">gejala yang lebih parah</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Orang Yang Menularkan" susceptibleperson="Orang Yang Tertular">
+      <span class="red">Rute Transmisi 1:</span> Ketika orang yang menularkan berada dekat dengan orang yang tertular, 'cipratan cairan dari mulut atau hidung' dapat menyebarkan penyakit.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Masker dapat mengurangi perpindahan partikel virus dari cipratan mulut antara satu orang ke orang lain — dengan memblokir atau mengalihkan cipratan tersebut — dapat mengurangi kemungkinan infeksi.</p>
+
+     <p>
+      Perlu diingat jika tidak ada masker yang sempurna.
+      Bahkan masker N95 yang direkomendasikan untuk pekerja kesehatan seperti dokter hanya melindungi <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% jumlah partikel yang sangat sulit dihalau</a> (dan itu pun jika <a href="https://www.n95decon.org/publications">digunakan secara benar</a>).
+    </p>
+
+  
+    <p>
+      Masker tidak menjamin keselamatan, mereka hanya mengurangi resiko.
+      Sama halnya seperti payung yang tidak menjamin kamu tetap kering, namun setidaknya dapat menghindari kamu dari basah kuyup.
+      Persis seperti payung, maskerpun akan bekerja jika digunakan secara benar.
+      Namun masker sepenuhnya tidak seperti payung, dimana hanya melindungi orang yang menggunakannya saja, masker juga melindungi orang <i>disekitar</i> penggunanya.
+    </p>
+
+
+    <p>
+    </p>
+
+    <h2>Mengapa Masker Melindungi Kita Duakali</h2>
+
+
+    <p>
+     Mari bayangkan jika seseorang yang menularkan, menggunakan masker dengan tingkat efektifitas 50%.
+     Dengan 'efektifitas sebesar 50%', maksudnya penggunaan masker ini dapat mengurangi setengah dari peluang mereka dapat menginfeksi orang disekitarnya.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Orang Yang Menularkan" susceptibleperson="Orang Yang Tertular"><span class="orange">Rute Transmisi 2:</span> Ketika orang yang menularkan menggunakan masker dengan efektifitas 50%, penularan penyakit juga menurun sebesar 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Namun, bagaimana jika orang yang tertular yang justru menggunakan masker?</p>
+
+    <p>
+      Secara umum, efektifitas dari sebuah masker bergantung dari bagaimana kamu <b>menghirup</b> atau <b>mengeluarkan</b> nafas melaluinya.
+      Untuk saat ini, mari kita bikin asumsi sederhana kalau masker ini secara efektif berlaku dikedua arah.
+    </p>
+
+    <p>Dalam kasus ini, kemungkinan dari infeksi pada rute berikut dapat menurun sebesar 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Orang Yang Menularkan" susceptibleperson="Orang Yang Tertular">
+      <span class="orange">Rute Transmisi 3:</span> Ketika orang yang tertular menggunakan masker dengan efektifitas 50%, maka kemungkinan untuk terinfeksi juga menurun sebesar 50%..</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Bagaimana jika orang yang menularkan <i>dan</i> orang yang tertular keduanya menggunakan masker?</p> 
+
+    <p>
+      Nah, masker yang pertama akan mengurangi kemungkinan infeksi menjadi setengahnya, dan masker yang kedua juga akan mengurangi lagi setengahnya. 
+      Jadi ketika <i>keduanya</i> menggunakan masker, peluang infeksi menjadi setengah dari setengahnya, bisa dibilang menjadi 25% (dibandingankan saat tidak menggunakan masker sama sekali).
+      Itu berarti kemungkinan infeksi mengalami penurunan sebesar 75%!
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Orang Yang Menularkan" susceptibleperson="Orang Yang Tertular"><span class="yellow">Rute Transmisi 4:</span> Ketika kedua orang tesebut menggunakan masker dengan efektifitas 50%, maka peluang menularnya penyakit menurun sebesar 75%.</anim-with-caption>
+  
+  <div class="container">
+
+
+    <p>
+      Kalau dipikir lagi, cukup mengejutkan jika masker yang punya efektifitas 50% ternyata dapat mengurangi peluang infeksi sampai 75%.
+      Hal ini menjadi mungkin jika kedua orang tersebut menggunakan masker, dan kemungkinan penularan berkurang dua kali lipat.
+      <b>Proteksi yang berlipat ganda</b> ini membuat masker menjadi lebih efektif dari yang kamu pikirkan.
+    </p>
+
+    <p>Berikut empat rute yang mungkin dilalui oleh partikel virus untuk menyebar dari orang ke orang.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Rute Transmisi Penyakit</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Penyebaran Berkurang Sebesar</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+       Keempat cara COVID-19 dapat menyebar dari orang ke orang. Diasumsikan masker memiliki efektifitas 50%.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>Dari Orang-ke-Orang menjadi Sebuah Populasi</h2>
+
+    <p>
+      Sejauh ini, kita hanya melihat penyebaran penyakit antara dua orang.
+      Bagaimana memulai memahami transmisi penyakit untuk <i>keseluruhan populasi</i>?
+    </p> 
+
+    <p>Nah, sebenarnya cukup sederhana.</p> 
+
+  
+    <p>
+      Sebagai contoh, jika <b>tidak satupun orang</b> menggunakan masker, kemudian ketika dua orang bertemu, maka kemungkinan bertemunya <span class="red">kedua orang yang tidak menggunakan masker</span> adalah 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+
+    <p>
+      Jadi bisa dikatakan dalam kondisi diatas kita memilih <span class="red">rute pertama</span> dari transmisi penyakit, dan populasi itu <span class="red">tidak mendapat penurunan</span> transmisi sebuah penyakit sedikitpun.
+    </p>
+
+   
+    <p>
+     Beralih ke kondisi lain, jika <b>semua orang</b> menggunakan masker, ketika dua orang bertemu, kemungkinan bertemunya <span class="yellow">kedua orang menggunakan masker</span> adalah 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      Dalam kondisi ini, berarti populasi memilih <span class="yellow">rute terakhir</span> dari penularan penyakit.
+      Diasumsikan efektifitas masker adalah 50% di kedua arah, populasi ini akan mendapatkan <span class="yellow">penurunan transmisi penyakit sebesar 75%</span>.
+    </p>
+
+
+    <p>
+      Jadi, ketika <i>semua orang</i> menggunakan masker (atau ketika <i>tidak ada satu pun</i> menggunakannya), sudah sangat jelas jika kita dapat mengkalkulasi penyebaran penyakit pada suatu populasi, karena hanya akan ada satu rute yang terlibat.
+    </p>
+
+    <p>
+     Namun kenyataannya, beberapa orang menggunakan masker dan beberapa tidak.
+     Hal ini berarti, sebuah virus dapat menyebar melalui gabungan dari ke empat rute tersebut. 
+     Sehingga kemungkinan keterlibatan setiap rute bergantung dari seberapa banyak orang yang menggunakan masker.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Penggunaan Masker: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+  
+    <p>
+     Sebagai contoh, <b>jika 50% orang menggunakan masker</b>, kemudian dua orang bertemu secara acak, kemungkinan bertemunya <span class="yellow">kedua orang yang menggunakan masker</span> adalah 50% ⨉ 50%, bisa dibilang 25%.
+     Demikian pula, kamu dapat mengetahui peluang dari tiga jalur penularan penyakit lainnya.
+    </p>
+
+
+    <p>
+     Ketika tepat setengah dari populasi menggunakan masker, itu berarti membuat setiap rute punya kemungkinan yang sama rata. (Bisakah kamu yakinkan dirimu mengapa hal ini benar?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Rute Transmisi Penyakit</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Penurunan Transmisi Penyakit</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Kemungkinan Rute</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Keempat cara COVID-19 dapat menyebar dari orang ke orang, diasumsikan jika 50% dari orang menggunakan masker dengan efektifitas 50%.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+
+    <p>
+      Sekarang kita bisa mengkalkulasi <b>rata-rata penurunan transmisi penyakit dalam sebuah populasi</b>.
+      Karena tadi kita telah menghitungnya dan setiap rute mempunyai kemungkinan yang sama, sehingga tinggal mencari rata-rata dari <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> dan <span class="yellow">75%</span>, dimana hasilnya adalah 43.75%.
+    </p>
+
+  
+    <p>
+      Orang yang <i>tidak</i> menggunakan masker akan terinfeksi dari kedua jalur yang pertama, sama ketika setengah populasinya menggunakan masker.
+     Jadi penurunan penularan penyakit kepada yang tidak menggunakan masker sebesar rata-rata dari <span class="red">0%</span> dan <span class="orange">50%</span>, atau hanya sebesar 25%.
+
+    </p>
+    
+    <p>
+      Sementara, orang yang <i>menggunakan</i> masker akan terinfeksi dari kedua rute terakhir.
+     Jadi penurunan penularan penyakit kepada yang menggunakan masker sebesar rata-rata dari <span class="orange">50%</span> dan <span class="yellow">75%</span>, yaitu sebesar 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Rata-rata penurunan Transmisi Penyakit = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Penurunan Transmisi Penyakit kepada yang<b> Tidak Menggunakan Masker</b> = 25%</div>
+        <div class="splash">Penurunan Transmisi Penyakit kepada yang<b> Menggunakan Masker</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Diasumsikan 50% dari orang-orang menggunakan masker dengan efektifitas 50%)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+     Meskipun, sebenarnya orang yang tidak menggunakan masker juga mendapat keuntungan, karena mereka menghirup udara yang telah dihalau oleh marker <i>oranglain</i>.
+    Namun, mereka yang menggunakan masker jauh lebih banyak diuntungkan, terimakasih kepada proteksi dari masker yang mereka pakai.
+    </p>
+
+     <p>Dan ketika sebuah populasi memiliki orang yang menggunakan masker maupun yang tidak, rata-rata keuntungan ini dibagi kedua orang tersebut.</p>
+
+    <p>Sehingga ini bisa jadi contoh yang sederhana (dimana 50% dari orang-orang menggunakan masker dengan efektifitas 50%) untuk mengetahui bagaimana <b>penggunaan masker dapat menguntungkan <i>setiap individu</i></b> sampai <b>menguntungkan rata-rata dari sebuah <i>populasi.</i></b></p>
+
+    <h2>Maskology</h2>
+
+ 
+    <p>
+      Mari <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">menerapkan logika ini</a> kepada <i>semua nilai</i> dari <b>penggunaan masker</b> dan <b>efektifitas masker</b>.
+     Geser slider dibawah untuk melihat bagaimana masker dapat menekan penyebaran dari penyakit.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Penggunaan Masker: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker saat Menghirup Udara: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker saat Mengeluarkan Udara: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Rute Transmisi Penyakit</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Penurunan Transmisi Penyakit</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Peluang Melewati Rute Ini</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Rata-rata Penurunan Transmisi Penyakit: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Penurunan Transmisi Penyakit kepada yang Tidak Menggunakan Masker: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Penurunan Transmisi Penyakit kepada yang Menggunakan Masker: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+     Apa yang akan terjadi pada transmisi penyakit, jika 60% dari orang-orang menggunakan masker dengan efektifitas 60%?
+     Atau 90% orang menggunakan masker dengan efektifitas 50%?
+     Atau 50% orang menggunakan masker dengan efektifitas 90%?
+     Papan interaktif tersebut dapat memberikan jawabannya.
+    </p>
+
+    <p>Kesimpulannya: <b>Semakin banyak orang yang menggunakan masker, semua orang akan semakin aman.</b></p>
+
+ 
+    <p>
+      Dengan menyaring udara yang dihirup, masker memberikan proteksi langsung kepada siapapun yang menggunakannya.
+      Dan dengan menyaring atau mengalihkan udara yang dikeluarkan, masker dapat memberikan proteksi sekunder kepada <i>semua orang</i> — termasuk orang-orang yang tidak menggunakan masker.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">Lalu bagaimana tentang masker yang tidak menyaring udara yang keluar?
+        <span v-if="!expandaside1"> (Klik untuk membaca lebih)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Beberapa masker N95 dilengkapi dengan <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">katup atau pembuka</a> yang melepaskan udara tanpa menyaringnya dulu.
+        CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">tidak merekomendasikannya</a> karena menggunakan masker jenis ini pada tempat umum berpotensi meningkatkan resiko untuk orang lain.
+        Kamu dapat melihat cara kerjanya pada alamat interaktif diatas.
+        <br><br>
+        Untuk menjalankan interaktif diatas.
+        Pertama, atur efektifitas hirup dan lepas ke nilai paling tinggi (dengan meggunaan masker diantaranya).
+        Hal ini merepresentasikan masker dengan tingkat efektifitas tinggi seperti sebuah N95.
+
+        Sekarang seret efektifitas keluaran menuju nol dan lihat bagaimana transmisi penyakit meningkat, terutama di antara pemakai orang yang menggunakan masker.
+        <br><br>
+       Jika kamu terlanjur memiliki jenis masker ini, CDC merekomendasikan <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">menutup katup luaran</a> dengan masker bedah.
+      </span>
+    </aside>
+
+
+    <p>
+     Faktanya, sebuah masker lebih efektif dari angka-angka diatas.
+    </p>
+
+    <h2>Cara Menghentikan Sebuah Pandemi</h2>
+
+    <p>
+    Untuk memadamkan kebakaran kamu perlu menghilangkan oksigen darinya.
+    Namun kamu tidak perlu menghilangkan seluruh oksigennya, kamu hanya perlu mengurangi sampai cukup untuk api tidak membesar. 
+    Sama halnya dengan sebuah pendemi — kamu tidak perlu untuk menghilangkan 100% atau semua transmisi penyakit.
+    Jika kamu menguranginya saja, itu sudah cukup untuk menghentikan sebuah penyakit menyebar, dan kamu bisa memadamkan pandemi tersebut. 
+    </p>
+
+    <p>
+      Mungkin kamu sudah mendengar tentang istilah epidemiologi R0, dibaca R-nought atau R-zero.
+      Ini adalah <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">jumlah orang yang terinfeksi yang mungkin menularkan </a> ke sebuah populasi tanpa adanya sebuah imunitas ke penyakit tersebut.
+    </p> 
+
+    <p>Ketika R0 mencapai 1, penyakit tersebut akan tumbuh secara eksponensial sampai tidak ada cukup orang untuk terinfeksi, atau cukup orang terinfeksi dan berhasil mengembangkan imun terhadap penyakit.</p>
+
+    <p>
+      Tapi, seperti yang Ed Yong tulis di the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 bukanlah takdir"</a>.
+      Melainkan R0 adalah hasil dari dua nilai: jumlah rata-rata orang yang berinteraksi langsung dengan orang yang menular, dan kemungkinan infeksi saat kontak.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">jumlah rata-rata orang yang ditemui oleh orang yang menular</span> <br>⨉ <span class="dotted">kemungkinan infeksi saat kontak</span></div>
+  </div>
+  
+  <div class="container">
+
+    
+    <p>
+      Social distancing, karantina, dan lockdown dapat mengurangi <span class="dashed">faktor pertama</span>.
+      Dan masker dapat mengurangi <span class="dotted">faktor kedua</span>.
+      Tujuan dari seluruh strategi kesehatan ini membawa jumlah pandemi kedalam angka yang dapat dikendalikan dengan menarik R0 dibawah 1.
+    </p>
+
+
+    <p>
+      Dengan pola berfikir ini, mari hubungkan pengaruh penggunaan masker dengan istilah R0.
+      Grafik dibawah menampilkan bagaimana R0 berubah sejalan dengan penggunaan masker yang meningkat.
+    </p>
+
+ 
+    <p>
+      Kamu bisa menggunakan slider pertama untuk mengubah R0, yang dimana untuk COVID-19 itu antara 2 dan 3 (Hal ini karena tidak adanya tindakan kesehatan masyarakat lainnya seperti jarak sosial, yang selanjutnya mengurangi R0.)
+      Dengan mengubah efektifitas dari penggunaan masker, kamu dapat melihat bagaimana pengaruh masker dalam mengendalikan sebuah pendemi.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker Mengeluarkan Udara: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker Menghirup Udara: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Bagaimana Masker Dapat Mengurangi Nilai R0',
+        'Persentase dari Jumlah Pengguna Masker',
+        '# Orang Terinfeksi yang Menularkan (R0)',
+        'Pandemi Dalam Kendali',
+        'Pandemi Diluar Kendali'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Untuk menghentikan penyebaran COVID-19, kita perlu untuk menekan angka R0 agar tetap berada dibawah 1.
+      Ketika ini terjadi, dalam rata-rata, orang yang menginfeksi akan menyebarkan lebih sedikit dari satu orang, dan pandemi akan berhenti perlahan.
+    </p>
+
+    <p>
+      Lalu berapa banyak orang yang dibutuhkan untuk menghentikan penyebaran COVID-19 dengan menggunakan masker berefektifitas 50%?
+      Bagaimana jika masker dengan efektifitas 75%?
+      Atau 90% efektif?
+      Interaktif berikut membantu memperediksi jawaban dari pertanyaan tersebut.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Peringatan penting: orang biasanya tidak bercampur secara acak.
+        <span v-if="!expandaside2"> (Click untuk membuka)</span>
+      </span>
+      
+    
+
+      <span v-if="expandaside2">
+        Orang yang menggunakan masker lebih sering akan berinteraksi dengan yang menggunakan masker juga, dan jarang berinteraksi dengan orang yang tidak menggunakan masker.
+        <br/><br/>
+        Mirip dengan orang yang tidak pakai masker akan berkerumun dengan penggunaan masker yang kurang.
+        Kecenderungan ini memiliki kemungkinan berinteraksi dengan orang lain yang memiliki kesukaan serupa <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">mengurangi kekuatan dari perlindungan masker</a> karena <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb"> mereka yang tidak menggunakan masker mendapatkan keuntungan yang lebih sedikit dari pada pemakai masker.</a>.
+        <br/><br/>
+        Seperti <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, dan Ashleigh Tuite</a> menulis analisisnya, 
+        "the impact of masks and other face coverings in reducing COVID-19 transmission 
+        is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+      </span>
+    </aside>
+
+    <h2>Banyaknya Korban</h2>
+
+    <p>
+      Kita dapat memahami hal ini satu langkah lebih lanjut dengan mengekspresikan kekuatan dari penggunaan masker dalam istilah yang lebih manusiawi.
+      Masker dapat menyelamatkan nyawa dengan mengurangi kemungkinan penularan, yang pada akhirnya, mengurangi penyebaran pandemi.
+    </p>
+
+
+    <p>
+      Selama lebih banyak lagi orang menggunakan masker, R0 akan menurun.
+      Dan ketika R0 berkurang, begitu juga dengan banyaknya orang yang terinfeksi.
+      Jadi disini kita dapat melihat gambaran yang lebih jelas dibanding membayangkan R0, kita membayangkannya sebagai  <b> sekumpulan yang terinfeksi </b> dari sebuah populasi.
+    </p>
+
+  
+    <p>
+     Dengan menggunakan model matematis yang banyak digunakan yang lebih dikenal dengan <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">model SIR</a>, kita bisa menghubungkan R0 dengan kumpulan orang-orang yang mungkin akan terinfeksi.
+      (untuk mengetahui lebih jauh tentang model SIR, saya merekomendasikanmu menonton <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">video yang keren ini</a>.)
+    </p>
+
+    <p>Meskipun model ini merupakan sebuah penyederhanaan (misalnya, mengasumsikan pencampuran acak antara orang-orang dan tidak ada lockdown), model ini memberi kita perkiraan kasar tentang banyaknya korban karena tidak memakai masker.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker Mengeluarkan Udara: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektifitas Masker Menghirup Udara: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Terinfeksi'
+        )" :layout="graph3Layout(
+        'Bagaimana Masker Mengurangi Infeksi',
+        'Presentase Orang yang Menggunakan Masker',
+        'Persentase Orang yang Akan Terinfeksi'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Kurva yang berbentuk bukit ini memperlihatkan pada kita bagaimana masker dapat mempengaruhi ukuran dari suatu pandemi.
+      <b>Semakin banyak orang yang menggunakan masker, jumlah orang yang terinfeksi pun akan menurun.</b>
+    </p>
+
+     <p>
+      Ketika hanya sedikit orang yang menggunakan masker, kita akan sampai pada puncak tertinggi dari bukit, dan kemungkinan semua orang akan terinfeksi.
+        Tapi setiap langkah yang tepat dapat membuat kurva kita makin turun.
+       Jadi, bahkan masker yang punya efektifitas sebagian, jika diterapkan ke sebagian orang saja, dapat membantu mengurangi penyebaran COVID-19.
+    </p>
+
+
+    <p>
+        Untuk benar-benar menghentikan penyebarannya, kita harus sampai ke dasar bukit ini.
+       Ada sebuah harapan: jika semakin banyak orang memakai masker, penurunan itu akan semakin curam dan drastis.
+      Yang berarti <b>masker akan memberikan hasil yang besar jika lebih banyak lagi orang yang menggunakannya</b>.
+    </p>
+
+    <p>
+      
+    </p>
+
+    <p>
+      Jika cukup banyak orang yang menggunakan masker, kita bisa mencapai dasar dari bukit tersebut, ketika kita mencapai tingakat infeksi yang nol.
+      Hal ini yang membuat bagaimana masker dapat mengakhiri sebuah pendemi.
+      Namun masker hanya dapat mengakhiri pandemi jika cukup banyak orang yang menggunakannya.
+    </p>
+
+    <p>
+      Kamu mungkin bertanya-tanya seberapa banyak orang yang dibutuhkan untuk mengakhiri pandemi ini?
+      Nah, bergantung kepada seberapa efektif masker tersebut.
+    </p>
+
+    <p>
+      Dengan memainkan papan interaktif diatas, kamu akan melihat jika masker memiliki efektifitas 50%, setidaknya kita membutuhkan kira-kira tiga-per-empat dari jumlah populasi untuk menggunakan masker guna menghentikan COVID-19.
+      Tetapi jika masker efektif 75%, kita hanya perlu setengah populasi memakainya untuk menghentikan penyebaran.  
+    </p>
+
+    <p>
+      <b>Semakin efektif maskernya, semakin cepat kita bisa mencapat dasar bukit.</b>
+      Karena itulah penting untuk memakai masker yang <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">menutup mulut <i>dan</i> hidung kamu dengan rapat</a>, dan terbuat dari bahan penyaringan yang efektif.
+    </p>
+
+    <p>
+    Tentu Kita semua ingin sampai ke dasar bukit dan menghentikan penyebaran COVID-19.
+       Tetapi anda tidak bisa sampai di sana sendirian.
+       Setiap orang hanya bisa mengambil langkah kecil untuk menurunkan sedikit kurva.
+    </p>
+
+    <p>Namun, ketika banyak orang mengambil langkah kecil ini, bersama-sama, ktia bisa melakukan lompatan besar untuk menuruni bukit.</p>
+
+    <p>Bersama-sama, kita bisa sampai ke dasar bukit.</p>
+    
+    <p>Bersama-sama, kita dapat menginjak pedal rem pada COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Kredit & Referensi</h2>
+
+    <p>Pembahasan ini dibuat oleh <a href="https://twitter.com/aatishb">Aatish Bhatia</a> berkolaborasi dengan <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+
+    <p>Kunjungi juga <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">video panduan ini</a> untuk visual yang lebih asik dalam menghitung masker! 
+        Video ini juga didukung oleh <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Berikut <a href="https://aatishb.com/maskmath/calculator.html">kalkulator masker</a> yang muncul dalam video.</p>
+
+    <p>
+      Banyak terimakasih kepada <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, dan <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> yang telah memberikan banyak masukan ke draf pembahasan ini.
+    </p>
+
+    <p>
+      Jika kamu merasa bahasan ini berharga dan ingin melihat lebih banyak karya seperti ini di masa mendatang, kamu bisa <b><a href="https://www.patreon.com/aatishb">mendukung lewat Patreon</a></b>.
+    </p>
+
+    <p>
+      Ini adalah <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">beberapa</a> <a href="https://www.maskfaq.com/test-results">sumber</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">yang informatif</a> tentang kemampuan penyaringan bahan masker biasa.
+      Meskipun masker sangat bervariasi dalam keefektifannya tergantung pada bahan dan kesesuaiannya, beberapa bahan bisa <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> kemampuan penyaringan saat digunakan dalam masker yang tertutup rapat.
+    </p>
+
+    <p>
+
+        Untuk para penggemar aljabar, berikut <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">bahasan</a> matematika secara lebih detail. 
+        Grafik dalam bahasan ini memperluas pengetahuan anda yang ditulis oleh <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a>  untuk menjelaskan keefektifan masker dua arah.
+
+     
+    </p>
+
+    <p>
+      Model masker dua arah yang mendasari bahasan ini sepengetahuan saya pertama kali diterbitkan dalam oleh <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Tabel S3 dan Figur S4). 
+      Disoroti dari Howard et al dalam <a href="https://www.preprints.org/manuscript/202004.0203/v3">review artikelnya</a> dan <a href="https://www.fast.ai/2020/04/13/masks-summary/">esai yang menyertai</a>, dan selanjutnya dipopulerkan oleh <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> pada the Atlantic, dan oleh <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> pada the New Yorker, yang telah menulis, <i>"The more effective the mask, the bigger the impact."</i>
+    </p>
+
+    <p>
+     Teks ini diterbitkan di bawah lisensi Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. 
+     Sumber pemrogrammannya tersedia <a href="https://github.com/aatishb/maskmath">di Github</a>. Emoji dibuat oleh <a href="https://twemoji.twitter.com/">Twitter</a> dimofikasi menggunakan desain masker kustom.
+    </p>
+
+    <p>
+     Terimakasih telah membaca, tetap jaga kesehatan! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
