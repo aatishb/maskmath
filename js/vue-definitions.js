@@ -202,15 +202,30 @@ Vue.component('p5', {
 
 // translation list component
 Vue.component('translation', {
+
   props: ['list'],
+
   template: `
   <h5>
     <ul id="translation-list">
       <li v-for="(item, index) in list" :key="item.language">
         <span v-if="index > 0"> &middot; </span><a :href="item.url">{{item.language}}</a>
       </li>
+      <li v-if="url == '' || url == 'index.html'">
+        <span> &middot; </span><a href="https://github.com/aatishb/maskmath/issues/4">Add a Translation</a>
+      </li>
     </ul>
-  </h5>`
+  </h5>`,
+
+  data: function() {
+    return {
+      url: ''
+    }
+  },
+
+  mounted() {
+    this.url = window.location.href.split('/').pop();
+  }
 })
 
 
