@@ -200,10 +200,17 @@ Vue.component('p5', {
 
 })
 
-// translation hyperlink
+// translation list component
 Vue.component('translation', {
-  props: ['item'],
-  template: `<span> &middot; <a v-bind:href='item.link'>{{item.name}}</a></span>`
+  props: ['list'],
+  template: `
+  <h5>
+    <ul id="translation-list">
+      <li v-for="(item, index) in list" :key="item.language">
+        <span v-if="index > 0"> &middot; </span><a :href="item.url">{{item.language}}</a>
+      </li>
+    </ul>
+  </h5>`
 })
 
 
@@ -226,15 +233,16 @@ let app = new Vue({
     expandaside2: false,
     translations: 
     [ 
-      { link: 'index-he.html', name: 'עברית' },
-      { link: 'index-fr.html', name: 'Français' },
-      { link: 'index-it.html', name: 'Italiano' },
-      { link: 'index-pt.html', name: 'Português Brasileiro' },
-      { link: 'index-ru.html', name: 'Русский' },
-      { link: 'index-es.html', name: 'Español' },
-      { link: 'index-el.html', name: 'Ελληνικά' },
-      { link: 'index-cs.html', name: 'Česky' },
-      { link: 'index-uk.html', name: 'Українська' },
+      { url: 'index.html', language: 'English' },
+      { url: 'index-he.html', language: 'עברית' },
+      { url: 'index-fr.html', language: 'Français' },
+      { url: 'index-it.html', language: 'Italiano' },
+      { url: 'index-pt.html', language: 'Português Brasileiro' },
+      { url: 'index-ru.html', language: 'Русский' },
+      { url: 'index-es.html', language: 'Español' },
+      { url: 'index-el.html', language: 'Ελληνικά' },
+      { url: 'index-cs.html', language: 'Česky' },
+      { url: 'index-uk.html', language: 'Українська' },
     ]
   },
 
