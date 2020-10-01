@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>The Multiplicative Power of Masks</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An Explorable Essay on How Masks Can End COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Masks Work Better Than You Think: An Interactive Essay">
+  <meta name="twitter:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Why Masks Work Better Than You Think: An Interactive Essay" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>The Multiplicative Power of Masks</h1>
+        <h3>An Explorable Essay on How Masks Can End COVID-19</h3>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      We <a href="https://www.preprints.org/manuscript/202004.0203/v1">now</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">know</a> <a href="https://science.sciencemag.org/content/368/6498/1422">that</a> masks have an outsized effect on slowing the spread of COVID-19.
+      And yet, some people oppose wearing masks because they view this as a personal choice rather than a public health issue.
+    </p>
+
+    <p>
+      This misses the big picture because <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">masks protect the wearer <i>and</i> the people around them</a>.
+      This <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">two-way protection</a> makes widespread mask-wearing a powerful way to extinguish an epidemic.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      By doing the math on masks, we'll see how when 60% of people wear 60% effective masks, disease transmission drops by as much as 60% — roughly what's needed to stop the spread of COVID-19.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Watch the companion video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Say it, Don't Spray It</h2>
+
+    <p>
+      But first, let’s get a ballpark sense for some numbers.
+      When a person exhales, they <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">spray out saliva particles</a> of various tiny sizes.
+      If they're contagious, then this 'mouth spray' is loaded with viral particles.
+      This <a href="https://arxiv.org/pdf/2005.10988.pdf">virus-laden saliva spray</a> is the main way that COVID-19 spreads.
+    </p>
+
+    <p>When a contagious person breathes, they spray out roughly <b>a thousand</b> viral particles every minute.</p>
+
+    <p>When they talk, they spray out roughly <b>ten thousand</b> viral particles every minute.</p>
+
+    <p>When they cough, they spray out roughly <b>a hundred thousand</b> viral particles.</p>
+
+    <p>And when they sneeze, they spray out roughly <b>a million</b> viral particles.</p>
+
+    <p>
+      The more viral particles travel from person to person, the higher the chance of infection.
+      (And if infected, people exposed to more viral particles generally experience <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">more severe symptoms</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Masks reduce the mouth spray traveling between people — by blocking or by redirecting the spray — thereby reducing the chance of infection.</p>
+
+    <p>
+      It's worth keeping in mind that no mask is perfect.
+      Even the N95 masks recommended for health workers are only guaranteed to block <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% of the hardest-to-block particles</a> (and that’s only if you <a href="https://www.n95decon.org/publications">wear them correctly</a>).
+    </p>
+
+    <p>
+      Masks don't guarantee safety, they reduce risk.
+      This is a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
+      Like umbrellas, masks only work if you use them correctly.
+      But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Why Masks Protect Us Twice</h2>
+
+    <p>
+      Let’s imagine that a contagious person wears a 50 percent effective mask.
+      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>But what if the susceptible person wears the mask instead?</p>
+
+    <p>
+      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
+      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+    </p>
+
+    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+
+    <p>
+      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
+      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
+      That's a 75% drop in the chance of infection.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
+      This is possible because when both people wear masks, the chance of infection is halved twice.
+      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+    </p>
+
+    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Disease Transmission Route</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Drop in Disease Transmission</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>From People to The Population</h2>
+
+    <p>
+      So far, we've only looked at disease transmission between two people.
+      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+    </p> 
+
+    <p>Well, in the extreme limits, this is straightforward.</p> 
+
+    <p>
+      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+    </p>
+
+    <p>
+      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
+      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+    </p>
+
+    <p>
+      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+    </p>
+
+    <p>
+      But in reality, some people wear masks and others don’t.
+      Which means the virus can spread through a mix of all four routes.
+      How likely each route is will depend on how many people wear masks.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
+      Similarly, you can work out the chance of the other three disease transmission routes.
+    </p>
+
+    <p>
+      When exactly half the population wears masks, it turns out that each route is equally likely.
+      (Can you convince yourself why this has to be true?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Disease Transmission Route</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Drop in Disease Transmission</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Chance of This Route</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      We can now calculate the <b>average drop in disease transmission in the population</b>.
+      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+    </p>
+
+    <p>
+      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
+      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+    </p>
+
+    <p>
+      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
+      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
+        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Assuming 50% of people wear a 50% effective mask.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
+      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+    </p>
+
+    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+
+    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+
+    <h2>Maskology</h2>
+
+    <p>
+      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
+      Vary the sliders below to see how masks moderate the spread of disease.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Disease Transmission Route</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Drop in Disease Transmission</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Chance of This Route</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      What happens to disease transmission if 60% of people wear a 60% effective mask?
+      Or 90% wear a 50% effective mask?
+      Or 50% wear a 90% effective mask?
+      This interactive lets you answer these questions.
+    </p>
+
+    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+
+    <p>
+      By filtering inhaled air, masks provide first-hand protection to those who wear them.
+      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
+        <span v-if="!expandaside1"> (Click to expand)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
+        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
+        You can see this for yourself in the interactive above.
+        <br><br>
+        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
+        This represents a highly effective mask like an N95.
+        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        <br><br>
+        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+      </span>
+    </aside>
+
+
+    <p>
+      In fact, masks are even more effective than these numbers suggest.
+    </p>
+
+    <h2>How To Stop An Epidemic</h2>
+
+    <p>
+      You put out a fire by starving it of oxygen.
+      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
+      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
+      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+    </p>
+
+    <p>
+      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
+      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+    </p> 
+
+    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+
+    <p>
+      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
+      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
+      And masks decrease <span class="dotted">the second number</span>.
+      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+    </p>
+
+    <p>
+      With this in mind, let's re-express the impact of masks in terms of R0.
+      The graph below shows how R0 varies as mask-wearing increases.
+    </p>
+
+    <p>
+      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
+      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'How Masks Reduce R0',
+        'Percentage of People Who Wear Masks',
+        '# People a Contagious Person Infects (R0)',
+        'Epidemic Under Control',
+        'Epidemic Out Of Control'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      To stop the spread of COVID-19, we need to keep R0 beneath 1.
+      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+    </p>
+
+    <p>
+      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
+      What if masks were 75% effective?
+      Or 90% effective?
+      This interactive lets you predict answers to these questions.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
+        <span v-if="!expandaside2"> (Click to expand)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        <br/><br/>
+        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
+        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        <br/><br/>
+        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+      </span>
+    </aside>
+
+    <h2>The Human Cost</h2>
+
+    <p>
+      We can take our understanding one step further by expressing the power of masks in more human terms.
+      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+    </p>
+
+    <p>
+      As more people wear masks, R0 decreases.
+      And as R0 decreases, so does the number of infected people.
+      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+    </p>
+
+    <p>
+      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
+      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+    </p>
+    
+    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
+        'How Masks Reduce Infections',
+        'Percentage of People Who Wear Masks',
+        'Percentage of People Who Will Be Infected'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      This hill-shaped curve shows us how masks influence the size of an epidemic.
+      <b>As more people wear masks, the number of infections plummet.</b>
+    </p>
+
+    <p>
+      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
+      But every step to the right moves us further down.
+      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+    </p>
+
+    <p>
+      To completely stop the spread, we need to get to the bottom of this hill.
+      But there's a silver lining: as more people wear masks, the hill grows steeper.
+      Which means <b>masks provide greater returns to society as more people wear them</b>.
+    </p>
+
+    <p>
+      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
+      This is how masks can end an epidemic.
+      But masks can only end an epidemic if enough people wear them.
+    </p>
+
+    <p>
+      You might wonder how many people have to wear masks to end an epidemic.
+      Well, that depends on how effective the masks are.
+    </p>
+
+    <p>
+      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
+      But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
+    </p>
+
+    <p>
+      <b>The more effective the mask, the faster we can descend the hill.</b>
+      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+    </p>
+
+    <p>
+      We all want to get to the bottom of the hill and stop the spread of COVID-19.
+      But you can't get there by yourself.
+      Each person can only take a tiny step downwards.
+    </p>
+
+    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+
+    <p>Together, we can get to the bottom of the hill.</p>
+    
+    <p>Together, we can hit the brakes on COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Credits & References</h2>
+
+    <p>This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+
+    <p>Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
+
+    <p>
+      Many thanks to <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> for their helpful feedback on drafts of this essay.
+    </p>
+
+    <p>
+      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">support my work on Patreon</a></b>.
+    </p>
+
+    <p>
+      Here are <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informative</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resources</a> on the filtering ability of common mask materials.
+      While masks vary a lot in effectiveness depending on their material and fit, some materials can <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">exceed</a> <a href="https://www.maskfaq.com/test-results">80%</a> filtering ability when used in a tightly-sealed mask.
+    </p>
+
+    <p>
+      For the algebra enthusiasts among you (you know who you are), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">here's a writeup</a> covering the math in more detail.
+      The graphs in this essay extend the work of <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> to account for the bidirectional effectiveness of masks.
+    </p>
+
+    <p>
+      The bidirectional model of masks underlying this essay was to my knowledge first published in a preprint by <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Table S3 and Fig S4). 
+      This was highlighted by Howard et al in their <a href="https://www.preprints.org/manuscript/202004.0203/v3">review article</a> and <a href="https://www.fast.ai/2020/04/13/masks-summary/">accompanying essay</a>, and further popularized by <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> in the Atlantic, and by <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> in the New Yorker, who writes, <i>"The more effective the mask, the bigger the impact."</i>
+    </p>
+
+    <p>
+      This text is published under a Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license. The source code is available <a href="https://github.com/aatishb/maskmath">on Github</a>. The emojis are created by <a href="https://twemoji.twitter.com/">Twitter</a> and were modified to include a custom mask design.
+    </p>
+
+    <p>
+      Thanks for reading, and stay safe! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
