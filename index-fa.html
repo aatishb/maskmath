@@ -135,8 +135,8 @@
 
       </div>
 
-      <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person">
+      <anim-with-caption :mask1="false" :mask2="false" contagiousperson="شخص ناقل"
+        susceptibleperson="شخص مستعد دریافت ویروس">
         <span>
           <span class="red">مسیر انتقال ۱: </span>
           وقتی یک شخص ناقل نزدیک یک شخص مستعد دریافت ویروس قرار بگیرد، «اسپری دهانی» می‌تواند بیماری را منتشر کند
@@ -178,8 +178,8 @@
 
       </div>
 
-      <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person">
+      <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="شخص ناقل"
+      susceptibleperson="شخص مستعد دریافت ویروس">
         <span>
           <span class="orange">مسیر انتقال ۲: </span>
           وقتی فرد ناقل ماسکی با کارایی ۵۰٪ را استفاده کند، احتمال انتقال بیماری ۵۰٪ کاهش پیدا می‌کند
@@ -201,8 +201,8 @@
 
       </div>
 
-      <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person">
+      <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="شخص ناقل"
+      susceptibleperson="شخص مستعد دریافت ویروس">
         <span>
           <span class="orange">مسیر انتقال ۳: </span>
           وقتی که فرد سالم در مقابل فرد ناقل ماسکی استفاده می‌کند که ۵۰٪ مؤثر است، احتمال انتقال بیماری ۵۰٪ کاهش می‌یابد
@@ -221,8 +221,8 @@
 
       </div>
 
-      <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person"
-        susceptibleperson="Susceptible Person">
+      <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="شخص ناقل"
+      susceptibleperson="شخص مستعد دریافت ویروس">
 
         <span>
           <span class="yellow">مسیر انتقال ۴: </span>وقتی هر دو نفر از ماسک با کارایی ۵۰٪ استفاده کنند، احتمال انتقال
@@ -768,7 +768,7 @@
           </label>
 
           <graph :traces="graph3Traces(
-        '% Infected'
+        'درصد افراد آلوده'
         )" :layout="graph3Layout(
         'چگونه ماسک آلودگی را کم می‌کند',
         'درصد افرادی که ماسک می‌پوشند',
