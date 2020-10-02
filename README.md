@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -21,6 +21,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://nicolas.lehuen.com/"><img src="https://avatars1.githubusercontent.com/u/69256?v=4" width="100px;" alt=""/><br /><sub><b>Nicolas Lehuen</b></sub></a><br /><a href="#translation-nlehuen" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/albannabla"><img src="https://avatars0.githubusercontent.com/u/52819459?v=4" width="100px;" alt=""/><br /><sub><b>Alban nablA</b></sub></a><br /><a href="#translation-albannabla" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/gnegrelligarcia"><img src="https://avatars1.githubusercontent.com/u/71154843?v=4" width="100px;" alt=""/><br /><sub><b>gnegrelligarcia</b></sub></a><br /><a href="#translation-gnegrelligarcia" title="Translation">🌍</a> <a href="https://github.com/aatishb/maskmath/issues?q=author%3Agnegrelligarcia" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/ulkar-aghayeva"><img src="https://avatars0.githubusercontent.com/u/11365706?v=4" width="100px;" alt=""/><br /><sub><b>Ulkar Aghayeva</b></sub></a><br /><a href="#translation-ulkar-aghayeva" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/quackduck"><img src="https://avatars0.githubusercontent.com/u/38882631?v=4" width="100px;" alt=""/><br /><sub><b>Ishan Goel</b></sub></a><br /><a href="https://github.com/aatishb/maskmath/commits?author=quackduck" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mariapaula9926"><img src="https://avatars1.githubusercontent.com/u/71100538?v=4" width="100px;" alt=""/><br /><sub><b>mariapaula9926</b></sub></a><br /><a href="#translation-mariapaula9926" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://pankgeorg.com"><img src="https://avatars1.githubusercontent.com/u/8681967?v=4" width="100px;" alt=""/><br /><sub><b>Παναγιώτης Γεωργακόπουλος</b></sub></a><br /><a href="#translation-pankgeorg" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/ismarou"><img src="https://avatars2.githubusercontent.com/u/33368247?v=4" width="100px;" alt=""/><br /><sub><b>ismarou</b></sub></a><br /><a href="https://github.com/aatishb/maskmath/pulls?q=is%3Apr+reviewed-by%3Aismarou" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/progproc"><img src="https://avatars1.githubusercontent.com/u/47752037?v=4" width="100px;" alt=""/><br /><sub><b>progproc</b></sub></a><br /><a href="#translation-progproc" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/professor-k"><img src="https://avatars2.githubusercontent.com/u/572940?v=4" width="100px;" alt=""/><br /><sub><b>Andriy Kvasnytsya</b></sub></a><br /><a href="#translation-professor-k" title="Translation">🌍</a> <a href="https://github.com/aatishb/maskmath/commits?author=professor-k" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/elybin"><img src="https://avatars0.githubusercontent.com/u/4969689?v=4" width="100px;" alt=""/><br /><sub><b>khakim assidiqi</b></sub></a><br /><a href="#translation-elybin" title="Translation">🌍</a></td>
   </tr>
 </table>
 

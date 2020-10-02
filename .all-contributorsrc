@@ -60,6 +60,79 @@
         "translation",
         "bug"
       ]
+    },
+    {
+      "login": "ulkar-aghayeva",
+      "name": "Ulkar Aghayeva",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11365706?v=4",
+      "profile": "https://github.com/ulkar-aghayeva",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "quackduck",
+      "name": "Ishan Goel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/38882631?v=4",
+      "profile": "https://github.com/quackduck",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mariapaula9926",
+      "name": "mariapaula9926",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/71100538?v=4",
+      "profile": "https://github.com/mariapaula9926",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "pankgeorg",
+      "name": "Παναγιώτης Γεωργακόπουλος",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8681967?v=4",
+      "profile": "https://pankgeorg.com",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "ismarou",
+      "name": "ismarou",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33368247?v=4",
+      "profile": "https://github.com/ismarou",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "progproc",
+      "name": "progproc",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/47752037?v=4",
+      "profile": "https://github.com/progproc",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "professor-k",
+      "name": "Andriy Kvasnytsya",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/572940?v=4",
+      "profile": "https://github.com/professor-k",
+      "contributions": [
+        "translation",
+        "code"
+      ]
+    },
+    {
+      "login": "elybin",
+      "name": "khakim assidiqi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4969689?v=4",
+      "profile": "https://github.com/elybin",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,

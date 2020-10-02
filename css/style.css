@@ -36,7 +36,7 @@ aside a {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Tinos', sans-serif;
   line-height: 1.1;
   color: rgb(255, 190, 137);
 }
@@ -110,7 +110,7 @@ a {
 
 .graphic {
   width: 100%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Tinos', sans-serif;
   background-color: rgb(0, 0, 51);
   color: rgb(240,240,240);
   display: flex;
@@ -305,7 +305,7 @@ a {
   height: 400px;
   margin-bottom: 1rem;
   background-color: rgb(0, 0, 51);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Tinos', sans-serif;
   color: #F6A660;
   position: relative;
 }
@@ -319,6 +319,16 @@ a {
   font-weight: 200;
   font-size: 0.75rem;
   color: rgb(255, 161, 155);
+}
+
+.header ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;  
+}
+
+.header li {
+  display: inline;  
 }
 
 .overlay {

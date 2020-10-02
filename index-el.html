@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>H Πολλαπλασιαστική Δύναμη των Μασκών</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Μια Διερευνητική Έκθεση στον Τρόπο που οι Μάσκες μπορούν να βοηθήσουν να φέρουμε το τέλος της Πανδημίας του COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?&family=Tinos:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Masks Work Better Than You Think: An Interactive Essay">
+  <meta name="twitter:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Why Masks Work Better Than You Think: An Interactive Essay" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>Η Πολλαπλασιαστική Δύναμη των Μασκών</h1>
+        <h3>Μια Διερευνητική Έκθεση στον Τρόπο με τον οποίο οι Μάσκες μπορούν να βοηθήσουν να φέρουμε το τέλος της Πανδημίας του COVID-19</h3>
+        <h4>από τους <a href="https://aatishb.com/">Aatish Bhatia</a>&nbsp;⨉&nbsp;<a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      <a href="https://www.preprints.org/manuscript/202004.0203/v1">Γνωρίζουμε</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">πλέον</a> <a href="https://science.sciencemag.org/content/368/6498/1422">ότι</a> οι μάσκες έχουν μια σημαντική επίδραση στην επιβράδυνση της μετάδοσης του κορονοϊού.
+      Παρά τα στοιχεία, κάποιοι άνθρωποι διαφωνούν με τη χρήση τους, διότι θεωρούν ότι είναι μια προσωπική επιλογή και όχι ένα δημόσιο θέμα για την προστασία της υγείας όλων μας.
+    </p>
+
+    <p>
+      Αυτό είναι μια κοντόφθαλμη προσέγγιση καθώς <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">οι μάσκες προστατεύουν αυτούς που τις χρησιμοποιούν, αλλά <i>και</i> τους ανθρώπους γύρω τους</a>.
+      Αυτή <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">η διπλή προστασία</a> καθιστά την μαζική χρήση μάσκας έναν αποτελεσματικό τρόπο για να εξαλείψουμε μια επιδημία.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Κάνοντας απλά μαθηματικά με τις μάσκες, βλέπουμε ότι όταν το 60% των ανθρώπων φορούν μάσκες με 60% προστασία, η μετάδοση πέφτει κατά 60% — περίπου όσο χρειαζόμαστε για να σταματήσει η διασπορά.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Δείτε το συνοδευτικό βίντεο <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Γιατί οι Μάσκες Δουλεύουν ΚΑΛΥΤΕΡΑ από όσο Νομίζετε</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Πες Το, Μη το Φτύνεις</h2>
+
+    <p>
+      Αρχικά, ας καταλάβουμε μερικά νούμερα.
+      Όταν κάποια ή κάποιος εκπνέει, ακούσια <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">εκπνέει και σωματίδια σάλιου</a> μικρού μεγέθους.
+      Αν έχουν μολυνθεί με κορονοϊό, τα σωματίδια αυτά είναι γεμάτα με τον ιό.
+      Αυτό το <a href="https://arxiv.org/pdf/2005.10988.pdf">γεμάτο-ιό "σπρέυ" σάλιου</a> είναι ο βασικός τρόπος με τον οποίο μεταδίδεται ο κορονοϊός.
+    </p>
+
+    <p>Όταν κάποια ή κάποιος μολυσμένος αναπνέει, εκπνέει περίπου <b>χίλια</b> ιικά σωματίδια κάθε λεπτό.</p>
+
+    <p>Όταν κάποια ή κάποιος μιλάει, εκπνέει περίπου <b>δέκα χιλιάδες</b> ιικά σωματίδια κάθε λεπτό.</p>
+
+    <p>Κάθε φορά που κάποια ή κάποιος βήχει, εκτοξεύει περίπου <b>εκατό χιλιάδες</b> ιικά σωματίδια.</p>
+
+    <p>Και όταν κάποια ή κάποιος φταρνιστεί, ψεκάζει περίπου <b>ένα εκατομμύριο</b> ιικά σωματίδια.</p>
+
+    <p>
+      Όσο περισσότερα ιικά σωματίδια ταξιδεύουν από άνθρωπο σε άνθρωπο, τόσο μεγαλύτερη η πιθανότητα μόλυνσης.
+      (Και στις περιπτώσεις μόλυνσης, φαίνεται ότι η ποσότητα του ιικού φορτίου των σωματιδίων (πόσα είναι/πόσο ιό έχουν) σχετίζεται <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">με εντονότερα συμπτώματα</a>)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Φορέας" susceptibleperson="Υγιής"><span class="red">Οδός μετάδοσης 1:</span> Όταν ένα μολυσμένο άτομο βρίσκεται κοντά σε ένα κάποιον άλλον, τα σωματίδια από την εκπνοή μπορούν να προκαλέσουν μόλυνση.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Οι μάσκες μειώνουν τα σωματίδια που εκπνέουμε από το να ταξιδεύουν στον αέρα — μπλοκάροντας ή αλλάζοντας πορεία στην εκπνοή — με αποτέλεσμα να μειώνεται η πιθανότητα μετάδοσης.</p>
+
+    <p>
+      Πρέπει να έχουμε υπόψιν ότι καμία μάσκα δεν είναι τέλεια.
+      Ακόμη και οι Ν95, που προτείνονται στους υγειονομικούς υπαλλήλους, είναι εγγυημένες να μπλοκάρουν μέχρι <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">το 95% των σωματιδίων που είναι πιο δύσκολο να μπλοκαριστούν</a> (και αυτό, μόνο αν τη <a href="https://www.n95decon.org/publications">φοράτε σωστά</a>).
+    </p>
+
+    <p>
+      Παρότι οι μάσκες δεν εγγυώνται την ασφάλεια, μειώνουν το ρίσκο.
+      Αν σκεφτούμε τις ομπρέλες, θα δούμε πως δεν εγγυώνται ότι δεν θα βραχείτε, αλλά μειώνουν τις πιθανότητες να γίνετε χάλια.
+      Όπως οι ομπρέλες, οι μάσκες δουλεύουν μόνο αν τις χρησιμοποιήσετε σωστά.
+      Αλλά αντίθετα με τις ομπρέλες που προστατεύουν μόνο τους ανθρώπους που τις χρησιμοποιούν, οι μάσκες προστατεύουν και τους <i>γύρω</i> αυτών που τις φοράνε.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Γιατί οι Μάσκες μας Προστατεύουν Διπλά</h2>
+
+    <p>
+      Ας φανταστούμε πως κάποια ή κάποιος με κορονοϊό, φοράει μια μάσκα με 50% προστασία.
+      Ως '50% προστασία', εννοούμε πως φορώντας αυτή τη μάσκα η πιθανότητα μόλυνσης κάποιου τρίτου πέφτει στο μισό.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Φορέας" susceptibleperson="Υγιής"><span class="orange">Οδός μετάδοσης 2:</span> Όταν ένα άτομο με κορονοϊό φοράει μια μάσκα με 50% προστασία, η πιθανότητα μετάδοσης πέφτει κατά 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Αλλά τι γίνεται αν φοράει μάσκα αυτή ή αυτός που θέλει να προστατευτεί από τον άρρωστο;</p>
+
+    <p>
+      Γενικά, η αποτελεσματικότητα της μάσκας εξαρτάται από το αν <b>εισπνέεις</b> ή αν <b>εκπνέεις</b> από αυτήν.
+      Αλλά ας κρατήσουμε τα πράγματα απλά: Ας θεωρήσουμε ότι η μάσκα είναι εξίσου αποτελεσματική και στις δύο περιπτώσεις. (Ένα αντιπαράδειγμα: η μάσκα να έχει βαλβίδα εκπνοής).
+    </p>
+
+    <p>
+      Σε αυτή την περίπτωση, η πιθανότητα της μετάδοσης αυτής της οδού πέφτει επίσης 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Φορέας" susceptibleperson="Υγιής"><span class="orange">Οδός μετάδοσης 3:</span> Όταν ένα άτομο χωρίς κορονοϊό φοράει μια μάσκα με 50% προστασία για προστασία, η πιθανότητα μετάδοσης πέφτει κατά 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Αν και το άτομο που έχει κορονοϊό <i>και</i> το άλλο που δεν έχει φορούν μάσκα;</p>
+
+    <p>
+      Λοιπόν, τότε η πρώτη μάσκα κόβει την πιθανότητα στο μισό και η δεύτερη μάσκα κόβει άλλο μισό.
+      Οπότε, όταν <i>και οι δύο</i> φορούν μάσκες, οι πιθανότητα μόλυνσης είναι μισή του μισού, δηλαδή 25% (σε σχέση με καμία μάσκα).
+      Δηλαδή, 75% μείωση στην πιθανότητα μόλυνσης.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Φορέας" susceptibleperson="Υγιής"><span class="yellow">Οδός μετάδοσης 4:</span> Όταν και οι δύο φορούν μια μάσκα με 50% προστασία για προστασία,  η πιθανότητα μετάδοσης πέφτει κατά 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Αν το σκεφτούμε, είναι εντυπωσιακό ότι μια μάσκα με 50% προστασία μειώνει το ρίσκο κατά 75%.
+      Αυτό γίνεται γιατί όταν και οι δύο άνθρωποι φορούν μάσκες, η προστασία εφαρμόζεται διπλά.
+      
+      Αυτή η <b>διπλή προστασία</b> κάνει τις μάσκες πολύ πιο αποτελεσματικές από όσο θα περίμενε κανείς αρχικά.
+    </p>
+
+    <p>Να λοιπόν οι 4 τρόποι μετάδοσης με τους οποίους μια ασθένεια που μεταδίδεται με την εκπνοή μπορεί να μεταδοθεί:</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Οδός μετάδοσης ασθένειας</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Πτώση στην Πιθανότητα Μετάδοσης</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Αυτοί είναι οι τέσσερις τρόποι που ο κορονοϊός μεταδίδεται από άνθρωπο σε άνθρωπο. Υποθέτουμε μια μάσκα με 50% προστασία.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>Από Δύο Άτομα στο Γενικό Πληθυσμό</h2>
+
+    <p>
+      Κοιτάξαμε ως τώρα τη μετάδοση μεταξύ δύο ανθρώπων.
+      Πως μπορούμε να χρησιμοποιήσουμε τα συμπεράσματά μας για να καταλάβουμε πως λειτουργεί η μετάδοση σε <i>ολόκληρο τον πληθυσμό</i>;
+    </p> 
+
+    <p>Αν δούμε τα άκρα είναι απλό:</p> 
+
+    <p>
+      Για παράδειγμα αν <b>κανείς</b> δεν φοράει μάσκα, τότε κάθε φορά που δύο άνθρωποι συναντιούνται, η πιθανότητα <span class="red">κανείς να μη φοράει μάσκα</span> είναι 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      Άρα έχουμε μόνο την <span class="red">πρώτη οδό</span> μετάδοσης, και σε επίπεδο πληθυσμού δεν θα είχαμε <span class="red">καμία</span> πτώση της πιθανότητα μετάδοσης.
+    </p>
+
+    <p>
+      Στο άλλο άκρο, αν <b>όλοι</b> φορούν μάσκα, τότε κάθε φορά που δύο άνθρωποι συναντιούνται, η πιθανότητα <span class="red">να φορούν και οι δύο μάσκα</span> είναι 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      Σε αυτή την περίπτωση έχουμε μόνο την <span class="yellow">τελευταία οδό</span> μετάδοσης.
+      Θεωρώντας ότι οι μάσκες είναι 50% αποτελεσματικές σε εκπνοή και εισπνοή, σε επίπεδο πληθυσμού θα βλέπαμε <span class="yellow">75% μείωση</span> της μετάδοσης.
+    </p>
+
+    <p>
+    
+      Οπότε αν <i>όλοι</i> φορούν μάσκα, (ή αν <i>κανείς</i> δεν φορά), είναι απλό να υπολογίσουμε την μείωση της μετάδοσης σε επίπεδο πληθυσμού, γιατί υπάρχει μόνο μια σχετική οδός μετάδοσης.
+    </p>
+
+    <p>
+      Στην πραγματικότητα όμως, μερικοί άνθρωποι φορούν μάσκες ενώ άλλοι άνθρωποι όχι.
+      Αυτό σημαίνει ότι ο ιός μπορεί να μεταδίδεται χρησιμοποιώντας ένα συνδυασμό των τεσσάρων τρόπων μετάδοσης.
+      Πόσο πιθανός είναι ο κάθε τρόπος εξαρτάται από τον αριθμό των ανθρώπων που φορούν μάσκα.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Χρήση Μάσκας: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Για παράδειγμα, <b>αν 50% των ανθρώπων φορούν μάσκες</b>, τότε κάθε φορά που δύο άνθρωποι συναντιούνται τυχαία, η πιθανότητα ότι <span class="yellow"> και οι δύο φορούν μάσκα</span> είναι 50%&nbsp;⨉&nbsp;50%, δηλαδή 25%.
+      Όμοια για τις πιθανότητες να συμβούν οι άλλοι 3 συνδυασμοί.
+    </p>
+
+    <p>
+      Όταν οι μισοί φορούν μάσκες, φαίνεται ότι κάθε τρόπος μετάδοσης είναι εξίσου πιθανός.
+      (Μπορείς να υπολογίσεις τα νούμερα;)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Οδός μετάδοσης</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Πτώση στην Πιθανότητα Μετάδοσης</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Πιθανότητα Συνδυασμού</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Οι 4 συνδυασμοί με τους οποίους μεταφέρεται ο κορονοϊός από άνθρωπο σε άνθρωπο, θεωρώντας ότι 50% των ανθρώπων φοράει μάσκα προστασίας 50%.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Μπορούμε τώρα να υπολογίσουμε τον <b>μέσο όρο μείσωης της πιθανότητας μετάδοσης στον πληθυσμό</b>.
+      Αφού κάθε συνδυασμός είναι το ίδιο πιθανός, αυτό είναι απλά ο μέσος όρος <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> και <span class="yellow">75%</span>, δηλαδή 43.75%.
+    </p>
+
+    <p>
+      Αν κάποια ή κάποιος που <i>δεν</i> φοράει μάσκα μολυνθεί, θα είναι με έναν από τους δύο πρώτους συνδυασμούς, που είναι ίδιο πιθανό να συμβούν όταν ο μισός πληθυσμός φοράει μάσκα.
+      Οπότε η πτώση της πιθανότητας μετάδοσης σε αυτούς που δεν φοράνε μάσκα είναι ο μέσος όρος των <span class="red">0%</span> και <span class="orange">50%</span>, δηλαδή 25%.
+    </p>
+
+    <p>
+      Αντίστοιχα, αν κάποια ή κάποιος που <i>φορά</i> μάσκα μολυνθεί, θα είναι με έναν από τους δύο δεύτερους συνδυασμούς, που είναι επίσης το ίδιο πιθανό να συμβούν.
+      Συνεπώς, η πτώση της πιθανότητας μετάδοσης σε αυτούς που φοράνε μάσκα είναι ο μέσος όρος των <span class="orange">50%</span> και <span class="yellow">75%</span>, δηλαδή 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Μέση Πτώση Μεταδοτικότητας = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Πτώση μεταξύ αυτών που <b>Δεν Φορούν Μάσκα</b> = 25%</div>
+        <div class="splash">Πτώση μεταξύ αυτών που <b>Φορούν Μάσκα</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Υποθέτοντας ότι το 50% των ανθρώπων φοράει μάσκες με 50% προστασία.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Έτσι, ακόμη και όσοι δεν φορούν μάσκα επωφελούνται, καθώς αναπνέουν αέρα που συχνά είναι φιλτραρισμένος από τις μάσκες των <i>άλλων</i>.
+      Αλλά περισσότερο επωφελούνται όσοι φορούν μάσκα, λόγω της προστιθέμενης προστασίας των μασκών τους.
+    </p>
+
+    <p>
+      Καθώς ο πληθυσμός έχει και ανθρώπους που φορούν και αυτούς που αποφεύγουν τις μάσκες, το όφελος συνολικά είναι κάπου ανάμεσα στα οφέλη που έχουν οι δύο ομάδες.</p>
+
+    <p>Σε αυτό λοιπόν το απλοποιημένο παράδειγμα (όπου το 50% του πληθυσμού φοράει μάσκες με 50% προστασία) έχουμε υπολογίσει πως <b>το όφελος <i>ενός</i></b> αντιστοιχεί στο <b>μέσο όφελος του <i>συνολικού πληθυσμού</i></b>.</p>
+
+    <h2>Μασκολογία</h2>
+
+    <p>
+      Ας <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">εφαρμόσουμε τη λογική</a> σε <i> κάθε πιθανή τιμές</i> των μεταβλητών <b>χρήση μάσκας</b> και <b>προστασία μάσκας</b>.
+      Αλλάξτε τους επιλογείς για να δείτε πως μάσκες μειώνουν τη μεταδοτικότητα της ασθένειας.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Χρήση Μάσκας: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εκπνοή): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εισπνοή): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Οδός Μετάδοσης</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Πτώση στην Πιθανότητα Μετάδοσης</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Πιθανότητα Συνδυασμού</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Μέση Πτώση στην Πιθανότητα Μετάδοσης: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Πτώση Πιθανότητας Μετάδοσης σε όσους Δεν Φορούν Μάσκα: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Πτώση Πιθανότητας Μετάδοσης σε όσους Φορούν Μάσκα: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Τι συμβαίνει στην μεταδοτικότητα αν 60% των ανθρώπων φορούν μια μάσκα με προστασία 60%;
+      Ή 90% των ανθρώπων φορούν μια μάσκα με προστασία 50%;
+      Ή 50% των ανθρώπων φορούν μια μάσκα με προστασία 90%;
+      Αυτό το γράφημα σας βοηθάει να απαντήσετε αυτές τις ερωτήσεις.
+    </p>
+
+    <p>Το συμπέρασμα: <b>Όταν πολλοί άνθρωποι φορούν μάσκες, όλοι είναι πιο ασφαλείς.</b></p>
+
+    <p>
+      Φιλτράροντας τον αέρα που εισπνέουμε, οι μάσκες προστατεύουν πρωτίστως αυτούς που τις φορούν.
+      Και φιλτράροντας τον αέρα που εκπνέουμε, ή απλώς αλλάζοντας την πορεία του, οι μάσκες προστατεύουν επιπλέον <i>όλους τους άλλους</i> - ακόμα και αυτούς που δεν τις φορούν.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">
+        Τι γίνεται με τις μάσκες που δεν φιλτράρουν τον εκπνεόμενο αέρα;
+        <span v-if="!expandaside1"> (πατήστε για περισσότερα)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Κάποιες μάσκες N95 έχουν <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">βαλβίδες ή ανοίγματα</a> που απελευθερώνουν τον αέρα χωρίς να τον φιλτράρουν.
+        Ο κύριος <a href="https://www.skai.gr/news/ygeia/tsiodras-oxi-se-xrisi-maskas-kai-gantion-mias-xrisis-epikindynes-oi-maskes-me-valvida">Τσιόδρας</a> και το αμερικανικό <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">ΚΕΕΛΠΝΟ (CDC)</a> προτείνουν να αποφεύγονται αυτές οι μάσκες σε περιπτώσεις όπως η παρούσα πανδημία κορωνοϊού, καθώς αυξάνουν τον κίνδυνο για τους υπόλοιπους.
+        Δείτε μόνοι σας στο παρακάτω γράφημα γιατί ισχύει αυτό.
+        <br><br>
+        Πρώτα, επιλέξτε την προστασία της μάσκας σε μια υψηλή τιμή (για παράδειγμα 95% για μάσκες Ν95), θέτοντας το ποσοστό χρήσης μάσκας κάπου στη μέση.
+        Έπειτα, σύρετε την τιμή που αφορά την προστασία εκπνοής στο 0 και δείτε πως αλλάζει η πιθανότητα μετάδοσης, ειδικά σε αυτούς που δεν φορούν μάσκα.
+        <br><br>
+        Αν έχετε ήδη τέτοια μάσκα, μπορείτε να <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">καλύψετε την βαβλίδα εκπνοής</a> με μια χειρουργική μάσκα.
+      </span>
+    </aside>
+
+
+    <p>
+      Στην πραγματικότητα, οι μάσκες είναι ακόμα πιο αποτελεσματικές από όσο φαίνεται στα νούμερα.
+    </p>
+
+    <h2>Πώς Σταματάμε μια Επιδημία</h2>
+
+    <p>
+      Σβήνουμε μια φωτιά κόβοντάς της το οξυγόνο.
+      Όμως, δεν χρειάζεται να αφαιρέσουμε τελείως το οξυγόνο, μόνο να το μειώσουμε αρκετά ώστε να σταματήσει η φωτιά να μεγαλώνει.
+      Το ίδιο ισχύει με μια επιδημία — δεν χρειάζεται να μειώσουμε την μετάδοση 100%. 
+      Αν την χαμηλώσουμε τόσο ώστε να σταματήσει να μεταδίδεται, η επιδημία σβήνει.
+    </p>
+
+    <p>
+      Πιθανότατα έχετε ακούσει για τον επιδημιολογικό όρο R0, που αναφέρεται ως 'αρ νω' ή 'ρω μηδέν'.
+      Αυτός είναι <a href="https://el.wikipedia.org/wiki/%CE%92%CE%B1%CF%83%CE%B9%CE%BA%CF%8C%CF%82_%CE%B1%CE%BD%CE%B1%CF%80%CE%B1%CF%81%CE%B1%CE%B3%CF%89%CE%B3%CE%B9%CE%BA%CF%8C%CF%82_%CE%B1%CF%81%CE%B9%CE%B8%CE%BC%CF%8C%CF%82">ο αριθμός των ανθρώπων που κάποια ή κάποιος με κορονοϊό μπορεί να μολύνει</a> σε ένα πληθυσμό χωρίς άμυνες στην ασθένεια.
+    </p> 
+
+    <p>
+      Όταν το R0 είναι > 1, η ασθένεια εξαπλώνεται εκθετικά μέχρι είτε αρκετοί άνθρωποι να εμβολιαστούν, είτε αρκετοί αρρωστήσουν και αναπτύξουν αντισώματα στην ασθένεια.
+    </p>
+    <p>
+      Όπως όπως αναφέρει ο Ed Yong, στην Atlantic <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"Το R0 δεν προβλέπει το μέλλον"</a>.
+      Το R0 είναι το γινόμενο δύο αριθμών: του μέσου αριθμού των ανθρώπων κάποια ή κάποιος με κορονοϊό συναντάει και της πιθανότητας να τον κολλήσει με την επαφή.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">μέσος όρος των ανθρώπων που κάποια ή κάποιος μολυσμένος συναντάει</span> <br>⨉ <span class="dotted">πιθανότητα μετάδοσης κατά τη συνάντηση.</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Η κοινωνική αποστασιοποίηση, οι καραντίνες και τα lockdown μειώνουν <span class="dashed">τον πρώτο αριθμό</span>.
+      Οι μάσκες μειώνουν <span class="dotted">τον δεύτερο</span>.
+      Ο σκοπός όλων αυτών των μέτρων είναι να ελεγχθεί η επιδημία μειώνοντας το R0 κάτω από 1.
+    </p>
+
+    <p>
+      Με αυτό κατά νου, ας εκφράσουμε πάλι το αποτέλσμα χρήσης μάσκας ως R0.
+      Το παρακάτω γράφημα δείχνει πως το R0 αλλάζει όσο η χρήση μάσκας αυξάνεται.
+    </p>
+
+    <p>
+      Με τον πρώτο επιλογέα αλλάζετε το R0, το οποίο είναι μεταξύ 2 και 3 για τον COVID-19, χωρίς μέτρα όπως η καραντίνα ή η κοινωνική αποστασιοποίηση που το μειώνουν επιπλέον.
+      Αλλάζοντας την αποτελεσματικότητα των μασκών, βλέπετε πως οι μάσκες μπορούν να βοηθήσουν να ελεγχθεί μια επιδημία.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εκπνοή):  <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εισπνοή):  <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Πως μειώνεται το R0 με χρήση Μάσκας',
+        'Ποστοστό ανθρώπων που φορούν μάσκα',
+        '# Ανθρώπων που μολύνει κάποια ή κάποιος μολυσμένος (R0)',
+        'Επιδημία υπό ελεγχο',
+        'Επιδημία εκτός ελέγχου'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Για να σταματήσουμε τον κορονοϊό, πρέπει να κρατήσουμε το R0 κάτω από 1.
+      Όταν αυτό συμβαίνει, κατά μέσο όρο, ένας άνθρωπος με κορονοϊό θα μολύνει λιγότερο από έναν υγιή και η επιδημία τείνει να σταματήσει.
+    </p>
+
+    <p>
+      Πόσοι λοιπόν άνθρωποι χρειάζεται να φορούν μάσκες με προστασία 50% για να σταματήσουμε τον COVID-19;
+      Αν οι μάσκες έχουν 75% προστασία;
+      Ή 90% προστασία;
+      Αυτό το γράφημα σας βοηθάει να προβλέψετε τις απαντήσεις σε αυτές τις ερωτήσεις.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Σημαντική παρατήρηση: οι άνθρωποι δεν αλληλεπιδρούν τυχαία! 
+        <span v-if="!expandaside2"> (πατήστε για περισσότερα)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        Όσοι φορούν μάσκες ίσως είναι περισσότερο πιθανό να αλληλεπιδρούν με άλλους που φορούν μάσκες και λιγότερο πιθανό να αλληλεπιδρούν με ανθρώπους που δεν φορούν μάσκες.
+        <br/><br/>
+        Αντίστοιχα, όσοι δεν φορούν μάσκες ίσως μένουν σε περιοχές όπου η χρήση μάσκας είναι χαμηλότερη από τον μέσο όρο.
+        
+        Αυτή η τάση για αλληλεπίδραση με ανθρώπους που έχουν όμοιες προτιμήσεις <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">εξανεμίζει την προστασία που παρέχουν οι μάσκες</a> επειδή <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">όσοι δεν τις φορούν είναι λιγότερο πιθανό να ευεργετηθούν από κοντινούς τους ανθρώπους που φορούν</a>.
+        <br/><br/>
+        Σύμφωνα με ανάλυση των <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, και Ashleigh Tuite</a>,
+        "η επίδραση των μασκών και άλλων προστατευτικών προσώπου στη μείωση της μετάδοσης του κορονοϊού είναι πιθανό να είναι μεγαλύτερη αν προβλεφθεί η διαθεσιμότητα τους σε μη-προνομιούχους πληθυσμούς".
+      </span>
+    </aside>
+
+    <h2>Το Ανθρώπινο Κόστος</h2>
+
+    <p>
+      Μπορούμε να προχωρήσουμε την ανάλυση ένα βήμα παραπέρα, εκφράζοντας τη δύναμη των μασκών με πιο ανθρώπινους όρους.
+      Οι μάσκες σώζουν ζωές μειώνοντας την πιθανότητα μετάδοσης, που, με τη σειρά της μειώνει την εξάπλωση της επιδημίας.
+    </p>
+
+    <p>
+      Όσο οι άνθρωποι φορούν μάσκες, το R0 μειώνεται.
+      Και όσο το R0 μειώνεται, τόσο μειώνεται και ο αριθμός των ασθενών.
+      Οπότε μπορούμε να έχουμε μια καθαρότερη εικόνα, αν αντί για το R0, αναπαραστήσουμε το  <b>ποστοστό που πληθυσμού που είναι ασθενείς</b>.
+    </p>
+
+    <p>
+      Χρησιμοποιώντας το ευρέως γνωστό μαθηματικό μοντέλο των επιδημιολόγων, γνωστό ως <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR</a>,
+      μπορούμε να συσχετίσουμε το R0 στο ποστοστό του πληθυσμού που τελικά θα νοσήσει.
+      (Για περισσότερες πληροφορίες για τα SIR μοντέλα, προτείνουμε αυτό το <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">εξαιρετικό βίντεο</a>.)
+    </p>
+    
+    <p>Παρότι αυτό το μοντέλο είναι μια απλούστευση της πραγματικότητας 
+      (π.χ. υποθέτει τυχαίες συναντήσεις και καθόλου lockdown), μας δίνει μια αρχική εκτίμηση του ανθρωπίνου κόστους από τη μη χρήση μάσκας.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εκπνοή): <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Προστασία (στην εισπνοή): <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Μολυσμένων'
+        )" :layout="graph3Layout(
+        'Πώς οι Μάσκες Μειώνουν τις Μολύνσεις',
+        'Ποσοστό Ανθρώπων που Φορούν Μάσκες',
+        'Ποσοστό Ανθρώπων που Θα Μολυνθούν'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Αυτή η καμπύλη που μοιάζει με λόφο μας δείχνει πως οι μάσκες επηρεάζουν το μέγεθος μιας επιδημίας.
+      <b>Όσο περισσότεροι άνθρωποι φορούν μάσκες, ο αριθμός των λοιμώξεων μειώνεται δραστικά.</b>
+    </p>
+
+    <p>
+      Όταν πολύ λίγοι άνθρωποι φορούν μάσκες, είμαστε στην κορυφή του λόφου και οι περισσότεροι άνθρωποι θα αρρωστήσουν.
+      Αλλά κάθε βήμα προς τα δεξιά βελτιώνει την κατάσταση.
+      Έτσι, μάσκες με μέτρια προστασία που χρησιμοποιούνται από πολλούς, ακόμη και αν δεν χρησιμοποιούνται από όλους, μπορούν βοηθήσουν να μειώσουμε την μετάδοση του κορονοϊού.
+    </p>
+
+    <p>
+      Για να σταματήσουμε τελείως την εξάπλωση, πρέπει να βρεθούμε στο κάτω μέρος του λόφου.
+      Αλλά μπορούμε να είμαστε αισιόδοξοι: όσο περισσότερος κόσμος φοράει μάσκες, τόσο πιο γρήγορα κατεβαίνουμε.
+      Το οποίο σημαίνει ότι <b>οι μάσκες είναι πιο αποτελεσματικές όσο περισσότεροι τις φορούν</b>.
+    </p>
+
+    <p>
+      Αν αρκετοί άνθρωποι φορέσουν μάσκες, μπορούμε να φτάσουμε το τέλος του λόφου, όπου η πιθανότητα μόλυνσης είναι μηδενική.
+      Έτσι οι μάσκες μπορούν να σταματήσουν μια επιδημία.
+      Αλλά οι μάσκες μπορούν να σταματήσουν μια επιδημία μόνο αν αρκετός κόσμος τις χρησιμοποιεί.
+    </p>
+
+    <p>
+      Θα αναρωτιέστε, πόσοι άνθρωποι πρέπει να φορέσουν μάσκες για να σταματήσει μια επιδημία.
+      Λοιπόν, αυτό εξαρτάται από την προστασία που παρέχουν.
+    </p>
+
+    <p>
+      Παίζοντας με το γράφημα παραπάνω, θα δείτε ότι αν οι μάσκες παρέχουν 50% προστασία, θα χρειαστούμε περίπου 3 στους 4 ανθρώπουν να τις φορούν για να σταματήσει η επιδημία.
+      Αλλά αν οι μάσκες προσέφεραν 75% προστασία, αρκεί να φορούν μάσκα οι μισοί για να σταματήσει η εξάπλωση.
+    </p>
+
+    <p>
+      <b>
+        Όσο πιο αποτελεσματική είναι μια μάσκα, τόσο γρηγορότερα θα κατεβούμε το λόφο.</b>
+        Γι'αυτό είναι σημαντικό να χρησιμοποιήσουμε μια μάσκα που
+         <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">κλείνει καλά το στόμα <i>και</i> τη μύτη</a>,
+         και κατασκευάζεται από κάποιο υλικό που φιλτράρει αποτελεσματικά.
+    </p>
+
+    <p>
+      Όλοι θέλουμε να σταματήσουμε την μετάδοση του κορονοϊού.
+      Αλλά δεν μπορείς να φτάσεις εκεί μόνος. Καθένας από εμάς μπορεί να κάνει μόνο ένα μικρό βήμα.
+    </p>
+
+    <p>
+      Ωστόσο, όταν πολλοί άνθρωποι κάνουν ένα μικρό βήμα, όλοι μαζί κάνουμε άλματα.
+    </p>
+
+    <p>Μαζί, μπορούμε να φτάσουμε στο τέλος του λόφου.</p>
+    
+    <p>Μαζί, μπορούμε να φρενάρουμε τον κορονοϊό.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Ευχαριστίες & Αναφορές</h2>
+
+    <p>Η έκθεση αυτή δημιουργήθηκε από τον <a href="https://twitter.com/aatishb">Aatish Bhatia</a> σε συνεργασία με τον <a href="https://twitter.com/minutephysics">Henry Reich</a> και μεταφράστηκε στα ελληνικά από τον <a href="https://pankgeorg.com">Παναγιώτη Γεωργακόπουλο</a></p>
+
+    <p>Δείτε το <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">συνοδευτικό βίντεο</a> για μια ευχάριστη οπτική πάνω στα μαθηματικά των μασκών! Το βίντεο έλαβε υποστήριξη από το <a href="https://www.hsfoundation.org/">Ίδρυμα Heising-Simons</a>. Εδώ βρίσκεται το κομπιουτεράκι <a href="https://aatishb.com/maskmath/calculator.html">πράξεων μάσκας</a> που εμφανίζεται στο βίντεο.</p>
+
+    <p>
+      Πολλές ευχαριστίες στους <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a> και <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> για  τα σχόλια και τις διορθώσεις στις πρώτες εκδόσεις της έκθεσης.
+    </p>
+
+    <p>
+      Αν βρήκατε αξία στην έκθεση αυτή και θα θέλατε να δείτε περισσότερη δουλειά σαν αυτή στο μέλλον, μπορείτε να
+      <b><a href="https://www.patreon.com/aatishb">υποστηρίξετε την δουλειά μου στο Patreon</a></b>.
+    </p>
+
+    <p>
+      Εδώ θα βρείτε <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">μερικές</a> <a href="https://www.maskfaq.com/test-results">πληροφοριακές</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">πηγές</a> στην αποτελεσματικότητα διαφόρων υλικών μασκών να φιλτράρουν τον αέρα.
+      Παρότι οι μάσκες διαφέρουν πολύ στην προστασία που παρέχουν λόγω διαφορετικού υλικού ή εφαρμογής, κάποια υλικά μπορούν να φιλτράρουν
+      <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">πάνω από</a> το <a href="https://www.maskfaq.com/test-results">80%</a> των σωματιδίων όταν χρησιμοποιούνται σε κάποια μάσκα που εφαρμόζει καλά.
+    </p>
+
+    <p>
+      Για όσους ενδιαφέρονται για τα μαθηματικά (ξέρετε ποιοι είστε),
+      <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">ορίστε μια περιγραφή</a> που καλύπτει τα παραπάνω με περισσότερη λεπτομέρεια.
+      Τα γραφήματα στην έκθεση αυτή επεκτείνουν την εργασία των <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> που περιγράφουν την διπλή προστασία που παρέχουν οι μάσκες.
+    </p>
+
+    <p>
+      Το μοντέλο μασκών δύο κατευθύνσεων (εισπνοής/εκπνοής) εξ'όσων γνωρίζω πρώτη φορά αναφέρθηκε από τους <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Πίνακας S3 και Διάγραμμα S4). 
+      Αυτό επισημαίνεται από τους Howard et al στην <a href="https://www.preprints.org/manuscript/202004.0203/v3">κριτική</a> και <a href="https://www.fast.ai/2020/04/13/masks-summary/">συνοδευτική έκθεση</a>, και διαδόθηκε περαιτέρω από τους <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> στο περιοδικό Atlantic, και από τον <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> στο New Yorker, ο οποίος γράφει,
+      <i>"Όσο πιο αποτελεσματική η μάσκα, τόσο καλύτερο το αποτέλεσμα."</i>
+    </p>
+
+    <p>
+      Το κείμενο αυτό δημοσιεύεται με άδεια Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Ο πηγαίος κώδικας είναι διαθέσιμος <a href="https://github.com/aatishb/maskmath">στο Github</a>. Τα emojis δημιουργήθηκαν από το <a href="https://twemoji.twitter.com/">Twitter</a>
+      και επεξεργάστηκαν ώστε να περιλαμβάνουν ένα προσαρμοσμένο σχέδιο μάσκας.
+    </p>
+
+    <p>
+      Ευχαριστώ για την ανάγνωση, μείνετε ασφαλείς! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>

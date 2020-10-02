@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Мультипликативный эффект масок</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интерактивное эссе о том, как маски могут победить COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Почему маски работают лучше, чем Вы думаете: интерактивное эссе">
+  <meta name="twitter:description" content="Даже частично эффективные маски могут остановить распространение COVID-19, если их будет носить достаточное число людей.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Почему маски работают лучше, чем Вы думаете: интерактивное эссе" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Даже частично эффективные маски могут остановить распространение COVID-19, если их будет носить достаточное число людей." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>Мультипликативный эффект масок</h1>
+        <h3>Интерактивное эссе о том, как маски могут победить COVID-19</h3>
+        <h4>подготовлено <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Нам <a href="https://www.preprints.org/manuscript/202004.0203/v1">теперь</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">известно, </a> <a href="https://science.sciencemag.org/content/368/6498/1422">что</a> маски имеют огромное влияние на замедление распространения COVID-19.
+      И все же некоторые люди противятся ношению масок, так как они считают это делом личного выбора, а не здравоохранения в целом.
+    </p>
+
+    <p>
+      Такое отношение к проблеме довольно близоруко, так как <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">маски защищают как тех, кто их носит, <i>так и</i> людей вокруг.</a>.
+      Такая <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">двухсторонняя защита</a> позволяет эффективно погасить эпидемию при широко распространенном ношении масок.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      С помощью вычислений мы можем убедиться в том, что если 60% людей будет носить маски, эффективные на 60%, распространение болезни может снизиться на 60% - что примерно достаточно, чтобы остановить распространение COVID-19.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Посмотрите сопровождающее видео: <a href="https://www.youtube-nocookie.com/watch?v=Y47t9qLc9I4">Почему маски работают ЛУЧШЕ, чем Вы думаете</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Говорите, а не брызгайтесь</h2>
+
+    <p>
+      Но сначала, давай разберемся в величинах некоторых численных данных.
+      Когда человек выдыхает, он <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">распространяет частицы слюны</a> различных размеров.
+      Если он заражен, то эти брызги содержат вирусные частицы.
+      Эти <a href="https://arxiv.org/pdf/2005.10988.pdf">брызги слюны, полные вирусных частиц,</a> - главный путь распространения COVID-19.
+    </p>
+
+    <p>При дыхании, зараженный человек каждую минуту распыляет вокруг себя около <b>тысячи</b> вирусных частиц.</p>
+
+    <p>При разговоре, он распыляет примерно <b>десять тысяч</b> вирусных частиц.</p>
+
+    <p>При кашле, он распространяет около <b>ста тысяч</b> вирусных частиц.</p>
+
+    <p>А при чихании, он распространяет около <b>миллиона</b> вирусных частиц.</p>
+
+    <p>
+      Чем больше вирусных частиц переносится от одного человека к другому, тем больше вероятность инфекции.
+      (И люди, зараженные большим количеством вирусных частиц, обычно проявляют <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">более тяжелые симптомы</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Заразный человек" susceptibleperson="Восприимчивый человек"><span class="red">Путь передачи 1:</span> Когда заразный человек находится рядом с восприимчивым, его брызги слюны могут распространять заболевание.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Маски снижают распространение слюнных брызг между людьми - путем блокирования или перенаправления брызг - и тем самым уменьшая вероятность инфекции.</p>
+
+    <p>
+      Следует иметь в виду, что нет безупречных масок. 
+      Даже N95 маски, рекомендованные для медработников, могут гарантированно блокировать <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% частиц, наиболее трудно поддающихся блокированию</a> (и это только если их <a href="https://www.n95decon.org/publications">правильно носить</a>).
+    </p>
+
+    <p>
+      Маски не гарантируют полную безопасность, они лишь снижают риск заболевания.
+      Это сходно с тем, как зонтик не гарантирует, что Вы совсем не промокнете от дождя, но он снижает вероятность промокания.
+      И так же, как зонтики, маски работают, только если Вы будете с ними правильно обращаться.
+      Но в отличие от зонтиков, маски защищают не только людей, которые их носят, но и тех, кто находится <i>вокруг</i> них.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Почему маски защищают нас дважды</h2>
+
+    <p>
+      Давайте представим, что заразный человек носит маску, эффективную на 50 процентов.
+      Под "эффективной на 50 процентов" я подразумеваю, что ношение им маски вдвое снижает риск заражения находящегося рядом восприимчивного человека. 
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Заразный человек" susceptibleperson="Восприимчивый человек"><span class="orange">Путь передачи 2:</span> Когда заразный человек носит маску, эффективную на 50%, распространение болезни снижается на 50%. </anim-with-caption>
+
+  <div class="container">
+
+    <p>Но что если вместо этого маску будет носить восприимчивый человек?</p>
+
+    <p>
+      В целом, эффективность маски зависит от того, <b>вдыхаете</b> или <b>выдыхаете</b> ли Вы через нее.
+      Пока давайте рассмотрим упрощенный случай и будем считать, что маска одинаково эффективна в обоих направлениях.
+    </p>
+
+    <p>В таком случае, вероятность инфекции этим путем также снижается на 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Заразный человек" susceptibleperson="Восприимчивый человек"><span class="orange">Путь передачи 3:</span> Когда восприимчивый человек носит маску, эффективную на 50%, распространение болезни снижается на 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Что если и заразный <i>и</i> восприимчивый человек оба будут носить маску?</p> 
+
+    <p>
+      Первая маска снижает вероятность инфекции вдвое, и вторая также снижает вероятность инфекции вдвое.
+      Так что, когда <i>оба</i> человека носят маску, вероятность заражения составляет половину от половины, то есть 25% (по сравнению со случаем, когда ни один из них не носит маску).
+      В целом, это представляет снижение вероятности инфекции на 75%.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Заразный человек" susceptibleperson="Восприимчивый человек"><span class="yellow">Путь передачи 4:</span> Когда оба человека носят маску, эффективную на 50%, распространение болезни снижается на 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Если подумать, то кажется неожиданным, что маски, эффективные на 50%, могут снизить вероятность заражения на 75%.
+      Это возможно благодаря тому, что, когда оба человека носят маску, вероятность инфекции уменьшается вдвое дважды.
+      Эта <b>двойная защита</b> делает маски намного эффективнее, чем можно интуитивно ожидать.
+    </p>
+
+    <p>Вот и все четыре пути передачи, через которые переносимые по воздуху заболевания могут распространяться между людьми.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Путь передачи заболевания</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Снижение распространения заболевания</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Четыре способа передачи COVID-19 от человека к человеку. Тут делается допущение, что маски эффективны на 50%.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>От людей к целому населению</h2>
+
+    <p>
+      До сих пор мы рассматривали распространение заболевания между двумя людьми.
+      Как перейти от этого к пониманию распространения заболевания в <i>целом населении</i>?
+    </p> 
+
+    <p>В крайних случаях, это довольно просто.</p> 
+
+    <p>
+      Например, если бы <b>никто</b> не носил маску, то при любой встрече между двумя людьми вероятность того, что <span class="red">ни один из них не носит маску</span> составляет 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      Так что нам нужно учитывать только <span class="red">первый путь</span> передачи заболевания, и, таким образом, не будет наблюдаться <span class="red">никакого снижения</span> в распространении заболевания.
+    </p>
+
+    <p>
+      В противоположном крайнем случае, если бы <b>все</b> носили маску, то при любой встрече между двумя людьми вероятность того, что <span class="yellow">оба из них носят маску</span> составляет 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      В этом случае нам нужно рассматривать только <span class="yellow">последний путь</span> передачи заболевания.
+      Полагая, что маски эффективны на 50% в обоих направлениях, во всем населении будет наблюдаться <span class="yellow">75%-е снижение</span> в распространении заболевания.
+    </p>
+
+    <p>
+      Таким образом, когда <i>все</i> носят маску (или когда <i>никто</i> ее не носит), рассчитать снижение распространения заболевания в населении просто, так как взаимодействие происходит только по одному из рассмотренных путей передачи.
+    </p>
+
+    <p>
+      Но в действительности, некоторые люди носят маску, а некоторые нет.
+      Что означает, что вирус может распространяться по комбинации всех четырех путей передачи.
+      Насколько вероятен каждый из путей передачи зависит от того, сколько людей носят маску.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Ношение масок: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Например, <b>если 50% людей носит маску</b>, то, когда два человека случайно встречаются, то вероятность того, что <span class="yellow">оба из них носят маску,</span> составляет 50% ⨉ 50%, т.е. 25%.
+      Подобным образом Вы можете вычислить и вероятность остальных трех путей передачи. 
+    </p>
+
+    <p>
+      Когда ровно половина населения носит маску, то выходит, что все четыре пути передачи равновероятны.
+      (Можете ли Вы убедить себя сами, что это действительно так?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Путь передачи заболевания</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Снижение распространения заболевания</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Вероятность данного пути</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Четыре пути передачи COVID-19 от человека к человеку, при допущении, что 50% людей носят маску, эффективную на 50%.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Теперь мы можем вычислить <b>среднее снижение распространения заболевания в населении</b>.
+      Так как мы устроили все так, что каждый из путей передачи имеет равную вероятность, это составляет среднее от <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> и <span class="yellow">75%</span>, то есть 43.75%.
+    </p>
+
+    <p>
+      Люди, которые <i>не носят</i> маску, могут заразиться через первые два пути передачи, которые имеют одинаковую вероятность, когда половина населения носит маску.
+      Таким образом, снижение распространения заболевания для тех, кто не носит маску, составляет среднее от <span class="red">0%</span> и <span class="orange">50%</span>, то есть 25%.
+    </p>
+
+    <p>
+      Между тем, люди, которые <i>носят</i> маску, могут заразиться через последние два пути передачи.
+      Таким образом, снижение распространения заболевания для тех, кто носит маску, составляет среднее от <span class="orange">50%</span> и <span class="yellow">75%</span>, то есть 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Среднее Снижение распространения заболевания = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Снижение распространения заболевания для <b>тех, кто не носит маску</b> = 25%</div>
+        <div class="splash">Снижение распространения заболевания для <b>тех, кто носит маску</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Полагая, что 50% людей носит маску, эффективную на 50%.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Таким образом, даже те, кто не носит маску, получает небольшую пользу, так как воздух, которым они дышат, часто опосредован масками, которые носят <i>другие люди</i>.
+      Но те, кто носит маски, получают гораздо больше пользы благодаря защите, обеспечиваемой их собственными масками.
+    </p>
+
+    <p>И так как население состоит и из тех, кто носит маску, и тех, кто ее не носит, то общий эффект получается чем-то средним между эффектами на эти две группы людей.</p>
+
+    <p>В этом упрощенном примере (где 50% населения носит маски, эффективные на 50%), мы выяснили, как перейти от <b>пользы, приносимой масками <i>одному человеку</i></b>, к <b>среднему эффекту масок на <i>целое население</i>.</b></p>
+
+    <h2>"Маскология"</h2>
+
+    <p>
+      Давайте <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">применим этот ход мыслей</a> к <i>произвольным значениям</i> <b>доли населения, носящей маски</b> и <b>эффективности масок</b>.
+      Поварьируйте слайдеры, приведенные ниже, чтобы увидеть, как маски влияют на распространение заболевания.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Ношение масок: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность маски при выдыхании: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность маски при вдыхании: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Путь передачи заболевания</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Снижение распространения заболевания</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Вероятность данного пути передачи</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Среднее снижение передачи заболевания: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Снижение распространения заболевания для тех, кто не носит маску: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Снижение распространения заболевания для тех, кто носит маску: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Что случится с распространением заболевания, если 60% людей будут носить маски, эффективные на 60%?
+      Или если 90% будут носить маски с 50%-й эффективностью?
+      Или если 50% будут носить маски с 90%-й эффективностью?
+      Это интерактивное приложение позволит Вам найти ответы на эти вопросы.
+    </p>
+
+    <p>Вывод: <b>Чем больше людей носит маски, тем это безопаснее для всех.</b></p>
+
+    <p>
+      Путем фильтрации вдыхаемого воздуха, маски обеспечивают первичную защиту для тех, кто их носит.
+      А путем фильтрации или перенаправления выдыхаемого воздуха, маски обеспечивают вторичную защиту для <i>всех</i> — включая и тех, кто не носит маски.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">Как насчет масок, которые не фильтруют выдыхаемый воздух? 
+        <span v-if="!expandaside1"> (Нажмите, чтобы развернуть)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Некоторые N95 маски снабжены <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">клапанами или отверстиями</a>, которые выпускают воздух без фильтрации.
+        CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">рекомедует не надевать</a> эти маски в помещениях медицинского обслуживания, так как они создают риск заболевания для других людей.
+        Вы можете в этом убедиться с помощью интерактивного приложения, приведенного выше.
+        <br><br>
+        Сначала поставьте эффективность при вдыхании и выдыхании на большую величину (при среднем значении частоты ношения масок в населении).
+        Это соответствует высокоэффективным маскам вроде N95.
+        Теперь приведите эффективность при выдыхании ближе к нулю и наблюдайте за тем, как распространение заболевания набирает обороты, особенно среди тех, кто не носит маски.
+        <br><br>
+        Если у Вас уже есть N95 маска, CDC рекомендует <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">покрывать ее выдыхательный клапан</a> хирургической маской.
+      </span>
+    </aside>
+
+
+    <p>
+      На самом деле, маски еще более эффективны, чем можно судить по этим выкладкам.
+    </p>
+
+    <h2>Как остановить эпидемию</h2>
+
+    <p>
+      Огонь гасят, лишая его кислорода.
+      Но нет необходимости в удалении всего кислорода, нужно лишь снизить его концентрацию до уровня, достаточного, чтобы предотвратить дальнейшее воспламенение.
+      То же самое можно сказать об эпидемии - не нужно снижать риск распространение заболевания на все 100%. 
+      Если уменьшить его до уровня, достаточного, чтобы предотвратить дальнейшее распространение заболевания, можно таким образом погасить эпидемию.
+    </p>
+
+    <p>
+      Наверное, Вы уже слышали об эпидемиологическом термине R0 (произносится R-ноль).
+      Это <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">число людей, которые могут инфицироваться от заразого носителя</a> среди населения, не обладающего иммунитетом к данному заболеванию. 
+    </p> 
+
+    <p>Когда R0 превышает 1, болезнь распространяется экспоненциально, до тех пор, пока достаточно людей либо привьются от этой болезни, либо заболеют и разовьют естественный иммунитет к этой болезни.</p>
+
+    <p>
+      Но, как пишет Эд Йонг в The Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 - не судьбоносный показатель"</a>.
+      R0 представляет собой произведение двух переменных: среднего числа людей, с которыми взаимодействует заразный человек, и вероятности инфекции при контакте.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">среднее число людей, с которыми взаимодействует заразный человек</span> <br>⨉ <span class="dotted">вероятность инфекции при контакте</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Социальное дистанцирование, карантин и изоляция уменьшают величину <span class="dashed">первой из этих переменных</span>.
+      А маски уменьшают величину <span class="dotted">второй переменной</span>.
+      Цель всех этих здравоохранительных мер в том, чтобы взять эпидемию под контроль путем уменьшения R0 ниже 1.
+    </p>
+
+    <p>
+      Принимая все это во внимание, давайте выразим эффект масок в отношении R0.
+      Нижеприведенный график показывает, как R0 изменяется с варьированием частоты ношения масок.
+    </p>
+
+    <p>
+      Вы можете использовать первый слайдер, чтобы варьировать R0, величина которого для COVID-19 находится между 2 и 3 (в отсутствии других здравоохранительных мер, таких как социальное дистанцирование, которые еще более снижают величину R0.)
+      Изменяя эффективность масок, Вы можете убедиться в том, как маски могут способствовать контролированию эпидемии.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность маски при выдыхании: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность маски при вдыхании: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Как маски снижают R0',
+        'Доля людей, носящих маски',
+        '# людей, инфицированных от заразного человека (R0)',
+        'Эпидемия под контролем',
+        'Эпидемия вне контроля'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Чтобы остановить распространение COVID-19, нам нужно сохранять R0 ниже 1.
+      Если этого достигнуть, то в среднем каждый заразный человек сможет инфицировать менее одного человека, и, таким образом, эпидемии придет конец.
+    </p>
+
+    <p>
+      Сколько же человек должны носить маски 50%-й эффективности, чтобы остановить распространение COVID-19?
+      Что, если маски обладают 75%-й эффективностью?
+      Или 90%-й?
+      Это интерактивное приложение позволит Вам предказать ответы на эти вопросы.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Важная заметка: люди обычно не взаимодействуют случайным образом. 
+        <span v-if="!expandaside2"> (Нажми, чтобы развернуть)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        Те, кто носят маски, могут с большей вероятностью взаимодействовать с другими людьми, которые тоже носят маски, и с меньшей вероятностью - с теми, кто их не носит.
+        <br/><br/>
+        Аналогично, те, кто не носят маски, могут жить в местах, где частота ношения масок ниже среднего.
+        Такая склонность людей взаимодействовать с теми, чьи предпочтения похожи на их собственные, <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">снижает защитный эффект масок, </a> так как <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">те, кто не носит маски, имеют меньше шансов получить пользу от тех, кто их носит.</a>.
+        <br/><br/>
+        Как отмечают <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, и Ashleigh Tuite</a> в своем анализе, "эффект масок и других способов покрытия лица на снижение распространения COVID-19 можно максимизировать, если уделить внимание снабжению масками нуждающихся частей населения."
+      </span>
+    </aside>
+
+    <h2>Во сколько человеческих жизней обходится эпидемия</h2>
+
+    <p>
+      Мы можем углубить наше понимание эпидемии путем выражения эффекта масок в отношении человеческих жизней. 
+      Маски спасают человеческие жизни, снижая вероятность инфекции, что, в свою очередь, сужает размах эпидемии.
+    </p>
+
+    <p>
+      Чем больше людей носит маски, тем меньше R0.
+      А чем меньше R0, тем меньше число инфицированных людей.
+      Так что мы можем прояснить картину происходящего, если вместо R0 мы попытаемся визуализировать <b>долю инфицированного населения</b>.
+    </p>
+
+    <p>
+      Используя широко применяемую математическую модель эпидемий, известную как <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR-модель</a>, мы можем соотнести R0 с долей населения, которая в итоге окажется инфицированной.
+      (Если Вы хотите узнать больше о SIR-моделях, я рекомендую посмотреть вот это <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">замечательное видео</a>.)
+    </p>
+    
+    <p>Несмотря на то, что эта модель представляет собой значительное упрощение (например, она полагает случайное взаимодействие между людьми и отсутствие карантина), она дает приблизительную оценку ущерба человеческим жизням от неношения масок.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность масок при выдыхании: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Эффективность масок при вдыхании: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Зараженный'
+        )" :layout="graph3Layout(
+        'Как маски снижают инфекции',
+        'Доля людей, которые носят маски',
+        'Доля людей, которые будут инфицированы'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Эта холмообразная кривая демонстрирует влияние масок на размах эпидемии.
+      <b>По мере того, как все больше людей носит маски, число инфекций резко падает.</b>
+    </p>
+
+    <p>
+      Когда лишь немногие носят маски, мы находимся на вершине холма, и большинство людей в итоге оказываются зараженными.
+      Но каждый шаг вправо двигает нас вниз по кривой.
+      Так что даже частично эффективные маски, носимые определенной долей населения, могут способствовать снижению распространения COVID-19.
+    </p>
+
+    <p>
+      Чтобы полностью прекратить распространение болезни, нам нужно добраться до подножия этого холма, изображаемого кривой.
+      Но тут есть и положительный поворот: чем больше людей носит маски, тем круче холм.
+      А это значит, что <b>маски приносят все больше пользы обществу, по мере того как все больше людей их носит.</b>.
+    </p>
+
+    <p>
+      Если достаточно людей станет носить маски, мы можем достигнуть подножия холма, где вероятность заражения равна нулю.
+      Именно таким образом маски могут помочь положить конец эпидемии.
+      Но маски могут положить конец эпидемии только в том случае, если достаточное число людей будет их носить.
+    </p>
+
+    <p>
+      Вам, наверное, интересно узнать, сколько людей должны носить маски, чтобы покончить с эпидемией.
+      Это зависит от того, насколько эффективны маски.
+    </p>
+
+    <p>
+      Используя интерактивное приложение, приведенное выше, Вы можете убедиться в том, что, если маски обладают 50%-й эффективноситью, то для прекращения распространения COVID-19 необходимо, чтобы примерно три четверти населения носили маски.
+      Но если маски эффективны на 75%, то нужно, чтобы лишь половина населения их носила.
+    </p>
+
+    <p>
+      <b>Чем более эффективны маски, тем быстрее мы можем спуститься по кривой.</b>
+      Поэтому так важно носить маски, которые <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">плотно прилегают ко рту <i>и</i> носу</a>, и которые сделаны из эффективного фильтрующего материала.
+    </p>
+
+    <p>
+      Мы все хотим добраться до подножия холма и остановить распространение COVID-19.
+      Но никто из нас не может туда добраться один. 
+      Каждый человек может только сделать крошечный шаг вниз.
+    </p>
+
+    <p>Но если много людей сделают этот маленький шаг, то вместе мы можем сделать гигантский прыжок вниз по склону холма. </p>
+
+    <p>Вместе мы можем добраться до подножия холма.</p>
+    
+    <p>Вместе мы можем остановить COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Благодарности и ссылки</h2>
+
+    <p>
+      Это эссе было подготовлено <a href="https://twitter.com/aatishb">Aatish Bhatia</a> при сотрудничестве с <a href="https://twitter.com/minutephysics">Henry Reich</a>. 
+      Оно было переведено на русский <a href="https://twitter.com/ulkar_aghayeva">Ulkar Aghayeva</a>.
+    </p>
+    
+    <p>Посмотрите наше <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">сопроводительное видео</a> с наглядным изображением математики масок! Это видео было сделано при поддержке <a href="https://www.hsfoundation.org/">Фонда Heising-Simons </a>. Здесь Вы можете найти <a href="https://aatishb.com/maskmath/calculator.html">калькулятор,</a> показанный на видео.</p>
+
+    <p>
+      Большое спасибо <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, и <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> за их полезные отзывы на черновики этого эссе.
+    </p>
+
+    <p>
+      Если это эссе было полезым для Вас и если Вы бы хотели видеть побольше таких работ в будущем, Вы можете <b><a href="https://www.patreon.com/aatishb">поддержать мою работу на Patreon</a></b>.
+    </p>
+
+    <p>
+      Здесь Вы можете найти <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">некоторые</a> <a href="https://www.maskfaq.com/test-results">информативные</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">ресурсы</a> на тему фильтрующей способности часто используемых масочных материалов.
+      Несмотря на то, что маски могут сильно отличаться по своей эффективности в зависимости от материала и плотности прилегания к лицу, некоторые материалы могут <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">превысить</a> <a href="https://www.maskfaq.com/test-results">80%</a> свою фильтрующую способность, если они используются в масках с плотным прилеганием к лицу.
+    </p>
+
+    <p>
+      Для любителей алгебры (Вы сами знаете, о ком это я), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">вот дополнительный материал,</a> содержащий математические детали.
+      Графики в этом эссе представляют собой расширение работы <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> с учетом двухсторонней эффективности масок.
+    </p>
+
+    <p>
+      Насколько мне известно, двухсторонняя модель масок, послужившая основой этому эссе, была впервые опубликована в препринте <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Таблица S3 и Рис S4). 
+      Эта модель была отмечена Howard et al в их <a href="https://www.preprints.org/manuscript/202004.0203/v3">обзорной статье</a> и <a href="https://www.fast.ai/2020/04/13/masks-summary/">сопроводительном эссе</a>, и далее популяризована <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> в The Atlantic, в также <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> в The New Yorker, который, в частности, написал, <i>"Чем более эффективна маска, тем сильнее ее общее влияние."</i>
+    </p>
+
+    <p>
+      Этот текст публикуется под лицензией Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Исходный код доступен <a href="https://github.com/aatishb/maskmath">на Github</a>. Эмодзи были созданы <a href="https://twemoji.twitter.com/">Twitter</a> и модифицированы для включения особых дизайнов масок.
+    </p>
+
+    <p>
+      Спасибо за прочтение, и берегите себя! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
