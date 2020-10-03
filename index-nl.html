@@ -121,7 +121,7 @@
     <p>
     </p>
 
-    <h2>Waarom Mondkapjes Ons Dubbel Beschermen.</h2>
+    <h2>Waarom Mondkapjes Ons Dubbel Beschermen</h2>
 
     <p>
       Stel dat een besmet persoon een mondkapje draagt dat voor 50 procent effectief is. 
@@ -240,26 +240,26 @@
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      De werkelijkheid is weerbastiger. Sommige mensen dragen wel en andere geen mondkapje.
+      Hierdoor kan het virus zich via elk van de vier routes verspreiden.
+      De waarschijnlijkheid van elke route hangt af van hoeveel mensen een mondkapje dragen.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Mondkapjes Gebruik: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Wanneer bijvoorbeeld <b>50% van de bevolking een mondkapje draagt</b>, dan is de kans dat twee personen bij een toevallige ontmoeting <span class="yellow">allebei een mondkapje dragen</span> 50% x 50% oftewel 25%.
+      Op vergelijkbare wijze kan je de kans voor de andere drie verpreidingsroutes uitrekenen.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Wanneer precies de helft van de bevolking een mondkapje draagt, is elke verspreidingsroute even waarschijnlijk.	
+      (Kan je zelf nagaan dat dit inderdaad klopt?)
     </p>
 
   </div>
@@ -270,7 +270,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Virus Verspreidingsroute</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -278,7 +278,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Afname in Virusoverdracht</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -286,7 +286,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Kans op deze Route</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -296,7 +296,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+      	De vier manieren waarop COVID-19 zich kan verspreiden van persoon tot personen, onder aanname dat 50% van de bevolking een mondkapje draagt dat voor 50% effectief is.
       </div>
 
     </div>
@@ -305,13 +305,12 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Nu kunnen we de <b>de gemiddelde afname in virusoverdracht binnen de bevolking</b> berekenen.	
+      Omdat we de getallen zo gekozen hebben dat kans voor elke route gelijk is, komt dit neer op het gemiddelde van <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, wat neerkomt op 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Mensen die <i>geen</i> mondkapje dragen kunnen via de eerste twee routes besmet raken. Beide routes zijn even waarschijnlijk wanneer de helft van de bevolking een mondkapje draagt. De afname in virusoverdracht voor mensen die geen mondkapje dragen is het gemiddelde van <span class="red">0%</span> en <span class="orange">50%</span>, wat neerkomt op 25%.
     </p>
 
     <p>
