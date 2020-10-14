@@ -260,7 +260,7 @@ let app = new Vue({
       { url: 'index-uk.html', language: 'Українська' },
       { url: 'index-id.html', language: 'Bahasa Indonesia' },
       { url: 'index-nl.html', language: 'Nederlands' },
-
+      { url: 'index-fa.html', language: 'فارسی' },
     ]
   },
 
