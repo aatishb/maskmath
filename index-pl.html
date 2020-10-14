@@ -562,25 +562,25 @@
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Koszt ludzki</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Możemy poszerzyć nasze rozumienie krok dalej i wyrazić moc masek za pomocą bardziej przystępnych pojęć.
+      Maski ratują życie poprzez redukowanie szansy zarażenia, co w konsekwencji zmniejsza wymiar epidemii.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Im więcej ludzi nosi maski, tym R0 maleje.
+      A im mniejsze R0, tym mniej zarażeń.
+      Możemy zatem uzyskać jaśniejszy obraz jeżeli zamiast R0 przedstawimy <b>zarażoną część populacji</b>.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Możemy użyć szeroko stosowanego matematycznego modelu epidemii znanego jako <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">model SIR</a> by połączyć R0 oraz część populacji, która ostatecznie zostanie zarażona.
+      (By dowiedzieć się więdzej na temat modelu SIR, polecam obejrzeć ten <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">świetny materiał</a>.)
     </p>
-    
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+
+    <p>Mimo że model ten jest sporym uproszczeniem (n.p. zakłada losowe kontakty między ludźmi oraz brak kwarantanny), daje nam on przybliżony koszt ludzki spowodowany brakiem obowiązku noszenia masek.</p>
 
   </div>
 
@@ -593,21 +593,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Skuteczność maski przy Wydychaniu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Skuteczność maski przy Wdychaniu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces(
         '% Infected'
         )" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        'Jak maski zmniejszają ilość zakażeń',
+        'Procent populacji noszący maski',
+        'Procent populacji, która będzie zarażona',
       )" :config="config"></graph>
 
     </div>
