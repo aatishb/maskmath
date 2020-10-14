@@ -547,7 +547,7 @@
     <aside>
 
       <span @click="expandaside2 = true;">Een belangrijke waarschuwing: "soort zoekt soort". 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+        <span v-if="!expandaside2"> (Klik hier voor een toelichting)</span>
       </span>
       
       <span v-if="expandaside2">
@@ -603,7 +603,7 @@
       </label>
 
       <graph :traces="graph3Traces(
-        '% Infected'
+        '% Besmet'
         )" :layout="graph3Layout(
         'Hoe Mondkapjesgebruik het Aantal Besmettingen Verlaagt',
         'Percentage Mensen dat een Mondkapje Draagt',
