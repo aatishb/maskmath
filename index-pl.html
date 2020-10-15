@@ -565,7 +565,7 @@
     <h2>Koszt ludzki</h2>
 
     <p>
-      Możemy poszerzyć nasze rozumienie krok dalej i wyrazić moc masek za pomocą bardziej przystępnych pojęć.
+      Możemy poszerzyć nasze rozumienie o krok dalej i wyrazić skuteczność masek za pomocą bardziej przystępnych pojęć.
       Maski ratują życie poprzez redukowanie szansy zarażenia, co w konsekwencji zmniejsza wymiar epidemii.
     </p>
 
@@ -580,7 +580,7 @@
       (By dowiedzieć się więdzej na temat modelu SIR, polecam obejrzeć ten <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">świetny materiał</a>.)
     </p>
 
-    <p>Mimo że model ten jest sporym uproszczeniem (n.p. zakłada losowe kontakty między ludźmi oraz brak kwarantanny), daje nam on przybliżony koszt ludzki spowodowany brakiem obowiązku noszenia masek.</p>
+    <p>Mimo że model ten jest sporym uproszczeniem (n.p. zakłada losowe kontakty między ludźmi oraz brak kwarantanny), daje nam on przybliżony koszt ludzki spowodowany brakiem noszenia masek.</p>
 
   </div>
 
@@ -593,19 +593,19 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność maski przy Wydychaniu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Skuteczność maski przy wydychaniu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność maski przy Wdychaniu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Skuteczność maski przy wdychaniu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces(
         '% Infected'
         )" :layout="graph3Layout(
-        'Jak maski zmniejszają ilość zakażeń',
+        'Jak maski zmniejszają liczbę zakażeń',
         'Procent populacji noszący maski',
         'Procent populacji, która będzie zarażona',
       )" :config="config"></graph>
