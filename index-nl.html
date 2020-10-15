@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>De Multiplicatieve Kracht van Mondkapjes</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Een Onderzoekend Essay over Hoe Mondkapjes een Einde Kunnen Maken aan COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Waarom Mondkapjes Beter Werken Dan Je Denkt: Een Interactief Essay">
+  <meta name="twitter:description" content="Zelfs gedeeltelijk effectieve mondkapjes kunnen het verspreiden van COVID-19 voorkomen, zolang maar genoeg mensen er eentje dragen.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Waarom Mondkapjes Beter Werken Dan Je Denkt: Een Interactief Essay" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Zelfs gedeeltelijk effectieve mondkapjes kunnen het verspreiden van COVID-19 voorkomen, zolang maar genoeg mensen er eentje dragen." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>De Multiplicatieve Kracht van Mondkapjes</h1>
+        <h3>Een Onderzoekend Essay over Hoe Mondkapjes een Einde Kunnen Maken aan COVID-19</h3>
+        <h4>door <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Wij <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">weten</a> <a href="https://www.preprints.org/manuscript/202004.0203/v1">inmiddels</a> <a href="https://science.sciencemag.org/content/368/6498/1422">dat</a> mondkapjes een overduidelijk effect hebben op het vertragen van de verspreiding van COVID-19.
+      Toch zijn sommigen mensen tegen het dragen van mondkapjes omdat zij dit als een persoonlijke keuze beschouwen in plaats van een volksgezondheidsprobleem.
+    </p>
+
+    <p>
+   	  Dit gaat voorbij aan het grotere plaatje, omdat <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">mondkapjes zowel drager <i>als ook</i> de mensen rondom hen beschermen</a>.
+   	  Deze <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tweerichtingsbescherming</a> is een krachtige manier om, bij wijdverspreid gebruik van mondkapjes, de epidemie te stoppen. 
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Door de wiskunde achter het gebruik van mondkapjes te onderzoeken, laten we zien dat wanneer 60% van de mensen een mondkapje draagt dat voor 60% effectief is, de overdracht van het virus tot wel 60% daalt. Dit is grofweg wat nodig is om de verspreiding van COVID-19 te stoppen.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Bekijk bovenstaande video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Verspreid de boodschap, niet het virus</h2>
+
+    <p>
+      Maar laten we eerst een gevoel krijgen voor de getallen.
+      Wanneer een persoon uitademt, dan <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">verspreidt diegene speeksel druppels</a> van verschilende grootte.
+      Als deze persoon besmet is, dan bevatten deze speeksel druppels virusdeeltjes.  
+      Deze <a href="https://arxiv.org/pdf/2005.10988.pdf">virusdragende speeksel druppels</a> is de belangrijkste manier waarop COVID-19 vespreidt.
+    </p>
+
+    <p>Wanneer een besmet persoon uitademt, vespreidt deze <b>duizend</b> virusdeeltjes per minuut.</p>
+
+    <p>Wanneer diegene praat, dan worden er <b>tienduizend</b> virusdeeltjes verspreid per minuut.</p>
+
+    <p>Wanneer diegene hoest, dan worden er  <b>honderdduizend</b> virusdeeltjes verspreid per minuut.</p>
+
+    <p>En bij niezen zijn tot wel <b>een miljoen</b> virusdeeltjes.</p>
+
+    <p>
+      Hoe meer virusdeeltjes zich bewegen van persoon tot persoon, hoe groter de kans om besmet te raken.
+      (En eenmaal besmet, leidt bloodstelling aan meer virusdeeltjes over het algemeen tot <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">hevigere symptomen</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Besmet Persoon" susceptibleperson="Vatbaar Persoon"><span class="red">Verpreidingsroute 1:</span> Wanneer een besmet persoon bij een vatbaar persoon in de buurt komt, kan hun geproest ziektes verspreiden.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Mondkapjes verminderen de verspreiding van speeksel deeltjes tussen mensen - door het blokkeren of omleiden van de luchtstroom waarin deze deeltjes zitten - hierdoor neemt de kans op besmetting af.</p>
+
+    <p>
+      Het is goed om wel in gedachten te houden dat geen enkel mondkapje perfect is.
+      Zelfs de N95 mondkapjes, aangeraden voor mensen die in de zorg werken, blokkeren <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% van moeilijkst tegen te houden deeltjes</a> (en dan alleen wanneer je <a href="https://www.n95decon.org/publications">het mondkapje correct draagt </a>).
+    </p>
+
+    <p>
+      Mondkapjes bieden geen garantie, ze verlagen het risico.
+      Zie het als een paraplu; een paraplu garandeert niet dat je droog blijft, maar verlaagt de kans dat je nat wordt.
+      Net als paraplus werken mondkapjes alleen als je ze correct gebruikt.
+      Maar in tegenstelling tot een paraplu, die alleen maar de gebruiker drooghoudt, beschermt een mondkapje ook de mensen <i>rondom</i> de gebruiker.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Waarom Mondkapjes Ons Dubbel Beschermen</h2>
+
+    <p>
+      Stel dat een besmet persoon een mondkapje draagt dat voor 50 procent effectief is. 
+      Met '50 procent effectief' bedoel ik dat het dragen van dit mondkapje de kans halveert dat deze persoon een vatbaar persoon in de buurt besmet. 
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Besmet Persoon" susceptibleperson="Vatbaar Persoon"><span class="orange">Verpreidingsroute 2:</span> Wanneer een besmet persoon een 50% effectief mondkapje draagt, neemt de kans op ziekteoverdracht af met 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Maar was als de vatbare persoon een mondkapje draagt?</p>
+
+    <p>
+      In het algemeen hangt de effectiviteit van een mondkapje af of je <b>inademt</b> of <b>uitademt</b>. 
+      Laten we voor nu, om het simpel te houden, aannemen dat een mondkapje net zo effectief is bij in- als uitademen.	
+    </p>
+
+    <p>In dit geval zal de kans op besmetting via deze route ook afnemen met 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Besmet Persoon" susceptibleperson="Vatbaar Persoon"><span class="orange">Verspreidingsroute 3:</span> Wanneer een vatbaar persoon een mondkapje draagt dat voor 50% effectief is, daalt de kans op virusoverdracht met 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Wat als nu zowel de besmette persoon als <i>ook</i> de vatbare persoon een mondkapje dragen?</p> 
+
+    <p>
+      Het eerste mondkapje halveert de kans op besmetting en het tweede mondkapje halveert wederom de kans op besmetting.
+      Dus wanneer <i>allebei</i> de personen een mondkapje dragen, neemt de kans op besmetting af met de helft van de helft, oftewel 25% (in vergelijking tot de situatie waarin geen van beide een mondkapje draagt). Dit is in totaal een afname van de kans op infectie van 75%.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Besmet Persoon" susceptibleperson="Vatbaar Persoon"><span class="yellow">Verspreidingsroute 4:</span> Wanneer beide personen een mondkapje dragen dat voor 50% effectief is, neemt de kans op virusoverdracht af met 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Als je er over nadenkt, is het best verrassend dat een 50% effectief mondkapje de kans op besmetting kan doen afnemen met 75%.
+      Dit is mogelijk omdat, wanneer beide mensen een mondkapje dragen, de kans op besmetting tweemaal halveert.
+      Deze <b>dubbele bescherming</b> maakt mondkapjes effectiever dan je aanvankelijk verwacht.
+
+    </p>
+
+    <p>Hieronder zijn de vier mogelijke routes waarmee een virus zich door de lucht kan verpreiden van persoon tot persoon.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Virus Verpreidingsroutes</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Afname in virusoverdracht</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+      	De vier manieren waarop COVID-19 kan overgaan van persoon tot persoon. Hier nemen we aan dat mondkapjes voor 50% effectief zijn.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>Van Persoon tot Bevolking</h2>
+
+    <p>
+      Tot dusver hebben we alleen gekeken naar de overdracht van het virus tussen twee personen.	
+      Hoe kunnen we nu de stap maken naar het begrijpen van de virusoverdracht binnen de <i>gehele bevolking</i>?
+    </p> 
+
+    <p>In de uiterste gevallen is dit makkelijk.</p> 
+
+    <p>
+      Wanneer bijvoorbeeld <b>niemand</b> een mondkapje draagt, zal bij de ontmoeting tussen twee personen de kans dat <span class="red">geen van beiden</span> een mondkapje draagt 100% zijn.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      In dit geval hoeven we alleen maar rekening te houden met <span class="red">route 1</span> voor de verpreiding van het virus, en voor de bevolking is er <span class="red">geen afname</span> in de virusoverdracht.
+    </p>
+
+    <p>
+      In het andere uiterste, waarbij <b>iedereen</b> een mondkapje draagt, zal wanneer twee personen elkaar ontmoeten de kans dat ze <span class="yellow">allebei</span> een mondkapje dragen 100% zijn.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      In dit geval hoeven we alleen maar rekening te houden met <span class="yellow">route 4</span> voor de verspreiding van het virus. Aannemend dat mondkapjes voor 50% effectief zijn beide kanten op, dan zal de virusoverdracht met <span class="yellow">75% dalen</span> voor de gehele bevolking.
+    </p>
+
+    <p>
+      Dus wanneer <i>iedereen</i> een mondkapje draagt (of wanneer <i>niemand</i> er eentje draagt), is het makkelijk om de afname in virusoverdracht voor de bevolking te berekenen omdat er maar een verspreidingsroute mogelijk is.	
+    </p>
+
+    <p>
+      De werkelijkheid is weerbastiger. Sommige mensen dragen wel en andere geen mondkapje.
+      Hierdoor kan het virus zich via elk van de vier routes verspreiden.
+      De waarschijnlijkheid van elke route hangt af van hoeveel mensen een mondkapje dragen.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Mondkapjes Gebruik: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Wanneer bijvoorbeeld <b>50% van de bevolking een mondkapje draagt</b>, dan is de kans dat twee personen bij een toevallige ontmoeting <span class="yellow">allebei een mondkapje dragen</span> 50% x 50% oftewel 25%.
+      Op vergelijkbare wijze kan je de kans voor de andere drie verpreidingsroutes uitrekenen.
+    </p>
+
+    <p>
+      Wanneer precies de helft van de bevolking een mondkapje draagt, is elke verspreidingsroute even waarschijnlijk.	
+      (Kan je zelf nagaan dat dit inderdaad klopt?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Virus Verspreidingsroute</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Afname in Virusoverdracht</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Kans op deze Route</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+      	De vier manieren waarop COVID-19 zich kan verspreiden van persoon tot personen, onder aanname dat 50% van de bevolking een mondkapje draagt dat voor 50% effectief is.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Nu kunnen we de <b>de gemiddelde afname in virusoverdracht binnen de bevolking</b> berekenen.	
+      Omdat we de getallen zo gekozen hebben dat kans voor elke route gelijk is, komt dit neer op het gemiddelde van <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, wat neerkomt op 43.75%.
+    </p>
+
+    <p>
+      Mensen die <i>geen</i> mondkapje dragen kunnen via de eerste twee routes besmet raken. Beide routes zijn even waarschijnlijk wanneer de helft van de bevolking een mondkapje draagt. De afname in virusoverdracht voor mensen die geen mondkapje dragen is het gemiddelde van <span class="red">0%</span> en <span class="orange">50%</span>, wat neerkomt op 25%.
+    </p>
+
+    <p>
+      Daarentegen kunnen mensen die <i>wel</i> een mondkapje dragen, alleen via de laatste twee routes besmet raken.
+      De afname in virusoverdracht voor deze groep is het gemiddelde van  <span class="orange">50%</span> en <span class="yellow">75%</span>, wat neerkomt op 62.5%
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Gemiddelde Afname in Virusoverdracht = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Afname in Virusoverdracht voor Mensen die <b>Geen Mondkapjes</b> Dragen = 25%</div>
+        <div class="splash">Afname in Virusoverdracht voor Mensen die <b>Wel Mondkapjes</b> Dragen = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Onder aanname dat 50% van de mensen een 50% effecief mondkapje dragen.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Zelfs mensen die geen mondkapje dragen profiteren een beetje, omdat de lucht die zij inademen eerst via <i>iemand anders</i> zijn mondkapje gaat.
+      Echter, het effect is veel groter voor mensen die een mondkapje dragen, omdat hun mondkapje hen nogmaals beschermt.	
+    </p>
+
+    <p>Aangezien de gehele bevolking bestaat uit mensen die wel en geen mondkapje dragen, ligt de gemiddelde afname in virusoverdracht voor de gehele bevolking tussen het percentage van beide losse groepen.</p>
+
+    <p>In dit versimpelde voorbeeld (waarbij 50% van de mensen een 50% effectief mondkapje dragen) hebben we laten zien hoe we van <b>het voordeel van een mondkapje voor een <i>individu</i></b> komen tot het <b>gemiddelde voordeel dat een mondkapje biedt voor de <i>gehele bevolking</i>.</b></p>
+
+    <h2>Mondkapjes: de wetenschap</h2>
+
+    <p>
+      Nu kunnen we <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">deze logica</a> toepassen <i>voor elk percentage</i> van <b>mondkapjes gebruik</b> en <b>mondkapjes effectiviteit</b>.
+      Verander de sliders hier beneden om te zien hoe mondkapjes de verspreiding van het virus beinvloeden.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Mondkapjes Gebruik: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Uitademen: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Inademen: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Virus Verspreidingsroutes</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Afname in Virusoverdracht</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Kans op Deze Route</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Gemiddelde Afname in Virusoverdracht: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Afname in Virusoverdracht voor Mensen die Geen Mondkapjes Dragen: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Afname in Virusoverdracht voor Mensen die Wel Mondkapjes Dragen: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Wat gebeurt er met de virusoverdracht wanneer 60% van de mensen een 60% effectief mondkapje dragen?
+      Of wanneer 90% een 50% effectief mondkapje draagt?
+      Of wanneer 50% een 90% effectief mondkapje draagt?
+      Met de interactieve sliders vind je het antwoord.
+    </p>
+
+    <p>De conclusie: <b>Wanneer meer mensen een mondkapje dragen, is iedereen veiliger.</b></p>
+
+    <p>
+      Door het filteren van de ingeademende lucht, bieden mondkapjes primaire bescherming voor de mensen die ze gebruiken.
+      En door het filteren of afwenden van de uitgeademende lucht, bieden mondkapjes ook secundaire bescherming voor <i>iedereen</i> - inclusief de mensen die geen mondkapje dragen.	
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">Maar hoe zit het nu met mondkapjes die uitgeademde lucht niet filteren?
+        <span v-if="!expandaside1"> (Klik hier voor een toelichting)</span>
+      </span>
+
+      <span v-if="expandaside1">
+      	Sommmige N95 mondkapjes komen met <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">ventielen of openingen</a> waar lucht uit kan stromen zonder gefilterd te worden.
+      	De CDC (de Amerikaanse GGD) <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">raadt af</a> deze mondkapjes te gebruiken in de context van de gezondheidszorg, omdat deze andere mensen in gevaar kunnen brengen.
+      	Je kan dit zelf onderzoeken met de interactieve sliders hierboven.
+      	<br><br>
+      	Zet eerst de effectiviteit van mondkapjes bij zowel inademen als uitademen op een hoge waarde (en het percentage mondkapjesgebruik ergens in het midden).
+      	Dit vertegenwoordigt een effectief mondkapje zoals een N95.
+      	Sleep nu de effectiviteit bij uitademen richting nul en zie hoe de virusoverdracht toeneemt, met name voor de groep die geen mondkapje draagt.
+      	<br><br>
+      	Als je toevallig al een mondkapje met ventiel of opening hebt, dan raadt het CDC aan om <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">de ventiel of opening te bedekken</a> met een chirurgisch mondkapje.
+      </span>
+    </aside>
+
+
+    <p>
+      Mondkapjes zijn daarom effectiever dan de losse getallen alleen.
+    </p>
+
+    <h2>Hoe Stoppen We een Epidemie</h2>
+
+    <p>
+      Je dooft vuur door de zuurstof weg te halen.
+      Echter, je hoeft niet alle zuurstof weg te halen, je hoeft alleen maar voldoende zuurstof weg te halen opdat het vuur niet meer kan groeien.
+      Met een epidemie is het precies zo - je hoeft de virusoverdracht niet met 100% te doen afnemen.
+      Wanneer je het voldoende laat afnemen om de verspreiding van het virus te stoppen, dan kan je de epidemie stoppen.
+    </p>
+
+    <p>
+      Waarschijnlijk heb je al wel gehoord van het R0 getal, uitgesproken als R-nul.
+      Dit getal geeft weer <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">hoeveel personen een besmet persoon kan infecteren</a> binnen een bevolking zonder enige vorm van immuniteit voor het virus.
+    </p> 
+
+    <p>Wanneer R0 groter is dan 1, zal het aantal besmette personen exponentieel stijgen totdat of voldoende mensen zijn gevaccineerd, of voldoende mensen immuun zijn geworden.</p>
+
+    <p>
+      Maar, zoals Ed Yong schrijft in de Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 bepaalt niet waar we heen gaan"</a>.	
+      R0 is het product van twee getallen: het gemiddelde aantal mensen dat een besmet persoon tegenkomt, en de kans op virusoverdracht bij een ontmoeting.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">het gemiddelde aantal mensen dat een besmet persoon tegenkomt</span> <br>⨉ <span class="dotted">kans op virusoverdracht bij een ontmoeting</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Social distancing, quarantaines en lockdowns verlagen <span class="dashed">het eerste getal</span>.
+      Het gebruik van mondkapjes verlaagt <span class="dotted">het tweede getal</span>.
+      Het doel van alle volksgezondheidsmaatregelen is de epidemie onder controle te krijgen door R0 beneden 1 te duwen.
+    </p>
+
+    <p>
+      Laten we, met dit in het achterhoofd, de impact van mondkapjes uitdrukken in termen van R0.
+      De grafiek hieronder laat zien hoe R0 verandert wanneer het gebruik van mondkapjes toeneemt.
+    </p>
+
+    <p>
+      Gebruik de eerstde slider om R0 te varieren. Voor COVID-19 is deze tussen de 2 en de 3 (in afwezigheid van andere volksgezondheidsmaatregelen zoals social distancing, welke R0 verder verlagen).
+      Door de effectiviteit van mondkapjes te varieren kan je zien hoe mondkapjes kunnen helpen de epidemie onder controle te krijgen.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Uitademen: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Inademen: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Hoe Mondkapjes R0 Verlagen',
+        'Percentage van de Bevolking dat een Mondkapje Draagt',
+        '# Mensen dat een Besmet Persoon Infecteert (R0)',
+        'Epidemie Onder Controle',
+        'Epidemie Niet Onder Controle'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Om de verspreiding van CVID-19 te stoppen, moeten we R0 beneden de 1 houden.
+      Wanneer dit lukt zal, gemiddeld gezien, een besmet persoon minder dan een ander persoon infecteren. Hierdoor zal de epidemie langzaam stoppen.
+    </p>
+
+    <p>
+      Dus hoeveel mensen moeten een 50% effectief mondkapje dragen om de verspreiding van COVID-19 te stoppen?
+      Wat als mondkapjes maar voor 75% effectief zijn?
+      Of 90%?
+      Met de interactieve grafiek hierboven kan je zelf antwoord geven op deze vragen.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Een belangrijke waarschuwing: "soort zoekt soort". 
+        <span v-if="!expandaside2"> (Klik hier voor een toelichting)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+      	Mensen die een mondkapje dragen zullen waarschijnlijk vaker omgaan met mensen die ook een mondkapje dragen, en minder vaak met mensen die geen mondkapje dragen.
+		<br/><br/>
+		Op dezelfde wijze zullen mensen die geen mondkapjes dragen wonen in gebieden waar het gemiddeld gebruik van mondkapjes lager dan gemiddeld is.
+		De neiging om alleen met mensen om te gaan die dezelfde voorkeuren hebben als jijzelf <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">vermindert de beschermende kracht van mondkapjes</a> omdat <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">mensen die geen mondkapje dragen minder kunnen profiteren van mensen die wel een mondkapje dragen</a>.
+        <br/><br/>
+
+        Zoals <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, en Ashleigh Tuite</a> schrijven in hun analyse: 
+        "de impact van mondkapjes en andere gezichtsbedekkende maatregelen op het verminderen van de overdracht van COVID-19 is waarschijnlijk het grootst wanneer vooral aandacht wordt besteed aan de beschikbaarheid hiervan voor benadeelde bevolkingsgroepen."
+      </span>
+    </aside>
+
+    <h2>In Termen van Besmette Mensen</h2>
+
+    <p>
+      We kunnen ons begrip nog een stap verder uitbreiden door de kracht van mondkapjes uit te drukken in meer mensenlijke termen.
+      Mondkapjes redden levens door de kans op besmetting te verkleinen waardoor, uiteindelijk, de epidemie zal afnemen.
+    </p>
+
+    <p>
+      Wanneer meer mensen mondkapjes dragen zal R0 dalen.
+      En wanneer R0 daalt, zal ook het aantal besmette mensen dalen.
+      We kunnen dan ook een duidelijker beeld schetsen als we in plaats van R0, we kijken naar de <b>fractie besmette personen</b>.
+    </p>
+
+    <p>
+      Door gebruik te maken van een algemeen aangenomen epidemiologisch model, het <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, kunnen we R0 linken aan de fractie van de bevolking dat uiteindelijk besmet zal raken.
+      (Om meer te leren over SIR modellen raden we deze <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">uitstekende video</a> aan.)
+    </p>
+    
+    <p>Alhoewel dit model een significante versimpeling van de werkelijkheid is (het random mengen van bevolkingsgroepen of lockdowns worden bijvoorbeeld niet meegenomen), biedt het wel een eerste inschatting van de kosten in termen van besmette mensen wanneer we geen mondkapje dragen.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Uitademen: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Effectiviteit van Mondkapjes bij Inademen: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Besmet'
+        )" :layout="graph3Layout(
+        'Hoe Mondkapjesgebruik het Aantal Besmettingen Verlaagt',
+        'Percentage Mensen dat een Mondkapje Draagt',
+        'Percentage Mensen dat Besmet Zal Raken'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+     Deze heuvelachtige grafiek laat zien hoe mondkapjes de omvang van de epidemie kan beinvloeden.
+     <b> Wanneer meer mensen mondkapjes dragen, zal het aantal besmettingen rap afnemen.</b>
+    </p>
+
+    <p>
+      Wanneer weinig mensen een mondkapje dragen, staan we bovenaan de heuvel en zal vrijwel iedereen uiteindelijk besmet raken.
+      Maar elke stap naar rechts brengt ons verder omlaag langs de heuvel.
+      Dus zelfs gedeeltelijk effectieve mondkapjes, gedragen door een gedeelte van de bevolking, zal helpen de verspreiding van COVID-19 te verminderen.
+    </p>
+
+    <p>
+ 	  Om de verspreiding helemaal te stoppen, moeten we naar de voet van de heuvel.
+ 	  Hier hebben we mazzel: wanneer meer mensen een mondkapje dragen, wordt de heuvel steeds stijler.
+ 	  Dit betekent dat <b> mondkapjes meer waarde hebben voor de samenleving wanneer meer mensen ze dragen</b>.
+    </p>
+
+    <p>
+      Als voldoende mensen mondkapjes dragen, dan bereiken we het dal waar de kans op besmetting nul is.
+      Op deze wijze kunnen mondkapjes de epidemie stoppen.
+      Dit kan echter alleen wanneer voldoende mensen een mondkapje dragen.
+    </p>
+
+    <p>
+      Je vraagt je misschien af hoeveel mensen een mondkapje moeten dragen om de epidemie te stoppen.
+      Dit hangt af van de effectiviteit van de mondkapjes.
+    </p>
+
+    <p>
+      Door te spelen met de interactieve grafiek zie je dat als mondkapjes voor 50% effectief zijn, ongeveer driekwart van de bevolking er eentje moet dragen om de verspreiding van COVID-19 te stoppen.
+      Maar als mondkapjes voor 75% effectief zijn, dan hoeft maar de helft van bevolking een mondkapje te dragen om de verspreiding te stoppen.
+    </p>
+
+    <p>
+      <b>Hoe effectiever het mondkapje, hoe sneller we van de heuvel af zijn.</b>
+     Dit is waarom het belangrijk is een mondkapje te dragen dat <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">strak afsluit rond je mond <i>en</i> neus</a>, en is gemaakt van een materiaal dat de lucht goed filtert.
+    </p>
+
+    <p>
+     We willen allemaal naar de voet van de heuvel en de verspreiding van COVID-19 stoppen.
+     Maar je komt er niet alleen.
+     Elk individu zet maar een kleine stap omlaag.
+    </p>
+
+    <p>Maar wanneer veel mensen een kleine stap nemen, dan nemen we samen een grote stap de heuvel af.</p>
+
+    <p>Samen bereiken we de voet van de heuvel.</p>
+    
+    <p>Samen roepen COVID-19 een halt toe.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Dankwoord & Referenties</h2>
+
+    <p>Dit essay is geschreven door <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in samenwerking met <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+
+    <p>Bekijk onze <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">begeleidende video</a> voor een flitsende visuele kijk op de wiskunde van mondkapjes! De video is ondersteund door de <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Hier kan je de <a href="https://aatishb.com/maskmath/calculator.html">mondkapjes rekenmachine vinden</a> zoals te zien is in de video.</p>
+
+    <p>
+      Veel dank gaat uit naar <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, en <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> voor hun behulpzame commentaar op eerdere versies van dit essay.
+    </p>
+
+    <p>
+      Wanneer je dit essay waardevol vond en je wilt in de toekomst meer van dit soort werken zien, dan kan je mijn werk <b><a href="https://www.patreon.com/aatishb">steunen via Patreon</a></b>.
+    </p>
+
+    <p>
+      Hier zijn <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">wat</a> <a href="https://www.maskfaq.com/test-results">informatieve</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">bronnen</a> over de filterende werking van sommige materialen gebruikt in mondkapjes.
+      Alhoewel mondkapjes, afhankelijk van materiaal en pasvorm, sterk kunnen varieren in effectiviteit, hebben sommige materialen <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">de eigenschap om meer dan</a> <a href="https://www.maskfaq.com/test-results">80%</a> van de lucht te filteren wanneer ze gebruikt worden in een strak zittend mondkapje.
+    </p>
+
+    <p>
+      Voor de enthousiaste wiskundigen onder ons (je weet wie je bent), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">is hier een notebook</a> welke in meer detail ingaat op de wiskunde.
+      De grafieken in dit essay bouwen voort op het werk van <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> om de tweezijdige effectiviteit van mondkapjes mee te nemen.
+    </p>
+
+    <p>
+      Het model waarin mondkapjes twee kanten op beschermen, zoals beschreven in dit essay, is naar ons weten voor het eerst gepubliceerd door <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Table S3 and Fig S4). 
+      Dit was aangestipt door <a href="https://www.preprints.org/manuscript/202004.0203/v3"> het review artikel</a> van Howard et al en <a href="https://www.fast.ai/2020/04/13/masks-summary/">het begeleidende essay</a>, en verder onder de aandacht gebracht door <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> in de Atlantic, en door <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> in de New Yorker, die schreef dat, <i>"Hoe effectiever het mondkapje, hoe groter de impact."</i>
+    </p>
+
+    <p>
+      Deze tekst is gepubliceerd onder de Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> licentie. De broncode is beschikbaar <a href="https://github.com/aatishb/maskmath">op Github</a>. De emojis zijn gemaakt door <a href="https://twemoji.twitter.com/">Twitter</a> en aangepast om een speciaal mondkapjes ontwerp te bevatten.
+    </p>
+
+    <p>
+      Bedankt voor het lezen en blijf gezond! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
