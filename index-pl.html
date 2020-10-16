@@ -566,17 +566,17 @@
 
     <p>
       Możemy poszerzyć nasze rozumienie o krok dalej i wyrazić skuteczność masek za pomocą bardziej przystępnych pojęć.
-      Maski ratują życie poprzez zmniejszanie szansy zarażenia, co w konsekwencji ogranicza rozmiar epidemii.
+      Maski ratują życie poprzez zmniejszanie szansy zakażenia, co w konsekwencji ogranicza rozmiar epidemii.
     </p>
 
     <p>
-      Im więcej ludzi nosi maski, tym R0 maleje.
-      A im mniejsze R0, tym mniej zarażeń.
-      Możemy zatem uzyskać jaśniejszy obraz jeżeli zamiast R0 przedstawimy <b>zarażoną część populacji</b>.
+      Im więcej ludzi nosi maski, tym niższe R0.
+      A im niższe R0, tym mniej zakażeń.
+      Możemy zatem uzyskać jaśniejszy obraz jeżeli zamiast R0 przedstawimy <b>zakażoną część populacji</b>.
     </p>
 
     <p>
-      Możemy użyć szeroko stosowanego matematycznego modelu epidemii znanego jako <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">model SIR</a> by połączyć R0 oraz część populacji, która ostatecznie zostanie zarażona.
+      Możemy użyć szeroko stosowanego matematycznego modelu epidemii znanego jako <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">model SIR</a> by połączyć R0 oraz część populacji, która ostatecznie zostanie zakażona.
       (By dowiedzieć się więdzej na temat modelu SIR, polecam obejrzeć ten <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">świetny materiał</a>.)
     </p>
 
@@ -593,12 +593,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność maski przy wydychaniu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Skuteczność maski przy wydechu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność maski przy wdychaniu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Skuteczność maski przy wdechu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -607,7 +607,7 @@
         )" :layout="graph3Layout(
         'Jak maski zmniejszają liczbę zakażeń',
         'Procent populacji noszący maski',
-        'Procent populacji, która będzie zarażona',
+        'Procent populacji, która będzie zakażona',
       )" :config="config"></graph>
 
     </div>
