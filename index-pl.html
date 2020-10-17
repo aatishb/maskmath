@@ -100,7 +100,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Osoba zarażona" susceptibleperson="Osoba zdrowa"><span class="red">1 sposób transmisji:</span> Kiedy osoba zarażona jest w pobliżu osoby zdrowej, jej "ustny aerozol" roznosi chorobę.</anim-with-caption>
 
   <div class="container">
 
@@ -121,31 +121,31 @@
     <p>
     </p>
 
-    <h2>Why Masks Protect Us Twice</h2>
+    <h2>Dlaczego maski chronią nas podwójnie</h2>
 
     <p>
-      Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
+      Wyobraźmy sobie, że osoba zarażona nosi maskę o skuteczności 50%.
+      Przez "maskę o skuteczności 50%" mam na myśli to, że noszenie takiej maski obniża o połowę szansę, że osoba zarażona zarazi kogoś innego.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Osoba zarażona" susceptibleperson="Osoba zdrowa"><span class="orange">2 sposób transmisji:</span> Kiedy osoba zarażona nosi maskę o skuteczności 50%, szanse zakażenia spadają o 50%.</anim-with-caption>
 
   <div class="container">
 
-    <p>But what if the susceptible person wears the mask instead?</p>
+    <p>Lecz co się dzieje jeśli zamist osoby chorej maskę nosi osoba zdrowa?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      Ogóle rzecz ujmując, skuteczność maski jest inna podczas <b>wdechu</b> oraz <b>wydechu</b>.
+      Na razie jednak nie wdawajmy się w szczegóły i przyjmijmy, że maska jest równie skuteczna w obu przypadkach.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>W takim wypadku szanse zakażenia również spadają o 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Osoba zarażona" susceptibleperson="Osoba zdrowa"><span class="orange">3 sposób transmisji:</span> Kiedy osoba zdrowa nosi maskę o skuteczności 50%, szanse zakażenia spadają o 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -159,7 +159,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Osoba zarażona" susceptibleperson="Osoba zdrowa"><span class="yellow">4 sposób transmisji:</span> Kiedy obie osoby noszą maski o skuteczności 50%, szanse zakażenia spadają o 75%.</anim-with-caption>
   
   <div class="container">
 
