@@ -346,11 +346,11 @@
 
     <p>Tak więc w tym prostym przykładzie (gdzie 50% ludzi nosi 50-procentowo skuteczne maski) rozpracowaliśmy jak przetłumaczyć <b>korzyści, które noszenie masek oferuje <i>jednostce</i></b>, na <b>średnią korzyść, którą noszenie masek oferuje całej <i>populacji</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>Maskologia</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Spróbujmy <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">zastosować tą logikę</a> do <i>dowolnych wartości</i> dotyczących <b>używania masek</b> i <b>ich efektywności</b>.
+      Użyj poniższych suwaków aby zobaczyć jak noszenie masek wpływa na rozprzestrzenianie się choroby.
     </p>
 
   </div>
@@ -359,24 +359,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Użycie masek: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Skuteczność masek podczas wydechu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Skuteczność masek podczas wdechu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Droga rozprzestrzeniania się choroby</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -384,7 +384,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Spadek w rozprzestrzenianiu się choroby</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -392,7 +392,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Prawdopodobieństwo tej drogi</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -403,15 +403,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Średni spadek w roznoszeniu choroby: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Spadek w rozprzestrzenianiu pośród nie noszących masek: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Spadek w rozprzestrzenianiu pośród noszących maski: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -420,17 +420,17 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      Jak zmieniłoby się roznoszenie choroby gdyby 60% osób nosiło 60-procentowo skuteczne maski?
+      Lub 90% nosiło 50-procentowo skuteczne maski?
+      Lub 50% nosiło 90-procentowo skuteczne maski?
+      Ten interaktywny panel pozwala Ci odpowiedzieć na te pytania. 
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>Podsumowując: <b>Im więcej osób nosi maski, tym wszyscy są bezpieczniejsi.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Filtrując wdychane powietrze, maski zapewniają ochronę tym którzy je noszą. 
+      A poprzez filtrowanie lub przekierowywanie wydychanego powietrza, maski zapewniają <i>wszystkim</i> dodatkową ochrwonę — wliczając tych, którzy ich nie noszą. 
     </p>
 
     <aside>
@@ -453,7 +453,7 @@
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      W rzeczywistości, maski są jeszcze bardziej skuteczne niż sugerują te liczby.
     </p>
 
     <h2>How To Stop An Epidemic</h2>
