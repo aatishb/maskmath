@@ -101,7 +101,7 @@
   </div>
 
   <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="red">
-  Ruta de transmissió 1:</span> Quan una persona contagiosa és a prop d'una persona susceptible, el seu 'esprai bucal' pot propagar la malaltia.</anim-with-caption>
+  Via de transmissió 1:</span> Quan una persona contagiosa és a prop d'una persona susceptible, el seu 'esprai bucal' pot propagar la malaltia.</anim-with-caption>
 
   <div class="container">
 
@@ -131,7 +131,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Ruta de transmissió 2:</span> Quan una persona contagiosa porta una mascareta amb efectivitat del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Via de transmissió 2:</span> Quan una persona contagiosa porta una mascareta amb efectivitat del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -146,7 +146,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Ruta de transmissió 3:</span> Quan la persona susceptible porta una mascareta amb una eficàcia del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Via de transmissió 3:</span> Quan la persona susceptible porta una mascareta amb una eficàcia del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -160,7 +160,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="yellow">Ruta de transmissió 4:</span> Quan les dues persones porten mascaretes amb un 50% d'eficàcia, la transmissió de la malaltia cau un 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="yellow">Via de transmissió 4:</span> Quan les dues persones porten mascaretes amb un 50% d'eficàcia, la transmissió de la malaltia cau un 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -170,7 +170,7 @@
       Aquesta <b>protecció doble</b> fa que les mascaretes siguin molt més efectives del que intuitivament esperaríem.
     </p>
 
-    <p>Així doncs, aquestes són les quatre rutes a través de les quals una malaltia de transmissió àeria pot contagiar-se de persona a persona.</p>
+    <p>Així doncs, aquestes són les quatre vies a través de les quals una malaltia de transmissió àeria pot contagiar-se de persona a persona.</p>
 
   </div>
 
@@ -180,7 +180,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Ruta de transmissió de la malaltia</div>
+          <div class="center">Via de transmissió de la malaltia</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -223,7 +223,7 @@
     <network :maskusage="0"></network>
 
     <p>
-      Aleshores, només hauries de considerar la <span class="red">primera ruta</span> de transmissió de la malaltia, i la població no notaria <span class="red">cap descens</span> en la transmissió de la malaltia.
+      Aleshores, només hauries de considerar la <span class="red">primera via</span> de transmissió de la malaltia, i la població no notaria <span class="red">cap descens</span> en la transmissió de la malaltia.
     </p>
 
     <p>
@@ -233,35 +233,35 @@
     <network :maskusage="1"></network>
 
     <p>
-      En aquest cas, només hauríem de considerar l'<span class="yellow">última ruta</span> de transmissió de la malaltia.
+      En aquest cas, només hauríem de considerar l'<span class="yellow">última via</span> de transmissió de la malaltia.
       Assumint que les mascaretes són efectives en un 50% en cada direcció, la població notaria una <span class="yellow">caiguda del 75%</span> en la transmissió de la malaltia.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Per tant, quan <i>tothom</i> porta mascareta (o quan <i>ningú</i> en porta), és força directe calcular la disminució en la transmissió de la malaltia, perquè només hi ha involucrada una viaa.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Però en realitat, algunes persones porten mascareta i d'altres no.
+      Això vol dir que el virus pot propagar-se per una barreja de les quatre vies.
+      Com de probable és cadascuna de les vies dependrà de quanta gent porti mascaretes.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Utilització de la mascareta: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Per exemple, <b>si el 50% de la gent portés mascaretes</b>, aleshores sempre que es trobessin dues persones a l'atzar, la probabilitat de que <span class="yellow">les dues persones portin mascareta</span> és del 50% ⨉ 50%, és a dir, el 25%.
+      De manera semblant, es pot calcular la probabilitat de cadascuna de les altres tres vies de transmissió.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Quan exactament la meitat de la població porta mascaretes, aleshores cada via és igual de probable.
+      (Pots convèncer-te a tu mateix de per què això ha de ser cert?)
     </p>
 
   </div>
@@ -272,7 +272,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Via de transmissió de la malaltia</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -280,7 +280,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Descens en la transmissió de la malaltia</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -288,7 +288,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilitat d'aquesta via</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -298,7 +298,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Les quatre vies en què la COVID-19 pot contagiar-se de persona a persona, assumint que el 50% de gent porta una mascareta el 50% d'efectiva.
       </div>
 
     </div>
@@ -307,18 +307,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Ara podem calcular el <b>descens esperat mitjà en la transmissió de la malaltia entre la població</b>.
+      Com que hem preparat les coses de manera que cada via és igualment probable, això serà simplement la mitjana de <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> i <span class="yellow">75%</span>, que és 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      La gent que <i>no porta</i> mascaretes poden infectar-se per les dues primeres vies, que són igual de probables quan la meitat de la població porta mascareta.
+      Així doncs, el descens en la transmissió de la malaltia entre els que no porten mascareta és la mitjana de <span class="red">0%</span> i <span class="orange">50%</span>, que és 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Mentrestant, la gent que <i>sí porta</i> mascaretes pot infectar-se per les dues últimes vies.
+      Així doncs, el descens en la transmissió de la malaltia entre els que porten mascareta és la mitjana de <span class="orange">50%</span> i <span class="yellow">75%</span>, que és 62.5%.
     </p>
 
   </div>
@@ -326,12 +326,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Descens mitjà en la transmissió de la malaltia = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Descens en la transmissió de la malaltia entre qui <b>no porta mascareta</b> = 25%</div>
+        <div class="splash">Descens en la transmissió de la malaltia entre qui <b>porta mascareta</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (assumint que el 50% de gent porta una mascareta amb una eficàcia del 50%.)
       </div>
     </div>
   </div>
@@ -339,19 +339,19 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Així doncs, fins i tot qui no porta mascareta rep un modest benefici, perquè l'aire que inhalen és sovint filtrat per mascaretes <i>d'altres persones</i>.
+      Però els que porten mascareta se'n beneficien molt més, gràcies a la protecció afegida que els proporciona.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>I com que la població consisteix de gent que porta mascareta i que no en porta, el benefici mitjà queda entre el d'aquests dos grups.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>Per tant, en aquest exemple simplificat (on el 50% de persones porta mascaretes amb un 50% d'eficàcia) hem calculat com passar del <b>benefici que les mascaretes ofereixen a un <i>individu</i></b> al <b>benefici mitjà que les mascaretes ofereixen a una <i>població</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>Mascaretalogia</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
-      Vary the sliders below to see how masks moderate the spread of disease.
+      Anem a <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">aplicar aquesta lògica</a> a <i>qualssevol valors</i> d'<b>ús de la mascareta</b> i <b>efectivitat de les mascaretes</b>.
+      Ajusta els lliscadors de sota per veure com les mascaretes influeixen en la propagació de la malaltia.
     </p>
 
   </div>
@@ -360,24 +360,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Ús de la mascareta: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efectivitat de la mascareta en exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efectivitat de la mascareta en inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Via de transmissió de la malaltia</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -385,7 +385,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Descens en la transmissió de la malaltia</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -393,7 +393,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Probabilitat d'aquesta via</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -404,15 +404,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Descens mitjà en la transmissió de la malaltia: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Descens en la transmissió de la malaltia entre qui no porta mascareta: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Descens en la transmissió de la malaltia entre qui porta mascareta: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
