@@ -43,7 +43,7 @@
       <div>
         <h1>El poder multiplicatiu de les mascaretes</h1>
         <h3>Un assaig interactiu de com les mascaretes poden aturar la COVID-19</h3>
-        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ? <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> & <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
         <translation :list="translations"></translation>
       </div>
     </div>
@@ -207,34 +207,34 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>De les persones a la població</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      De moment, només hem estudiat la transmissió de la malaltia entre dues persones.
+      Com podem passar d'aquí a comprendre la transmissió de la malaltia entre <i>tota la població</i>?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p>Bé, en els casos extrems, això és bastant directe.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Per exemple, si <b>ningú</b> portés mascareta, aleshores cada vegada que dues persones es trobessin, la probabilitat de que <span class="red">cap d'elles porti mascareta</span> és del 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      Aleshores, només hauries de considerar la <span class="red">primera ruta</span> de transmissió de la malaltia, i la població no notaria <span class="red">cap descens</span> en la transmissió de la malaltia.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      A l'altre extrem, si <b>tothom</b> portés mascareta, aleshores sempre que dues persones es trobession, la probabilitat de que <span class="yellow">les dues portin mascareta</span> seria del 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      En aquest cas, només hauríem de considerar l'<span class="yellow">última ruta</span> de transmissió de la malaltia.
+      Assumint que les mascaretes són efectives en un 50% en cada direcció, la població notaria una <span class="yellow">caiguda del 75%</span> en la transmissió de la malaltia.
     </p>
 
     <p>
