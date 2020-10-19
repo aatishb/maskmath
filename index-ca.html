@@ -138,39 +138,39 @@
     <p>Però i què passa si és la persona susceptible qui porta la mascareta?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      En general, l'efectivitat de la mascareta depèn de si estàs <b>inhalant</b> o <b>exhalant</b> l'aire.
+      De moment, i per simplificar, assumim que la mascareta és igual d'efectiva en cada direcció.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>En aquest cas, la probabilitat d'infecció per aquesta via també cau un 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Ruta de transmissió 3:</span> Quan la persona susceptible porta una mascareta amb una eficàcia del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
   
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+    <p>Què passa si la persona contagiosa <i>i</i> la persona susceptible porten mascareta les dues?</p> 
 
     <p>
-      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
-      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
-      That's a 75% drop in the chance of infection.
+      Bé, la primera mascareta talla la probabilitat d'infecció per la meitat, i la segona mascareta torna a tallar la probabilitat d'infecció per la meitat.
+      Per tant, quan <i>ambdues</i> persones porten mascaretes, la probabilitat d'infectar-se és la meitat de la meitat, és a dir, un 25% (en comparació amb quan cap de les dues en porta).
+      Això suposa una reducció del 75% en la probabilitat d'infectar-se.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="yellow">Ruta de transmissió 4:</span> Quan les dues persones porten mascaretes amb un 50% d'eficàcia, la transmissió de la malaltia cau un 75%.</anim-with-caption>
   
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+      Si hi pensem, és sorprenent que una mascareta amb un 50% d'efecitivtat pugui reduir el risc d'infecció un 75%.
+      Això és possible perquè quan dues persones porten mascaretes, la probabilitat d'infectar-se es redueix a la meitat dues vegades.
+      Aquesta <b>protecció doble</b> fa que les mascaretes siguin molt més efectives del que intuitivament esperaríem.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>Així doncs, aquestes són les quatre rutes a través de les quals una malaltia de transmissió àeria pot contagiar-se de persona a persona.</p>
 
   </div>
 
@@ -180,7 +180,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Ruta de transmissió de la malaltia</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Reducció en la transmissió de la malaltia</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -198,7 +198,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+        Les quatre maneres en què la COVID-19 pot contagiar-se de persona a persona. Això assumeix mascaretes amb un 50% d'efectivitat.
       </div>
 
     </div>
