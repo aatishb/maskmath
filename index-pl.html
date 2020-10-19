@@ -247,7 +247,7 @@
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Użycie Masek: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Droga Rozprzestrzeniania</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Spadek w Rozprzestrzenianiu</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Przwdopodobieństwo Każdej z Dróg Rozprzestrzeniania</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Cztery drogi, którymi COVID-19 może przenieść się z jednej osoby na drugą, zakładając, że 50% osób nosi maski, które są w 50-procentach skuteczne.
       </div>
 
     </div>
@@ -306,18 +306,18 @@
   <div class="container">
 
     <p>
-      Teraz możemy obliczyć <b>średni spadek w roznoszeniu choroby w całej populacji</b>.
+      Teraz możemy obliczyć <b>średni spadek w rozprzestrzenianiu choroby w całej populacji</b>.
       Ponieważ założylismy, że każda z dróg jest równie prawdopodobna, średni spadek to średnia z: <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> i <span class="yellow">75%</span>, i wynosi 43.75%.
     </p>
 
     <p>
       Osoby, które <i>nie noszą</i> masek, zakażają się poprzez dwie pierwsze drogi, które, gdy połowa populacji nosi maski, są równie prawdopodobne.
-      Tak więc spadek w rozprzestrzenianiu choroby dla nie noszących masek równa się średniej z <span class="red">0%</span> i <span class="orange">50%</span>, czyli 25%.
+      Tak więc spadek w rozprzestrzenianiu pośród nie noszących masek równa się średniej z <span class="red">0%</span> i <span class="orange">50%</span>, czyli 25%.
     </p>
 
     <p>
       Tymczasem, osoby, które <i>noszą</i> maski, zakażają się poprzez dwie ostatnie drogi.
-      Także spadek w rozprzestrzenianiu się choroby dla noszących maski jest średnią z <span class="orange">50%</span> i <span class="yellow">75%</span>, i wynosi 62.5%.
+      Wobec tego spadek w rozprzestrzenianiu się pośród osób noszących maski jest średnią z <span class="orange">50%</span> i <span class="yellow">75%</span>, i wynosi 62.5%.
     </p>
 
   </div>
@@ -325,9 +325,9 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Uśredniony Spadek w Rozprzestrzenianiu = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Spadek w Rozprzestrzenianiu Pośród <b>Nie Noszących Masek</b> = 25%</div>
+        <div class="splash">Spadek w Rozprzestrzenianiu Pośród <b>Noszących Maski</b> = 62.5%</div>
       </div>
       <div class="caption">
         (Zakładając, że 50% ludzi nosi 50-procentowo skuteczne maski.)
