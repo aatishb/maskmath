@@ -481,25 +481,25 @@
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">mitjana de gent amb què una persona contagiosa té contacte</span> <br>⨉ <span class="dotted">probabilitat d'infecció en contactar</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      La distància social, les quarantenes i els confinaments fan decréixer <span class="dashed">el primer nombre</span>.
+      I les mascaretes fan decréixer <span class="dotted">el segon nombre</span>.
+      L'objectiu de totes aquestes estratègies de salut pública és passar a tenir l'epidèmia sota control portant la R0 per sota de 1.
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Tenint això al cap, re-escrivim l'impacte de les mascaretes en funció de R0.
+      El gràfic a sota mostra com varia R0 a mesura que augmenta l'ús de les mascaretes.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Pots ajustar el primer lliscador per variar R0, que per a la COVID-19 es troba entre 2 i 3 (això és, en absència d'altres mesures de salut pública com el distanciament social, que redueix més encara R0.)
+      Si varies l'efectivitat de les mascaretes, es pot veure com això ajuda a controlar l'epidèmia.
     </p>
 
   </div>
@@ -513,21 +513,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efectivitat de les mascaretes en exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efectivitat de les mascaretes en inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout(
-        'How Masks Reduce R0',
-        'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
-        'Epidemic Under Control',
-        'Epidemic Out Of Control'
+        'Com redueixen R0 les mascaretes',
+        'Percentatge de gent que porta mascaretes',
+        '# Persones que una persona contagiosa infecta (R0)',
+        'Epidèmia sota control',
+        'Epidèmia fora de control'
       )" :config="config"></graph>
 
     </div>
@@ -536,44 +536,44 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Per aturar la propagació de la COVID-19, necessitem mantenir R0 per sota de 1.
+      Quan això passa, de mitjana, una persona contagiosa infecta a menys d'una persona, i l'epidèmia acabarà aturant-se.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Llavors, quanta gent necessita portar una mascareta amb una efectivitat del 50% per aturar la propagació de la COVID-19?
+      Què pasaria si les mascaretes tinguessin una efectivitat del 75%?
+      O del 90%?
+      Aquest interactiu et permet predir les respostes a aquestes preguntes.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">Una advertència important: la gent no s'acostuma a barrejar de manera aleatòria. 
+        <span v-if="!expandaside2"> (Clica per expandir)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        La gent que porta mascareta és més probable que interaccioni amb altra gent que porti mascareta, i és menys probable que interaccioni amb gent que no en porti.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        De manera similar, els qui no porten mascareta podrien viure en clústers de població on l'ús de la mascareta sigui menor que la mitjana.
+        La tendència a interaccionar amb altres que tenen preferències similars <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">fa disminuir el poder protector de les mascaretes</a> perquè <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">els qui no porten mascareta és menys probable que es beneficiïn de la gent propera que sí en porta</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Com <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, i Ashleigh Tuite</a> escriuen en el seu anàlisi, "l'impacte de les mascaretes i altres mètodes de cobrir la cara en la reducció de la transmissió de la COVID-19 transmission és susceptible de ser major si es para atenció a assegurar la disponibilitat per a la població desavantatjada."
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>El cost humà</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Podem portar la nostra comprensió un pas més enllà expressant el poder de les mascaretes en termes més humans.
+      Les mascaretes salven vides reduint la probabilitat d'infecció, que, al seu torn, redueix l'abast de l'epidèmia.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Com més gent porti mascaretes, més decreixerà R0.
+      I a mesura que R0 decreixi, també ho farà la quantitat de persones infectades.
+      Així doncs, podem obtenir una imatge més clara si en comptes de visualitzar R0, visualitzem la <b>fracció infectada</b> de la població.
     </p>
 
     <p>
