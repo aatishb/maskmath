@@ -261,7 +261,7 @@ let app = new Vue({
       { url: 'index-id.html', language: 'Bahasa Indonesia' },
       { url: 'index-fa.html', language: 'فارسی' },
       { url: 'index-nl.html', language: 'Nederlands' },
-      { url: 'index-ca.html', language: 'Català' }
+      { url: 'index-ca.html', language: 'Català' },
     ]
   },
 
