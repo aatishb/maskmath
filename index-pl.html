@@ -349,8 +349,8 @@
     <h2>Maskologia</h2>
 
     <p>
-      Spróbujmy <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">zastosować tą logikę</a> do <i>dowolnych wartości</i> dotyczących <b>używania masek</b> i <b>ich efektywności</b>.
-      Użyjcie poniższych suwaków aby zobaczyć jak noszenie masek wpływa na rozprzestrzenianie się choroby.
+      Spróbujmy <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">zastosować tę logikę</a> do <i>dowolnych wartości</i> dotyczących <b>używania masek</b> i <b>ich efektywności</b>.
+      Użyj poniższych suwaków aby zobaczyć jak noszenie masek wpływa na rozprzestrzenianie się choroby.
     </p>
 
   </div>
@@ -407,7 +407,7 @@
       </div>
 
       <div class="row half bigsplash">
-        <span>Spadek w rozprzestrzenianiu pośród nie noszących masek: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Spadek w rozprzestrzenianiu pośród nienoszących masek: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
@@ -420,21 +420,21 @@
   <div class="container">
 
     <p>
-      Jak zmieniłoby się roznoszenie choroby gdyby 60% osób nosiło 60% skuteczne maski?
-      Lub 90% nosiło 50% skuteczne maski?
-      Lub 50% nosiło 90% skuteczne maski?
-      Ten interaktywny panel pozwala Wam odpowiedzieć na te pytania. 
+      Jak zmieniłoby się roznoszenie choroby gdyby 60% osób nosiło maski o 60% skuteczności?
+      Lub 90% nosiło maski o 50% skuteczności?
+      Lub 50% nosiło maski o 90% skuteczności?
+      Ten interaktywny panel pozwala odpowiedzieć na te pytania. 
     </p>
 
     <p>Podsumowując: <b>Im więcej osób nosi maski, tym wszyscy są bezpieczniejsi.</b></p>
 
     <p>
       Filtrując wdychane powietrze, maski zapewniają ochronę tym którzy je noszą. 
-      A poprzez filtrowanie lub przekierowywanie wydychanego powietrza, maski zapewniają <i>wszystkim</i> dodatkową ochrwonę — wliczając tych, którzy ich nie noszą. 
+      A poprzez filtrowanie lub przekierowywanie wydychanego powietrza, maski zapewniają <i>wszystkim</i> dodatkową ochronę — wliczając tych, którzy ich nie noszą. 
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">A co maskiami, które nie filtrują wydychanego powietrza? 
+      <span @click="expandaside1 = true;">A co z maskami, które nie filtrują wydychanego powietrza? 
         <span v-if="!expandaside1"> (Kliknij aby rozwinąć)</span>
       </span>
 
@@ -444,16 +444,16 @@
         Możesz sam się o tym przekonać używając interaktywnego panelu powyżej. 
         <br><br>
         Na początek ustaw skutechność masek zarówno dla wdychangeo i wydychanego powietrza na dość wysokie wartości (jednocześnie ustawiając użycie masek gdzieś po środku).
-        Ten scenariusz reprezentuje użycie bardzo skutecznych masek jak N95.
-        Teraz, zacznij przeciągnij suwak skuteczności podczas wydechu w stronę zera i obserwuj jak zwiększa się ryzyko zakażenia, szczególnie pośród nie noszących masek.
+        Ten scenariusz reprezentuje użycie bardzo skutecznych masek, takich jak N95.
+        Następnie, przeciągaj suwak skuteczności podczas wydechu w stronę zera i obserwuj jak zwiększa się ryzyko zakażenia, szczególnie pośród nienoszących masek.
         <br><br>
-        Jeśli masz już jedną z takich masek, CDC zaleca <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">żeby zakryć zawór wydechowy</a> używając maski chirurgicznej.
+        Jeśli masz już jedną z takich masek, CDC zaleca <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">żeby zakryć zawór wydechowy</a> maską chirurgiczną.
       </span>
     </aside>
 
 
     <p>
-      W rzeczywistości, maski są jeszcze bardziej skuteczne niż sugerują te liczby.
+      W rzeczywistości maski są jeszcze bardziej skuteczne niż sugerują te liczby.
     </p>
 
     <h2>Jak Zatrzymać Epidemię</h2>
