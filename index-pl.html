@@ -209,8 +209,8 @@
     <h2>Od Jednostek do Populacji</h2>
 
     <p>
-      Do tej pory, przyglądaliśmy się jedynie rozprzestrzenianiu się choroby pomiedzy dwojgiem ludzi.
-      Jak możemy przełożyć to na zrozumienie jak działa rozprzestrzenianie sie wirusa <i>w całej populacji</i>?
+      Do tej pory, przyglądaliśmy się jedynie rozprzestrzenianiu się choroby pomiędzy dwojgiem ludzi.
+      Jak możemy przełożyć to na zrozumienie jak działa rozprzestrzenianie się wirusa <i>w całej populacji</i>?
     </p> 
 
     <p>W przypadkach skrajnych jest to dość proste.</p> 
@@ -222,7 +222,7 @@
     <network :maskusage="0"></network>
 
     <p>
-      W takiej sytuacji wzięliśmy pod uwagę tylko <span class="red">pierwszą drogę</span> rozprzestrzeniania się choroby i w populacji nie zaobserwowalibysmy <span class="red">żadnego spadku</span> w roznoszeniu się choroby.
+      W takiej sytuacji bierzemy pod uwagę tylko <span class="red">pierwszą drogę</span> rozprzestrzeniania się choroby i w populacji nie zaobserwowalibyśmy <span class="red">żadnego spadku</span> w roznoszeniu się choroby.
     </p>
 
     <p>
@@ -232,8 +232,8 @@
     <network :maskusage="1"></network>
 
     <p>
-      W tym przypadku więliśmy pod uwagę jedynie <span class="yellow">ostatnią drogę</span> rozprzestrzeniania się choroby.
-      Zakładając, że maski mają 50-procentową skutechność w każdym kierunku, w populacji zaobserwoalibyśmy<span class="yellow">75-procentowy spadek</span> w roznoszeniu choroby.
+      W tym przypadku bierzemy pod uwagę jedynie <span class="yellow">ostatnią drogę</span> rozprzestrzeniania się choroby.
+      Zakładając, że maski mają 50% skuteczność w każdym kierunku, w populacji zaobserwowalibyśmy<span class="yellow">75% spadek</span> w roznoszeniu choroby.
     </p>
 
     <p>
@@ -242,8 +242,8 @@
 
     <p>
       W rzeczywistości jednak, niektórzy ludzie noszą maski a inni nie.
-      To oznacza, że wirus może rozprzestrzeniać się poprzez kombinację wszystkich czterech dróg rozprzestrzeniania.
-      Prawdopodobieństwo każdej z nich jest podyktowane tym jak wiele ludzi nosi maski.
+      To oznacza, że wirus może roznosić się poprzez kombinację wszystkich czterech dróg rozprzestrzeniania.
+      Prawdopodobieństwo każdej z nich zależy od tego, jak wiele ludzi nosi maski.
     </p>
 
     <label class="row half bigsplash">
@@ -254,8 +254,8 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      Na przykład, <b>jeśli 50% ludzi nosi maski</b>, zawsze gdy spotyka się dwoje przypadkowych ludzi, szansa na to, że <span class="yellow">oboje mają maski</span> wynosi 50% ⨉ 50%, czyli 25%.
-      W podobny sposób możemy obliczyć szanse na zaistnienie pozostałych trzech dróg na rozprzestrzenianie się choroby.
+      Na przykład, <b>jeśli 50% ludzi nosi maski</b>, to zawsze gdy spotyka się dwoje przypadkowych ludzi, szansa na to, że <span class="yellow">oboje mają maski</span> wynosi 50% ⨉ 50%, czyli 25%.
+      W podobny sposób możemy obliczyć szanse na wystąpienie pozostałych trzech dróg rozprzestrzeniania się choroby.
     </p>
 
     <p>
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Droga Rozprzestrzeniania</div>
+          <div class="center">Droga rozprzestrzeniania</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Spadek w Rozprzestrzenianiu</div>
+          <div class="center">Spadek w rozprzestrzenianiu</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Przwdopodobieństwo Każdej z Dróg Rozprzestrzeniania</div>
+          <div class="center">Prawdopodobieństwo każdej z dróg rozprzestrzeniania</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        Cztery drogi, którymi COVID-19 może przenieść się z jednej osoby na drugą, zakładając, że 50% osób nosi maski, które są w 50-procentach skuteczne.
+        Cztery drogi, którymi COVID-19 może przenieść się z jednej osoby na drugą, zakładając, że 50% osób nosi maski o 50% skuteczności.
       </div>
 
     </div>
@@ -312,7 +312,7 @@
 
     <p>
       Osoby, które <i>nie noszą</i> masek, zakażają się poprzez dwie pierwsze drogi, które, gdy połowa populacji nosi maski, są równie prawdopodobne.
-      Tak więc spadek w rozprzestrzenianiu pośród nie noszących masek równa się średniej z <span class="red">0%</span> i <span class="orange">50%</span>, czyli 25%.
+      Tak więc spadek w rozprzestrzenianiu pośród nienoszących masek równa się średniej z <span class="red">0%</span> i <span class="orange">50%</span>, czyli 25%.
     </p>
 
     <p>
@@ -325,12 +325,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Uśredniony Spadek w Rozprzestrzenianiu = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Spadek w Rozprzestrzenianiu Pośród <b>Nie Noszących Masek</b> = 25%</div>
-        <div class="splash">Spadek w Rozprzestrzenianiu Pośród <b>Noszących Maski</b> = 62.5%</div>
+        <div class="splash">Uśredniony spadek w rozprzestrzenianiu = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Spadek w rozprzestrzenianiu pośród <b>nienoszących masek</b> = 25%</div>
+        <div class="splash">Spadek w rozprzestrzenianiu pośród <b>noszących maski</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Zakładając, że 50% ludzi nosi 50-procentowo skuteczne maski.)
+        (Zakładając, że 50% ludzi nosi maski o 50% skuteczności.)
       </div>
     </div>
   </div>
@@ -338,13 +338,13 @@
   <div class="container">
 
     <p>
-      W ostatecznym rozrachunku, nawet osoby nie noszące masek, zyskują pewną niewielką ochronę, ponieważ powietrze, którym oddychają, jest częściowo filtrowane przez maski <i>innych osób</i>.
+      W ostatecznym rozrachunku, nawet osoby nienoszące masek, zyskują pewną niewielką ochronę, ponieważ powietrze, którym oddychają, jest częściowo filtrowane przez maski <i>innych osób</i>.
       Dla porównania, osoby noszące maski zyskują dużo większą ochronę, dzięki dodadkowemu zabezpieczeniu, które zapewniają im ich własne maski.
     </p>
 
-    <p>A ponieważ populacja składa sie zarówno z osób noszących jak i nie noszących masek, średnia ilość ochrony która zapewniają maski leży pomiędzy ilością ochrony w tych dwóch grupach.</p>
+    <p>A ponieważ populacja składa sie zarówno z osób noszących jak i nienoszących masek, średnia korzyść z ochrony, którą zapewniają maski leży pomiędzy ilością ochrony w tych dwóch grupach.</p>
 
-    <p>Tak więc w tym prostym przykładzie (gdzie 50% ludzi nosi 50-procentowo skuteczne maski) rozpracowaliśmy jak przetłumaczyć <b>korzyści, które noszenie masek oferuje <i>jednostce</i></b>, na <b>średnią korzyść, którą noszenie masek oferuje całej <i>populacji</i>.</b></p>
+    <p>Tak więc na tym prostym przykładzie (gdzie 50% ludzi nosi maski o 50% skuteczności) udało nam się ustalić jak przeliczyć <b>korzyścć, którą noszenie masek oferuje <i>jednostce</i></b>, na <b>średnią korzyść, którą noszenie masek oferuje całej <i>populacji</i>.</b></p>
 
     <h2>Maskologia</h2>
 
