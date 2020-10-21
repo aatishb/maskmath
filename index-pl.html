@@ -488,16 +488,16 @@
     <p>
       Zachowywanie dystansu, kwarantanny i tymczasowe zamknięcia zmniejszają <span class="dashed">pierwszą wartość</span>.
       A noszenie masek zmniejsza <span class="dotted">wartość drugą</span>.
-      Celem wszystkich strategii zdrowia publicznego jest zapanowanie nad epidemią poprzez obniżenie wartości R0 poniżej 1.
+      Celem tych wszystkich środków jest zapanowanie nad epidemią poprzez obniżenie wartości R0 poniżej 1.
     </p>
 
     <p>
       Mając to na uwadze,  przeanalizujmy jak używanie masek wpływa na wartości R0.
-      wykres poniżej ilustruje jak wartość R0 zmienia się w odpowiedzi na zwiększone użycie masek.
+      Wykres poniżej ilustruje jak wartość R0 zmienia się w odpowiedzi na zwiększone użycie masek.
     </p>
 
     <p>
-      Możecie użyć pierwszego suwaka aby zmieniać wartość R0, która w przypadku COVID-19 jest pomiędzy 2 a 3 (zakładając brak jakichkolwiek działań prewencyjnych, które mogłyby obniżyć wartość R0, jak na przykład zachowywanie dystansu 2m).
+      Możesz użyć pierwszego suwaka aby zmieniać wartość R0, która w przypadku COVID-19 jest pomiędzy 2 a 3 (zakładając brak jakichkolwiek działań prewencyjnych, które mogłyby obniżyć wartość R0, jak na przykład zachowywanie dystansu).
       Poprzez zmienianie wartości skuteczności masek, możecie łatwo zobaczyć w jaki sposób noszenie maski może pomóc kontrolować epidemię.
     </p>
 
@@ -512,12 +512,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność Masek podczas Wydechu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Skuteczność masek podczas wydechu: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Skuteczność Masek podczas Wdechu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Skuteczność masek podczas wdechu: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -540,23 +540,23 @@
     </p>
 
     <p>
-      W takim razie, ile osób musi nosić 50-procentowo skuteczne maski abyśmy zatrzymali rozprzestrzenianie się COVID-19?
-      Co stałoby się gdyby maski były skuteczne w 75%?
-      Lub skuteczne w 90%?
-      Ten interaktywny panel pozwala Wam zobaczyć odpowiedzi na te pytania.
+      W takim razie, ile osób musi nosić maski o 50% skuteczności abyśmy zatrzymali rozprzestrzenianie się COVID-19?
+      Co stałoby się gdyby maski miały 75% skuteczność?
+      Lub 90% skuteczność?
+      Ten interaktywny panel pozwala udzielić odpowiedzi na te pytania.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">Istotne zasrzeżenie: ludzie zwykle nie spotykają się zupełnie przypadkowo. 
+      <span @click="expandaside2 = true;">Istotne zastrzeżenie: ludzie zwykle nie spotykają się zupełnie losowo. 
         <span v-if="!expandaside2"> (Kliknij by rozwinąć)</span>
       </span>
       
       <span v-if="expandaside2">
         Statystycznie, osoby noszące maski częściej kontaktują się z innymi osobami noszącymi maski, niż tymi, które masek nie noszą.
         <br/><br/>
-        Jednocześnie, osoby nie noszące masek prawdopodobnie przebywają w grupach, w których częstotliwość noszenia masek jest poniżej średniej.
-        Ta tendencja do przebywania wsród osób dokonujących wyborów podobnych do naszych własnych <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">zmniejsza moc ochronną masek</a> ponieważ <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">osoby nie noszące masek, tracą tą dodatkową ochronę, którą zapewniałoby noszenie masek przez osoby w ich środowisku</a>.
+        Jednocześnie, osoby nienoszące masek prawdopodobnie przebywają w grupach, w których częstotliwość noszenia masek jest poniżej średniej.
+        Ta tendencja do przebywania wsród osób dokonujących wyborów podobnych do naszych własnych <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">zmniejsza moc ochronną masek</a> ponieważ <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">osoby nienoszące masek, tracą tą dodatkową ochronę, którą zapewniałoby noszenie masek przez osoby w ich środowisku</a>.
         <br/><br/>
         Według analizy <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191"> wykonanej przez Davida Fismana, Amy Greer i Ashleigh Tuite</a> , "noszenia masek i innych okryć twarzy będzie miało największy wpływ na zahamowanie rozprzestrzeniania się COVID-19 jeśli skupimy się na zapewnieniu dostępności maseczek w środowiskach o trudnej sytuacji socjo-ekonomicznej."
       </span>
