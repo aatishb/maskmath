@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="ca">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>El poder multiplicatiu de les mascaretes</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Un assaig interactiu sobre com les mascaretes poden acabar amb la COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Per què les mascaretes funcionen millor del que penses: un assaig interactiu">
+  <meta name="twitter:description" content="Fins i tot les mascaretes que només funcionen parcialment poden aturar la propagacióde la COVID-19, sempre que prou gent les dugui.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Per què les mascaretes funcionen millor del que penses: un assaig interactiu" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Fins i tot les mascaretes que només funcionen parcialment poden aturar la propagació de la COVID-19, sempre que prou gent les dugui." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>El poder multiplicatiu de les mascaretes</h1>
+        <h3>Un assaig interactiu sobre com les mascaretes poden aturar la COVID-19</h3>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> X <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Nosaltres <a href="https://www.preprints.org/manuscript/202004.0203/v1">ara</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">sabem</a> <a href="https://science.sciencemag.org/content/368/6498/1422">que</a> les mascaretes tenen un gran impacte en la reducció de la propagació de la COVID-19.
+      Tot i així, algunes persones no volen portar-ne perquè ho veuen com una elecció personal en comptes de com un assumpte de salut pública.
+    </p>
+
+    <p>
+      Això és perdre de vista la perspectiva global, perquè sabem que <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">les mascaretes protegeixen a qui les porta <i>i també</i> a la gent del seu voltant</a>.
+      Aquesta <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">protecció en els dos sentits</a> és el que fa que l'ús generalitzat de mascaretes sigui una eina molt potent per extinguir una epidèmia.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Si analitzem matemàticament l'ús de les mascaretes, observem que quan el 60% de la població porta mascaretes amb una efectivitat del 60%, la transmissió de la malaltia cau fins al 60% — aproximadament el que és necessari per aturar la propagació de la COVID-19.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Mira el vídeo complementari: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Per què les mascaretes funcionen MILLOR del que creuries</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Dispersa el missatge, no el virus</h2>
+
+    <p>
+      Però primer, fem-nos una idea dels números.
+      Quan una persona exhala, <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">esparceix partícules diminutes de saliva</a> de diverses mides.
+      Si són contagiosos, aleshores aquest 'esprai bucal' està carregat de partícules virals.
+      Aquesta contaminació <a href="https://arxiv.org/pdf/2005.10988.pdf">per aerosol de saliva</a> és la via principal de propagació de la COVID-19.
+    </p>
+
+    <p>Quan una persona contagiosa respira, esparceix aproximadament <b>mil</b> partícules virals cada minut.</p>
+
+    <p>Quan parla, esparceix aproximadament <b>deu mil</b> partícules virals cada minut.</p>
+
+    <p>Quan estossega, esparceix aproximadament <b>cent mil</b> partícules virals.</p>
+
+    <p>Quan estornuda, esparceix aproximadament <b>un milió</b> de partícules virals.</p>
+
+    <p>
+      Com més partícules virals viatgen de persona a persona, més gran és la probabilitat d'infectar-se.
+      (I si estan infectades, les persones exposades a més partícules virals generalment experimenten <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">símptomes més severs</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="red">
+  Via de transmissió 1:</span> Quan una persona contagiosa és a prop d'una persona susceptible, el seu 'esprai bucal' pot propagar la malaltia.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Les mascaretes reduixen els aerosols que viatgen entre les persones — blocant o redireccionant els aerosols — i d'aquesta manera redueixen la probabilitat de ser infectats.</p>
+
+    <p>
+      Cal recordar que cap mascareta funciona a la perfecció.
+      Fins i tot les mascaretes N95, les recomanades per als professionals de la salut, només garanteixen blocar el <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% de les partícules més difícils de filtrar</a> (i això només si <a href="https://www.n95decon.org/publications">s'utilitzen correctament</a>).
+    </p>
+
+    <p>
+      Les mascaretes no garanteixen la seguretat, redueixen el risc.
+      S'assembla molt a la manera en què un paraigües no et garanteix que romandràs sec, però sí que redueix la teva probabilitat de mullar-te.
+      Com els paraigües, les mascaretes només funcionen si les utilitzes correctament.
+      Però a diferència dels paraigües, que només protegeixen a la gent que els duu, les mascaretes també protegeixen a la gent <i>al voltant</i> de qui les porta.
+    </p>
+
+    <p>
+    </p>
+
+<h2>Per què les mascaretes ens protegeixen dues vegades</h2>
+
+    <p>
+      Imaginem que una persona contagiosa porta una mascareta amb una efectivitat del 50%.
+      Per 'efectivitat del 50%', volem dir que aquesta mascareta divideix per la meitat la probabilitat d'infectar una persona propera susceptible.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Via de transmissió 2:</span> Quan una persona contagiosa porta una mascareta amb efectivitat del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Però i què passa si és la persona susceptible qui porta la mascareta?</p>
+
+    <p>
+      En general, l'efectivitat de la mascareta depèn de si estàs <b>inhalant</b> o <b>exhalant</b> l'aire.
+      De moment, i per simplificar, assumim que la mascareta és igual d'efectiva en cada direcció.
+    </p>
+
+    <p>En aquest cas, la probabilitat d'infecció per aquesta via també cau un 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="orange">Via de transmissió 3:</span> Quan la persona susceptible porta una mascareta amb una eficàcia del 50%, la transmissió de la malaltia cau un 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Què passa si la persona contagiosa <i>i també</i> la persona susceptible porten mascareta?</p> 
+
+    <p>
+      Bé, la primera mascareta talla la probabilitat d'infecció per la meitat, i la segona mascareta torna a tallar la probabilitat d'infecció per la meitat.
+      Per tant, quan <i>ambdues</i> persones porten mascaretes, la probabilitat d'infectar-se és la meitat de la meitat, és a dir, un 25% (en comparació amb quan cap de les dues en porta).
+      Això suposa una reducció del 75% en la probabilitat d'infectar-se.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Persona contagiosa" susceptibleperson="Persona susceptible"><span class="yellow">Via de transmissió 4:</span> Quan les dues persones porten mascaretes amb un 50% d'eficàcia, la transmissió de la malaltia cau un 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Si hi pensem, és sorprenent que una mascareta amb un 50% d'efectivitat pugui reduir el risc d'infecció un 75%.
+      Això és possible perquè quan dues persones porten mascaretes, la probabilitat d'infectar-se es redueix a la meitat dues vegades.
+      Aquesta <b>protecció doble</b> fa que les mascaretes siguin molt més efectives del que intuïtivament esperaríem.
+    </p>
+
+    <p>Així doncs, aquestes són les quatre vies a través de les quals una malaltia de transmissió àeria pot contagiar-se de persona a persona.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissió de la malaltia</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Reducció en la transmissió de la malaltia</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Les quatre maneres en què la COVID-19 pot contagiar-se de persona a persona. Això assumeix mascaretes amb un 50% d'efectivitat.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>De les persones a la població</h2>
+
+    <p>
+      De moment, només hem estudiat la transmissió de la malaltia entre dues persones.
+      Com podem passar d'aquí a comprendre la transmissió de la malaltia entre <i>tota la població</i>?
+    </p> 
+
+    <p>Bé, en els casos extrems, això és bastant directe.</p> 
+
+    <p>
+      Per exemple, si <b>ningú</b> portés mascareta, aleshores cada vegada que dues persones es trobessin, la probabilitat de que <span class="red">cap d'elles porti mascareta</span> és del 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      Aleshores, només hauríem de considerar la <span class="red">primera via</span> de transmissió de la malaltia, i la població no notaria <span class="red">cap descens</span> en la transmissió de la malaltia.
+    </p>
+
+    <p>
+      A l'altre extrem, si <b>tothom</b> portés mascareta, aleshores sempre que dues persones es trobessin, la probabilitat de que <span class="yellow">les dues portin mascareta</span> seria del 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      En aquest cas, només hauríem de considerar l'<span class="yellow">última via</span> de transmissió de la malaltia.
+      Assumint que les mascaretes són efectives en un 50% en cada direcció, la població notaria una <span class="yellow">caiguda del 75%</span> en la transmissió de la malaltia.
+    </p>
+
+    <p>
+      Per tant, quan <i>tothom</i> porta mascareta (o quan <i>ningú</i> en porta), és força directe calcular la disminució en la transmissió de la malaltia, perquè només hi ha involucrada una via.
+    </p>
+
+    <p>
+      Però en realitat, algunes persones porten mascareta i d'altres no.
+      Això vol dir que el virus pot propagar-se per una barreja de les quatre vies.
+      Com de probable és cadascuna de les vies dependrà de quanta gent porti mascaretes.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Utilització de la mascareta: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Per exemple, <b>si el 50% de la gent portés mascaretes</b>, aleshores sempre que es trobessin dues persones a l'atzar, la probabilitat de que <span class="yellow">les dues persones portin mascareta</span> és del 50% ⨉ 50%, és a dir, el 25%.
+      De manera semblant, es pot calcular la probabilitat de cadascuna de les altres tres vies de transmissió.
+    </p>
+
+    <p>
+      Quan exactament la meitat de la població porta mascaretes, aleshores cada via és igual de probable.
+      (Pots convèncer-te a tu mateix de per què això ha de ser cert?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissió de la malaltia</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Descens en la transmissió de la malaltia</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Probabilitat d'aquesta via</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Les quatre vies en què la COVID-19 pot contagiar-se de persona a persona, assumint que el 50% de gent porta una mascareta el 50% d'efectiva.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Ara podem calcular el <b>descens esperat mitjà en la transmissió de la malaltia entre la població</b>.
+      Com que cada via és igualment probable, això serà simplement la mitjana de <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> i <span class="yellow">75%</span>, que és 43.75%.
+    </p>
+
+    <p>
+      La gent que <i>no porta</i> mascaretes pot infectar-se per les dues primeres vies, que són igual de probables quan la meitat de la població porta mascareta.
+      Així doncs, el descens en la transmissió de la malaltia entre els que no porten mascareta és la mitjana de <span class="red">0%</span> i <span class="orange">50%</span>, que és 25%.
+    </p>
+
+    <p>
+      Mentrestant, la gent que <i>sí porta</i> mascaretes pot infectar-se per les dues últimes vies.
+      Així doncs, el descens en la transmissió de la malaltia entre els que porten mascareta és la mitjana de <span class="orange">50%</span> i <span class="yellow">75%</span>, que és 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Descens mitjà en la transmissió de la malaltia = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Descens en la transmissió de la malaltia entre qui <b>no porta mascareta</b> = 25%</div>
+        <div class="splash">Descens en la transmissió de la malaltia entre qui <b>porta mascareta</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (assumint que el 50% de gent porta una mascareta amb una eficàcia del 50%.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Així doncs, fins i tot qui no porta mascareta rep un modest benefici, perquè l'aire que inhalen és sovint filtrat per mascaretes <i>d'altres persones</i>.
+      Però els que porten mascareta se'n beneficien molt més, gràcies a la protecció afegida que els proporciona.
+    </p>
+
+    <p>I com que la població consisteix de gent que porta mascareta i que no en porta, el benefici mitjà queda entre el d'aquests dos grups.</p>
+
+    <p>Per tant, en aquest exemple simplificat (on el 50% de persones porta mascaretes amb un 50% d'eficàcia) hem calculat com passar del <b>benefici que les mascaretes ofereixen a un <i>individu</i></b> al <b>benefici mitjà que les mascaretes ofereixen a una <i>població</i>.</b></p>
+
+    <h2>Mascaretalogia</h2>
+
+    <p>
+      Anem a <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">aplicar aquesta lògica</a> a <i>qualssevol valors</i> d'<b>ús de la mascareta</b> i <b>efectivitat de les mascaretes</b>.
+      Ajusta els lliscadors de sota per veure com les mascaretes influeixen en la propagació de la malaltia.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Ús de la mascareta: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Via de transmissió de la malaltia</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Descens en la transmissió de la malaltia</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Probabilitat d'aquesta via</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Descens mitjà en la transmissió de la malaltia: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Descens en la transmissió de la malaltia entre qui no porta mascareta: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Descens en la transmissió de la malaltia entre qui porta mascareta: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Com influeix en la transmissió de la malaltia si el 60% de persones porten una mascareta amb un 60% d'efectivitat?
+      O si el 90% en porten una amb el 50% d'efectivitat?
+      O si el 50% en porten una amb el 90% d'efectivitat?
+      Aquest interactiu et permetrà respondre aquestes preguntes.
+    </p>
+
+    <p>La conclusió: <b>Com més persones portin mascaretes, més segur estarà tothom.</b></p>
+
+    <p>
+      En filtrar l'aire inhalat, les mascaretes donen protecció de primera mà a les persones que les porten.
+      I en filtar o redirigir l'aire exhalat, les mascaretes donen protecció de segona mà per a <i>tothom<i> — fins i tot per a les persones que no porten mascaretes.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">Què passa amb les mascaretes que no filtren l'aire exhalat? 
+        <span v-if="!expandaside1"> (Clica per expandir-ho)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Algunes mascaretes N95 venen amb <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">vàlvules o obertures</a> que alliberen l'aire sense filtrar-lo.
+        El CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recomana no portar</a> aquestes mascaretes en condicions generals de salut pública, perquè posen l'altra gent en risc.
+        Pots veure-ho per tu mateix en l'interactiu de dalt.
+        <br><br>
+        En primer lloc, ajusta l'efectivitat en inhalar i exhalar a un valor alt (amb un ús de la mascareta normalment entremig).
+        Això representa una mascareta d'alta eficàcia com una N95.
+        Ara arrossega l'efectivitat en exhalar cap al zero i observa com la transmissió de la malaltia augmenta, especialment entre qui no porta mascareta.
+        <br><br>
+        Si tens alguna d'aquestes mascaretes, el CDC recomana <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">cobrir la vàlvula d'exhalació</a> amb una mascareta quirúrgica.
+      </span>
+    </aside>
+
+
+    <p>
+      De fet, les mascaretes són encara més efectives del que aquests números suggereixen.
+    </p>
+
+    <h2>Com aturar una epidèmia</h2>
+
+    <p>
+      S'apaga un foc deixant-lo sense oxigen.
+      Però no necessites treure tot l'oxigen, tan sols necessites reduir-lo prou com per fer que el foc deixi de créixer.
+      Passa el mateix amb una epidèmia — no necessites tallar la transmissió de la malaltia al 100%. 
+      Si aconsegueixes reduir-la prou com perquè la malaltia pari de propagar-se, pots extingir l'epidèmia.
+    </p>
+
+    <p>
+      Probablement has sentit a parlar del terme epidemiològic R0, el coeficient de reproducció bàsic.
+      Això és el <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">nombre de persones que una persona contagiosa pot infectar</a> en una població sense immunitat a priori a la malaltia.
+    </p> 
+
+    <p>Quan R0 val més de 1, la malaltia creixerà exponencialment fins que prou gent sigui vacunada, o prou gent quedi infectada i desenvolupi immunitat a la malaltia.</p>
+
+    <p>
+      Però, tal i com escriu Ed Yong a l'Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 no és el destí"</a>.
+      R0 és el producte de dos nombres: la mitjana de gent amb què una persona contagiosa té contacte, i la probabilitat d'infecció quan hi ha aquest contacte.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">mitjana de gent amb què una persona contagiosa té contacte</span> <br>⨉ <span class="dotted">probabilitat d'infecció en contactar</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      La distància social, les quarantenes i els confinaments fan decréixer <span class="dashed">el primer nombre</span>.
+      I les mascaretes fan decréixer <span class="dotted">el segon nombre</span>.
+      L'objectiu de totes aquestes estratègies de salut pública és passar a tenir l'epidèmia sota control portant la R0 per sota de 1.
+    </p>
+
+    <p>
+      Tenint això al cap, reescrivim l'impacte de les mascaretes en funció de R0.
+      El gràfic a sota mostra com varia R0 a mesura que augmenta l'ús de les mascaretes.
+    </p>
+
+    <p>
+      Pots ajustar el primer lliscador per variar R0, que per a la COVID-19 es troba entre 2 i 3 (això és, en absència d'altres mesures de salut pública com el distanciament social, que redueix més encara R0).
+      Si varies l'efectivitat de les mascaretes, es pot veure com això ajuda a controlar l'epidèmia.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'Com redueixen R0 les mascaretes',
+        'Percentatge de gent que porta mascaretes',
+        '# Persones que una persona contagiosa infecta (R0)',
+        'Epidèmia sota control',
+        'Epidèmia fora de control'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Per aturar la propagació de la COVID-19, necessitem mantenir R0 per sota de 1.
+      Quan això passa, de mitjana, una persona contagiosa infecta a menys d'una persona, i l'epidèmia acabarà aturant-se.
+    </p>
+
+    <p>
+      Llavors, quanta gent necessita portar una mascareta amb una efectivitat del 50% per aturar la propagació de la COVID-19?
+      Què passaria si les mascaretes tinguessin una efectivitat del 75%?
+      O del 90%?
+      Aquest interactiu et permet predir les respostes a aquestes preguntes.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Una advertència important: la gent no s'acostuma a barrejar de manera aleatòria. 
+        <span v-if="!expandaside2"> (Clica per expandir)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        La gent que porta mascareta és més probable que interaccioni amb altra gent que porti mascareta, i és menys probable que interaccioni amb gent que no en porti.
+        <br/><br/>
+        De manera similar, els qui no porten mascareta podrien viure en clústers de població on l'ús de la mascareta sigui menor que la mitjana.
+        La tendència a interaccionar amb altres que tenen preferències similars <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">fa disminuir el poder protector de les mascaretes</a> perquè <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">els qui no porten mascareta és menys probable que es beneficiïn de la gent propera que sí en porta</a>.
+        <br/><br/>
+        Com <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, i Ashleigh Tuite</a> escriuen en la seva anàlisi, "l'impacte de les mascaretes i altres mètodes per cobrir la cara en la reducció de la transmissió de la COVID-19 és susceptible de ser major si es para atenció a assegurar la disponibilitat per a la població desavantatjada."
+      </span>
+    </aside>
+
+    <h2>El cost humà</h2>
+
+    <p>
+      Podem portar la nostra comprensió un pas més enllà expressant el poder de les mascaretes en termes més humans.
+      Les mascaretes salven vides reduint la probabilitat d'infecció, que, al seu torn, redueix l'abast de l'epidèmia.
+    </p>
+
+    <p>
+      Com més gent porti mascaretes, més decreixerà R0.
+      I a mesura que R0 decreixi, també ho farà la quantitat de persones infectades.
+      Així doncs, podem obtenir una imatge més clara si en comptes de visualitzar R0, visualitzem la <b>fracció infectada</b> de la població.
+    </p>
+
+    <p>
+      Mitjançant un model matemàtic per estudiar les epidèmies àmpliament utilitzat, que és conegut com a <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">model SIR</a>, podem relacionar R0 amb la fracció de gent que en algun moment acabarà sent infectada.
+      (Per aprendre més sobre els models SIR, recomano veure aquest <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">vídeo excel·lent</a>.)
+    </p>
+    
+    <p>Tot i que aquest model és una simplificació considerable (per exemple, assumeix que la gent interacciona aleatòriament, i que no hi ha confinaments), ofereix una estimació raonable del cost humà de no portar mascareta.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en exhalar: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efectivitat de la mascareta en inhalar: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Infectats'
+        )" :layout="graph3Layout(
+        'Com redueixen les infeccions les mascaretes',
+        'Percentatge de gent que porta mascaretes',
+        'Percentatge de gent que acabarà sent infectada'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Aquesta corba amb forma de turó ens mostra la influència de les mascaretes en l'abast de l'epidèmia.
+      <b>A mesura que més gent porta la mascareta, el nombre d'infeccions cau en picat.</b>
+    </p>
+
+    <p>
+      Quan molt poca gent porta mascaretes, estem al cim del turó, i la majoria de gent acabarà sent infectada.
+      Però cada pas cap a la dreta ens porta més avall.
+      Així, fins i tot mascaretes només parcialment efectives, i utilitzades només parcialment també, ens poden ajudar a reduir l'abast de la COVID-19.
+    </p>
+
+    <p>
+      Per aturar completament la propagació, necessitem arribar fins al peu del turó.
+      Hi ha una part esperançadora: com més gent porta mascaretes, el turó decreix cada cop més escarpat.
+      Això significa que <b>les mascaretes proporcionen un retorn major a la societat a mesura que més gent en porta</b>.
+    </p>
+
+    <p>
+      Si prou gent porta mascaretes, podem arribar al peu del turó, on la probabilitat d'infecció és zero.
+      Així és com les mascaretes poden aturar una epidèmia.
+      Però les mascaretes només poden acabar una epidèmia si prou gent les duu.
+    </p>
+
+    <p>
+      Potser et preguntes quanta gent ha de portar mascareta per acabar amb una epidèmia.
+      Bé, això depèn de com d'efectives són les mascaretes.
+    </p>
+
+    <p>
+      Jugant amb l'interactiu de dalt, pots veure que si les mascaretes fossin efectives a un 50%, necessitaríem aproximadament que tres quartes parts de la població en duguessin per aturar la propagació de la COVID-19.
+      Però si les mascaretes fossin efectives a un 75%, només necessitaríem que la meitat de la població en dugués per aturar la propagació.
+    </p>
+
+    <p>
+      <b>Com més efectiva és la mascareta, més ràpidament podem descendre el turó.</b>
+      És per això que és important portar una mascareta que <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">selli fermament la teva boca <i>i</i> nas</a>, i que sigui feta d'un material per filtrar efectiu.
+    </p>
+
+    <p>
+      Tots volem arribar al peu del turó i aturar la propagació de la COVID-19.
+      Però no hi pots arribar per tu mateix.
+      Cada persona només pot donar un pas diminut cap a baix.
+    </p>
+
+    <p>No obstant això, quan molta gent fa aquest petit pas, col·lectivament, fem un salt de gegant cap al fons del turó.</p>
+
+    <p>Junts, podem arribar al fons del turó.</p>
+    
+    <p>Junts, podem posar fre a la COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Crèdits i referències</h2>
+
+    <p>Aquest assaig ha estat creat per <a href="https://twitter.com/aatishb">Aatish Bhatia</a> en col·laboració amb <a href="https://twitter.com/minutephysics">Henry Reich</a>.
+      Ha estat traduït al català per <a href="https://twitter.com/david_meldor">David Virgili</a>.</p>
+
+    <p>Mira el nostre <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">vídeo complementari</a> per a una introducció ràpida a les matemàtiques darrera de les mascaretes! El vídeo té el suport de la <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Aquí hi ha la <a href="https://aatishb.com/maskmath/calculator.html">calculadora matemàtica de mascaretes</a> que es mostra en el vídeo.</p>
+
+    <p>
+      Moltes gràcies a <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, i <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> pels seus comentaris tant profitosos en els primers esborranys d'aquest assaig.
+    </p>
+
+    <p>
+      Si has trobat aquest assaig interessant i voldries veure més feina d'aquest estil en el futur, pots <b><a href="https://www.patreon.com/aatishb">donar suport a la meva feina a Patreon</a></b>.
+    </p>
+
+    <p>
+      Aquí hi ha <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">alguns</a> <a href="https://www.maskfaq.com/test-results">recursos</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">informatius</a> sobre la capacitat de filtratge dels materials comuns de les mascaretes.
+      Així com les mascaretes varien molt la seva efectivitat en funció del seu material i el seu ajustament, alguns materials poden <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">superar</a> <a href="https://www.maskfaq.com/test-results">80%</a> la seva capacitat de filtratge quan són utilitzats en una mascareta ben ajustada.
+    </p>
+
+    <p>
+      Per als entusiastes de l'àlgebra entre vosaltres (vosaltres sabeu qui sou), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">aquí hi ha un escrit</a> que cobreix la part matemàtica amb més detall.
+      Els gràfics d'aquest assaig estenen la feina de <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a> per donar resposta a l'efectivitat bidireccional de les mascaretes.
+    </p>
+
+    <p>
+      El model bidireccional de mascaretes que s'utilitza en aquest assaig va ser, segons tinc entès, publicat per primer cop per <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (Taula S3 i Fig S4). 
+      Això va ser remarcat per Howard et al en el seu <a href="https://www.preprints.org/manuscript/202004.0203/v3">article de revisió</a> i <a href="https://www.fast.ai/2020/04/13/masks-summary/">l'assaig complementari</a>, i popularitzat més endavant per <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> a l'Atlantic, i per <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> al New Yorker, que va escriure, <i>"Com més efectiva és la mascareta, major és l'impacte."</i>
+    </p>
+
+    <p>
+      Aquest text es publica sota una llicència Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. El codi font està disponible <a href="https://github.com/aatishb/maskmath">a Github</a>. Els emojis estan creats per <a href="https://twemoji.twitter.com/">Twitter</a> i van ser modificats per incloure un disseny propi de mascareta.
+    </p>
+
+    <p>
+      Gràcies per llegir-ho, i mantingue't sa i estalvi! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
