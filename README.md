@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -37,6 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/fbuters"><img src="https://avatars1.githubusercontent.com/u/70638081?v=4" width="100px;" alt=""/><br /><sub><b>fbuters</b></sub></a><br /><a href="#translation-fbuters" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/dvirgili"><img src="https://avatars3.githubusercontent.com/u/67393500?v=4" width="100px;" alt=""/><br /><sub><b>dvirgili</b></sub></a><br /><a href="#translation-dvirgili" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/morethanoneanimal"><img src="https://avatars3.githubusercontent.com/u/1583799?v=4" width="100px;" alt=""/><br /><sub><b>morethanoneanimal</b></sub></a><br /><a href="#translation-morethanoneanimal" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/kasiarzynaLu"><img src="https://avatars1.githubusercontent.com/u/66224340?v=4" width="100px;" alt=""/><br /><sub><b>kasiarzynaLu</b></sub></a><br /><a href="#translation-kasiarzynaLu" title="Translation">🌍</a></td>
   </tr>
 </table>
 
