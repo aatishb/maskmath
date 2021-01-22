@@ -346,10 +346,10 @@
 
     <p>U našem pojednostavljenom primeru (gde 50% ljudi nosi 50% efektivne maske) shvatili smo kako na osnovu <b>koristi koju od maske imaju <i>pojedinci</i></b> da dobijemo <b>prosečnu korist koju maske donose <i>populaciji</i>.</b></p>
 
-    <h2>Maskology</h2>
+    <h2>Maskologija</h2>
 
     <p>
-      Let's <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">apply this logic</a> to <i>any values</i> of <b>mask usage</b> and <b>mask effectiveness</b>.
+      <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">Primenimo ovu logiku</a> na <i>bilo koju vrednost</i> <b>procenta populacije koji koristi maske</b> i <b>efektivnosti maske</b>.
       Vary the sliders below to see how masks moderate the spread of disease.
     </p>
 
@@ -359,24 +359,24 @@
     <div class="graphic-container">
 
       <label class="row half bigsplash">
-        <div>Mask Usage: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <div>Procenat populacije koji koristi masku: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
         <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <div class="row big-small-small padabove">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Način prenosa bolesti</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="eout"></anim>
           <anim :mask1="false" :mask2="true" :ein="ein"></anim>
@@ -384,7 +384,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Pad u prenosu bolesti</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
@@ -392,7 +392,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Verovatnoća ovog načina prenosa bolesti</div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
           <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
@@ -403,15 +403,15 @@
 
 
       <div class="row half bigsplash">
-        <span>Average Drop in Disease Transmission: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+        <span>Prosečan pad u prenosu bolesti: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Non-Mask Wearers: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+        <span>Pad u prenosu bolesti onima koji ne nose maske: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
       </div>
 
       <div class="row half bigsplash">
-        <span>Drop in Disease Transmission to Mask-Wearers: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+        <span>Pad u prenosu bolesti onima koji nose maske: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
       </div>
 
     </div>
@@ -420,40 +420,40 @@
   <div class="container">
 
     <p>
-      What happens to disease transmission if 60% of people wear a 60% effective mask?
-      Or 90% wear a 50% effective mask?
-      Or 50% wear a 90% effective mask?
-      This interactive lets you answer these questions.
+      Šta se dešava sa prenosom bolesti ako 60% ljudi nosi 60% efektivne maske?
+      Ili 90% nosi 50% efektivne maske?
+      Ili 50% nosi 90% efektivne maske?
+      Ovaj interaktivna tabela ti omogućava da dobiješ odgovor na ova pitanja.
     </p>
 
-    <p>The conclusion: <b>When more people wear masks, everyone is safer.</b></p>
+    <p>Zaključak: <b>Kada više ljudi nosi maske, svi su bezbedniji.</b></p>
 
     <p>
-      By filtering inhaled air, masks provide first-hand protection to those who wear them.
-      And by filtering or redirecting exhaled air, masks provide second-hand protection to <i>everyone</i> — including people who don't wear masks.
+      Filtriranjem vazduha koji udišemo, maske nude direktnu zaštitu onima koji ih nose.
+      Filtriranjem ili skretanjem vazduha koji izdišemo, maske nude indirektnu zaštitu <i>svima</i> — uključujući i ljude koji ne nose maske.
     </p>
 
     <aside>
-      <span @click="expandaside1 = true;">What about masks that don't filter exhaled air? 
-        <span v-if="!expandaside1"> (Click to expand)</span>
+      <span @click="expandaside1 = true;">Šta je sa maskama koje ne filtriraju izdahnut vazduh? 
+        <span v-if="!expandaside1"> (Klikni da vidiš)</span>
       </span>
 
       <span v-if="expandaside1">
-        Some N95 masks come with <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">valves or openings</a> that release air without filtering it.
-        The CDC <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">recommends against</a> wearing these masks in public health settings, because they put other people at risk.
-        You can see this for yourself in the interactive above.
+        Neke N95 maske dolaze sa <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">ventilima ili otvorima</a> koji ispuštaju vazduh bez filtriranja.
+        Američki Centar za kontrolu i prevenciju bolesti (eng. <i>Center for Disease Control and Prevention, CDC<i>) <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">izdao je preporuke protiv</a> nošenja ovakvih maski u javnosti jer izlažu druge riziku.
+        Možete ovo sami videti u interaktivnoj tabeli iznad.
         <br><br>
-        First set the inhale & exhale effectiveness to a high value (with mask usage somewhere in the middle).
-        This represents a highly effective mask like an N95.
-        Now drag the exhale effectiveness towards zero and watch how disease transmission rises, particularly among non-mask wearers.
+        Namestite efektivnost izdisanja i udisanja na visoku vrednost (sa procentom populacije koji koristi maske negde u sredini).
+        Ovo je reprezentacija vrlo efektivne maske kao što je N95.
+        Onda prevucite efektivnost izdisanja prema nuli i obratite pažnju kako prenos bolesti raste, pogotovo među ljudima koji ne nose maske.
         <br><br>
-        If you happen to already have one of these masks, the CDC recommends <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">covering the exhalation valve</a> with a surgical mask.
+        Ako već imate ovakvu masku, Centar za kontrolu i prevenciju bolesti preporučuje da <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">prekrijete ventil za izdisaj</a> hirurškom maskom.
       </span>
     </aside>
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      Zapravo, maske su još efektivnije nego što ovi brojevi sugerišu.
     </p>
 
     <h2>How To Stop An Epidemic</h2>
