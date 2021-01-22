@@ -76,7 +76,7 @@
       </div>
     </aside>
 
-    <h2>Say it, Don't Spray It</h2>
+    <h2>Kako se virus prenosi kroz vazduh</h2>
 
     <p>
       Hajde za početak da steknemo osećaj za opseg kome neke brojke pripadaju.
@@ -562,25 +562,25 @@
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>Cena po ljude</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Možemo još bolje da razumemo problem tako što ga izrazimo u terminima ljudi koji ispaštaju.
+      Maske spašavaju živote smanjujući verovatnoću infekcije što onda dalje smanjuje obim i doseg epidemije.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Što više ljudi nosi maske, to se više R0 smanjuje.
+      Što se R0 više smanjuje, to se više smanjuje ukupan broj ljudi koji će biti inficirani.
+      Možemo dobiti jasnu tako što umesto da vizualizujemo R0, mi vizualizujemo <b>inficirani deo</b> populacije.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Korišćenjem opšteprihvaćenog matematičkog modela epidemija poznatog kao <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, možemo izvesti vezu R0 i dela populacije koji će kad-tad biti inficiran.
+      (Za više informacija o SIR modelu, preporučujemo ovaj <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">izvaredan video</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Iako je ovaj model prilično pojednostavljenje (npr. pretpostavlja da ljudi nasumično biraju s kim će interagovati i da neće biti mera zabrane kretanja), nudi nam aproksimaciju štete po ljude ako ne nosimo maske masovno.</p>
 
   </div>
 
@@ -593,12 +593,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -616,54 +616,54 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Brdolika kriva nam pokazuje kako maske utiču na veličinu epidemije.
+      <b>Što više ljudi nosi maske, to broj infekcija više pada.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Kada jako malo ljudi nosi maske, na vrhu smo krive i većina ljudi će se kad-tad inficirati.
+      Ali svaki korak nadesno nas spušta još više na dole.
+      Dakle, čak i delimično efektivne maske koje samo deo populacije nosi mogu pomoći da se smanji širenje koronavirusa.
     </p>
 
     <p>
-      To completely stop the spread, we need to get to the bottom of this hill.
-      But there's a silver lining: as more people wear masks, the hill grows steeper.
-      Which means <b>masks provide greater returns to society as more people wear them</b>.
+      Da bismo sasvim zaustavili širenje, moramo doći na dno ovog brda.
+      U svakom zlu ima i dobra: što više ljudi nosi maske, brdo je strmije.
+      To znači da <b>make doprinose sve veću dobit društvu što ih više ljudi nosi</b>.
     </p>
 
     <p>
-      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
-      This is how masks can end an epidemic.
-      But masks can only end an epidemic if enough people wear them.
+      Ako dovoljno ljudi nosi maske, možemo doći do dna brda, gde je šansa infekcije skoro 0.
+      Ovako maske mogu okončati epidemiju.
+      Ali maske mogu okončati epidemiju samo ako ih dovoljno ljudi nosi.
     </p>
 
     <p>
-      You might wonder how many people have to wear masks to end an epidemic.
-      Well, that depends on how effective the masks are.
+      Možda se pitate koliko ljudi moraju da nose maske da bi se završila epidemija.
+      To zavisi od toga koliko su maske efektivne.
     </p>
 
     <p>
-      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
-      But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
+      Ako se igrate sa grafikom iznad, videćete da ako bi maske bile 50% efektivne, trebalo bi da ih otprilike tri četvrtine populacije nosi da se zaustavi širenje koronavirusa.
+      Ali ako su maske 75% efektivne, bilo bi dovoljno da ih pola populacije nosi da bi se zaustavilo širenje.
     </p>
 
     <p>
-      <b>The more effective the mask, the faster we can descend the hill.</b>
-      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      <b>Što je efektivnija maska, to brže možemo da se spustimo niz brdo.</b>
+      Zato je bitno nositi masku koja <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">prijanja uz lice i pokriva usta <i>i</i> nos</a>, i koja je pravljena od materijala koji je dobar za filtraciju.
     </p>
 
     <p>
-      We all want to get to the bottom of the hill and stop the spread of COVID-19.
-      But you can't get there by yourself.
-      Each person can only take a tiny step downwards.
+      Svi želimo da dođemo na dno brda i zaustavimo širenje koronavirusa.
+      Ali ne možeš dostići taj cilj sam.
+      Svaka osoba može napraviti malecni korak nadole.
     </p>
 
-    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+    <p>Ipak, kada mnogo ljudi napravi takav malecni korak, zajedno, možemo napraviti ogroman skok nadole.</p>
 
-    <p>Together, we can get to the bottom of the hill.</p>
+    <p>Zajedno možemo doći do  dna brda.</p>
     
-    <p>Together, we can hit the brakes on COVID-19.</p>
+    <p>Zajedno možemo zaustaviti COVID-19.</p>
 
   </div>
 
