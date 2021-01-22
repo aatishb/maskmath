@@ -206,61 +206,61 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>Od pojedinaca do populacije</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      Za sada smo samo razgovarali o prenosu bolesti između dve osobe.
+      Kako da odatle pređemo na razumevanje prenosa bolesti u <i>celokupnoj populaciji</i>?
     </p> 
 
-    <p>Well, in the extreme limits, this is straightforward.</p> 
+    <p>Najlakše je doći do zaključka za ekstreme.</p> 
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      Na primer, ako <b>niko</b> ne bi nosio masku, onda bi verovatnoća da kada god se dve osobe sretnu <span class="red">nikoja ne nosi masku</span> bila 100%.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      U tom slučaju, morali bismo da razmatramo samo <span class="red">prvi način prenosa bolesti</span>, tako da u populaciji <span class="red">ne bi bilo pada</span> u prenosu bolesti.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      U drugom ekstremu imamo situaciju kada bi <b>svi</b> ljudi nosili maske. Tada bi kad god se dve osobe sretnu, verovatnoća da <span class="yellow">obe nose masku</span> bila 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      U ovom slučaju, trebalo bi samo razmotriti <span class="yellow">četvrti način prenosa bolesti</span>.
+      Pod pretpostavkom da je maska 50% efektivna u svakom smeru, u populaciji bi bilo <span class="yellow">75% manje</span> prenosa bolesti.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Dakle, kada <i>svako</i> nosi masku (ili kada je <i>niko</i> ne nosi), lako je izračunati za koliko će prenos bolesti opasti u populaciji, jer je u račun uključen samo jedan način prenosa.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      U realnosti, pak, neki ljudi nose maske, a neki ne.
+      To znači da se virus može prenositi kroz mešavinu sva četiri načina.
+      Kolika je verovatnoća kog načina prenosa zavisi od toga koliko ljudi nosi maske.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>Procenat populacije koji nosi maske: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      Na primer, <b>ako 50% ljudi nosi maske</b>, kad god se dve nasumične osobe sretnu, verovatnoća da <span class="yellow">obe nose masku</span> je 50% ⨉ 50%, tj. 25%.
+      Na sličan način se može izračunati verovatnoća za druge puteve prenosa.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Kada tačno pola populacije nosi maske, ispostavlja se da je svaki način prenosa jednako verovatan.
+      (Možete li dokazati sebi zašto ovo mora biti tačno?)
     </p>
 
   </div>
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Način prenosa bolesti</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Pad u prenosu bolesti</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Verovatnoća da se bolest prenese na ovaj način</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Četiri načina na koje se COVID-19 može preneti s osobe na osobu, pod pretpostavkom da 50% ljudi nosi 50% efektivnu masku.
       </div>
 
     </div>
@@ -306,18 +306,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Sada možemo izračunati koliko <b>prosečno opadne prenos bolesti u populaciji</b>.
+      Pošto smo podesili parametre tako da je svaki način prenosa bolesti jednako verovatan, dovoljno je da izračunamo prosek vrednosti <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> i <span class="yellow">75%</span>, što je 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Ljudi koji <i>ne nose</i> maske se inficiraju na prva dva načina, koja su podjednako verovatna kada pola populacije nosi maske.
+      Pad u prenosu bolesti onima koji ne nose maske je prosek od <span class="red">0%</span> i <span class="orange">50%</span>, što je 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Istovremeno, ljudi koji<i>nose</i> maske se inficiraju na druga dva načina.
+      Pad u prenosu bolesti ljudima koji nose maske je prosek od <span class="orange">50%</span> i <span class="yellow">75%</span>, što je 62.5%.
     </p>
 
   </div>
@@ -325,12 +325,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Prosečan pad u prenosu bolesti = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Pad u prenosu bolesti onima koji <b>ne nose maske</b> = 25%</div>
+        <div class="splash">Pad u prenosu bolesti onima koji <b>nose maske</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Pod pretpostavkom da 50% ljudi nosi 50% efektivne maske.)
       </div>
     </div>
   </div>
@@ -338,13 +338,13 @@
   <div class="container">
 
     <p>
-      So even non-mask wearers get a modest benefit, because the air they inhale is often mediated by <i>other people’s</i> masks.
-      But mask-wearers benefit much more, thanks to the added protection their masks provide.
+      Dakle, čak i oni koji ne nose maske imaju solidnu korist od ovakve situacije jer je vazduh koji udišu često manje zarazan zahvaljujući <i>tuđim</i> maskama.
+      Ali nosioci maski imaju mnogo veću korist zahvaljujući dodatnoj zaštiti koju dobijaju od sopstvene maske.
     </p>
 
-    <p>And since the population consists of both mask-wearers and non-mask wearers, the average benefit lies in between the benefit to these two groups.</p>
+    <p>Pošto se populacija sastoji od ljudi koji nose i ne nose maske, prosečna korist je negde između ove dve vrednosti.</p>
 
-    <p>So in this simplified example (where 50% of people wear 50% effective masks) we’ve worked out how to go from the <b>benefit that masks offer an <i>individual</i></b> to the <b>average benefit that masks offer a <i>population</i>.</b></p>
+    <p>U našem pojednostavljenom primeru (gde 50% ljudi nosi 50% efektivne maske) shvatili smo kako na osnovu <b>koristi koju od maske imaju <i>pojedinci</i></b> da dobijemo <b>prosečnu korist koju maske donose <i>populaciji</i>.</b></p>
 
     <h2>Maskology</h2>
 
