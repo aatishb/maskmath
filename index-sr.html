@@ -456,49 +456,49 @@
       Zapravo, maske su još efektivnije nego što ovi brojevi sugerišu.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Kako zaustaviti epidemiju</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      Možeš da ugasiš požar uskraćujući vatri kiseonik.
+      Ali ne moraš se otarasiti svog kiseonika, dovoljno je smanjiti dotok istog dovoljno da se spreči rast vatre.
+      Isto je i sa epidemijom — ne mora se smanjiti prenos bolesti za 100%. 
+      Ako ga smanjimo dovoljno da zaustavimo širenje virusa, možemo ugasiti epidemiju.
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Verovatno ste čuli za epidemiološki termin R0.
+      To je <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">broj ljudi koje zarazna osoba može da inficira</a> u populaciji koja nema nikakav imunitet na tu bolest od ranije.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>Kada je R0 preko 1, bolest će se širiti eksponencijalno dok ili ne vakcinišemo dovoljno ljudi ili se dovoljno ljudi ne razboli i razvije tim putem imunitet na virus.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Ali, kao što Ed Jong (eng. <i>Ed Yong</i>) piše za "Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 nije sudbina"</a>.
+      R0 je proizvod dva broja: prosečnog broja osoba koje zarazna osoba sretne i verovatnoće da se desi infekcija prilikom tog kontakta.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">prosečan broj osoba koje zarazna osoba sretne</span> <br>⨉ <span class="dotted">verovatnoća da se desi infekcija prilikom tog kontakta</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      Fizičko distanciranje, karantiniranje, i mere zabrane kretanja mogu da smanje <span class="dashed">prvi broj</span>.
+      Maske smanjuju <span class="dotted">drugi broj</span>.
+      Cilj svih ovih strategija javnog zdravlja je da se epidemija dovede pod kontrolu tako što smanjimo R0 ispod 1.
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Sa ovim na umu, izvedimo uticaj maski na R0.
+      Grafik ispod prikazuje kako R0 varira u odnosu na porast procenta populacije koji nosi maske.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Prvi slajder možete koristiti za menjanje R0, koji je za COVID-19 između 2 i 3 (u odsustvu bilo kakvih mera javnog zdravlja kao što su fizičko distanciranje, koje mogu smanjiti R0).
+      Menjanjem efektivnosti masaka, možete videti kako maske mogu pomoći u dovođenje epidemije pod kontrolu.
     </p>
 
   </div>
@@ -512,12 +512,12 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -535,30 +535,30 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      Da bismo zaustavili širenje COVID-19, moramo održati R0 ispod 1.
+      Kada se ovo desi, u proseku, zarazna osoba će inficirati manje od jedne osobe, što će zaustaviti epidemiju.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Dakle, koliko ljudi mora da nosi 50% efektivnu masku da bismo zaustavili širenje COVID-19?
+      Šta ako su maske 75% efektivne?
+      Ili 90% efektivne?
+      Ovaj interaktivni grafik može ti dati odgovore na ova pitanja.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">Bitna napomena: ljudi obično ne interaguju nasumično. 
+        <span v-if="!expandaside2"> (Klikni da vidiš)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Ljudi koji nose maske češće interaguju sa drugim ljudima s maskama, a ređe sa onima koji ne nose maske.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        Slično, ljudi koji ne nose maske možda žive u krugovima gde je procenat populacije koji nosi maske manji od prosečnog.
+        Ova tendencija da se interaguje sa onima koji imaju slične preference <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">smanjuje zaštitnu moć maski</a> jer <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">ljudi koji ne nose maske zbog toga imaju manju prosečnu korist od činjenice da drugi nose maske, jer će u proseku biti u manje takvih interakcija</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Kao što autori <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">Dejvid Fisman (eng. <i>David Fisman</i>), Ejmi Grir (eng. <i>Amy Greer</i>), i Ešli Tut (eng. <i>Ashleigh Tuite</i>)</a> pišu u svojoj analizi, "uticaj maski i ostalih zaštita za lice u smanjenju prenosa COVID-19 će verovatno biti najveći ako se pažnja obrati na obezbeđivanje maski populacijama u nepovoljnom položaju".
       </span>
     </aside>
 
