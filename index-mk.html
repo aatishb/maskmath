@@ -100,56 +100,56 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Заразена личност" susceptibleperson="Личност подложна на зараза"><span class="red">Прв начин на пренесување:</span> Кога заразената личност е близу друга личност, нејзиниот 'спреј' може да ја шири болеста.</anim-with-caption>
 
   <div class="container">
 
-    <p>Masks reduce the mouth spray traveling between people — by blocking or by redirecting the spray — thereby reducing the chance of infection.</p>
+    <p>Маските ја намалуваат количината на спрејот што патува меѓу две личности, затоа што му го попречуваат или менуваат патот, и така го намалуваат ризикот за заразување.</p>
 
     <p>
-      It's worth keeping in mind that no mask is perfect.
-      Even the N95 masks recommended for health workers are only guaranteed to block <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% of the hardest-to-block particles</a> (and that’s only if you <a href="https://www.n95decon.org/publications">wear them correctly</a>).
+      Имајте на памет дека ниедна маска не е совршена.
+      Дури и маските N95, кои се препорачани за здравствените работници, блокиррат само <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% од најпреносливите честички</a> (и тоа само доколку <a href="https://www.n95decon.org/publications">ги носиме како што треба</a>).
     </p>
 
     <p>
-      Masks don't guarantee safety, they reduce risk.
-      This is a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
-      Like umbrellas, masks only work if you use them correctly.
-      But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
+      Маските не се гаранција за безбедност, тие само го намалуваат ризикот.
+      Ова е исто како носењето користењето чадор на дожд кое не е гаранција дека нема да нè наврне, но сепак го намалува ризикот да бидеме мокри.
+      Исто како и чадорите, и маските работат само доколку правилно ги користиме.
+      Но за разлика од чадорите, кои ги штитат само луѓето што ги носат, маските исто така ги штитат и луѓето <i>околу</i> оние што ги носат.
     </p>
 
     <p>
     </p>
 
-    <h2>Why Masks Protect Us Twice</h2>
+    <h2>Зошто маските се двократна заштита</h2>
 
     <p>
-      Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
+      Да замислиме личност со маска којашто е 50% ефикасна.
+      Ова '50% ефикасна', подразбира дека носењто на таква маска ги намалува шансите за пренос на вирусот кон личност подложна на зараза во близина за пола.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Заразена личност" susceptibleperson="Личност подложна на зараза"><span class="orange">Втор начин на пренесување:</span> Кога заразената личност носи маска којашто е 50% ефикасна, преносот на болеста се намалува за 50%.</anim-with-caption>
 
   <div class="container">
 
-    <p>But what if the susceptible person wears the mask instead?</p>
+    <p>Но што се случува кога личноста подложна на зараза носи маска?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      Ефикасноста на маската главно зависи од тоа дали <b>вдишуваме</b> или <b>издишуваме</b> преку неа.
+      Да почнеме со наједноставна претпоставка, дека маската функционира подеднакво добро во двете насоки.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>Во тој случај, шансите за пренос на болеста исто така се намалуваат за 50%.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Заразена личност" susceptibleperson="Личност подложна на зараза"><span class="orange">Трет начин на пренесување:</span> Кога личност подложна на зараза носи маска којашто е 50% ефикасна, преносот на болеста се намалува за 50%.</anim-with-caption>
   
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p> 
+    <p>А што ако двете личности, заразената <i>и</i> подложната на зараза, носат маски?</p> 
 
     <p>
       Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
@@ -159,17 +159,17 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Заразена личност" susceptibleperson="Личност подложна на зараза"><span class="yellow">Четврти начин на пренесување:</span> Кога двете личности носат маски коишто се 50% ефикасни, преносот на болеста се намалува за 75%.</anim-with-caption>
   
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+      Ако се подзамислиме над ова, нели е изненадувачки дека маска којашто е 50% ефикасна, го намалува ризикот за пренос на блеста за 75%?
+      Ова е така затоа што кога двете личности носат маски, ризикот за пренос на болеста е преполовен два пати.
+      Поради оваа <b>двојна заштита</b> маските работат многу подобро отколку што интуитивно очекуваме.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>Еве ги четирите начини преку коишто болест која се шири низ воздухот може да се пренесе од една на друга личност.</p>
 
   </div>
 
@@ -179,7 +179,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Начин на пренесување</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
