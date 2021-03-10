@@ -169,7 +169,7 @@
       Поради оваа <b>двојна заштита</b> маските работат многу подобро отколку што интуитивно очекуваме.
     </p>
 
-    <p>Еве ги четирите начини преку коишто болест која се шири низ воздухот може да се пренесе од една на друга личност.</p>
+    <p>Еве ги четирите начини преку коишто болест што се шири низ воздухот може да се пренесе од една на друга личност.</p>
 
   </div>
 
@@ -226,24 +226,24 @@
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      Другиот екстремен случај е кога <b>сите</b> носат маска, па кога две личности ќе се сретнат, веројатноста дека <span class="yellow">двете личности носат маска</span> е 100%.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      Во овој случај, единствен начин за пренесување на болеста е <span class="yellow">четвртиот</span>.
+      Ако претпоставиме дека маските се 50% ефикасни во двете насоки, преносот на болеста низ целата популација <span class="yellow">ќе се намали за 75%</span>.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      Значи кога <i>сите</i> носат маска (или кога <i>никој</i> не носи), лесно е да се премета за колку ќе се намали преносот на болеста, бидејќи таа се пренесува на само еден начин.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      Но во пракса, некои луѓе носат маски а некои не носат.
+      Што значи дека вирусот се шири низ комбинација од сите четири начини на пренос.
+      Веројатноста на секој начин на пренос зависи од тоа колку луѓе носат маски.
     </p>
 
     <label class="row half bigsplash">
@@ -254,13 +254,13 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      На пример, <b>доколку 50% од луѓето носат маски</b>, тогаш ако било кои две личности случајно се сретнат, веројатноста дека <span class="yellow">двете личности носат маска</span> е 50% ⋅ 50%, т.е. 25%.
+      На сличен начин може да пресметаме која е веројатноста болеста да се пренесе на останатите три начини.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      Кога точно половина од популацијата носи маски, тогаш сите начини на пренос се подеднакво веројатни.
+      (Сфаќаш зошто е ова така?)
     </p>
 
   </div>
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">Начин на пренесување</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">Намалување на ризикот за пренос</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">Веројатност за пренесување на овој начин</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        Четирите начини на коишто COVID-19 се шири од една кон друга личност, со претпоставка дека 50% од популацијата носи маски кои се 50% ефикасни.
       </div>
 
     </div>
@@ -306,18 +306,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      Сега може да го пресметаме <b>просечното намалување на преносот на болеста во популацијата</b>.
+      Бидејќи сите начини на пренос се подеднакво веројатни, ова е средната вредност од <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> и <span class="yellow">75%</span>, или 43.75%.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      Луѓето кои <i>не носат</i> маски се заразуваат преку првите два начини, кои се подеднакво веројатни кога половина од популацијата носи маски.
+      Така намалувањето на преносот на болеста меѓу оние што не носат маски е средната вредност од <span class="red">0%</span> и <span class="orange">50%</span>, или 25%.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      Во исто време, луѓето кои <i>носат</i> маски се заразуваат преку последните два начини.
+      Па намалувањето на преносот на болеста меѓу оние што носат маски е средната вредност од <span class="orange">50%</span> и <span class="yellow">75%</span>, или 62.5%.
     </p>
 
   </div>
@@ -325,12 +325,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">Просечно намалување на преносот на болеста = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Намалување на преносот на болеста за <b>Non-Mask Wearers</b> = 25%</div>
+        <div class="splash">Намалување на преносот на болеста за <b>Mask-Wearers</b> = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (Претпоставувајќи дека 50% од луѓето носат маски кои се 50% ефикасни.)
       </div>
     </div>
   </div>
