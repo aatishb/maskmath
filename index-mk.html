@@ -535,30 +535,30 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      За COVID-19 да престане да се шири, R0 треба да го доведеме под 1.
+      Кога ова ќе се случи, една заразна личност во просек ќе ја пренесува болеста на помалку од еден човек, и епидемијата ќе почне да забавува сè додека не запре.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      Па колку луѓе треба да носат маски кои се 50% ефикасни за да спречи ширењето на COVID-19?
+      Што ако маските се 75% ефикасни?
+      Или пак 90% ефикасни?
+      Ова може да го пресметаш со интерактивниот график погоре.
     </p>
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
+      <span @click="expandaside2 = true;">Важно предупредување: луѓето не се среќаваат случајно. 
         <span v-if="!expandaside2"> (Click to expand)</span>
       </span>
       
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        Луѓето кои носат маски почесто се среќаваат со други луѓе кои исто така носат маски, а поретко со луѓе кои не носат маски.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        Исто така, луѓето кои не носат маски може да живеат во кластери каде маските се користат поретко.
+        Ова групирање помеѓу носачи и неносачи на маски <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ја намалува заштитата што ја пружа носењето маски</a> затоа што <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">луѓето што не носат маски имаат помалку корист од тоа што луѓето во нивна близина носат маски</a>.
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Како што пишуваат <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">Дејвид Фишмен, Ејми Гриир и Ешли Туит</a> во нивната анализа, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
       </span>
     </aside>
 
