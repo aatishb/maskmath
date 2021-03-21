@@ -312,7 +312,7 @@
 
     <p>
       Луѓето кои <i>не носат</i> маски се заразуваат преку првите два начини, кои се подеднакво веројатни кога половина од популацијата носи маски.
-      Така намалувањето на пренесувањето на болеста меѓу оние што не носат маски е средната вредност од <span class="red">0%</span> и <span class="orange">50%</span>, или 25%.
+      Така, пренесувањето на болеста меѓу оние што не носат маски се намалува за средната вредност од <span class="red">0%</span> и <span class="orange">50%</span>, или 25%.
     </p>
 
     <p>
@@ -338,18 +338,18 @@
   <div class="container">
 
     <p>
-      Значи дури и луѓето што не носат маски имаат корист од маските, затоа што воздухот што го вдишуваат е делумно филтриран благодарение на <i>маските кои ги носат други луѓе</i>.
+      Значи дури и луѓето што не носат маски имаат корист од нив, затоа што воздухот што го вдишуваат е делумно филтриран благодарение на <i>маските кои ги носат други луѓе</i>.
       Но луѓето кои носат маски имаат многу поголема корист, благодарение на додатната лична заштита што ја добиваат носејќи ги.
     </p>
 
     <p>Бидејќи во популацијата има и луѓе што носат и луѓе што не носат маски, просечната придобивка од носењето маски е некаде помеѓу придобивката на секоја од овие две групи.</p>
 
-    <p>Во овој едноставен пример (кога 50% од луѓето носат маски кои се 50% ефикасни), научивме да го преметаме <b>просечниот придонес од носењето маски за цела <i>популација</i></b> од <b><i>индивидуалната</i> корист од носење маски</b>.
+    <p>Во овој едноставен пример (кога 50% од луѓето носат маски кои се 50% ефикасни), научивме како од <b><i>индивидуалната</i> корист од носење маски</b>, да го пресметаме <b>просечниот придонес од носењето маски за цела <i>популација</i></b>.
 
     <h2>Маскологија</h2>
 
     <p>
-      Ајде <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">да ја примениме оваа логика</a> за <i>било кој процент</i> на <b>луѓе што носат маски</b> и <b>ефикасност на маските</b>.
+      Ајде <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">да ја примениме оваа логика</a> за <i>било кој процент</i> на <b>луѓе што носат маски</b> и <i>било која ефикаснос</i> <b>ефикасност на маските</b>.
       Поместете ги копчињата за да видете како маските го спречуваат ширењето на болеста.
     </p>
 
@@ -440,12 +440,12 @@
 
       <span v-if="expandaside1">
         Некои N95 маски имаат <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">валва или отвор</a> преку кои воздухот излегува без да биде филтриран.
-        Центарот за превенција и контрола на болести во САД, CDC, <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">препорачува да не се носат</a> вакви маски во јавност, бидејќи ги изложуваат останатите луѓе на ризик.
+        Центарот за превенција и контрола на болести (CDC) во САД, <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">препорачува да не се носат</a> вакви маски во јавност, бидејќи ги изложуваат останатите луѓе на ризик.
         Овие може да го провериш со интерактивната симулација погоре.
         <br><br>
         Прво одбери висока вредност при вдишување и издишување (а вредност за корисници на маски некаде во средината).
         Ова ги претставува маските со голема ефикасност како N95.
-        Сега почни да го поместуваш копчето за ефикасност при издишување кон нула, и набљудувај пренесувањето на болеста се зголемува, особено меѓу луѓето кои не носат маски.
+        Сега почни да го поместуваш копчето за ефикасност при издишување кон нула, и погледни како пренесувањето на болеста се зголемува, особено меѓу луѓето кои не носат маски.
         <br><br>
         Доколку имате некоја од овие маски, СDC препорачува <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">да го покриете отворот</a> со хируршка маска.
       </span>
@@ -453,52 +453,52 @@
 
 
     <p>
-      In fact, masks are even more effective than these numbers suggest.
+      Но маските се дури и поефикасни од она што го пресметавме со симулациите погоре.
     </p>
 
-    <h2>How To Stop An Epidemic</h2>
+    <h2>Како да се запре епидемија</h2>
 
     <p>
-      You put out a fire by starving it of oxygen.
-      But you don't need to get rid of all the oxygen, you only need to reduce it enough to stop the fire from growing.
-      It's the same with an epidemic — you don't need to cut disease transmission by 100%. 
-      If you lower it just enough to stop the disease from spreading, you can extinguish the epidemic.
+      За да се изгаси оган треба да се лиши од кислород.
+      Но не мора целосно да се спречи дотокот на кислород, доволно е само да се намали за да се спречи оганот и понатаму да се разгорува.
+      Истото се случува и со епидемијата - пренесувањето на болеста не мора дас е намали за 100%. 
+      Доколку пренесувањето се намали колку што треба за да се спречи ширењето на болеста, епидемијата ќе стивне.
     </p>
 
     <p>
-      You've probably heard of the epidemiology term R0, pronounced R-nought or R-zero.
-      This is <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">the number of people that a contagious person can infect</a> in a population with no prior immunity to the disease.
+      Сигурно си слушнал за терминот R0 кој го користат епидемиолозите.
+      Ова е <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">бројот на луѓе на коишто една заразена личност ќе ја пренесе болеста</a> во популација која не е претходно имунизирана од болеста.
     </p> 
 
-    <p>When R0 exceeds 1, the disease will grow exponentially until either enough people get vaccinated, or enough people get infected and develop immunity to the disease.</p>
+    <p>Кога R0 е поголемо од 1, пренесувањето на болеста расте експоненцијално сè додека доволно луѓе не се вакцинирани, или сè додека доволно луѓе не се заразат за потоа да се отпорни на болеста.</p>
 
     <p>
-      But, as Ed Yong writes in the Atlantic, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>.
-      R0 is a product of two numbers: the average number of people that a contagious person encounters, and the chance of infection upon contact.
+      Но, како што пишува Ед Јанг за Атлантик, <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 не е судбина"</a>.
+      R0 е производ на два броја: просечниот број на луѓе со кои се среќава една заразна личност и веројатноста за пренесување на болеста при контакт со заразна личност.
     </p>
 
   </div>
 
   <div class="graphic">
-      <div class="splash">R0 = <span class="dashed">average number of people that a contagious person encounters</span> <br>⨉ <span class="dotted">chance of infection upon contact</span></div>
+      <div class="splash">R0 = <span class="dashed">просечен број на луѓе со кои се среќава една заразна личност</span> <br>⨉ <span class="dotted">веројатност за пренесување на болеста при контакт со заразна личност</span></div>
   </div>
   
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      Држење дистанца, карантин и изолација ја намалуваат <span class="dashed">првата вредност</span>.
+      А маските ја намалуваат <span class="dotted">втората вредност</span>.
+      Целта на сите здравствени мерки е да се доведе епидемијата под контрола со тоа што R0 ќе се намали под 1.
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      Земајќи го ова во предвид, да го претставиме влијанието на маските на друг начин, преку тоа како влијаат на R0.
+      Графикот подолу покажува како R0 се менува кога носењето на маски се зголемува.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      Со првото копче може да ја менуваш вредноста на R0, која е помеѓу 2 и 3 за COVID-19 (доколку не се превземени никакви јавни здравствени мерки како што се држење дистанца, карантин и изолација, кои додатно го намалуваат R0.)
+      Ако ја менуваш ефикасноста на маските, ќе видиш како тие помагаат да се доведе епидемијата под контрола.
     </p>
 
   </div>
@@ -512,21 +512,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Ефикаснос при издишување: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Ефикасност при вдишување: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout(
-        'How Masks Reduce R0',
-        'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
-        'Epidemic Under Control',
-        'Epidemic Out Of Control'
+        'Како маските го намалуваат R0',
+        'Процент на луѓе кои носат маски',
+        '# на луѓе заразени од една заразна личност(R0)',
+        'Епидемија под контрола',
+        'Епидемија вон контрола'
       )" :config="config"></graph>
 
     </div>
