@@ -461,7 +461,7 @@
     <p>
       За да се изгаси оган треба да се лиши од кислород.
       Но не мора целосно да се спречи дотокот на кислород, доволно е само да се намали за да се спречи оганот и понатаму да се разгорува.
-      Истото се случува и со епидемијата - пренесувањето на болеста не мора дас е намали за 100%. 
+      Истото се случува и со епидемијата - пренесувањето на болеста не мора да се намали за 100%. 
       Доколку пренесувањето се намали колку што треба за да се спречи ширењето на болеста, епидемијата ќе стивне.
     </p>
 
@@ -497,7 +497,7 @@
     </p>
 
     <p>
-      Со првото копче може да ја менуваш вредноста на R0, која е помеѓу 2 и 3 за COVID-19 (доколку не се превземени никакви јавни здравствени мерки како што се држење дистанца, карантин и изолација, кои додатно го намалуваат R0.)
+      Со првото копче може да ја менуваш вредноста на R0, која е помеѓу 2 и 3 за COVID-19 (доколку не се превземени никакви јавни здравствени мерки како што се држење дистанца, карантин и изолација, кои додатно го намалуваат R0).
       Ако ја менуваш ефикасноста на маските, ќе видиш како тие помагаат да се доведе епидемијата под контрола.
     </p>
 
@@ -512,7 +512,7 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Ефикаснос при издишување: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Ефикасност при издишување: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
@@ -525,8 +525,8 @@
         'Како маските го намалуваат R0',
         'Процент на луѓе кои носат маски',
         '# на луѓе заразени од една заразна личност(R0)',
-        'Епидемија под контрола',
-        'Епидемија вон контрола'
+        'Епидемијата е под контрола',
+        'Епидемијата е вон контрола'
       )" :config="config"></graph>
 
     </div>
@@ -549,7 +549,7 @@
     <aside>
 
       <span @click="expandaside2 = true;">Важно предупредување: луѓето не се среќаваат случајно. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+        <span v-if="!expandaside2"> (Кликнете овде)</span>
       </span>
       
       <span v-if="expandaside2">
@@ -558,29 +558,29 @@
         Исто така, луѓето кои не носат маски може да живеат во кластери каде маските се користат поретко.
         Ова групирање помеѓу носачи и неносачи на маски <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">ја намалува заштитата што ја пружа носењето маски</a> затоа што <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">луѓето што не носат маски имаат помалку корист од тоа што луѓето во нивна близина носат маски</a>.
         <br/><br/>
-        Како што пишуваат <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">Дејвид Фишмен, Ејми Гриир и Ешли Туит</a> во нивната анализа, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        Како што пишуваат <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">Дејвид Фишмен, Ејми Гриир и Ешли Туит</a> во нивната анализа, "придонесот од носењето маски кон намалувањето на пренесувањето на COVID-19 најверојтано ќе биде најголем доколку се се потрудиме да најранливите популации имаат маски на располагање."
       </span>
     </aside>
 
     <h2>The Human Cost</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      Нашето разбирање може да го однесеме чекор понатаму доколку ја изразиме моќта на маските со човечна терминологија by expressing the power of masks in more human terms.
+      Маските спасуваат животи со тоа што го намалуваат ризикот за пренесување на болеста, што пак го намалува ширењето на епидемијата.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      Колку повеќе луѓе носат мски, толку повеќе се намалува R0.
+      А како што R0 се намалува, така се намалува и бројот на заболени.
+      Значи за појасна претстава наместо да го гледаме R0, може да го гледаме <b>процентот на заболени </b> во популацијата.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      Благодарение на широко распространетиот математички <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR модел</a> кој го користат епидемиолозите, може да го поврземе R0 со процентот на луѓе кои ќе бидат заразени.
+      (Ако сакаш да научиш повеќе за SIR моделите, погледни го ова <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">одлично видео</a>.)
     </p>
     
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>Иако овој модел е видливо упростен, (на пр. претпоставува дека сите луќе се среќаваат по случајност и нема изолација), тој сепак ни дава груба претстава за тоа колку луѓе ќе не чини неносењето маски.</p>
 
   </div>
 
@@ -593,21 +593,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>Ефикасност на маските при издишување: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>Ефикасност на маските при вдишување: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces(
         '% Infected'
         )" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        'Како маските го намалуваат бројот на заболени',
+        'Процент на луѓе кои носат маски',
+        'Процент на луѓе кои ќе заболат'
       )" :config="config"></graph>
 
     </div>
@@ -616,54 +616,54 @@
   <div class="container">
 
     <p>
-      This hill-shaped curve shows us how masks influence the size of an epidemic.
-      <b>As more people wear masks, the number of infections plummet.</b>
+      Оваа линија во форма на ридче ни покажува како маските влијаат на ширењето на епидемијата.
+      <b>Колку повеќе луѓе носат маски, толку повеќе опаѓа бројот на заболени.</b>
     </p>
 
     <p>
-      When very few people wear masks, we're at the top of the hill, and most people will eventually get infected.
-      But every step to the right moves us further down.
-      So even partially effective masks, when partially adopted, can help reduce the spread of COVID-19.
+      Ако само неколку луѓе носат маски, ќе бидеме на врвот од ридчето и најголемиот дел од луѓето со тек на време ќе се заразат.
+      Но секој чекор на десно од ридѓето не носи малку пониско.
+      Па дури и делумно ефикасни маски кои ги носи само дел од популацијата, помагаат за да се спречи ширењето на COVID-19.
     </p>
 
     <p>
-      To completely stop the spread, we need to get to the bottom of this hill.
-      But there's a silver lining: as more people wear masks, the hill grows steeper.
-      Which means <b>masks provide greater returns to society as more people wear them</b>.
+      За целосно да се спречи ширењето, треба да се симнеме на почетокот на ридчето.
+      За среќа, колку повеќе луѓе носат маски, толку е пострмнно ридчето.
+      Што значи дека <b>како што повеќе луѓе носат маски, така нивната корист за целото општество сè повеќе расте</b>.
     </p>
 
     <p>
-      If enough people wear masks, we can reach the bottom of the hill, where the chance of infection is zero.
-      This is how masks can end an epidemic.
-      But masks can only end an epidemic if enough people wear them.
+      Љко доволно луѓе носат маски, може да стигнеме на дното на ридчето, каде шансите за заболување се еднакви на нула.
+      Ете како маските може да стават крај на епидемијата.
+      Но ова ќе се случи само доколку доволно луѓе ги носат.
     </p>
 
     <p>
-      You might wonder how many people have to wear masks to end an epidemic.
-      Well, that depends on how effective the masks are.
+      Можеби се прашуваш колку луѓе треба да носат маски за да заврши епидемијата.
+      Ова зависи од тоа колку се ефикасни маските.
     </p>
 
     <p>
-      By playing with interactive above, you'll see that if masks were 50% effective, we'd need roughly three-quarters of the population to wear them to stop the spread of COVID-19.
-      But if masks were 75% effective, we'd only need half the population to wear them to stop the spread.
+      Ако си поиграш со интерактивниот график погоре ќе видиш дека доколку маските се 50% ефикасни, треба отрпилика три четвртини од популацијата да ги носи за да се спречи ширењето на COVID-19.
+      Но ако маските се 75% ефикасни, доволно е само половина од популацијата да ги носи за да се спречи ширењето на болеста.
     </p>
 
     <p>
-      <b>The more effective the mask, the faster we can descend the hill.</b>
-      That's why it's important to wear a mask that <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">tightly seals your mouth <i>and</i> nose</a>, and is made from an effective filtering material.
+      <b>Колку се маските поефикасни, толку побрзо ќе се симнеме од ридчето.</b>
+      Затоа е многу важно да носиме маски кои <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">целосно ги покриваат устата <i>и</i> носот</a>, и кои се направени од материјал што добро го филтрира воздухот.
     </p>
 
     <p>
-      We all want to get to the bottom of the hill and stop the spread of COVID-19.
-      But you can't get there by yourself.
-      Each person can only take a tiny step downwards.
+      Сите сакаме да се симнеме од ова ридче и да го спречиме ширењето на COVID-19.
+      Но ова нема да го постигнеме секој сам.
+      Секој од нас може само да даде еден мал чекор надоле.
     </p>
 
-    <p>However, when many people take this small step, together, we take a giant leap down the hill.</p>
+    <p>Но доколку доволно луѓе го направат овој чекор, заедно ќе направиме огромен скок надоле.</p>
 
-    <p>Together, we can get to the bottom of the hill.</p>
+    <p>Заедно, ќе стигнеме на дното од овој рид.</p>
     
-    <p>Together, we can hit the brakes on COVID-19.</p>
+    <p>Заедно, ќе го запреме COVID-19.</p>
 
   </div>
 
@@ -677,16 +677,16 @@
   <div class="container">
     <h2>Credits & References</h2>
 
-    <p>This essay was created by <a href="https://twitter.com/aatishb">Aatish Bhatia</a> in collaboration with <a href="https://twitter.com/minutephysics">Henry Reich</a>.</p>
+    <p>Овој есеј е направен од <a href="https://twitter.com/aatishb">Атиш Батја</a> во соработка со <a href="https://twitter.com/minutephysics">Хенри Рајх</a>.</p>
 
-    <p>Check out our <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">companion video</a> for a snappy visual take on the math of masks! The video was supported by the <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>. Here's the <a href="https://aatishb.com/maskmath/calculator.html">mask math calculator</a> shown in the video.</p>
+    <p>Погледнете го нашето <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">видео</a> со прекрасна визуализација на математиката со маски! Видеото е спонзорирано од <a href="https://www.hsfoundation.org/">Фондацијата Хајзинг-Симонс</a>. За дигитронот за маски во видеото <a href="https://aatishb.com/maskmath/calculator.html">кликнете овде</a> shown.</p>
 
     <p>
-      Many thanks to <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> for their helpful feedback on drafts of this essay.
+      Огромна благодарност до <a href="https://twitter.com/roy_upasana">Упасана Рој</a>, <a href="https://twitter.com/PrakashLab">Ману Пракаш</a>, <a href="https://twitter.com/DFisman">Дејвид Фишмен</a>, <a href="https://twitter.com/MonicaGandhi9">Моника Ганди</a>, and <a href="https://this-vijay.github.io/">Виџеј Рамикумар</a> за коментарите на првата верзија од овој есеј.
     </p>
 
     <p>
-      If you found this essay valuable and would like to see more work like this in future, you can <b><a href="https://www.patreon.com/aatishb">support my work on Patreon</a></b>.
+      Доколку есејов ви се допадна и сакате да има повеќе вакви есеи во иднина, <b><a href="https://www.patreon.com/aatishb">може да ме поддржите на Patreon</a></b>.
     </p>
 
     <p>
