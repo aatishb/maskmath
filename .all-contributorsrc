@@ -205,6 +205,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "kisaragi-hiu",
+      "name": "Kisaragi Hiu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11722318?v=4",
+      "profile": "http://kisaragi-hiu.com",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
