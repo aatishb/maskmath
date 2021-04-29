@@ -100,7 +100,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Prvi način prenosa:</span> Kada je zarazna osoba u blizini podložne osobe, njihov "sprej iz usta" može raširiti zarazu.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Zarazna osoba" susceptibleperson="Podložna osoba"><span class="red">Prvi način prenosa:</span> Kada je zarazna osoba u blizini podložne osobe, njihov "sprej iz usta" može raširiti zarazu.</anim-with-caption>
 
   <div class="container">
 
@@ -130,7 +130,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Drugi način prenosa:</span> Kada zarazna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Zarazna osoba" susceptibleperson="Podložna osoba"><span class="orange">Drugi način prenosa:</span> Kada zarazna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
 
   <div class="container">
 
@@ -145,7 +145,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Treći način prenosa:</span> Kada podložna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Zarazna osoba" susceptibleperson="Podložna osoba"><span class="orange">Treći način prenosa:</span> Kada podložna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
   
   <div class="container">
 
@@ -159,7 +159,7 @@
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Četvrti način prenosa:</span> Kada obe osobe nose 50% efektivne maske, prenos bolesti se smanji za 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Zarazna osoba" susceptibleperson="Podložna osoba"><span class="yellow">Četvrti način prenosa:</span> Kada obe osobe nose 50% efektivne maske, prenos bolesti se smanji za 75%.</anim-with-caption>
   
   <div class="container">
 
@@ -523,7 +523,7 @@
       <graph :traces="graph2Traces" :layout="graph2Layout(
         'How Masks Reduce R0',
         'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
+        '# People a Zarazna osoba Infects (R0)',
         'Epidemic Under Control',
         'Epidemic Out Of Control'
       )" :config="config"></graph>
