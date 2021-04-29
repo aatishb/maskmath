@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html lang="sr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Multiplikativna moć maski</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An Explorable Essay on How Masks Can End COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Masks Work Better Than You Think: An Interactive Essay">
+  <meta name="twitter:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Why Masks Work Better Than You Think: An Interactive Essay" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Even partly-effective masks can stop the spread of COVID-19, so long as enough people wear them." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>Multiplikativna moć maski</h1>
+        <h3>Interaktivni esej o tome kako nam maske mogu pomoći da okončamo COVID-19 pandemiju</h3>
+        <h4>priredili <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      <a href="https://www.preprints.org/manuscript/202004.0203/v1">Sada</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">znamo</a> <a href="https://science.sciencemag.org/content/368/6498/1422">da</a> maske imaju ogroman efekat na usporavanje širenja bolesti COVID-19.
+      Ali ipak su neki ljudi protiv nošenja maski jer to vide kao lični izbor, a ne pitanje javnog zdravlja.
+    </p>
+
+    <p>
+      Ovakav stav zanemaruje širu sliku jer <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">maske štite nosioca <i>i</i> ljude oko njega</a>.
+      Ovakva <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">dvosmerna zaštita</a> znači da je široko rasprostranjeno nošenje maski moćan način za gašenje epidemije.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      Ako odradimo računicu, videćemo da ako 60% ljudi nosi maske koje su 60% efektivne, širenje bolesti može pasti za do 60% - otprilike potreban procenat za zaustavljanje širenja koronavirusa.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Pogledajte prateći video: <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Zašto maske rade BOLJE nego što biste pomislili <br /> (eng. <i>Why Masks Work BETTER Than You'd Think</i>)</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Kako se virus prenosi kroz vazduh</h2>
+
+    <p>
+      Hajde za početak da steknemo osećaj za opseg kome neke brojke pripadaju.
+      Kada osoba izdahne, <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">izbaci čestice pljuvačke</a> različitih sitnih veličina.
+      Ako su zarazni, ovaj "sprej iz usta" je pun virusnih čestica.
+      Ovakav <a href="https://arxiv.org/pdf/2005.10988.pdf">sprej pljuvačke pun virusa</a> je glavni način na koji se COVID-19 širi.
+    </p>
+
+    <p>Kada zarazna osoba diše, izbaci otprilike <b>hiljadu</b> virusnih čestica u minuti.</p>
+
+    <p>Kada priča, izbaci otprilike <b>deset hiljada</b> virusnih čestica u minuti.</p>
+
+    <p>Kada kašlje, izbaci otprilike <b>sto hiljada</b> virusnih čestica.</p>
+
+    <p>A kada kine, izbaci otprilike <b>milion</b> virusnih čestica.</p>
+
+    <p>
+      Što više virusnih čestica pređe od osobe do osobe, to su veće šanse za infekciju.
+      (I, ako se inficiraju, ljudi koji su izloženi većem broju virusnih čestica uobičajeno imaju <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">znatno gore simptome</a>.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Prvi način prenosa:</span> Kada je zarazna osoba u blizini podložne osobe, njihov "sprej iz usta" može raširiti zarazu.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Maske smanjuju količinu spreja iz usta koji putuje između ljudi tako što ga blokiraju ili skreću, te tako smanjuju šansu infekcije.</p>
+
+    <p>
+      Bitno je napomenuti da nijedna maska nije savršena.
+      Čak i N95 maske koje su preporučene za zdravstvene radnike garantuju da će blokirati samo <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% čestica koje su teške za blokiranje</a> (i to samo pod uslovom da <a href="https://www.n95decon.org/publications">se nose pravilno</a>).
+    </p>
+
+    <p>
+      Maske ne garantuju bezbednost, već smanjuju rizik.
+      Može se reći da je ovo slično načinu na koji kišobran ne garantuje da će osoba ostati suva, ali smanjuje šanse da će se nakvasiti.
+      Kao i kišobrani, maske rade samo ako se koriste pravilno.
+      Analogija tu staje, jer nasuprot kišobranima koji štite samo one koji ih koriste, maske štite i ljude <i>u blizini</i> nosioca.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>Zašto nas maske štite duplo</h2>
+
+    <p>
+      Zamislimo da zarazna osoba nosi 50% efektivnu masku.
+      Pod time da je maska "50% efektivna" želim da kažem da ova maska upola smanjuje šansu da će nosilac zaraziti podložnu osobu u blizini.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Drugi način prenosa:</span> Kada zarazna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
+
+  <div class="container">
+
+    <p>A šta ako je podložna osoba ta koja nosi masku?</p>
+
+    <p>
+      Uopšteno, efektivnost maske zavisi od toga da li <b>udišemo</b> ili <b>izdišemo</b> kroz nju.
+      Za sad, hajde da pojednostavimo stvari tako što ćemo pretpostaviti da je ova maska podjednako efikasna u oba smera.
+    </p>
+
+    <p>U tom slučaju, šansa za infekciju ovim putem takođe opada za 50%.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Treći način prenosa:</span> Kada podložna osoba nosi 50% efektivnu masku, prenos bolesti se smanji za 50%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>Šta ako i zarazna <i>i</i> podložna osoba nose masku?</p> 
+
+    <p>
+      Prva maska upola smanjuje verovatnoću druge infekcije, a druga maska takođe upola smanjuje verovatnoću infekcije.
+      Dakle, kada <i>obe</i> osobe nose maske, verovatnoća infekcije je pola od pola, tj. 25% (u poređenju sa situacijom kad niko ne nosi masku).
+      To znači da je verovatnoća da se podložna osoba zarazi za 75% manja nego bez maski.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Četvrti način prenosa:</span> Kada obe osobe nose 50% efektivne maske, prenos bolesti se smanji za 75%.</anim-with-caption>
+  
+  <div class="container">
+
+    <p>
+      Naizgled je iznenađujuće što maske sa 50% efektivnosti mogu da smanje rizik od infekcije za 75%.
+      Ovo je moguće jer kad obe osobe nose maske, verovatnoća infekcije se dvaput prepolovljuje.
+      Ova <b>dvostruka zaštita</b> čini da maske budu mnogo efektivnije nego što biste možda intuitivno očekivali.
+    </p>
+
+    <p>Slede sva četiri nabrojana načina na koji se vazdušno prenosiva zaraza može preneti s osobe na osobu.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Prvi način prenosa</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Smanjenje prenosa bolesti</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Četiri načina na koje se COVID-19 može preneti s osobe na osobu. Ovde je pretpostavljeno da je maska 50% efektivna.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>Od pojedinaca do populacije</h2>
+
+    <p>
+      Za sada smo samo razgovarali o prenosu bolesti između dve osobe.
+      Kako da odatle pređemo na razumevanje prenosa bolesti u <i>celokupnoj populaciji</i>?
+    </p> 
+
+    <p>Najlakše je doći do zaključka za ekstreme.</p> 
+
+    <p>
+      Na primer, ako <b>niko</b> ne bi nosio masku, onda bi verovatnoća da kada god se dve osobe sretnu <span class="red">nikoja ne nosi masku</span> bila 100%.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      U tom slučaju, morali bismo da razmatramo samo <span class="red">prvi način prenosa bolesti</span>, tako da u populaciji <span class="red">ne bi bilo pada</span> u prenosu bolesti.
+    </p>
+
+    <p>
+      U drugom ekstremu imamo situaciju kada bi <b>svi</b> ljudi nosili maske. Tada bi kad god se dve osobe sretnu, verovatnoća da <span class="yellow">obe nose masku</span> bila 100%.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      U ovom slučaju, trebalo bi samo razmotriti <span class="yellow">četvrti način prenosa bolesti</span>.
+      Pod pretpostavkom da je maska 50% efektivna u svakom smeru, u populaciji bi bilo <span class="yellow">75% manje</span> prenosa bolesti.
+    </p>
+
+    <p>
+      Dakle, kada <i>svako</i> nosi masku (ili kada je <i>niko</i> ne nosi), lako je izračunati za koliko će prenos bolesti opasti u populaciji, jer je u račun uključen samo jedan način prenosa.
+    </p>
+
+    <p>
+      U realnosti, pak, neki ljudi nose maske, a neki ne.
+      To znači da se virus može prenositi kroz mešavinu sva četiri načina.
+      Kolika je verovatnoća kog načina prenosa zavisi od toga koliko ljudi nosi maske.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>Procenat populacije koji nosi maske: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      Na primer, <b>ako 50% ljudi nosi maske</b>, kad god se dve nasumične osobe sretnu, verovatnoća da <span class="yellow">obe nose masku</span> je 50% ⨉ 50%, tj. 25%.
+      Na sličan način se može izračunati verovatnoća za druge puteve prenosa.
+    </p>
+
+    <p>
+      Kada tačno pola populacije nosi maske, ispostavlja se da je svaki način prenosa jednako verovatan.
+      (Možete li dokazati sebi zašto ovo mora biti tačno?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">Način prenosa bolesti</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Pad u prenosu bolesti</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Verovatnoća da se bolest prenese na ovaj način</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        Četiri načina na koje se COVID-19 može preneti s osobe na osobu, pod pretpostavkom da 50% ljudi nosi 50% efektivnu masku.
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Sada možemo izračunati koliko <b>prosečno opadne prenos bolesti u populaciji</b>.
+      Pošto smo podesili parametre tako da je svaki način prenosa bolesti jednako verovatan, dovoljno je da izračunamo prosek vrednosti <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> i <span class="yellow">75%</span>, što je 43.75%.
+    </p>
+
+    <p>
+      Ljudi koji <i>ne nose</i> maske se inficiraju na prva dva načina, koja su podjednako verovatna kada pola populacije nosi maske.
+      Pad u prenosu bolesti onima koji ne nose maske je prosek od <span class="red">0%</span> i <span class="orange">50%</span>, što je 25%.
+    </p>
+
+    <p>
+      Istovremeno, ljudi koji <i>nose</i> maske se inficiraju na druga dva načina.
+      Pad u prenosu bolesti ljudima koji nose maske je prosek od <span class="orange">50%</span> i <span class="yellow">75%</span>, što je 62.5%.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">Prosečan pad u prenosu bolesti = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash">Pad u prenosu bolesti onima koji <b>ne nose maske</b> = 25%</div>
+        <div class="splash">Pad u prenosu bolesti onima koji <b>nose maske</b> = 62.5%</div>
+      </div>
+      <div class="caption">
+        (Pod pretpostavkom da 50% ljudi nosi 50% efektivne maske.)
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Dakle, čak i oni koji ne nose maske imaju solidnu korist od ovakve situacije jer je vazduh koji udišu često manje zarazan zahvaljujući <i>tuđim</i> maskama.
+      Ali nosioci maski imaju mnogo veću korist zahvaljujući dodatnoj zaštiti koju dobijaju od sopstvene maske.
+    </p>
+
+    <p>Pošto se populacija sastoji od ljudi koji nose i ne nose maske, prosečna korist je negde između ove dve vrednosti.</p>
+
+    <p>U našem pojednostavljenom primeru (gde 50% ljudi nosi 50% efektivne maske) shvatili smo kako na osnovu <b>koristi koju od maske imaju <i>pojedinci</i></b> da dobijemo <b>prosečnu korist koju maske donose <i>populaciji</i>.</b></p>
+
+    <h2>Maskologija</h2>
+
+    <p>
+      <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">Primenimo ovu logiku</a> na <i>bilo koju vrednost</i> <b>procenta populacije koji koristi maske</b> i <b>efektivnosti maske</b>. Koristeći klizače ispod, možete videti kako maske regulišu širenje zaraze.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>Procenat populacije koji koristi masku: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">Način prenosa bolesti</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Pad u prenosu bolesti</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">Verovatnoća ovog načina prenosa bolesti</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>Prosečan pad u prenosu bolesti: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Pad u prenosu bolesti onima koji ne nose maske: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>Pad u prenosu bolesti onima koji nose maske: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Šta se dešava sa prenosom bolesti ako 60% ljudi nosi 60% efektivne maske?
+      Ili 90% nosi 50% efektivne maske?
+      Ili 50% nosi 90% efektivne maske?
+      Ovaj interaktivna tabela ti omogućava da dobiješ odgovor na ova pitanja.
+    </p>
+
+    <p>Zaključak: <b>Kada više ljudi nosi maske, svi su bezbedniji.</b></p>
+
+    <p>
+      Filtriranjem vazduha koji udišemo, maske nude direktnu zaštitu onima koji ih nose.
+      Filtriranjem ili skretanjem vazduha koji izdišemo, maske nude indirektnu zaštitu <i>svima</i> — uključujući i ljude koji ne nose maske.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">Šta je sa maskama koje ne filtriraju izdahnut vazduh? 
+        <span v-if="!expandaside1"> (Klikni da vidiš)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        Neke N95 maske dolaze sa <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">ventilima ili otvorima</a> koji ispuštaju vazduh bez filtriranja.
+        Američki Centar za kontrolu i prevenciju bolesti (eng. <i>Center for Disease Control and Prevention, CDC</i>) <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">izdao je preporuke protiv</a> nošenja ovakvih maski u javnosti jer izlažu druge riziku.
+        Možete ovo sami videti u interaktivnoj tabeli iznad.
+        <br><br>
+        Namestite efektivnost izdisanja i udisanja na visoku vrednost (sa procentom populacije koji koristi maske negde u sredini).
+        Ovo je reprezentacija vrlo efektivne maske kao što je N95.
+        Onda prevucite efektivnost izdisanja prema nuli i obratite pažnju kako prenos bolesti raste, pogotovo među ljudima koji ne nose maske.
+        <br><br>
+        Ako već imate ovakvu masku, Centar za kontrolu i prevenciju bolesti preporučuje da <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">prekrijete ventil za izdisaj</a> hirurškom maskom.
+      </span>
+    </aside>
+
+
+    <p>
+      Zapravo, maske su još efektivnije nego što ovi brojevi sugerišu.
+    </p>
+
+    <h2>Kako zaustaviti epidemiju</h2>
+
+    <p>
+      Možeš da ugasiš požar uskraćujući vatri kiseonik.
+      Ali ne moraš se otarasiti svog kiseonika, dovoljno je smanjiti dotok istog dovoljno da se spreči rast vatre.
+      Isto je i sa epidemijom — ne mora se smanjiti prenos bolesti za 100%. 
+      Ako ga smanjimo dovoljno da zaustavimo širenje virusa, možemo ugasiti epidemiju.
+    </p>
+
+    <p>
+      Verovatno ste čuli za epidemiološki termin R0.
+      To je <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">broj ljudi koje zarazna osoba može da inficira</a> u populaciji koja nema nikakav imunitet na tu bolest od ranije.
+    </p> 
+
+    <p>Kada je R0 preko 1, bolest će se širiti eksponencijalno dok ili ne vakcinišemo dovoljno ljudi, ili se dovoljno ljudi ne razboli i razvije tim putem imunitet na virus.</p>
+
+    <p>
+      Ali, kao što Ed Jong (eng. <i>Ed Yong</i>) piše za "Atlantic", <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 nije sudbina"</a>.
+      R0 je proizvod dva broja: prosečnog broja osoba koje zarazna osoba sretne ("susreti") i verovatnoće da se desi infekcija prilikom tog kontakta ("verovatnoća infekcije").
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">susreti</span> <br>⨉ <span class="dotted">verovatnoća infekcije</span></div>
+  </div>
+  
+  <div class="container">
+
+    <p>
+      Fizičko distanciranje, karantiniranje, i mere zabrane kretanja mogu da smanje <span class="dashed">prvi broj</span>.
+      Maske smanjuju <span class="dotted">drugi broj</span>.
+      Cilj svih ovih strategija javnog zdravlja je da se epidemija dovede pod kontrolu tako što smanjimo R0 ispod 1.
+    </p>
+
+    <p>
+      Sa ovim na umu, izvedimo uticaj maski na R0.
+      Grafik ispod prikazuje kako R0 varira u odnosu na porast procenta populacije koji nosi maske.
+    </p>
+
+    <p>
+      Prvi klizač možete koristiti za menjanje R0, koji je za COVID-19 između 2 i 3 (u odsustvu bilo kakvih mera javnog zdravlja kao što su fizičko distanciranje, koje mogu smanjiti R0).
+      Menjanjem efektivnosti masaka, možete videti kako maske mogu pomoći u dovođenje epidemije pod kontrolu.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        'How Masks Reduce R0',
+        'Percentage of People Who Wear Masks',
+        '# People a Contagious Person Infects (R0)',
+        'Epidemic Under Control',
+        'Epidemic Out Of Control'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Da bismo zaustavili širenje COVID-19, moramo održati R0 ispod 1.
+      Kada se ovo desi, u proseku, zarazna osoba će inficirati manje od jedne osobe, što će zaustaviti epidemiju.
+    </p>
+
+    <p>
+      Dakle, koliko ljudi mora da nosi 50% efektivnu masku da bismo zaustavili širenje COVID-19?
+      Šta ako su maske 75% efektivne?
+      Ili 90% efektivne?
+      Ovaj interaktivni grafik može ti dati odgovore na ova pitanja.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">Bitna napomena: ljudi obično ne interaguju nasumično. 
+        <span v-if="!expandaside2"> (Klikni da vidiš)</span>
+      </span>
+      
+      <span v-if="expandaside2">
+        Ljudi koji nose maske češće interaguju sa drugim ljudima s maskama, a ređe sa onima koji ne nose maske.
+        <br/><br/>
+        Slično, ljudi koji ne nose maske možda žive u krugovima gde je procenat populacije koji nosi maske manji od prosečnog.
+        Ova tendencija da se interaguje sa onima koji imaju slične preference <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">smanjuje zaštitnu moć maski</a> jer <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">ljudi koji ne nose maske zbog toga imaju manju prosečnu korist od činjenice da drugi nose maske, jer će u proseku biti u manje takvih interakcija</a>.
+        <br/><br/>
+        Kao što autori <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">Dejvid Fisman, Ejmi Grir, i Ešli Tut (eng. <i>David Fisman, Amy Greer, Ashleigh Tuite</i>)</a> pišu u svojoj analizi, "uticaj maski i ostalih zaštita za lice u smanjenju prenosa COVID-19 će verovatno biti najveći ako se pažnja obrati na obezbeđivanje maski populacijama u nepovoljnom položaju".
+      </span>
+    </aside>
+
+    <h2>Cena po ljude</h2>
+
+    <p>
+      Možemo još bolje da razumemo problem tako što ga izrazimo u terminima ljudi koji ispaštaju.
+      Maske spašavaju živote smanjujući verovatnoću infekcije što onda dalje smanjuje obim i doseg epidemije.
+    </p>
+
+    <p>
+      Što više ljudi nosi maske, to se više R0 smanjuje.
+      Što se R0 više smanjuje, to se više smanjuje ukupan broj ljudi koji će biti inficirani.
+      Možemo dobiti jasnu sliku tako što umesto da vizualizujemo R0, mi vizualizujemo <b>inficirani deo</b> populacije.
+    </p>
+
+    <p>
+      Korišćenjem opšteprihvaćenog matematičkog modela epidemija poznatog kao <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, možemo izvesti vezu R0 i dela populacije koji će kad-tad biti inficiran.
+      (Za više informacija o SIR modelu, preporučujemo ovaj <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">izvaredan video</a>.)
+    </p>
+    
+    <p>Iako je ovaj model prilično pojednostavljenje (npr. pretpostavlja da ljudi nasumično biraju s kim će interagovati i da neće biti mera zabrane kretanja), nudi nam aproksimaciju štete po ljude ako ne nosimo maske masovno.</p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom izdisanja: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>Efektivnost maske prilikom udisanja: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% Infected'
+        )" :layout="graph3Layout(
+        'How Masks Reduce Infections',
+        'Percentage of People Who Wear Masks',
+        'Percentage of People Who Will Be Infected'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Brdolika kriva nam pokazuje kako maske utiču na veličinu epidemije.
+      <b>Što više ljudi nosi maske, to broj infekcija više opada.</b>
+    </p>
+
+    <p>
+      Kada jako malo ljudi nosi maske, na vrhu smo krive i većina ljudi će se kad-tad inficirati.
+      Ali svaki korak nadesno nas spušta još više na dole.
+      Dakle, čak i delimično efektivne maske koje samo deo populacije nosi mogu pomoći da se smanji širenje koronavirusa.
+    </p>
+
+    <p>
+      Da bismo sasvim zaustavili širenje, moramo doći na dno ovog brda.
+      U svakom zlu ima i dobra: što više ljudi nosi maske, brdo je strmije.
+      To znači da <b>make doprinose sve veću dobit društvu što ih više ljudi nosi</b>.
+    </p>
+
+    <p>
+      Ako dovoljno ljudi nosi maske, možemo doći do dna brda, gde je šansa infekcije skoro 0.
+      Ovako maske mogu okončati epidemiju.
+      Ali maske mogu okončati epidemiju samo ako ih dovoljno ljudi nosi.
+    </p>
+
+    <p>
+      Možda se pitate koliko ljudi moraju da nose maske da bi se završila epidemija.
+      To zavisi od toga koliko su maske efektivne.
+    </p>
+
+    <p>
+      Ako se igrate sa grafikom iznad, videćete da ako bi maske bile 50% efektivne, trebalo bi da ih otprilike tri četvrtine populacije nosi da se zaustavi širenje koronavirusa.
+      Ali ako su maske 75% efektivne, bilo bi dovoljno da ih pola populacije nosi da bi se zaustavilo širenje.
+    </p>
+
+    <p>
+      <b>Što je efektivnija maska, to brže možemo da se spustimo niz brdo.</b>
+      Zato je bitno nositi masku koja <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">prijanja uz lice i pokriva usta <i>i</i> nos</a>, i koja je pravljena od materijala koji je dobar za filtraciju.
+    </p>
+
+    <p>
+      Svi želimo da dođemo na dno brda i zaustavimo širenje koronavirusa.
+      Ali ne možeš dostići taj cilj sam.
+      Svaka osoba može napraviti malecni korak nadole.
+    </p>
+
+    <p>Ipak, kada mnogo ljudi napravi takav malecni korak, zajedno, možemo napraviti ogroman skok nadole.</p>
+
+    <p>Zajedno možemo doći do  dna brda.</p>
+    
+    <p>Zajedno možemo zaustaviti COVID-19.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>Zasluge i reference</h2>
+
+    <p>Ovaj esej napravio je <a href="https://twitter.com/aatishb">Aatish Bhatia</a> u saradnji sa <a href="https://twitter.com/minutephysics">Henry Reich</a>. Prevela na srpski <a href="https://github.com/Mentathiel/">Darinka Zobenica</a>.</p>
+
+    <p>Bacite pogled na naš <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">propratni video</a> za kul vizualni prikaz matematike maski! Ovaj video je napravljen uz podršku fondacije <a href="https://www.hsfoundation.org/">"Heising-Simons Foundation"</a>. Evo <a href="https://aatishb.com/maskmath/calculator.html">kalkulatora za matematiku masaka</a> prikazanog u videu.</p>
+
+    <p>
+      Zahvaljujemo se duboko <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, i <a href="https://this-vijay.github.io/">Vijay Ravikumar</a> za deljenje utisaka i mišljenja tokom kreiranja prvih verzija ovog eseja.
+    </p>
+
+    <p>
+      Ako vam se ovaj esej svideo i voleli biste da vidite još sličnih u budućnosti, možete <b><a href="https://www.patreon.com/aatishb">podržati moj rad na Patreonu</a></b>.
+    </p>
+
+    <p>
+      Evo <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">some</a> <a href="https://www.maskfaq.com/test-results">informativnih</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">resursa</a> vezanih za filtracione mogućnosti uobičajenih materijala od kojih se prave maske.
+      Iako maske dosta variraju u efektivnosti u zavisnosti od materijala i toga koliko dobro prijanjaju, neki materijali mogu <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">preći i preko</a> <a href="https://www.maskfaq.com/test-results">80%</a> u sposobnosti filtracije u masci koja perfektno prijanja uz lice.
+    </p>
+
+    <p>
+      Za entuzijaste za algebru među vama (znate ko ste), <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">evo izveštaja</a> koji pokriva matematiku primenjenu u eseju detaljnije.
+      Grafici u ovom eseju su napravljeni na osnovu naučnog rada <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a>, uz dodatno uzimanje u obzir dvosmerne efektivnosti maski.
+    </p>
+
+    <p>
+      Dvosmerni model maski na kome se zasniva ovaj esej je, kolliko mi je poznato, prvi put objavljen u tada još nerecenziranoj studiji <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a> (tabela S3 i figura S4). 
+      Ovo su naglasili Howard et al u svom <a href="https://www.preprints.org/manuscript/202004.0203/v3">preglednom članku</a> i <a href="https://www.fast.ai/2020/04/13/masks-summary/">propratnom eseju</a>, a dalje su koncept popularizovali <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a> u "Atlantic" novinama, i <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a> u "New Yorker" novinama, gde je napisao: <i>"Što je efektivnija maska, to veći uticaj ima."</i>
+    </p>
+
+    <p>
+      Ovaj tekst je objavljen pod licencom "Creative Commons" <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. Izvorni kod dostupan je <a href="https://github.com/aatishb/maskmath">na Githubu</a>. Emotikone je kreirao <a href="https://twemoji.twitter.com/">Twitter</a>, a modifikovani su sa unikatnim dizajnom maski.
+    </p>
+
+    <p>
+      Hvala na čitanju, i čuvajte se! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
