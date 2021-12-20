@@ -249,6 +249,7 @@ let app = new Vue({
     translations: 
     [ 
       { url: 'index.html', language: 'English' },
+      { url: 'index-kr.html', language: '한국어' },
       { url: 'index-he.html', language: 'עברית' },
       { url: 'index-fr.html', language: 'Français' },
       { url: 'index-it.html', language: 'Italiano' },
