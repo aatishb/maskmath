@@ -100,76 +100,76 @@
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="red">Transmission Route 1:</span> When a contagious person is near a susceptible person, their 'mouth spray' can spread disease.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="red">감염 경로 1:</span> 감염된 사람이 민감한 사람 주변에 있으면, 그들의 구강 분비물이 질병을 퍼트릴 수 있다.</anim-with-caption>
 
   <div class="container">
 
-    <p>Masks reduce the mouth spray traveling between people — by blocking or by redirecting the spray — thereby reducing the chance of infection.</p>
+    <p>마스크는 사람들 간의 구강 분비물 전파를 감소시킨다. - 막거나 분비를 다른곳으로 하게 하는 방식으로 - 그러므로 감염의 확률을 줄여준다.</p>
 
     <p>
-      It's worth keeping in mind that no mask is perfect.
-      Even the N95 masks recommended for health workers are only guaranteed to block <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% of the hardest-to-block particles</a> (and that’s only if you <a href="https://www.n95decon.org/publications">wear them correctly</a>).
+      물론, 완벽한 마스크는 없다는 사실을 명심해야 한다.
+      의료 종사자들이 사용하는 N95 마스크더라도 <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% 정도의 막기 힘든 입자</a>를 막는것을 보장할 수 있다. (그리고 마스크를 <a href="https://www.n95decon.org/publications">똑바로 썼을때</a>만 보장한다.)
     </p>
 
     <p>
-      Masks don't guarantee safety, they reduce risk.
-      This is a lot like how an umbrella doesn't guarantee that you'll stay dry, but it does reduce your chance of getting wet.
-      Like umbrellas, masks only work if you use them correctly.
-      But unlike umbrellas, which only protect people who use them, masks also protect people <i>around</i> the wearer.
+      마스크는 안전을 보장하지는 않지만, 위험을 감소시킨다.
+      이것은 마치 우산이 당신을 건조한 상태로 유지하는 것을 보장하지 않고, 젖는 확률을 줄여주는 것과 비슷하다고 할 수 있다.
+      우산과 같이, 마스크는 오직 당신이 제대로 착용했을 경우에만 제 역할을 다한다.
+      그러나 우산을 사용한 사람만 보호해주는 것과 달리, 마스크는 착용자 <i>주변의</i>사람들 또한 보호해준다.
     </p>
 
     <p>
     </p>
 
-    <h2>Why Masks Protect Us Twice</h2>
+    <h2>왜 마스크는 우리를 두번 보호해주는가?</h2>
 
     <p>
-      Let’s imagine that a contagious person wears a 50 percent effective mask.
-      By '50 percent effective', I mean that wearing this mask cuts in half the chance that they'll infect a nearby susceptible person.
+      감염된 사람이 50%의 차단 효과를 가진 마스크를 착용했다고 상상해 보자.
+      50% 차단 효과란, 마스크를 쓰는 것을 통해 주변 민감한 사람들을 감염시킬 확률을 반으로 줄여주는 것을 말한다.
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 2:</span> When the contagious person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="orange">감염 경로 2:</span>감염된 사람이 50% 차단 효과를 가진 마스크를 썼을 때, 질병 전파율은 50% 감소된다.</anim-with-caption>
 
   <div class="container">
 
-    <p>But what if the susceptible person wears the mask instead?</p>
+    <p>그러나 대신 민감한 사람이 마스크를 쓴다면 어떨까?</p>
 
     <p>
-      In general, the effectiveness of a mask depends on whether you’re <b>inhaling</b> or <b>exhaling</b> through it.
-      For now, let’s keep things simple and assume that this mask is equally effective in either direction.
+      보통, 마스크의 효과는 당신이 그것을 통해 <b>들숨</b>과 <b>날숨</b>을 할 경우에 의존적이다.
+      지금부터, 단순하게 생각하기 위해서 마스크가 양방향에 동일한 효과를 가진다고 가정하자.
     </p>
 
-    <p>In that case, the chance of infection in this route also drops by 50%.</p>
+    <p>그 경우에, 이 경로를 통한 감염 또한 50% 감소한다.</p>
 
   </div>
 
-  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="orange">Transmission Route 3:</span> When the susceptible person wears a 50% effective mask, disease transmission drops by 50%.</anim-with-caption>
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="orange">감염 경로 3:</span> 민감한 사람이 50% 마스크를 사용했을 때, 질병 전파율도 50% 감소한다.</anim-with-caption>
 
   <div class="container">
 
-    <p>What if both the contagious <i>and</i> the susceptible person wear a mask?</p>
+    <p>만약 감염자와 민감한 사람 <i>모두</i> 마스크를 쓴다면 어떨까?</p>
 
     <p>
-      Well, the first mask cuts the chance of infection in half, and the second mask once again cuts the chance of infection in half.
-      So when <i>both</i> people wear masks, the chance of infection is half of half, i.e. 25% (as compared to when neither wear masks).
-      That's a 75% drop in the chance of infection.
+      그러면, 첫번째 마스크가 감염율을 절반으로 줄이고, 두번째 마스크가 한번 더 절반으로 줄인다.
+      그러므로 두명의 사람이 모두 마스크를 쓴다면, 감염율은 절반의 절반인 25%가 된다.(둘 다 마스크를 착용하지 않았을 경우와 비교하여)
+      이는 감염율을 75% 줄인 효과이다
     </p>
 
   </div>
 
-  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="Contagious Person" susceptibleperson="Susceptible Person"><span class="yellow">Transmission Route 4:</span> When both people wear 50% effective masks, disease transmission drops by 75%.</anim-with-caption>
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="yellow">감염 경로 4:</span> 두명의 사람이 모두 50% 효과의 마스크를 착용했을 경우, 감염율은 75% 감소한다.</anim-with-caption>
 
   <div class="container">
 
     <p>
-      If you think about it, it's surprising that a 50% effective mask can reduce the risk of infection by 75%.
-      This is possible because when both people wear masks, the chance of infection is halved twice.
-      This <b>double protection</b> makes masks much more effective than you might intuitively expect.
+      생각해보면, 50% 효과의 마스크로 75%까지 감염 전파율을 감소시킬 수 있는 것은 매우 놀랍다.
+      이것은 양쪽의 사람이 모두 마스크를 착용했을때 가능하며, 감염율은 절반씩 두번 줄어든다.
+      마스크를 착용함으로써 얻을 수 있는 이 <b>두번의 보호</b>는 당신이 직관적으로 생각했을 때 보다 훨씬 효과적입니다.
     </p>
 
-    <p>So here are all four routes through which an airborne disease can spread from person to person.</p>
+    <p>그래서 여기 공기를 통해 사람에서 사람으로 전파할 수 있는 모든 경로가 있습니다. </p>
 
   </div>
 
@@ -179,7 +179,7 @@
       <div class="row big-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">질병 전파 경로</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">질병 전파 감소율</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -197,7 +197,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person. This assumes a 50% effective mask.
+        COVID-19을 사람 대 사람으로 전파시킬 수 있는 4가지 방법. 이것은 50% 차단 효과를 가진 마스크로 가정한다.
       </div>
 
     </div>
@@ -206,48 +206,48 @@
 
   <div class="container">
 
-    <h2>From People to The Population</h2>
+    <h2>사람에서 군중으로</h2>
 
     <p>
-      So far, we've only looked at disease transmission between two people.
-      How do we go from here to understanding disease transmission in the <i>entire population</i>?
+      지금까지, 우리는 두 사람간의 질병 전파의 모습만 관찰해 왔습니다.
+      이러한 사실로부터 어떻게 우리는 <i>모든 사람들간</i>의 질병 감염을 이해할 수 있을까요?
     </p>
 
-    <p>Well, in the extreme limits, this is straightforward.</p>
+    <p>극단적인 제한속에서, 이것은 꽤나 직관적입니다.</p>
 
     <p>
-      For example, if <b>nobody</b> wore a mask, then whenever two people meet, the chance that <span class="red">neither wear a mask</span> is 100%.
+      예를들어, 아무도 마스크를 쓰지 않았다면, 두 사람이 서로 만났을 때, <span class="red">둘 다 마스크를 쓰지 않았을</span> 확률은 100% 입니다.
     </p>
 
     <network :maskusage="0"></network>
 
     <p>
-      So we'd only have to consider the <span class="red">first route</span> of disease transmission, and the population would see <span class="red">no drop</span> in disease transmission.
+      그러므로 우리는 오직 질병 전파의 첫번째 경로만 고려하면 되고, 사람들은 결국 질병의 감소르 볼 수 없을 것입니다.
     </p>
 
     <p>
-      At the other extreme, if <b>everyone</b> wore a mask, then whenever two people meet, the chance that they <span class="yellow">both wear masks</span> is 100%.
+      다른 극단적인 상황으로, 만약 모든 사람들이 마스클 썼다면, 두 사람이 서로 만났을 때, 그들이 <span class="yellow">모두 마스크를 썼을</span> 확률은 100% 입니다.
     </p>
 
     <network :maskusage="1"></network>
 
     <p>
-      In this case, we’d only have to consider the <span class="yellow">last route</span> of disease transmission.
-      Assuming masks are 50% effective in each direction, the population would see a <span class="yellow">75% drop</span> in disease transmission.
+      이 경우에는, 우리는 오직 질병 전파의 <span class="yellow">마지막 경로</span>만 고려하면 됩니다.
+      마스크가 양 방향으로 50%의 차단 효과를 가지고 있다고 가정할 때, 사람들은 <span class="yellow">75%의 질병 전파 감소율</span>을 볼 수 있을 것입니다.
     </p>
 
     <p>
-      So when <i>everyone</i> wears a mask (or when <i>no one</i> wears one), it's straightforward to calculate the drop in disease transmission in the population, because there's only one route involved.
+      그러므로 <i>모든</i> 사람들이 마스크를 쓴다면(아니면 <i>아무도</i> 마스크를 쓰지 않는다면), 사람들 속에서 질병 전파율을 감소시키는 것을 계산하는 것은 직관적입니다. 왜냐하면, 오직 한가지 경로만 보면 되기 떄문입니다.
     </p>
 
     <p>
-      But in reality, some people wear masks and others don’t.
-      Which means the virus can spread through a mix of all four routes.
-      How likely each route is will depend on how many people wear masks.
+      그러나 실제로, 어떤 사람들은 마스크를 쓰고 어떤 사람들은 쓰지 않습니다.
+      이것은 바이러스가 모든 4가지 경우를 통해 전파될 수 있음을 의미합니다.
+      각 경로의 감염 가능성은 사람들이 얼마나 마스크를 썼는지에 달려 있습니다.
     </p>
 
     <label class="row half bigsplash">
-      <div>Mask Usage: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <div>마스크 사용률: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
       <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
     </label>
 
