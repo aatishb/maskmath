@@ -222,7 +222,7 @@
     <network :maskusage="0"></network>
 
     <p>
-      그러므로 우리는 오직 질병 전파의 첫번째 경로만 고려하면 되고, 사람들은 결국 질병의 감소르 볼 수 없을 것입니다.
+      그러므로 우리는 오직 질병 전파의 첫번째 경로만 고려하면 되고, 사람들은 결국 질병의 감소를 볼 수 없을 것입니다.
     </p>
 
     <p>
@@ -254,13 +254,13 @@
     <network :maskusage="pnetwork"></network>
 
     <p>
-      For example, <b>if 50% of people wear masks</b>, then whenever two people meet at random, the chance that <span class="yellow">both people wear masks</span> is 50% ⨉ 50%, i.e. 25%.
-      Similarly, you can work out the chance of the other three disease transmission routes.
+      예를들어, <b>만약 50%의 사람들이 마스크르 쓴다면</b>, 무작위로 두명의 사람들이 만났을 때, <span class="yellow">두 사람 모두가 마스크를 썼을</span> 확률은 50% x 50%인 25%입니다.
+      유사하게, 다른 3가지 질병 감염 경로에 대해서도 확률을 계산할 수 있습니다.
     </p>
 
     <p>
-      When exactly half the population wears masks, it turns out that each route is equally likely.
-      (Can you convince yourself why this has to be true?)
+      정확히 인구의 절반이 마스크를 쓴다면, 각 경로는 동일한 가능성이 있는 것으로 나타납니다.
+      (이게 왜 사실인지 납득할 수 있습니까?)
     </p>
 
   </div>
@@ -271,7 +271,7 @@
       <div class="row big-small-small">
 
         <div class="column onehundredpx">
-          <div class="center">Disease Transmission Route</div>
+          <div class="center">질병 전파 경로</div>
           <anim :mask1="false" :mask2="false"></anim>
           <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
           <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
@@ -279,7 +279,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Drop in Disease Transmission</div>
+          <div class="center">질병 전파 감소율</div>
           <div class="center"><span class="red">0%</span></div>
           <div class="center"><span class="orange">50%</span></div>
           <div class="center"><span class="orange">50%</span></div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="column onehundredpx">
-          <div class="center">Chance of This Route</div>
+          <div class="center">해당 경로의 감염 확률</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
           <div class="center">25%</div>
@@ -297,7 +297,7 @@
       </div>
 
       <div class="caption">
-        The four ways that COVID-19 can spread from person to person, assuming that 50% of people wear a 50% effective mask.
+        COVID-19을 사람 대 사람으로 전파시킬 수 있는 4가지 방법. 이것은 50% 차단 효과를 가진 마스크를 50%의 인구가 착용했을 경우를 가정한다.
       </div>
 
     </div>
@@ -306,18 +306,18 @@
   <div class="container">
 
     <p>
-      We can now calculate the <b>average drop in disease transmission in the population</b>.
-      Since we’ve set things up so that each route is equally likely, this is just the average of <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 43.75%.
+      우리는 이제 <b>인구대비 평균 질병 전파 감소율</b>을 계산할 수 있습니다.
+      우리가 각 경로가 동일한 가능성을 가질 수 있도록 상황을 설정했기 때문에, 감소율은 <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> 그리고 <span class="yellow">75%</span>,의 평균인 43.75%입니다.
     </p>
 
     <p>
-      People who <i>don’t</i> wear masks get infected via the first two routes, which are equally likely when half the population wears a mask.
-      So the drop in disease transmission to non-mask wearers is the average of <span class="red">0%</span> and <span class="orange">50%</span>, which is 25%.
+      마스크를 쓰지 <i>않은</i> 사람들은 첫번째와 두번째 경로에서 감염이 되고, 이것은 절반의 인구가 마스크를 썼을때의 확률과 동일합니다.
+      그러므로 마스크를 쓰지 않는 사람들에 대한 질병 전파 감소율은 <span class="red">0%</span> 그리고 <span class="orange">50%</span>의 평균인, 25% 입니다.
     </p>
 
     <p>
-      Meanwhile, people who <i>do</i> wear masks get infected via the last two routes.
-      So the drop in disease transmission to mask-wearers is the average of <span class="orange">50%</span> and <span class="yellow">75%</span>, which is 62.5%.
+      한편, 마스크를 쓴 사람들은 마지멱 두 경로에서 감염이 됩니다.
+      그러므로 마스크를 쓴 두사람의 질병 전파 감소율은 <span class="orange">50%</span> 그리고 <span class="yellow">75%</span>의 평균인 62.5% 입니다.
     </p>
 
   </div>
@@ -325,12 +325,12 @@
   <div class="graphic">
     <div class="graphic-container">
       <div class="column">
-        <div class="splash">Average Drop in Disease Transmission = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Non-Mask Wearers</b> = 25%</div>
-        <div class="splash">Drop in Disease Transmission to <b>Mask-Wearers</b> = 62.5%</div>
+        <div class="splash">질병 전파 평균 감소율 = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash"><b>마스크를 쓰지 않은 사람들</b>의 질병 전파 감소율 = 25%</div>
+        <div class="splash"><b>마스크를 착용한 사람들</b>의 질병 전파 감소율 = 62.5%</div>
       </div>
       <div class="caption">
-        (Assuming 50% of people wear a 50% effective mask.)
+        (인구의 절반이 50%의 차단 효과를 가진 마스크를 착용한 경우를 가정한다.)
       </div>
     </div>
   </div>
