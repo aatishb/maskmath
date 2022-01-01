@@ -486,19 +486,19 @@
   <div class="container">
 
     <p>
-      Social distancing, quarantines, and lockdowns decrease <span class="dashed">the first number</span>.
-      And masks decrease <span class="dotted">the second number</span>.
-      The goal of all these public health strategies is to bring the epidemic under control by pulling R0 beneath 1.
+      사회적 거리두기, 격리 및 봉쇄조치는 <span class="dashed">첫번째 숫자</span>를 감소시킨다.
+      그리고 마스크는 <span class="dotted">두번째 숫자</span>를 감소시킨다.
+      이러한 공공 정책의 목표는 R0를 1 이하로 떨어뜨림으로써 전염병을 통제하고자 하는 것이다.
     </p>
 
     <p>
-      With this in mind, let's re-express the impact of masks in terms of R0.
-      The graph below shows how R0 varies as mask-wearing increases.
+      이것을 염두에 두고, 마스크의 효과를 R0로 대해 다시 표현해보자.
+      아래 그래프는 R0가 마스크 사용 증가에 따라 어떻게 달라지는지를 보여준다.
     </p>
 
     <p>
-      You can use the first slider to vary R0, which for COVID-19 is between 2 and 3 (that's in the absence of other public health measures such as social distancing, which further reduce R0.)
-      By varying the effectiveness of the masks, you can see how masks can help bring an epidemic under control.
+      당신은 첫번째 슬라이더를 통해 R0를 변화시킬 수 있고, COVID-19은 2와 3 사이에 위치해 있다. (R0을 추가로 감소시키는 사회적 거리두기와 같은 다른 공공 보건 측정치가 없는 상태)
+      마스크의 효과가 달라짐에 따라, 마스크가 전염병을 통제하는데 얼마나 효과적인지 관찰할 수 있다.
     </p>
 
   </div>
@@ -512,21 +512,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>날숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>들숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph2Traces" :layout="graph2Layout(
-        'How Masks Reduce R0',
-        'Percentage of People Who Wear Masks',
-        '# People a Contagious Person Infects (R0)',
-        'Epidemic Under Control',
-        'Epidemic Out Of Control'
+        '어떻게 마스크가 R0를 감소시키는가',
+        '마스크를 사용한 사람들의 비율',
+        '# 감염된 사람이 감염시키는 사람들 (R0)',
+        '통제되는 전염병',
+        '통제되지 않는 전염병'
       )" :config="config"></graph>
 
     </div>
@@ -535,15 +535,15 @@
   <div class="container">
 
     <p>
-      To stop the spread of COVID-19, we need to keep R0 beneath 1.
-      When this happens, on average, a contagious person will infect less than one person, and the epidemic will grind to a halt.
+      COVID-19의 확산을 막기 위해, 우리는 R0를 1 이하로 유지시킬 필요가 있다.
+      이것이 실현되었을 때, 평균적으로, 감염된 사람은 1명 이하의 사람을 감염시키고 전염병은 멈출 것이다.
     </p>
 
     <p>
-      So how many people need to wear a 50% effective mask to stop the spread of COVID-19?
-      What if masks were 75% effective?
-      Or 90% effective?
-      This interactive lets you predict answers to these questions.
+      그래서 COVID-19을 막기 위해 얼마나 많은 사람들이 50% 차단 효과의 마스크를 사용해야 할까?
+      만약 75% 효과의 마스크라면?
+      혹시 90% 효과라면?
+      이 반응형 그래프가 위 질문들에 대한 답을 예측하도록 해 줄 것이다.
     </p>
 
     <aside>
