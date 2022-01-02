@@ -435,7 +435,7 @@
 
     <aside>
       <span @click="expandaside1 = true;">날숨을 필터링 하지 않는 마스크는 어떨까?
-        <span v-if="!expandaside1"> (Click to expand)</span>
+        <span v-if="!expandaside1"> (확장하려면 클릭하세요)</span>
       </span>
 
       <span v-if="expandaside1">
@@ -548,39 +548,39 @@
 
     <aside>
 
-      <span @click="expandaside2 = true;">An important caveat: people don't usually mix randomly. 
-        <span v-if="!expandaside2"> (Click to expand)</span>
+      <span @click="expandaside2 = true;">중요한 경고 : 사람들은 보통 무작위로 섞이지 않는다.
+        <span v-if="!expandaside2"> (확장하려면 클릭하세요)</span>
       </span>
 
       <span v-if="expandaside2">
-        People who wear masks may be more likely to interact with other mask wearers, and less likely to interact with people who don't wear masks.
+        마스크를 착용한 사람들은 다른 마스크 착용자와 상호작용을 더 할것이고 미착용자와 상호작용을 덜 할 것이다.
         <br/><br/>
-        Similarly, non-mask wearers might live in clusters where mask usage is lower than average.
-        This tendency to interact with others who have similar preferences <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">diminishes the protective power of masks</a> because <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">non-mask wearers become less likely to benefit from nearby mask-wearers</a>.
+        비슷하게, 미착용자는 마스크 착용률이 평균 이하인 구역에서 거주할 확률이 높다.
+        이러한 비슷한 성향을 가진 다른사람들과의 상호작용 경향은 <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">마스크의 보호 능력을 감소시킨다</a>. 왜냐하면, <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">미착용자는 착용자 근처에서 얻을 수 있는 이득이 거의 없기 때문이다.</a>
         <br/><br/>
-        As <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a> write in their analysis, "the impact of masks and other face coverings in reducing COVID-19 transmission is likely to be greatest if attention is paid to ensuring availability for disadvantaged populations."
+        <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a>이 작성한 분석보고서에 따르면, "마스크와 기타 얼굴 덮개가 COVID-19 전파를 감소시키는것에 대한 영향력은 불우한 이웃들에게 마스크를 착용할 기회를 보장할 때 효과가 가장 클 것이라고 말한다."
       </span>
     </aside>
 
-    <h2>The Human Cost</h2>
+    <h2>인간의 노력</h2>
 
     <p>
-      We can take our understanding one step further by expressing the power of masks in more human terms.
-      Masks save lives by reducing the chance of infection which, in turn, shrinks the extent of the epidemic.
+      우리는 인간의 용어로 마스크의 위력을 표현함으로써 이해를 한 단계 더 깊게 할 수 있다.
+      마스크는 감염의 확률을 줄임으로써 생명을 구할 수 있다. 다시말하면, 전염병의 확산을 줄일 수 있다.
     </p>
 
     <p>
-      As more people wear masks, R0 decreases.
-      And as R0 decreases, so does the number of infected people.
-      So we can get a clearer picture if instead of visualizing R0, we visualize the <b>infected fraction</b> of the population.
+      더 많은 사람들이 마스크를 사용할 수록, R0은 감소한다.
+      R0이 감소하면, 감염된 사람의 수도 감소한다.
+      그러므로 만약 R0을 시각화하는 것 대신에, 우리가 <b>감염된 일부 사람들</b>을 시각화한다면, 우리는 명확한 그림을 얻을 수 있다.
     </p>
 
     <p>
-      By using a widely-adopted mathematical model of epidemics known as an <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>, we can relate R0 to the fraction of people who will eventually be infected.
-      (To learn more about SIR models, I recommend watching this <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">excellent video</a>.)
+      <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>로 알려진 널리 적용되고 있는 전염병의 수학적 모델을 사용함으로써, 우리는 R0와 결국 감염될 일부 사람들을 연관지을수 있다.
+      (SIR models에 대해 더 알고 싶다면, 이 <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">영상</a>을 보길 추천한다.)
     </p>
 
-    <p>Although this model is a considerable simplification (e.g. it assumes random mixing between people and no lockdowns), it offers us a ballpark estimate of the human cost of not wearing masks.</p>
+    <p>이 모델이 꽤 단순함에도 불구하고(예를들어, 사람들과 락다운되지 않은 사람들을 무작위로 섞는것을 가정한다), 마스크를 착용하지 않았을 때 대략적인 비용 추정치를 제공해준다. </p>
 
   </div>
 
@@ -593,21 +593,21 @@
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Exhale: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <div>날숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
         <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <label class="row half bigsplash">
-        <div>Mask Effectiveness on Inhale: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <div>들숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
         <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
       </label>
 
       <graph :traces="graph3Traces(
-        '% Infected'
+        '% 감염된 사람'
         )" :layout="graph3Layout(
-        'How Masks Reduce Infections',
-        'Percentage of People Who Wear Masks',
-        'Percentage of People Who Will Be Infected'
+        '마스크가 얼마나 감염을 감소시키는가',
+        '마스크 착용자의 비율',
+        '곧 감염될 사람들의 비율'
       )" :config="config"></graph>
 
     </div>
