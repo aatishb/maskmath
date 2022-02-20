@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Le pouvoir multiplicateur des masques</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Un essai interactif sur la manière dont les masques peuvent mettre un terme à la COVID-19">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez : un essai interactif">
+  <meta name="twitter:description" content="Même des masques partiellement efficaces peuvent stopper la diffusion de COVID-19, à condition qu'assez de gens en portent.">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+  
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Pourquoi les masques fonctionnent mieux que vous ne le pensez : un essai interactif" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="Même des masques partiellement efficaces peuvent stopper la diffusion de COVID-19, à condition qu'assez de gens en portent." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>Le pouvoir multiplicateur des masques</h1>
+        <h3>Un essai interactif sur la manière dont les masques peuvent mettre un terme à COVID-19</h3>
+        <h4>par <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      Nous <a href="https://www.preprints.org/manuscript/202004.0203/v1">savons</a> <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">maintenant</a> <a href="https://science.sciencemag.org/content/368/6498/1422">que</a> les masques freinent significativement la diffusion de la COVID-19.
+      Et cependant, certains refusent de porter un masque, voyant cela comme un choix personnel plutôt qu'une question de santé publique.
+    </p>
+
+    <p>
+      C'est manquer de recul car <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">les masques protègent ceux qui en portent <i>et</i> les gens qui les entourent</a>.
+      Cette <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">protection dans les deux sens</a> fait de la généralisation du port du masque un moyen puissant pour mettre un terme à l'épidémie.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      En calculant l'effet des masques, nous verrons que si 60% des gens portent un masque efficace à 60%, la transmission de la maladie chute de 60% — à peu près ce qui est nécessaire pour arrêter la diffusion de la COVID-19.
+    </p>      
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          Visionnez la vidéo associée : <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">Why Masks Work BETTER Than You'd Think</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>Diffusez le message, pas le virus</h2>
+
+    <p>
+      Mais tout d'abord, quelques ordres de grandeurs.
+      Lorsqu'une personne expire, elle <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">projette des particules de salive</a> microscopiques de différentes tailles.
+      Si cette personne est contagieuse, ce "spray buccal" est chargé de particules virales.
+      Ce <a href="https://arxiv.org/pdf/2005.10988.pdf">spray salivaire chargé de virus</a> est le principal vecteur de diffusion de COVID-19.
+    </p>
+
+    <p>Quand une personne contagieuse respire, elle diffusion environ <b>un millier</b> de particules virales par minute.</p>
+
+    <p>Quand elle parle, elle diffuse environ <b>dix mille</b> particules virales par minute.</p>
+
+    <p>Quand elle tousse, elle diffuse environ <b>cent mille</b> particules virales.</p>
+
+    <p>Et quand elle éternue, elle diffuse environ <b>un million</b> de particules virales.</p>
+
+    <p>
+      Plus il y a de particules virales qui voyagent d'une personne à l'autre, plus la contamination est probable.
+      (Et les personnes infectées ont en général des <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">symptômes plus sévères</a> lorsqu'ils ont été exposées à de plus grands nombres de particules virales.)
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="Personne contagieuse" susceptibleperson="Personne saine"><span class="red">Mode de transmission 1 :</span> Quand un personne contagieuse est proche d'une personne saine, son "spray buccal" peut répandre la maladie.</anim-with-caption>
+
+  <div class="container">
+
+    <p>Les masques réduisent la quantité de spray buccal voyageant entre les gens — en bloquant ou redirigeant le spray — ce qui réduit donc les chances d'une infection.</p>
+
+    <p>
+      Il est important de se souvenir qu'aucun masque n'est parfait.
+      Même les masques FFP2 ou N95 recommandés pour le personnel de santé ne garantissent pas de bloquer que <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% des particules les plus fines</a> (et cela seulement si vous les <a href="https://www.n95decon.org/publications">portez correctement</a>).
+    </p>
+
+    <p>
+      Les masques ne garantissent pas la sécurité, elles réduisent le risque.
+      C'est tout à fait comme un parapluie, qui ne garantit pas que vous resterez sec, mais qui réduit vos chances d'être mouillé.
+      Comme les parapluies, les masques ne fonctionnent que si vous les utilisez correctement.
+      Mais contrairement aux parapluies, qui ne protègent que la personne qui les porte, les masques protègent également les personnes <i>autour</i> du porteur.
+    </p>
+
 
