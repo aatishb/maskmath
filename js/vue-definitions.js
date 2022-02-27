@@ -265,6 +265,7 @@ let app = new Vue({
       { url: 'index-pl.html', language: 'Polski' },
       { url: 'index-sr.html', language: 'Srpski' },
       { url: 'index-mk.html', language: 'Македонски'},
+      { url: 'index-kr.html', language: '한국어' }
     ]
   },
 

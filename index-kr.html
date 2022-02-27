@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="kr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>마스크의 위력</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="어떻게 마스크가 COVID-19을 끝내는게 가능한지에 대한 이해하기 쉬운 에세이">
+  <meta name="author" content="Aatish Bhatia">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="왜 생각보다 마스크가 더 효과적인지 : 대화형 에세이">
+  <meta name="twitter:description" content="부분적 효과를 가진 마스크일지라도, 사람들이 충분히 쓰고 다니는 한, COVID-19의 확산을 막을 수 있다">
+  <meta name="twitter:site" content="@aatishb">
+  <!-- Twitter Summary card images must be at least 120x120px -->
+  <meta name="twitter:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="왜 생각보다 마스크가 더 효과적인지 : 대화형 에세이" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aatishb.com/maskmath/" />
+  <meta property="og:image" content="https://aatishb.com/maskmath/assets/twitter-banner.png" />
+  <meta property="og:description" content="부분적 효과를 가진 마스크일지라도, 사람들이 충분히 쓰고 다니는 한, COVID-19의 확산을 막을 수 있습니다." />
+
+</head>
+
+<body>
+<div id="root" class="page">
+
+  <div class="header">
+    <p5 src="js/sketch0.js"></p5>
+    <div class="overlay">
+      <div>
+        <h1>마스크의 위력</h1>
+        <h3>어떻게 마스크가 COVID-19을 끝내는게 가능한지에 대한 이해하기 쉬운 에세이</h3>
+        <h4>by <a href="https://aatishb.com/">Aatish Bhatia</a> ⨉ <a href="https://www.youtube.com/user/minutephysics">Minute Physics</a></h4>
+        <translation :list="translations"></translation>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      우리는 <a href="https://www.preprints.org/manuscript/202004.0203/v1">지금</a> 마스크가 COVID-19의 확산을 느리게 하는것에 대해 <a href="https://science.sciencemag.org/content/368/6498/1422">엄청난 효과</a>를 가지고 있다는 것을 <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">알고</a> 있습니다.
+      그런데 아직, 어떤 사람들은 마스크를 쓰는것을 반대합니다. 왜냐하면 그들은 이것을 공공 보건 문제라기보다 개인의 선택으로 보기 때문입니다.
+    </p>
+
+    <p>
+      이러한 견해는 너무 일차원적인 생각입니다. 왜냐하면, <a href="https://link.springer.com/article/10.1007/s11606-020-06067-8">마스크는 착용자를 보호하면서 <i>동시에</i> 주위사람들 또한 보호할 수 있기 때문입니다.</a>
+      이러한 <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">양방향 보호는</a> 곧 광범위한 마스크 착용이 전염병을 종식시킬 강력한 방법인 것을 알 수 있습니다.
+    </p>
+
+    <network :maskusage="0.6"></network>
+
+    <p>
+      마스크에 대한 실험을 해서, 우리는 60%의 사람들이 60%의 효과를 내는 마스크를 착용했을 때, 질병 전파를 60% 감소시키는 것을 볼 수 있을 것입니다. - 이것이 대략 우리가 COVID-19의 확산을 막는데 필요한 것입니다.
+    </p>
+
+    <aside>
+      <div class="center">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y47t9qLc9I4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <span style="margin-top: 0.75rem;">
+          관련 영상을 보세요 : <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">왜 당신의 생각보다 마스크가 더 효과가 좋은가?</a>
+        </span>
+      </div>
+    </aside>
+
+    <h2>말하되, 흩뿌리지 마세요.</h2>
+
+    <p>
+      그러나 먼저 몇가지 숫자에 대해 명확히 하려고 합니다.
+      사람이 숨을 내뱉을때, 그들은 <a href="https://www.youtube.com/watch?v=f57LXUbrtPU">침 입자를 아주 작은 사이즈로 주변에 흩뿌립니다.</a>
+      만약 그 사람이 감염되어 있는경우, 이 구강 분비물은 바이러스 입자로 가득합니다.
+      이 <a href="https://arxiv.org/pdf/2005.10988.pdf">바이러스 가득찬 침 분비물</a>이 바로 COVID-19 확산의 주요 원인입니다.
+    </p>
+
+    <p>감염된 사람이 숨쉴때, 그들은 대략적으로 <b>수천의</b> 구강 분비물을 매분 뿜어냅니다.</p>
+
+    <p>그들이 말할때, 그들은 대략 <b>수만의</b> 구강 분비물을 매분 뿜어냅니다.</p>
+
+    <p>그들이 기침할때, 그들은 대략 <b>수십만의</b> 구강 분비물을 뿜어냅니다.</p>
+
+    <p>그리고 그들이 재채기할때, 그들은 대략 <b>수백만의</b> 구강 분비물을 뿜어냅니다.</p>
+
+    <p>
+      더 많은 구강 분비물이 사람에서 다른 사람으로 이동하면, 감염율은 더 높아집니다.
+      (그리고 만약 감염됩니다.면,더 많은 바이러스 입자에 노출된 사람들은 일반적으로 <a href="https://www.nytimes.com/2020/05/29/health/coronavirus-transmission-dose.html">더 심한 증상</a>을 경험합니다.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="false" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="red">감염 경로 1:</span> 감염된 사람이 민감한 사람 주변에 있으면, 그들의 구강 분비물이 질병을 퍼트릴 수 있습니다.</anim-with-caption>
+
+  <div class="container">
+
+    <p>마스크는 사람들 간의 구강 분비물 전파를 감소시킵니다. - 막거나 분비를 다른곳으로 하게 하는 방식으로 - 그러므로 감염의 확률을 줄여줍니다.</p>
+
+    <p>
+      물론, 완벽한 마스크는 없다는 사실을 명심해야 합니다.
+      의료 종사자들이 사용하는 N95 마스크더라도 <a href="https://www.youtube.com/watch?v=eAdanPfQdCA">95% 정도의 막기 힘든 입자</a>를 막는것을 보장할 수 있습니다. (그리고 마스크를 <a href="https://www.n95decon.org/publications">똑바로 썼을때</a>만 보장합니다.)
+    </p>
+
+    <p>
+      마스크는 안전을 보장하지는 않지만, 위험을 감소시킵니다.
+      이것은 마치 우산이 당신을 건조한 상태로 유지하는 것을 보장하지 않고, 젖는 확률을 줄여주는 것과 비슷하다고 할 수 있습니다.
+      우산과 같이, 마스크는 오직 당신이 제대로 착용했을 경우에만 제 역할을 다합니다.
+      그러나 우산을 사용한 사람만 보호해주는 것과 달리, 마스크는 착용자 <i>주변의</i>사람들 또한 보호해줍니다.
+    </p>
+
+    <p>
+    </p>
+
+    <h2>왜 마스크는 우리를 두번 보호해주는가?</h2>
+
+    <p>
+      감염된 사람이 50%의 차단 효과를 가진 마스크를 착용했다고 상상해 봅시다.
+      50% 차단 효과란, 마스크를 쓰는 것을 통해 주변 민감한 사람들을 감염시킬 확률을 반으로 줄여주는 것을 말합니다.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="false" :eout="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="orange">감염 경로 2:</span>감염된 사람이 50% 차단 효과를 가진 마스크를 썼을 때, 질병 전파율은 50% 감소됩니다..</anim-with-caption>
+
+  <div class="container">
+
+    <p>그러나 대신 민감한 사람이 마스크를 쓴다면 어떨까요?</p>
+
+    <p>
+      보통, 마스크의 효과는 당신이 마스크를 통해 <b>들숨</b>과 <b>날숨</b>을 할 경우에 의존적입니다.
+      지금부터, 단순하게 생각하기 위해서 마스크가 양방향에 동일한 효과를 가진다고 가정합시다.
+    </p>
+
+    <p>그 경우에, 이 경로를 통한 감염 또한 50% 감소합니다.</p>
+
+  </div>
+
+  <anim-with-caption :mask1="false" :mask2="true" :ein="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="orange">감염 경로 3:</span> 민감한 사람이 50% 마스크를 사용했을 때, 질병 전파율도 50% 감소합니다.</anim-with-caption>
+
+  <div class="container">
+
+    <p>만약 감염자와 민감한 사람 <i>모두</i> 마스크를 쓴다면 어떨까요?</p>
+
+    <p>
+      그러면, 첫번째 마스크가 감염율을 절반으로 줄이고, 두번째 마스크가 한번 더 절반으로 줄입니다.
+      그러므로 두명의 사람이 모두 마스크를 쓴다면, 감염율은 절반의 절반인 25%가 됩니다.(둘 다 마스크를 착용하지 않았을 경우와 비교하여)
+      이는 감염율을 75% 줄인 효과입니다.
+    </p>
+
+  </div>
+
+  <anim-with-caption :mask1="true" :mask2="true" :eout="0.5" :ein="0.5" contagiousperson="감염된 사람" susceptibleperson="민감한 사람"><span class="yellow">감염 경로 4:</span> 두명의 사람이 모두 50% 효과의 마스크를 착용했을 경우, 감염율은 75% 감소합니다.</anim-with-caption>
+
+  <div class="container">
+
+    <p>
+      생각해보면, 50% 효과의 마스크로 75%까지 감염 전파율을 감소시킬 수 있는 것은 매우 놀랍습니다.
+      이것은 양쪽의 사람이 모두 마스크를 착용했을때 가능하며, 감염율은 절반씩 두번 줄어듭니다.
+      마스크를 착용함으로써 얻을 수 있는 이 <b>양방향 보호</b>는 당신이 직관적으로 생각했을 때 보다 훨씬 효과적입니다.
+    </p>
+
+    <p>그래서 여기 공기를 통해 사람에서 사람으로 전파할 수 있는 모든 경로가 있습니다. </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small">
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 경로</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 감소율</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        COVID-19을 사람 대 사람으로 전파시킬 수 있는 4가지 방법. 이것은 50% 차단 효과를 가진 마스크로 가정합니다.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <h2>개인에서 인류로</h2>
+
+    <p>
+      지금까지, 우리는 두 사람간의 질병 전파의 모습만 관찰해 왔습니다.
+      이러한 사실로부터 어떻게 우리는 <i>모든 사람들간</i>의 질병 감염을 이해할 수 있을까요?
+    </p>
+
+    <p>극단적인 제한속에서, 이것은 꽤나 직관적입니다.</p>
+
+    <p>
+      예를들어, 아무도 마스크를 쓰지 않았다면, 두 사람이 서로 만났을 때, <span class="red">둘 다 마스크를 쓰지 않았을</span> 확률은 100% 입니다.
+    </p>
+
+    <network :maskusage="0"></network>
+
+    <p>
+      그러므로 우리는 오직 질병 전파의 첫번째 경로만 고려하면 되고, 사람들은 결국 질병의 감소를 볼 수 없을 것입니다.
+    </p>
+
+    <p>
+      다른 극단적인 상황으로, 만약 모든 사람들이 마스클 썼다면, 두 사람이 서로 만났을 때, 그들이 <span class="yellow">모두 마스크를 썼을</span> 확률은 100% 입니다.
+    </p>
+
+    <network :maskusage="1"></network>
+
+    <p>
+      이 경우에는, 우리는 오직 질병 전파의 <span class="yellow">마지막 경로</span>만 고려하면 됩니다.
+      마스크가 양 방향으로 50%의 차단 효과를 가지고 있다고 가정할 때, 사람들은 <span class="yellow">75%의 질병 전파 감소율</span>을 볼 수 있을 것입니다.
+    </p>
+
+    <p>
+      그러므로 <i>모든</i> 사람들이 마스크를 쓴다면(아니면 <i>아무도</i> 마스크를 쓰지 않는다면), 사람들 속에서 질병 전파율을 감소시키는 것을 계산하는 것은 직관적입니다. 왜냐하면, 오직 한가지 경로만 보면 되기 떄문입니다.
+    </p>
+
+    <p>
+      그러나 실제로, 어떤 사람들은 마스크를 쓰고 어떤 사람들은 쓰지 않습니다.
+      이것은 바이러스가 모든 4가지 경우를 통해 전파될 수 있음을 의미합니다.
+      각 경로의 감염 가능성은 사람들이 얼마나 마스크를 썼는지에 달려 있습니다.
+    </p>
+
+    <label class="row half bigsplash">
+      <div>마스크 사용률: <span class="dotted">{{convertToPercent(pnetwork)}}</span>%</div>
+      <slider v-model="pnetwork" :min="0" :max="1" :step="0.01"></slider>
+    </label>
+
+    <network :maskusage="pnetwork"></network>
+
+    <p>
+      예를들어, <b>만약 50%의 사람들이 마스크르 쓴다면</b>, 무작위로 두명의 사람들이 만났을 때, <span class="yellow">두 사람 모두가 마스크를 썼을</span> 확률은 50% x 50%인 25%입니다.
+      유사하게, 다른 3가지 질병 감염 경로에 대해서도 확률을 계산할 수 있습니다.
+    </p>
+
+    <p>
+      정확히 인구의 절반이 마스크를 쓴다면, 각 경로는 동일한 가능성이 있는 것으로 나타납니다.
+      (이게 왜 사실인지 납득할 수 있습니까?)
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <div class="row big-small-small">
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 경로</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="0.5"></anim>
+          <anim :mask1="false" :mask2="true" :ein="0.5"></anim>
+          <anim :mask1="true" :mask2="true" :eout="0.5" :ein="0.5"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 감소율</div>
+          <div class="center"><span class="red">0%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="orange">50%</span></div>
+          <div class="center"><span class="yellow">75%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">해당 경로의 감염 확률</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+          <div class="center">25%</div>
+        </div>
+
+      </div>
+
+      <div class="caption">
+        COVID-19을 사람 대 사람으로 전파시킬 수 있는 4가지 방법. 이것은 50% 차단 효과를 가진 마스크를 50%의 인구가 착용했을 경우를 가정합니다.
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      우리는 이제 <b>인구대비 평균 질병 전파 감소율</b>을 계산할 수 있습니다.
+      우리가 각 경로가 동일한 가능성을 가질 수 있도록 상황을 설정했기 때문에, 감소율은 <span class="red">0%</span>, <span class="orange">50%</span>, <span class="orange">50%</span> 그리고 <span class="yellow">75%</span>,의 평균인 43.75%입니다.
+    </p>
+
+    <p>
+      마스크를 쓰지 <i>않은</i> 사람들은 첫번째와 두번째 경로에서 감염이 되고, 이것은 절반의 인구가 마스크를 썼을때의 확률과 동일합니다.
+      그러므로 마스크를 쓰지 않는 사람들에 대한 질병 전파 감소율은 <span class="red">0%</span> 그리고 <span class="orange">50%</span>의 평균인, 25% 입니다.
+    </p>
+
+    <p>
+      한편, 마스크를 쓴 사람들은 마지멱 두 경로에서 감염이 됩니다.
+      그러므로 마스크를 쓴 두사람의 질병 전파 감소율은 <span class="orange">50%</span> 그리고 <span class="yellow">75%</span>의 평균인 62.5% 입니다.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+      <div class="column">
+        <div class="splash">질병 전파 평균 감소율 = <span style="font-size: 2rem;"><b>43.75</b></span>%</div>
+        <div class="splash"><b>마스크를 쓰지 않은 사람들</b>의 질병 전파 감소율 = 25%</div>
+        <div class="splash"><b>마스크를 착용한 사람들</b>의 질병 전파 감소율 = 62.5%</div>
+      </div>
+      <div class="caption">
+        (인구의 절반이 50%의 차단 효과를 가진 마스크를 착용한 경우를 가정합니다.)
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      그러므로 마스크를 착용하지 않은 사람들도 약간의 이득을 얻습니다. 왜냐하면 그들이 들이마쉬는 공기는 <i>다른 사람들의</i> 마스크로부터 대부분 필터링된 공기이기 때문입니다.
+      그러나 그들의 마스크가 제공하는 추가적인 보호 덕분에 마스크를 착용한 사람들의 이득은 더욱 큽니다.
+    </p>
+
+    <p>그리고 인구가 마스크 착용자와 미착용자로 구성되기 때문에, 평균적인 효과는 이 두 그룹의 효과 사이에 있습니다.</p>
+
+    <p>그러므로 이 단순화된 예시에서 (50%의 사람들이 50%효과의 마스크를 착용한) 우리는 <b>마스크가 <i>개인</i>에게 주는 혜택</b>에서 <b><i>인류</i>에게 주는 혜택</b>으로 어떻게 확장 할 수 있는지 알아냈습니다.</p>
+
+    <h2>마스크 이론</h2>
+
+    <p>
+      이 <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">이론</a>을 <b>마스크 사용량</b>과 <b>마스크 효율성</b>에 적용해봅시다.
+      마스크가 어떻게 질병의 전파를 조절할 수 있는지 보려면, 아래 슬라이더를 조정해 보십시오.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>마스크 사용량: <span class="dotted">{{convertToPercent(p)}}</span>%</div>
+        <slider v-model="p" :min="0" :max="1" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>날숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>들숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <div class="row big-small-small padabove">
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 경로</div>
+          <anim :mask1="false" :mask2="false"></anim>
+          <anim :mask1="true" :mask2="false" :eout="eout"></anim>
+          <anim :mask1="false" :mask2="true" :ein="ein"></anim>
+          <anim :mask1="true" :mask2="true" :eout="eout" :ein="ein"></anim>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">질병 전파 감소율</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(d4)}}</span>%</span></div>
+        </div>
+
+        <div class="column onehundredpx">
+          <div class="center">해당 경로로 감염될 확률</div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l1)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l2)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l3)}}</span>%</span></div>
+          <div class="center"><span><span class="dotted">{{convertToPercent(l4)}}</span>%</span></div>
+        </div>
+
+      </div>
+
+
+      <div class="row half bigsplash">
+        <span>평균 질병 전파 감소율: <span class="dotted" style="font-size: 2rem;"><b>{{convertToPercent(1 - (1 - ein * p) * (1 - eout * p))}}</b></span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>마스크 미착용자의 평균 질병 전파 감소율: <span class="dotted">{{convertToPercent(eout * p)}}</span>%</span>
+      </div>
+
+      <div class="row half bigsplash">
+        <span>마스크 착용자의 평균 질병 전파 감소율: <span class="dotted">{{convertToPercent(1 - (1 - eout * p) * (1 - ein))}}</span>%</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      만약 60%의 사람들이 60% 차단율을 가진 마스크를 사용했을 때 감염 전파는 어떻게 될까요?
+      만약 90%의 사람들이 50% 차단 효과 마스크를 쓴다면?
+      만약 50%의 사람들이 90% 차단 효과 마스크를 쓴다면?
+      아래 반응을 통해 이러한 질문의 답을 얻읕 수 있습니다.
+    </p>
+
+    <p>결론 : <b>더욱 많은 사람들이 마스크를 쓸 수록 모두가 더욱 안전해진다.</b></p>
+
+    <p>
+      들숨의 공기를 필터링하여, 마스크를 쓴 사람들이 우선 보호받도록 합니다.
+      그리고 날숨을 필터링하거나 방향을 바꿈으로써, <i>모든</i> 사람들을 다시한번 보호합니다. - 마스크를 쓰지 않은 사람 또한 포함합니다.
+    </p>
+
+    <aside>
+      <span @click="expandaside1 = true;">날숨을 필터링 하지 않는 마스크는 어떨까요?
+        <span v-if="!expandaside1"> (확장하려면 클릭하세요)</span>
+      </span>
+
+      <span v-if="expandaside1">
+        일부 N95 마스크에는 필터링 하지 않고 공기를 <a href="https://www.healthline.com/health-news/certain-type-n95-mask-harm-covid19-spread">내보낼 수 있는 밸브나 구멍</a>이 있습니다.
+        다른사람들을 위험에 빠뜨릴 수 있기 때문에, CDC에서는 이러한 마스크를 공공장소에서 <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">쓰지 않는 것을 권고</a>합니다.
+        위의 내용을 통해 이러한 내용을 직접 확인할 수 있습니다.
+        <br><br>
+        먼저, 들숨과 날숨의 효과를 매우 높게 세팅합시다.(중간에서 마스크를 사용하는것으로 생각합니다.)
+        이것은 N95와 같은 매우 높은 효과를 가진 마스크를 나타냅니다.
+        이제 날숨의 효과를 0로 드래그하고 질병 전파율이 얼마나 올라가는지 관찰합시다. 특히 마스크를 쓰지 않은 사람들 위주로 보면 됩니다.
+        <br><br>
+        당신이 이미 이러한 마스크들 중 하나를 가지고 있다면, CDC는 <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/respirator-use-faq.html">날숨 밸브를 수술용 마스크로 덮을 것</a>을 권고합니다.
+      </span>
+    </aside>
+
+
+    <p>
+      사실, 마스크는 이러한 여러 수치가 나타내는 것 보다 훨씬 효과적입니다.
+    </p>
+
+    <h2>전염병을 막는 방법</h2>
+
+    <p>
+      우리는 산소가 부족해지면, 불을 꺼야 합니다.
+      그러나 불을 끄기 위한 재료를 충분히 없앨 수 있다면, 산소를 제거할 필요는 없습니다.
+      전염병도 똑같습니다. - 질병 전파율을 100%로 줄일 필요가 없습니다.
+      질병의 확산을 막을 만큼만 낮춘다면, 전염병을 진압할 수 있습니다.
+    </p>
+
+    <p>
+      당신은 R-zero 혹은 R-nought로 불리는 R0라는 역학 용어를 아마 들어봤을 수도 있습니다.
+      이것은 전염병에 대해 면역이 안된 사람들을 <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number">감염시킬 수 있는 감염된 사람들의 숫자</a>를 가르킵니다.
+    </p>
+
+    <p>R0가 1을 초과하면, 질병은 충분한 사람들이 백신을 맞거나 모두 감염되고 자체 면역이 발생할때까지 엄청나게 증가합니다.</p>
+
+    <p>
+      그러나, Ed Yong이 대서양에서 쓴 <a href="https://www.theatlantic.com/science/archive/2020/01/how-fast-and-far-will-new-coronavirus-spread/605632/">"R0 is not destiny"</a>을 봅시다.
+      R0은 두 숫자의 곱셈입니다 : 전염성이 있는 사람이 만난 사람 수의 평균과 접촉으로 감염될 확률
+    </p>
+
+  </div>
+
+  <div class="graphic">
+      <div class="splash">R0 = <span class="dashed">감염성이 있는 사람이 만나는 평균 사람 수</span> <br>⨉ <span class="dotted">접촉시 감염될 확률</span></div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      사회적 거리두기, 격리 및 봉쇄조치는 <span class="dashed">첫번째 숫자</span>를 감소시킵니다.
+      그리고 마스크는 <span class="dotted">두번째 숫자</span>를 감소시킵니다.
+      이러한 공공 정책의 목표는 R0를 1 이하로 떨어뜨림으로써 전염병을 통제하고자 하는 것입니다.
+    </p>
+
+    <p>
+      이것을 염두에 두고, 마스크의 효과를 R0로 대해 다시 표현해봅시다.
+      아래 그래프는 R0가 마스크 사용 증가에 따라 어떻게 달라지는지를 보여줍니다.
+    </p>
+
+    <p>
+      당신은 첫번째 슬라이더를 통해 R0를 변화시킬 수 있고, COVID-19은 2와 3 사이에 위치해 있습니다. (R0을 추가로 감소시키는 사회적 거리두기와 같은 다른 공공 보건 측정치가 없는 상태)
+      마스크의 효과가 달라짐에 따라, 마스크가 전염병을 통제하는데 얼마나 효과적인지 관찰할 수 있습니다.
+    </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>날숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>들숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph2Traces" :layout="graph2Layout(
+        '어떻게 마스크가 R0를 감소시키는가',
+        '마스크를 사용한 사람들의 비율',
+        '# 감염된 사람이 감염시키는 사람들 (R0)',
+        '통제되는 전염병',
+        '통제되지 않는 전염병'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      COVID-19의 확산을 막기 위해, 우리는 R0를 1 이하로 유지시킬 필요가 있습니다.
+      이것이 실현되었을 때, 평균적으로, 감염된 사람은 1명 이하의 사람을 감염시키고 전염병은 멈출 것입니다.
+    </p>
+
+    <p>
+      그래서 COVID-19을 막기 위해 얼마나 많은 사람들이 50% 차단 효과의 마스크를 사용해야 할까요?
+      만약 75% 효과의 마스크라면?
+      혹시 90% 효과라면?
+      이 반응형 그래프가 위 질문들에 대한 답을 예측하도록 해 줄 것입니다.
+    </p>
+
+    <aside>
+
+      <span @click="expandaside2 = true;">중요한 경고 : 사람들은 보통 무작위로 섞이지 않습니다.
+        <span v-if="!expandaside2"> (확장하려면 클릭하세요)</span>
+      </span>
+
+      <span v-if="expandaside2">
+        마스크를 착용한 사람들은 다른 마스크 착용자와 상호작용을 더 할것이고 미착용자와 상호작용을 덜 할 것입니다.
+        <br/><br/>
+        비슷하게, 미착용자는 마스크 착용률이 평균 이하인 구역에서 거주할 확률이 높습니다.
+        이러한 비슷한 성향을 가진 다른사람들과의 상호작용 경향은 <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">마스크의 보호 능력을 감소시킵니다.</a>. 왜냐하면, <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">미착용자는 착용자 근처에서 얻을 수 있는 이득이 거의 없기 때문입니다.</a>
+        <br/><br/>
+        <a href="https://www.sciencedirect.com/science/article/pii/S2468042720300191">David Fisman, Amy Greer, and Ashleigh Tuite</a>이 작성한 분석보고서에 따르면, "마스크와 기타 얼굴 덮개가 COVID-19 전파를 감소시키는것에 대한 영향력은 불우한 이웃들에게 마스크를 착용할 기회를 보장할 때 효과가 가장 클 것이라고 말합니다."
+      </span>
+    </aside>
+
+    <h2>인간의 노력</h2>
+
+    <p>
+      우리는 인간의 용어로 마스크의 위력을 표현함으로써 이해를 한 단계 더 깊게 할 수 있습니다.
+      마스크는 감염의 확률을 줄임으로써 생명을 구할 수 있습니다. 다시말하면, 전염병의 확산을 줄일 수 있습니다.
+    </p>
+
+    <p>
+      더 많은 사람들이 마스크를 사용할 수록, R0은 감소합니다.
+      R0이 감소하면, 감염된 사람의 수도 감소합니다.
+      그러므로 만약 R0을 시각화하는 것 대신에, 우리가 <b>감염된 일부 사람들</b>을 시각화한다면, 우리는 명확한 그림을 얻을 수 있습니다.
+    </p>
+
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">SIR model</a>로 알려진 널리 적용되고 있는 전염병의 수학적 모델을 사용함으로써, 우리는 R0와 결국 감염될 일부 사람들을 연관지을수 있습니다.
+      (SIR models에 대해 더 알고 싶다면, 이 <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs">영상</a>을 보길 추천합니다.)
+    </p>
+
+    <p>이 모델이 꽤 단순함에도 불구하고(예를들어, 사람들과 락다운되지 않은 사람들을 무작위로 섞는것을 가정한다), 마스크를 착용하지 않았을 때 대략적인 비용 추정치를 제공해줍니다. </p>
+
+  </div>
+
+  <div class="graphic">
+    <div class="graphic-container">
+
+      <label class="row half bigsplash">
+        <div>R0: <span class="dotted">{{R0}}</span></div>
+        <slider v-model="R0" :min="1" :max="3" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>날숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(eout)}}</span>%</div>
+        <slider v-model="eout" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <label class="row half bigsplash">
+        <div>들숨에서 마스크의 효과: <span class="dotted">{{convertToPercent(ein)}}</span>%</div>
+        <slider v-model="ein" :min="0" :max="0.99" :step="0.01"></slider>
+      </label>
+
+      <graph :traces="graph3Traces(
+        '% 감염된 사람'
+        )" :layout="graph3Layout(
+        '마스크가 얼마나 감염을 감소시키는가',
+        '마스크 착용자의 비율',
+        '곧 감염될 사람들의 비율'
+      )" :config="config"></graph>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <p>
+      이 언덕 모양의 곡선은 마스크가 전염병의 크기에 얼마나 영향을 미치는지 우리에게 보여준다.
+      <b>더 많은 사람들이 마스크를 사용함에 따라, 감염의 수는 급격하게 감소합니다.</b>
+    </p>
+
+    <p>
+      만약 매우 소수의 사람들만 마스크를 사용한다면, 우리는 언덕의 꼭대기에 있을 것이고, 대부분의 사람들이 즉시 감염될 것입니다.
+      그러나 오른쪽으로 한걸음 더 갈때마다, 우리는 더 내려갑니다.
+      그러므로 적당히 효과적인 마스크가 일부분만 적용되도 COVID-19 확산을 감소시키는데 도움이 됩니다.
+    </p>
+
+    <p>
+      전염병 확산을 완벽히 멈추기 위해, 우리는 이 언덕의 아래로 가야만 합니다.
+      그러나 희망이 있다 : 더 많은 사람들이 마스크를 사용할 수록 언덕은 더 가파르게 변합니다.
+      이것은 <b>마스크가 더 많은 사람들이 사용할 수록 사회에 큰 효과를 가져다 주는 것을 의미합니다.</b>
+    </p>
+
+    <p>
+      만약 충분한 사람들이 마스크를 사용한다면, 우리는 언덕의 바닥에 도달할 수 있고, 이것은 감염의 학률이 0%가 된다는 것입니다.
+      이것이 마스크가 전염병을 끝내는 방식입니다.
+      그러나 충분한 사람들이 마스크를 사용했을 때만 전염병을 끝낼 수 있습니다.
+    </p>
+
+    <p>
+      전염병을 끝내기 위해 얼마나 많은 사람들이 마스크를 사용해야만 하는지 궁금할 것입니다.
+      그것은 얼마만큼의 효과를 지닌 마스크인지에 달려 있을 것입니다.
+    </p>
+
+    <p>
+      상호작용하는 위 그래프를 통해, 50%의 차단 효과를 가진 마스크라면, 대략 인구의 3/4만 마스크를 착용해도 COVID-19 확산을 막을 수 있는 것을 알 수 있습니다.
+      그러나 75%의 차단 효과를 가진 마스크라면, 인구의 1/2만 착용해도 확산을 막을 수 있습니다.
+    </p>
+
+    <p>
+      <b>더 효과적인 마스크일수록, 언덕을 더 빠르게 감소시킬 수 있습니다.</b>
+      그래서 <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5ea3b5859bc8f31a11f3deb5/1587787141808/2020-04-24_N95DECON_Face_Mask_Technical_Report_v1_final.pdf">입과 코 주변을 마스크로 빈틈없이 가리는것이</a> 중요하고, 이것이 좀 더 효과적인 필터를 해줍니다.
+    </p>
+
+    <p>
+      우리는 모두 언덕의 바닥에 도착하는 것을 원하고 COVID-19이 종식되기를 원합니다.
+      그러나 그곳까지 혼자서는 갈 수 없습니다.
+      개개인이 작은 발걸음을 나아가야만 할 수 있습니다.
+    </p>
+
+    <p>그러나, 사람들이 이 조그마한 발걸음을 함께 내딛을 때, 우리는 언덕 아래로 거대한 도약을 할 수 있습니다.</p>
+
+    <p>다함께, 언덕 아래로 갈 수 있습니다.</p>
+
+    <p>다함께, 우리는 COVID-19을 물리칠 수 있습니다.</p>
+
+  </div>
+
+  <div class="ending">
+    <p5 src="js/sketch0.js"></p5>
+  </div>
+
+</div>
+
+<div class="page footer">
+  <div class="container">
+    <h2>도와주신분 & 참고 문헌</h2>
+
+    <p>이 문서는 <a href="https://twitter.com/aatishb">Aatish Bhatia</a>와 <a href="https://twitter.com/minutephysics">Henry Reich</a>가 공동으로 작성하였습니다.</p>
+
+    <p>이 문서는 한국어로 <a href="https://github.com/dev-owner">dev-owner</a>에 의해 번역되었습니다.</p>
+
+    <p>마스크의 수학적 원리를 보다 더 생생하게 보려면 <a href="https://www.youtube.com/watch?v=Y47t9qLc9I4">이 비디오</a>를 참고하세요. 이 비디오는 <a href="https://www.hsfoundation.org/">Heising-Simons Foundation</a>의 도움을 받아 제작되었습니다. 여기 <a href="https://aatishb.com/maskmath/calculator.html">마스크의 수학적 원리</a>를 비디오에서 보여주고 있습니다.</p>
+
+    <p>
+      초고에 대해 <a href="https://twitter.com/roy_upasana">Upasana Roy</a>, <a href="https://twitter.com/PrakashLab">Manu Prakash</a>, <a href="https://twitter.com/DFisman">David Fisman</a>, <a href="https://twitter.com/MonicaGandhi9">Monica Gandhi</a>, and <a href="https://this-vijay.github.io/">Vijay Ravikumar</a>의 많은 피드백에 감사드립니다.
+    </p>
+
+    <p>
+      이 글이 도움이 됩니다.고 생각하시거나 미래에 이러한 글들을 더 보고싶으시다면 <b><a href="https://www.patreon.com/aatishb">Patreon으로 제 작업을 도와주실 수 있습니다.</a></b>
+    </p>
+
+    <p>
+      보통 마스크의 필터링 효과에 대한 <a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">몇몇</a> <a href="https://www.maskfaq.com/test-results">정보</a> <a href="http://built-envi.com/what-kind-of-mask-should-i-be-wearing-to-protect-against-covid-19/">자료</a>들이 있습니다.
+      마스크가 재질과 핏에 따라 효과가 매우 달라지긴 해도, 어떤 재질은 제대로 착용하기만 해도 <a href="https://www.maskfaq.com/test-results">80%</a><a href="https://static1.squarespace.com/static/5e8126f89327941b9453eeef/t/5f2c4463a5c9f75a38d2b26f/1596736614213/N95DECON_cloth_mask_breathability_filtrationtechnical_report_v1_200804.pdf">이상</a>의 효과를 보여줍니다.
+    </p>
+
+    <p>
+      당신들 중 대수학을 좋아하는 사람들이 있다면(스스로 알거라고 생각합니다), 여기 수학적으로 더 자세히 다룬 <a href="https://github.com/aatishb/maskmath/blob/master/model/mathmodel.ipynb">자료</a>가 있습니다.
+      이 글의 그래프는 마스크의 양방향 효과를 설명하기 위해 <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1539-6924.2010.01428.x">Brienen et al</a>의 자료를 확장하여 보여줍니다.
+    </p>
+
+    <p>
+      이 글의 기반이 된 마스크의 양방향 모델은 제가 아는 한 <a href="https://arxiv.org/ftp/arxiv/papers/2003/2003.07353.pdf">Tian et al</a>의 사전 인쇄본에서 처음 출판되었습니다. (표 S3와 그림 S4)
+      이것은 Howard et al의 <a href="https://www.preprints.org/manuscript/202004.0203/v3">리뷰</a>와 <a href="https://www.fast.ai/2020/04/13/masks-summary/">에세이</a>에서 조명되었고, 대서양의 <a href="https://medium.com/the-atlantic/the-real-reason-to-wear-a-mask-e6405abbc484">Zeynep Tufekci, Jeremy Howard, Trisha Greenhalgh</a>와 <i>"The more effective the mask, the bigger the impact."</i>의 저자, 뉴요커인 <a href="https://www.newyorker.com/science/medical-dispatch/amid-the-coronavirus-crisis-a-regimen-for-reentry">Atul Gawande</a>에 의해 더 유명해졌습니다.
+    </p>
+
+    <p>
+      이 글은 Creative Commons <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> license에 의거 출간되었습니다. 소스코드는 <a href="https://github.com/aatishb/maskmath">Github</a>에서 이용 가능합니다. 이모티콘은 <a href="https://twemoji.twitter.com/">Twitter</a>에서 만들어졌으며, 커스텀 마스크 디자인을 포함하기위해 수정되었습니다.
+    </p>
+
+    <p>
+      항상 조심하시고, 읽어주셔서 감사합니다! 😷
+    </p>
+
+  </div>
+</div>
+
+<script src="libraries/plotly-basic.min.js"></script>
+<script src="libraries/vue.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+<script src="libraries/vue-observe-visibility.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/lambertw.js"></script>
+<script src="js/vue-definitions.js"></script>
+</body>
+
+</html>
