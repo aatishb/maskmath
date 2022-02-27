@@ -214,6 +214,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "dev-owner",
+      "name": "jaewoo sung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14194045?v=4",
+      "profile": "https://github.com/dev-owner",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
