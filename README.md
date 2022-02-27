@@ -1,6 +1,6 @@
 # [The Multiplicative Power of Masks](https://aatishb.com/maskmath/)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 #### An Explorable Essay on How Masks Can End COVID-19
@@ -44,6 +44,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/bojanastojanova"><img src="https://avatars.githubusercontent.com/u/15385865?v=4?s=100" width="100px;" alt=""/><br /><sub><b>bojanastojanova</b></sub></a><br /><a href="#translation-bojanastojanova" title="Translation">🌍</a></td>
     <td align="center"><a href="http://kisaragi-hiu.com"><img src="https://avatars.githubusercontent.com/u/11722318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kisaragi Hiu</b></sub></a><br /><a href="#design-kisaragi-hiu" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/dev-owner"><img src="https://avatars.githubusercontent.com/u/14194045?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jaewoo sung</b></sub></a><br /><a href="#translation-dev-owner" title="Translation">🌍</a></td>
   </tr>
 </table>
 
